@@ -12,32 +12,29 @@ export const home = {
     description: 'Representamos sus intereses y articulamos oportunidades para acercar los objetivos de su empresa al mercado peruano.',
     primary: 'Conversemos',
     secondary: 'Conozca nuestro enfoque',
-    caption: 'Lima, Perú · Una perspectiva local, una visión internacional.',
+    caption: 'Miraflores, Lima · Fotografía de contexto',
   },
   capabilities: {
-    title: 'Sus objetivos. Un punto de conexión en Perú.',
-    introduction: 'Cada relación empresarial necesita un alcance propio. Partimos de sus objetivos para definir dónde y cómo podemos aportar.',
+    title: 'Representación y coordinación local.',
+    introduction: 'Partimos de los objetivos de su empresa para acordar dónde y cómo podemos aportar.',
     items: [
       {
         title: 'Representación empresarial',
         description: 'Una contraparte para canalizar intereses, facilitar conversaciones y acompañar relaciones comerciales en el país.',
-        detail: 'Presencia y coordinación local',
       },
       {
         title: 'Articulación de oportunidades',
-        description: 'Conexión entre empresas, iniciativas y contrapartes para explorar posibilidades de colaboración con un propósito compartido.',
-        detail: 'Relaciones con sentido de negocio',
+        description: 'Conexión entre empresas, iniciativas y contrapartes para explorar posibilidades de colaboración.',
       },
       {
         title: 'Acompañamiento comercial',
         description: 'Coordinación de gestiones y seguimiento de conversaciones dentro del alcance que se acuerde para cada relación.',
-        detail: 'Continuidad en cada etapa',
       },
     ],
   },
   sectors: {
-    title: 'Diversas industrias. Una misma visión de conexión.',
-    description: 'Nuestros focos de interés reúnen actividades que conectan capital, proyectos y relaciones empresariales en Perú.',
+    title: 'Sectores de interés.',
+    description: 'Ámbitos en los que buscamos articular relaciones empresariales en Perú.',
     note: 'El encaje y el alcance se evalúan en cada conversación.',
     items: [
       { title: 'Minería', description: 'Relaciones empresariales alrededor de la actividad minera y su cadena de valor.' },
@@ -48,7 +45,7 @@ export const home = {
     ],
   },
   process: {
-    title: 'Una relación clara, desde el comienzo.',
+    title: 'Cómo empieza la relación.',
     description: 'Primero entendemos lo que busca. Después, definimos juntos el camino y las responsabilidades.',
     steps: [
       { title: 'Escuchar sus objetivos', description: 'Conocer su empresa, sus intereses en Perú y el momento en el que se encuentra.' },
@@ -58,9 +55,8 @@ export const home = {
     ],
   },
   firm: {
-    title: 'El valor de una contraparte cercana.',
+    title: 'La firma.',
     description: 'POWERFUL es una firma peruana que articula relaciones empresariales entre Perú y el exterior. La representación, el diálogo y la coordinación son el punto de partida de nuestra propuesta.',
-    statement: 'Comprender el contexto. Conectar intereses. Construir una relación.',
     principles: ['Alcance definido en cada acuerdo', 'Comunicación directa', 'Atención al contexto local'],
   },
   contact: {

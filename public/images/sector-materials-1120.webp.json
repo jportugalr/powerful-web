@@ -1,0 +1,17 @@
+{
+  "generatedBy": "builtin image_gen",
+  "generatedAt": "2026-10-17",
+  "originalLocator": "/mnt/c/Users/jonat/.codex/generated_images/01a14a73-9170-70a2-9956-eff679f3d06e/exec-1d22a0af-e83d-48d8-b770-e5ef1becfc72.png",
+  "preservedOriginal": "output/imagegen/sector-materials-source.png",
+  "prompt": "Use case: stylized-concept\nAsset type: finished editorial image for a sober Peruvian corporate website, sector introduction, tall 4:5 composition\nPrimary request: create an art-directed physical still-life of the materials behind industry, a material atlas rather than a technology advertisement.\nScene/backdrop: an actual studio table with a warm ivory matte surface and deep navy vertical backdrop, strong soft daylight entering from the upper left.\nSubject: a substantial rough dark copper-bearing mineral rock with small natural copper seams, one flat oxidized copper sheet folded once with a precise edge, a brushed steel profile and a low pale concrete block. These are grounded material specimens, not floating objects or invented products. Arrange as a deliberate layered composition with an architectural eye, a restrained diagonal from lower left to upper right, overlapping at one precise point. The mineral and tactile copper are the visual focus. Keep generous negative space in the top fifth and right edge for cropping, no copy will be baked into the image.\nStyle/medium: refined analog editorial still-life photography, tactile, believable imperfections, architectural magazine art direction; understated, serious, beautifully lit, natural photographic perspective, not a 3D render.\nComposition/framing: portrait 4:5, close enough to show mineral grain, brushed steel and cast concrete pores; subjects occupy lower two-thirds; do not center every object or arrange into equal tiles.\nLighting/mood: crisp directional daylight, controlled shadow with real penumbra, highlights protected, no orange/teal blockbuster grading.\nColor palette: mineral charcoal, natural copper, silver steel, pale concrete, ivory #F4F1EA and very dark navy #14263D. Gold may occur only as a small natural copper glint.\nText: none.\nConstraints: no maps, no globes, no people, no hands, no offices, no buildings, no money, no growth charts, no logos, no watermarks, no labels, no artificial data. It is a conceptual image of sector materials, never a depiction of a real POWERFUL project.\nAvoid: glossy abstract orbs, neon, holograms, floating geometries, generative gradient backgrounds, utopian infrastructure, plastic surfaces, generic corporate stock-photo styling.\n",
+  "classification": "Conceptual editorial illustration; not a real POWERFUL project or endorsement",
+  "transformations": [
+    "Resize to 1120 px width without enlargement, preserving aspect ratio",
+    "Convert PNG to WebP, quality 82, effort 6"
+  ],
+  "output": {
+    "width": 1120,
+    "height": 1400,
+    "format": "webp"
+  }
+}

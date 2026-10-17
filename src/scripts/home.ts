@@ -1,4 +1,7 @@
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
 const navigation = document.querySelector<HTMLElement>('#main-navigation');
@@ -86,14 +89,49 @@ draftForm?.addEventListener('submit', (event) => {
 });
 
 const motion = gsap.matchMedia();
+
 motion.add('(prefers-reduced-motion: no-preference)', () => {
-  const connectionPath = document.querySelector<SVGPathElement>('.connection > path');
-  const timeline = gsap.timeline({ defaults: { ease: 'expo.out' } });
-  timeline.from('.hero-copy h1', { y: 20, duration: 1.1 });
-  timeline.from('.hero-copy > p, .hero-actions', { y: 12, duration: 1, stagger: .08 }, .12);
-  timeline.from('.hero-image', { scale: 1.045, duration: 1.7 }, 0);
-  if (connectionPath) {
-    const length = connectionPath.getTotalLength();
-    timeline.fromTo(connectionPath, { strokeDasharray: length, strokeDashoffset: length }, { strokeDashoffset: 0, duration: 1.8, clearProps: 'strokeDasharray,strokeDashoffset' }, .3);
-  }
+  const entrance = gsap.timeline({ defaults: { ease: 'expo.out' } });
+  entrance.from('.hero-copy h1', { y: 12, duration: .7 });
+  entrance.from('.hero-figure', { clipPath: 'inset(0% 0% 12% 0%)', duration: .9 }, 0);
+  entrance.from('.hero-image', { scale: 1.035, duration: 1 }, 0);
+  entrance.from('.relationship li + li', {
+    '--connection-scale': 0,
+    duration: .55,
+    stagger: .14,
+  }, .15);
+  entrance.from('.relationship span', { y: 5, duration: .6, stagger: .1 }, .2);
+
+  const sectors = gsap.timeline({
+    defaults: { ease: 'expo.out' },
+    scrollTrigger: {
+      trigger: '.sectors',
+      start: 'top 78%',
+      once: true,
+    },
+  });
+  sectors.from('.sectors-image-frame', { clipPath: 'inset(8% 0% 0% 0%)', duration: .85 });
+  sectors.from('.sectors-image', { scale: 1.035, duration: 1 }, 0);
+  sectors.from('.sectors-intro h2', { y: 16, duration: .8 }, .1);
+});
+
+// The image has overscan for this 40 px journey; its entrance uses another layer.
+motion.add('(min-width: 960px) and (pointer: fine) and (prefers-reduced-motion: no-preference)', () => {
+  gsap.fromTo('.hero-image-motion', { y: -20 }, {
+    y: 20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: .6,
+      invalidateOnRefresh: true,
+      onToggle: (self) => {
+        gsap.set('.hero-image-motion', { willChange: self.isActive ? 'transform' : 'auto' });
+      },
+    },
+  });
+  return () => {
+    document.querySelector<HTMLElement>('.hero-image-motion')?.style.removeProperty('will-change');
+  };
 });
