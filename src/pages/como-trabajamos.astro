@@ -1,0 +1,47 @@
+---
+import MiniCta from '../components/MiniCta.astro';
+import PageHero from '../components/PageHero.astro';
+import ProcessStep from '../components/ProcessStep.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { businessPagesEs } from '../content/es';
+
+const page = businessPagesEs.comoTrabajamos;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="overline gold">{page.process.eyebrow}</p>
+          <h2>{page.process.heading.lead}{' '}<em>{page.process.heading.emphasis}</em></h2>
+        </div>
+        <p>{page.process.description}</p>
+      </div>
+      <div class="step-list">
+        {
+          page.process.steps.map((step) => (
+            <ProcessStep step={step} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section navy-panel">
+    <div class="container split-layout">
+      <div>
+        <p class="overline gold">{page.responsibilities.eyebrow}</p>
+        <h2>{page.responsibilities.heading.lead}{' '}<em>{page.responsibilities.heading.emphasis}</em></h2>
+      </div>
+      <div>
+        <p>{page.responsibilities.paragraphs[0]}</p>
+        <p>{page.responsibilities.paragraphs[1]}</p>
+      </div>
+    </div>
+  </section>
+
+  <MiniCta content={page.cta} />
+</SiteLayout>

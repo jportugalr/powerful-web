@@ -1,0 +1,52 @@
+---
+import MiniCta from '../components/MiniCta.astro';
+import PageHero from '../components/PageHero.astro';
+import SectorCard from '../components/SectorCard.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { businessPagesEs } from '../content/es';
+
+const page = businessPagesEs.sectores;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} />
+
+  <section class="section sectors-section">
+    <div class="container">
+      <div class="sector-controls">
+        <div>
+          <p class="overline gold">{page.controls.eyebrow}</p>
+          <h2>{page.controls.heading.lead}{' '}<em>{page.controls.heading.emphasis}</em></h2>
+        </div>
+        <div class="filter-set" role="group" aria-label={page.controls.ariaLabel}>
+          {
+            page.controls.filters.map((filter) => (
+              <button
+                type="button"
+                class:list={['filter-pill', { active: filter.value === 'all' }]}
+                data-filter={filter.value}
+                aria-pressed={filter.value === 'all' ? 'true' : 'false'}
+              >
+                {filter.label}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+      <div class="sector-cards">
+        {
+          page.cards.map((sector) => (
+            <SectorCard sector={sector} actionLabel={page.cardAction} />
+          ))
+        }
+      </div>
+      <p class="sector-disclaimer">{page.disclaimer}</p>
+    </div>
+  </section>
+
+  <MiniCta content={page.cta} />
+
+  <script>
+    import '../scripts/sector-filters';
+  </script>
+</SiteLayout>

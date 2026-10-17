@@ -1,0 +1,37 @@
+---
+import Icon from '../components/Icon.astro';
+import MiniCta from '../components/MiniCta.astro';
+import PageHero from '../components/PageHero.astro';
+import ServiceDetailRow from '../components/ServiceDetailRow.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { businessPagesEs } from '../content/es';
+
+const page = businessPagesEs.servicios;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} />
+
+  <section class="section">
+    <div class="container service-detail-list">
+      {
+        page.details.map((item) => (
+          <ServiceDetailRow item={item} />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section service-notice">
+    <div class="container notice-panel">
+      <div>
+        <Icon name="shield-check" />
+        <p class="overline">{page.notice.eyebrow}</p>
+      </div>
+      <h2>{page.notice.heading}</h2>
+      <p>{page.notice.description}</p>
+    </div>
+  </section>
+
+  <MiniCta content={page.cta} />
+</SiteLayout>

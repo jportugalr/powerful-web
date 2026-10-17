@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+import type { ProcessStepEs } from '../content/es';
+
+interface Props {
+  step: ProcessStepEs;
+}
+
+const { step } = Astro.props;
+---
+
+<article class="step">
+  <span class="step-num">{step.number}</span>
+  <h3>{step.title}</h3>
+  <p>{step.description}</p>
+  <span class="step-end"><Icon name="arrow-up-right" /></span>
+</article>

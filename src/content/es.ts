@@ -271,3 +271,456 @@ export const homePageEs = {
     actionHref: '/contacto.html?tipo=proyecto',
   },
 } as const satisfies HomePageEs;
+
+export interface TextHeadingEs {
+  lead: string;
+  emphasis: string;
+}
+
+export interface PageMetadataEs {
+  title: string;
+  description: string;
+}
+
+export interface SubpageHeroEs {
+  eyebrow: string;
+  heading: TextHeadingEs;
+  lede: string;
+  pageNumber: string;
+}
+
+export interface MiniCtaEs {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  actionLabel: string;
+  actionHref: string;
+}
+
+export interface ServiceDetailEs {
+  index: string;
+  heading: TextHeadingEs;
+  description: string;
+  icon: 'globe' | 'briefcase' | 'layers' | 'compass';
+}
+
+export type SectorCategoryEs =
+  | 'mineria'
+  | 'energia'
+  | 'infraestructura'
+  | 'inmobiliario'
+  | 'comercio';
+
+export type SectorArtClassEs =
+  | 'art-mineria'
+  | 'art-energia'
+  | 'art-infraestructura'
+  | 'art-inmobiliario'
+  | 'art-comercio';
+
+export interface SectorFilterEs {
+  value: 'all' | SectorCategoryEs;
+  label: string;
+}
+
+export interface SectorCardEs {
+  id: SectorCategoryEs;
+  category: SectorCategoryEs;
+  index: string;
+  artClass: SectorArtClassEs;
+  title: string;
+  description: string;
+}
+
+export interface ProcessStepEs {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface BusinessPagesEs {
+  nosotros: {
+    metadata: PageMetadataEs;
+    hero: SubpageHeroEs;
+    profile: {
+      eyebrow: string;
+      heading: TextHeadingEs;
+      paragraphs: [string, string];
+      linkLabel: string;
+      linkHref: string;
+    };
+    approach: {
+      eyebrow: string;
+      heading: TextHeadingEs;
+      description: string;
+      values: {
+        index: string;
+        title: string;
+        description: string;
+      }[];
+    };
+    transparency: {
+      eyebrow: string;
+      heading: TextHeadingEs;
+      description: string;
+    };
+    cta: MiniCtaEs;
+  };
+  servicios: {
+    metadata: PageMetadataEs;
+    hero: SubpageHeroEs;
+    details: ServiceDetailEs[];
+    notice: {
+      eyebrow: string;
+      heading: string;
+      description: string;
+    };
+    cta: MiniCtaEs;
+  };
+  sectores: {
+    metadata: PageMetadataEs;
+    hero: SubpageHeroEs;
+    controls: {
+      eyebrow: string;
+      heading: TextHeadingEs;
+      ariaLabel: string;
+      filters: SectorFilterEs[];
+    };
+    cards: SectorCardEs[];
+    cardAction: string;
+    disclaimer: string;
+    cta: MiniCtaEs;
+  };
+  comoTrabajamos: {
+    metadata: PageMetadataEs;
+    hero: SubpageHeroEs;
+    process: {
+      eyebrow: string;
+      heading: TextHeadingEs;
+      description: string;
+      steps: ProcessStepEs[];
+    };
+    responsibilities: {
+      eyebrow: string;
+      heading: TextHeadingEs;
+      paragraphs: [string, string];
+    };
+    cta: MiniCtaEs;
+  };
+}
+
+export const businessPagesEs = {
+  nosotros: {
+    metadata: {
+      title: 'Nosotros | POWERFUL',
+      description: 'Nuestra identidad, modelo empresarial y enfoque en Perú',
+    },
+    hero: {
+      eyebrow: 'CONOCE POWERFUL',
+      heading: {
+        lead: 'Una firma peruana con',
+        emphasis: 'visión empresarial.',
+      },
+      lede:
+        'Vinculamos oportunidades en Perú con relaciones comerciales e intereses de inversión del exterior, combinando articulación y participación según cada caso.',
+      pageNumber: '02',
+    },
+    profile: {
+      eyebrow: 'QUIÉNES SOMOS',
+      heading: {
+        lead: 'Un punto de encuentro para',
+        emphasis: 'nuevos negocios.',
+      },
+      paragraphs: [
+        'POWERFUL es una iniciativa empresarial peruana orientada a identificar oportunidades, relacionar contrapartes y explorar formas de representación, gestión o participación en negocios y proyectos.',
+        'Nuestro alcance se define por las necesidades de cada iniciativa y por los acuerdos que corresponda suscribir. No todas las relaciones implican inversión directa ni representación formal.',
+      ],
+      linkLabel: 'Ver qué hacemos',
+      linkHref: '/servicios.html',
+    },
+    approach: {
+      eyebrow: 'NUESTRO ENFOQUE',
+      heading: {
+        lead: 'Perú como centro',
+        emphasis: 'de actuación.',
+      },
+      description:
+        'La red de oportunidades y el trabajo empresarial se orientan al mercado peruano; el carácter internacional responde principalmente a las relaciones con potenciales contrapartes y capital extranjero.',
+      values: [
+        {
+          index: '01 /',
+          title: 'Criterio',
+          description:
+            'Comprender el contexto, la oportunidad y a las contrapartes antes de avanzar.',
+        },
+        {
+          index: '02 /',
+          title: 'Relaciones',
+          description:
+            'Promover vínculos comerciales con objetivos y alcances claramente definidos.',
+        },
+        {
+          index: '03 /',
+          title: 'Participación',
+          description:
+            'Evaluar un rol activo en cada negocio cuando el acuerdo lo permita.',
+        },
+      ],
+    },
+    transparency: {
+      eyebrow: 'UNA IDENTIDAD EN CONSTRUCCIÓN',
+      heading: {
+        lead: 'La confianza debe sustentarse en',
+        emphasis: 'hechos verificables.',
+      },
+      description:
+        'Por ello presentamos con claridad nuestro modelo y nuestros sectores de interés, sin atribuir a POWERFUL proyectos ejecutados, alianzas institucionales o resultados que todavía no estén documentados y autorizados para difusión.',
+    },
+    cta: {
+      eyebrow: 'SIGUIENTE PASO',
+      heading: 'Hablemos de la relación que buscas.',
+      description:
+        'Podemos explorar si existe una oportunidad pertinente para conversar.',
+      actionLabel: 'Contactar',
+      actionHref: '/contacto.html',
+    },
+  },
+  servicios: {
+    metadata: {
+      title: 'Qué hacemos | POWERFUL',
+      description: 'Articulación, representación y participación empresarial',
+    },
+    hero: {
+      eyebrow: 'QUÉ HACEMOS',
+      heading: {
+        lead: 'Articulamos, representamos y',
+        emphasis: 'participamos.',
+      },
+      lede:
+        'El alcance de POWERFUL puede abarcar distintas etapas de una relación empresarial, dependiendo del proyecto, las contrapartes y los acuerdos aplicables.',
+      pageNumber: '03',
+    },
+    details: [
+      {
+        index: '01 / ARTICULACIÓN',
+        heading: {
+          lead: 'Oportunidades y',
+          emphasis: 'contrapartes.',
+        },
+        description:
+          'Identificamos iniciativas y posibles espacios de colaboración entre titulares de proyectos en Perú, empresas y actores con interés comercial o de inversión.',
+        icon: 'globe',
+      },
+      {
+        index: '02 / REPRESENTACIÓN',
+        heading: {
+          lead: 'Gestión y',
+          emphasis: 'representación empresarial.',
+        },
+        description:
+          'Podemos asumir funciones de representación, coordinación o gestión comercial dentro de facultades expresamente acordadas y documentadas.',
+        icon: 'briefcase',
+      },
+      {
+        index: '03 / PARTICIPACIÓN',
+        heading: {
+          lead: 'Involucramiento en',
+          emphasis: 'negocios y proyectos.',
+        },
+        description:
+          'Evaluamos esquemas de participación directa o colaboración sostenida, con responsabilidades y condiciones pactadas para cada operación.',
+        icon: 'layers',
+      },
+      {
+        index: '04 / COMERCIO',
+        heading: {
+          lead: 'Relaciones de',
+          emphasis: 'comercio exterior.',
+        },
+        description:
+          'Exploramos oportunidades vinculadas con importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
+        icon: 'compass',
+      },
+    ],
+    notice: {
+      eyebrow: 'NUESTRO ALCANCE',
+      heading: 'Una propuesta no equivale a una promesa.',
+      description:
+        'La recepción y evaluación de una oportunidad no comprometen financiamiento, representación, contratación ni participación. Las responsabilidades se establecen únicamente mediante acuerdos aplicables.',
+    },
+    cta: {
+      eyebrow: 'CONVERSEMOS',
+      heading: 'Cada operación tiene su propio contexto.',
+      description:
+        'Describe brevemente la relación empresarial o necesidad que te interesa explorar.',
+      actionLabel: 'Solicitar conversación',
+      actionHref: '/contacto.html?tipo=representacion',
+    },
+  },
+  sectores: {
+    metadata: {
+      title: 'Sectores | POWERFUL',
+      description: 'Ámbitos de oportunidad y actividad empresarial en Perú',
+    },
+    hero: {
+      eyebrow: 'SECTORES DE INTERÉS',
+      heading: {
+        lead: 'Una perspectiva',
+        emphasis: 'multisectorial.',
+      },
+      lede:
+        'Exploramos oportunidades empresariales en industrias clave de Perú. La evaluación de cada caso depende de sus características y del marco aplicable.',
+      pageNumber: '04',
+    },
+    controls: {
+      eyebrow: 'ÁMBITOS DE ACTUACIÓN',
+      heading: {
+        lead: 'Explora los',
+        emphasis: 'sectores.',
+      },
+      ariaLabel: 'Filtrar sectores',
+      filters: [
+        { value: 'all', label: 'Todos' },
+        { value: 'mineria', label: 'Minería' },
+        { value: 'energia', label: 'Energía' },
+        { value: 'infraestructura', label: 'Construcción' },
+        { value: 'inmobiliario', label: 'Inmobiliario' },
+        { value: 'comercio', label: 'Comercio exterior' },
+      ],
+    },
+    cards: [
+      {
+        id: 'mineria',
+        category: 'mineria',
+        index: 'SECTOR / 01',
+        artClass: 'art-mineria',
+        title: 'Minería y minerales',
+        description:
+          'Relaciones comerciales y oportunidades vinculadas con proyectos, minerales y materias primas, sujetas a análisis técnico, contractual y normativo.',
+      },
+      {
+        id: 'energia',
+        category: 'energia',
+        index: 'SECTOR / 02',
+        artClass: 'art-energia',
+        title: 'Energía e hidrocarburos',
+        description:
+          'Iniciativas de generación eléctrica, petróleo, gas y actividades relacionadas que puedan requerir alianzas o participación empresarial.',
+      },
+      {
+        id: 'infraestructura',
+        category: 'infraestructura',
+        index: 'SECTOR / 03',
+        artClass: 'art-infraestructura',
+        title: 'Infraestructura y construcción',
+        description:
+          'Proyectos, suministro de materiales, ejecución y relaciones comerciales para infraestructura y obras.',
+      },
+      {
+        id: 'inmobiliario',
+        category: 'inmobiliario',
+        index: 'SECTOR / 04',
+        artClass: 'art-inmobiliario',
+        title: 'Inmobiliario y bienes raíces',
+        description:
+          'Oportunidades empresariales relacionadas con activos, proyectos de inversión y negocios del mercado inmobiliario peruano.',
+      },
+      {
+        id: 'comercio',
+        category: 'comercio',
+        index: 'SECTOR / 05',
+        artClass: 'art-comercio',
+        title: 'Comercio exterior y materias primas',
+        description:
+          'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',
+      },
+    ],
+    cardAction: 'Consultar oportunidad',
+    disclaimer:
+      'Los sectores presentados describen ámbitos de interés y evaluación. No implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
+    cta: {
+      eyebrow: 'OPORTUNIDADES EN PERÚ',
+      heading: '¿Tu iniciativa pertenece a alguno de estos sectores?',
+      description:
+        'Cuéntanos el tipo de proyecto y la relación comercial que deseas desarrollar.',
+      actionLabel: 'Presentar consulta',
+      actionHref: '/contacto.html?tipo=proyecto',
+    },
+  },
+  comoTrabajamos: {
+    metadata: {
+      title: 'Cómo trabajamos | POWERFUL',
+      description: 'Proceso de evaluación, vinculación y colaboración empresarial',
+    },
+    hero: {
+      eyebrow: 'NUESTRO PROCESO',
+      heading: {
+        lead: 'De la primera conversación a una',
+        emphasis: 'relación estructurada.',
+      },
+      lede:
+        'El trabajo empieza comprendiendo la oportunidad. Cada iniciativa se evalúa individualmente antes de definir posibles compromisos.',
+      pageNumber: '05',
+    },
+    process: {
+      eyebrow: 'LA FORMA DE TRABAJAR',
+      heading: {
+        lead: 'Un proceso',
+        emphasis: 'con criterio.',
+      },
+      description:
+        'El siguiente recorrido es orientativo. No sustituye las validaciones técnicas, legales, comerciales o contractuales que correspondan.',
+      steps: [
+        {
+          number: '01',
+          title: 'Primer contacto',
+          description:
+            'Recibimos una descripción inicial del interés empresarial, la oportunidad o el proyecto.',
+        },
+        {
+          number: '02',
+          title: 'Revisión de pertinencia',
+          description:
+            'Consideramos el tipo de iniciativa, el objetivo de las partes y si existe espacio para una conversación.',
+        },
+        {
+          number: '03',
+          title: 'Conversaciones y validaciones',
+          description:
+            'Cuando corresponde, se coordinan acercamientos y un intercambio adecuado de información.',
+        },
+        {
+          number: '04',
+          title: 'Definición contractual',
+          description:
+            'El rol de articulación, representación, gestión o participación se establece mediante acuerdos.',
+        },
+        {
+          number: '05',
+          title: 'Seguimiento según alcance',
+          description:
+            'Se realizan las actividades pactadas, con responsabilidades y condiciones propias de cada operación.',
+        },
+      ],
+    },
+    responsibilities: {
+      eyebrow: 'RELACIONES CON RESPONSABILIDADES CLARAS',
+      heading: {
+        lead: 'Las condiciones se',
+        emphasis: 'acuerdan.',
+      },
+      paragraphs: [
+        'La intervención de POWERFUL puede adoptar diferentes formas, pero ninguna se presume: representación y participación directa dependen de facultades y acuerdos adecuados.',
+        'No prometemos aprobación de proyectos, adjudicación, liquidez ni retorno de inversión.',
+      ],
+    },
+    cta: {
+      eyebrow: 'EMPECEMOS',
+      heading: 'Cuéntanos qué necesitas explorar.',
+      description:
+        'Un primer mensaje con el contexto suficiente es el punto de partida.',
+      actionLabel: 'Enviar una consulta',
+      actionHref: '/contacto.html',
+    },
+  },
+} as const satisfies BusinessPagesEs;

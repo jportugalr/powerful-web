@@ -1,0 +1,23 @@
+---
+import type { SubpageHeroEs } from '../content/es';
+
+interface Props {
+  content: SubpageHeroEs;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="page-hero sub">
+  <div class="container page-hero-inner">
+    <div class="page-hero-copy">
+      <p class="overline">{content.eyebrow}</p>
+      <h1>{content.heading.lead}{' '}<em>{content.heading.emphasis}</em></h1>
+      <p class="lede">{content.lede}</p>
+    </div>
+    <div class="page-hero-no" aria-hidden="true">
+      <span>POWERFUL / PERÚ</span>
+      <b>{content.pageNumber}</b>
+    </div>
+  </div>
+</section>

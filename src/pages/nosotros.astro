@@ -1,0 +1,65 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Icon from '../components/Icon.astro';
+import MiniCta from '../components/MiniCta.astro';
+import PageHero from '../components/PageHero.astro';
+import { businessPagesEs } from '../content/es';
+
+const page = businessPagesEs.nosotros;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} />
+
+  <section class="section">
+    <div class="container split-layout content-split">
+      <div>
+        <p class="overline gold">{page.profile.eyebrow}</p>
+        <h2>{page.profile.heading.lead}{' '}<em>{page.profile.heading.emphasis}</em></h2>
+      </div>
+      <div>
+        <p class="body-xl">{page.profile.paragraphs[0]}</p>
+        <p>{page.profile.paragraphs[1]}</p>
+        <a href={page.profile.linkHref} class="text-link">
+          {page.profile.linkLabel} <Icon name="arrow-right" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section navy-panel">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="overline gold">{page.approach.eyebrow}</p>
+          <h2>
+            {page.approach.heading.lead}<br />
+            <em>{page.approach.heading.emphasis}</em>
+          </h2>
+        </div>
+        <p>{page.approach.description}</p>
+      </div>
+      <div class="values-grid">
+        {
+          page.approach.values.map((value) => (
+            <article>
+              <span>{value.index}</span>
+              <h3>{value.title}</h3>
+              <p>{value.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section narrow-section">
+    <div class="container">
+      <p class="overline gold">{page.transparency.eyebrow}</p>
+      <h2>{page.transparency.heading.lead}{' '}<em>{page.transparency.heading.emphasis}</em></h2>
+      <p>{page.transparency.description}</p>
+    </div>
+  </section>
+
+  <MiniCta content={page.cta} />
+</SiteLayout>

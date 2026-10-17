@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+import type { ServiceDetailEs } from '../content/es';
+
+interface Props {
+  item: ServiceDetailEs;
+}
+
+const { item } = Astro.props;
+---
+
+<article class="detail-row">
+  <div class="detail-index">{item.index}</div>
+  <div>
+    <h2>{item.heading.lead}{' '}<em>{item.heading.emphasis}</em></h2>
+    <p>{item.description}</p>
+  </div>
+  <div class="detail-icon">
+    <Icon name={item.icon} />
+  </div>
+</article>

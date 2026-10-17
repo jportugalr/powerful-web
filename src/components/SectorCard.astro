@@ -1,0 +1,30 @@
+---
+import Icon from './Icon.astro';
+import type { SectorCardEs } from '../content/es';
+
+interface Props {
+  sector: SectorCardEs;
+  actionLabel: string;
+}
+
+const { sector, actionLabel } = Astro.props;
+---
+
+<article class="sector-card" id={sector.id} data-category={sector.category}>
+  <div class="sector-card-top">
+    <span>{sector.index}</span>
+    <Icon name="arrow-up-right" />
+  </div>
+  <div class:list={['sector-card-art', sector.artClass]} aria-hidden="true">
+    <i></i>
+    <i></i>
+    <i></i>
+  </div>
+  <div class="sector-card-bottom">
+    <h2>{sector.title}</h2>
+    <p>{sector.description}</p>
+    <a href="/contacto.html?tipo=proyecto" class="text-link">
+      {actionLabel} <Icon name="arrow-right" />
+    </a>
+  </div>
+</article>

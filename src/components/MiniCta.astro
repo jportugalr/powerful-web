@@ -1,0 +1,26 @@
+---
+import Icon from './Icon.astro';
+import type { MiniCtaEs } from '../content/es';
+
+interface Props {
+  content: MiniCtaEs;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="mini-cta section">
+  <div class="container">
+    <div class="mini-cta-box">
+      <div>
+        <p class="overline gold">{content.eyebrow}</p>
+        <h2>{content.heading}</h2>
+        <p>{content.description}</p>
+      </div>
+      <a class="btn btn-gold" href={content.actionHref}>
+        <span>{content.actionLabel}</span>
+        <Icon name="arrow-right" />
+      </a>
+    </div>
+  </div>
+</section>
