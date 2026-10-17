@@ -1,0 +1,291 @@
+{
+  "title": "POWERFUL · Composición de la portada",
+  "question": "Ambas propuestas conservan la marca y el mensaje acordados. Elige cómo debe presentarse el inicio; construiremos directamente una versión navegable.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Atlas del Pacífico",
+      "thesis": "Perú como punto de encuentro para su próximo negocio.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "fotografía de contexto",
+        "tipografía editorial",
+        "líneas de conexión"
+      ],
+      "viewport": "Titular amplio a la izquierda, fotografía de Lima a la derecha y un trazo que enlaza ambos campos.",
+      "risk": "La composición debe conservar legibilidad y claridad del negocio en móvil.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Marca y navegación",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "h": 1
+          },
+          {
+            "label": "Su contraparte empresarial en Perú",
+            "x": 0,
+            "y": 1,
+            "w": 7,
+            "h": 6,
+            "accent": true
+          },
+          {
+            "label": "Fotografía de Lima",
+            "x": 7,
+            "y": 1,
+            "w": 5,
+            "h": 7
+          },
+          {
+            "label": "Conversemos",
+            "x": 0,
+            "y": 7,
+            "w": 4,
+            "h": 1
+          },
+          {
+            "label": "Capacidades",
+            "x": 0,
+            "y": 9,
+            "w": 12,
+            "h": 1
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/assigned.webp",
+      "kicker": "PROPUESTA",
+      "lineage": "Atlas empresarial y publicaciones de comercio internacional",
+      "raised": [
+        {
+          "from": "Capas de conexión",
+          "raise": "Orquestación de una única secuencia de movimiento."
+        },
+        {
+          "from": "Ventanas de oportunidad",
+          "raise": "Jerarquía mediante proporciones y contraste de superficies."
+        },
+        {
+          "from": "Corrientes del Pacífico",
+          "raise": "Una transición continua entre secciones."
+        },
+        {
+          "from": "Mesa de coordinación",
+          "raise": "Respuesta precisa y consistente de los controles."
+        },
+        {
+          "from": "Rutas de negocio",
+          "raise": "Secuencia de proceso fácil de seguir."
+        },
+        {
+          "from": "Doble perspectiva",
+          "raise": "Contraste claro entre dos voces complementarias."
+        }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Editorial institucional",
+      "thesis": "Una firma clara y directa, con presencia de publicación corporativa.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "fotografía de contexto",
+        "tipografía editorial",
+        "líneas de conexión"
+      ],
+      "viewport": "Mensaje en una franja amplia y una fotografía panorámica debajo; composición más familiar y serena.",
+      "risk": "Es una composición más habitual en webs corporativas y exige gran cuidado tipográfico para destacar.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Marca y navegación",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "h": 1
+          },
+          {
+            "label": "Su contraparte empresarial en Perú",
+            "x": 0,
+            "y": 1,
+            "w": 9,
+            "h": 3,
+            "accent": true
+          },
+          {
+            "label": "Conversemos",
+            "x": 9,
+            "y": 1,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "label": "Fotografía panorámica",
+            "x": 0,
+            "y": 4,
+            "w": 12,
+            "h": 5
+          },
+          {
+            "label": "Capacidades",
+            "x": 0,
+            "y": 9,
+            "w": 12,
+            "h": 1
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/model-pick.webp",
+      "kicker": "IMPECCABLE’S PICK"
+    },
+    {
+      "id": "canopy",
+      "label": "Capas de conexión",
+      "thesis": "Capas translúcidas coordinan intereses empresariales.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "sistema gráfico traducido a la marca"
+      ],
+      "viewport": "La representación empresarial permanece como mensaje central.",
+      "risk": "La superposición distrae de la representación empresarial.",
+      "verdict": "declined",
+      "case": "La superposición distrae de la representación empresarial.",
+      "kept": "Orquestación de una única secuencia de movimiento."
+    },
+    {
+      "id": "glazier",
+      "label": "Ventanas de oportunidad",
+      "thesis": "Cada panel abre una capacidad o sector.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "sistema gráfico traducido a la marca"
+      ],
+      "viewport": "La representación empresarial permanece como mensaje central.",
+      "risk": "El mosaico fragmenta el mensaje principal.",
+      "verdict": "declined",
+      "case": "El mosaico fragmenta el mensaje principal.",
+      "kept": "Jerarquía mediante proporciones y contraste de superficies."
+    },
+    {
+      "id": "ink",
+      "label": "Corrientes del Pacífico",
+      "thesis": "Una superficie fluida conecta intereses.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "sistema gráfico traducido a la marca"
+      ],
+      "viewport": "La representación empresarial permanece como mensaje central.",
+      "risk": "La simulación domina sobre el negocio.",
+      "verdict": "declined",
+      "case": "La simulación domina sobre el negocio.",
+      "kept": "Una transición continua entre secciones."
+    },
+    {
+      "id": "meter",
+      "label": "Mesa de coordinación",
+      "thesis": "Canales paralelos muestran capacidades.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "sistema gráfico traducido a la marca"
+      ],
+      "viewport": "La representación empresarial permanece como mensaje central.",
+      "risk": "Los medidores sugieren indicadores financieros inexistentes.",
+      "verdict": "declined",
+      "case": "Los medidores sugieren indicadores financieros inexistentes.",
+      "kept": "Respuesta precisa y consistente de los controles."
+    },
+    {
+      "id": "transit",
+      "label": "Rutas de negocio",
+      "thesis": "Un recorrido conecta objetivos y acuerdos.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "sistema gráfico traducido a la marca"
+      ],
+      "viewport": "La representación empresarial permanece como mensaje central.",
+      "risk": "Puede parecer una red operativa que aún no está acreditada.",
+      "verdict": "declined",
+      "case": "Puede parecer una red operativa que aún no está acreditada.",
+      "kept": "Secuencia de proceso fácil de seguir."
+    },
+    {
+      "id": "zine",
+      "label": "Doble perspectiva",
+      "thesis": "Dos capas representan exterior y Perú.",
+      "palette": [
+        "#14263D",
+        "#B79862",
+        "#F4F1EA"
+      ],
+      "materials": [
+        "sistema gráfico traducido a la marca"
+      ],
+      "viewport": "La representación empresarial permanece como mensaje central.",
+      "risk": "Su carácter experimental reduce identificación institucional.",
+      "verdict": "declined",
+      "case": "Su carácter experimental reduce identificación institucional.",
+      "kept": "Contraste claro entre dos voces complementarias."
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "steer": true,
+  "canonCard": {
+    "label": "Corporativa convencional",
+    "thesis": "Estructura corporativa familiar y ejecutada con cuidado.",
+    "palette": [
+      "#14263D",
+      "#B79862",
+      "#F4F1EA"
+    ],
+    "materials": [
+      "retícula clásica",
+      "fotografía institucional"
+    ],
+    "viewport": "Titular centrado, imagen y servicios debajo.",
+    "risk": "Menor diferenciación frente a otras firmas.",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  }
+}

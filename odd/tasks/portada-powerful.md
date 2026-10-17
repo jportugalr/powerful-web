@@ -1,0 +1,47 @@
+# Portada POWERFUL
+
+## Objetivo y autorización
+
+Materializar una portada corporativa navegable, moderna, llamativa y sobria para POWERFUL. El usuario autorizó comenzar por la portada, construir directamente en código y usar verificación funcional normal (sin TDD estricto). Alcance local; sin push, PR ni despliegue remoto.
+
+## Problema, público y alcance
+
+La carpeta contiene documentación y marca, pero no aplicación ni repositorio Git. El público principal es la empresa/inversionista extranjero que busca representación en Perú. Los titulares de proyectos peruanos evalúan el respaldo institucional de la firma.
+
+Incluye base Astro + TypeScript + Tailwind CSS, portada completa responsive, movimiento CSS/GSAP selectivo, navegación por secciones y contacto exploratorio honesto. No incluye otras páginas completas, CMS, formulario con envío real, traducción inglesa, proveedores o infraestructura remota.
+
+Contenido separado de componentes; ES inicial e inglés futuro sin publicar rutas vacías. Conservar el PNG maestro V1.2 byte por byte. No inventar proyectos, métricas, personas, clientes, testimonios, experiencia ni contactos oficiales.
+
+## Configuración de trabajo
+
+- Ruta: delegada. Exploración preparatoria delegada porque requiere más de cuatro archivos; escritor delegado porque la implementación afecta múltiples archivos no triviales.
+- TDD: desactivado para esta entrega; fuente: respuesta explícita del usuario del 2026-10-17. Verificación ordinaria obligatoria.
+- Runner: `npm run check` (astro check) y `npm run build` (astro build); comprobación real de navegador con Playwright en P3.
+- RDD: disabled/unmanaged; `gentle-ai review mode status` devuelve off, decidido por default. No activar ni iniciar review nativo.
+- Git: no existe aún; inicializar en esta raíz y conservar su rama inicial, sin crear ni cambiar ramas adicionales. Commits Conventional Commits por unidad de trabajo.
+- Entorno: WSL Ubuntu 24.04, Node v24.16.0 en `/home/jony/.nvm/versions/node/v24.16.0/bin`; cargar PATH explícitamente.
+- Entrega: single-pr como estrategia de una entrega coherente; no se autoriza crear ningún PR. Presupuesto previsto: aproximadamente 1200 líneas de autor, excluyendo lockfile y activos generados. El tamaño es orientativo; no minificar ni omitir verificación para reducirlo.
+- Espejo Engram: PENDIENTE. No hay herramientas Engram disponibles. Topic previsto `odd/portada-powerful/tasks`, proyecto `powerful-web`; sincronizar documento completo y este localizador cuando esté disponible.
+
+## Tareas
+
+- [x] **P1 — Base técnica y contexto.** Inicializar aplicación y Git, configurar scripts reproducibles, registrar PRODUCT.md y preferencia code-first, preparar marca. El contrato visual pasa a P2 para cerrar primero la elección de composición. Ruta: delegada, múltiples archivos no triviales. Checks observados: instalación (287 paquetes, 0 vulnerabilidades reportadas), check 0 errores/avisos, build correcto con 0 páginas antes de implementación, PNG idéntico. Commit: esta unidad se registra a continuación; identidad pendiente de añadir al documento.
+- [ ] **P2 — Portada completa.** Registrar contrato de dirección elegido e implementar header/menú, hero, capacidades, sectores, proceso, firma y contacto/footer; fotografía de contexto con licencia y procedencia verificables; CSS/GSAP con movimiento reducido. Anclas funcionales sin páginas falsas ni recepción simulada. Ruta: delegada, componentes y estilos coordinados. Checks: tipos, build, interacción y contenido. Commit: pendiente.
+- [ ] **P3 — Verificación y entrega.** Revisar escritorio y móvil en navegador, corregir hallazgos materiales, documentar diseño real y mantenimiento; dejar preview abierto. Ruta: delegada para QA/diseño, padre integra. Checks: 320/390/768/1440 px, sin overflow, teclado/Escape, reduced motion, recursos y consola, integridad logo, build final y diff. Commit: pendiente.
+
+## Aceptación
+
+El visitante identifica representación empresarial en Perú y encuentra una acción clara en el primer viewport. Las secciones son legibles y distintivas, la portada es operable en móvil/teclado y la animación no impide leer. El contacto explica su alcance real mientras no existan canales oficiales ni backend. Ninguna ruta futura o selector EN promete contenido ausente.
+
+## Evidencia y progreso
+
+- Exploración: raíz solo contiene `Powerful/`; sin package.json, tests ni .git.
+- SHA256 master: `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`.
+- P1 verificado: Node24.16, Astro7.4, TypeScript6, Tailwind4.3; `npm run check` y `npm run build` correctos sobre scaffold (todavía sin páginas). El PNG copiado conserva SHA256 esperado. No se afirma prueba de interfaz.
+- Composición: opciones servidas localmente en puerto 62898; elección pendiente. Seed f939704b; método code-first confirmado.
+- Fallos conocidos: PATH inicial no cargaba Node; ruta NVM identificada y ejecutable verificado.
+- Decisiones externas pendientes para fases futuras: hosting, persistencia de consultas, correo, datos legales y canales oficiales.
+
+## Siguiente paso
+
+P2: recoger elección de composición, registrar contrato y construir la portada. Espejo Engram sigue pendiente por herramienta no disponible.

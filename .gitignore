@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+Powerful/
+output/
+.impeccable/config.local.json
+.impeccable/questions/
+.impeccable/review/
+.DS_Store
