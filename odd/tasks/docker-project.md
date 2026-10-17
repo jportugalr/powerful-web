@@ -19,8 +19,8 @@ Alcance: Dockerfile multi-stage, Compose para desarrollo y producción local, co
 
 ## Tareas
 
-- [x] **D1 — Configuración y builds.** Dockerfile multi-stage, Compose independiente para dev y producción local, Nginx estático sin SPA fallback, exclusiones seguras del contexto e instrucciones reproducibles. Ruta delegada por el mapeo de 4+ archivos y escritor de 2+ archivos. Verificado: ambas configuraciones Compose; builds dev y producción; `npm run check` (0 errores/avisos/hints) y `npm run build` dentro del contenedor (0 páginas, scaffold vacío); `nginx -t` correcto; runtime en UID 101 sin Node; puertos ligados a loopback. Incluye `src/pages/.gitkeep` para establecer el directorio observado por Astro. Commit de D1 pendiente.
-- [ ] **D2 — Smoke real y cierre.** Comprobar acceso local, puertos solo loopback, copia de marca íntegra, 404 para rutas ausentes, edición visible sin rebuild y persistencia limpia; registrar limitaciones y comando para continuar portada en contenedor. Añadir smoke reutilizable si aporta una comprobación real, sin duplicar implementación. Ruta delegada/inline para comprobación. Commit pendiente.
+- [x] **D1 — Configuración y builds.** Dockerfile multi-stage, Compose independiente para dev y producción local, Nginx estático sin SPA fallback, exclusiones seguras del contexto e instrucciones reproducibles. Ruta delegada por el mapeo de 4+ archivos y escritor de 2+ archivos. Verificado: ambas configuraciones Compose; builds dev y producción; `npm run check` (0 errores/avisos/hints) y `npm run build` dentro del contenedor (0 páginas, scaffold vacío); `nginx -t` correcto; runtime en UID 101 sin Node; puertos ligados a loopback. Incluye `src/pages/.gitkeep` para establecer el directorio observado por Astro. Commit `cd88e9d` (`feat: add local Docker workflows for POWERFUL`).
+- [x] **D2 — Smoke real y cierre.** Smoke reproducible en `scripts/verify-docker.sh`, documentado en README. Ruta delegada por escritor de 2 archivos (script y guía). Verificado: `bash -n`, script completo con servicios activos, caso sin servicios con error claro y sin mutación; creación/edición de ruta temporal entrega HTML actualizado sin rebuild ni cambio del ID del contenedor, y luego limpieza; logo igual en dev/producción; estado HTTP, puertos, UID y ausencia de Node correctos. Commit D2 pendiente.
 
 ## Aceptación
 
@@ -33,4 +33,4 @@ Alcance: Dockerfile multi-stage, Compose para desarrollo y producción local, co
 - Evidencia HTTP: dev `@vite/client` 200; producción `/healthz` 200, `/` y ruta desconocida 404; logo servido con SHA256 maestro `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`.
 - Recarga observada con página temporal en `src/pages/`: crear y editar actualizaron el HTML sin cambiar el ID del contenedor. Se eliminó el archivo de prueba; `src/pages/.gitkeep` permanece.
 - Portada continúa pendiente de elección visual; esta petición no autoriza elegirla por el usuario.
-- D1 completo, a la espera de commit. Siguiente: revisión del diff y commit D1; cerrar D2 con comprobación final de estado/limpieza local. Espejo Engram pendiente.
+- D1 y D2 completos. D1 commit `cd88e9d`; identidad del commit D2 se añadirá al registro de cierre tras crearlo. Ambos servicios quedan disponibles localmente. Espejo Engram pendiente.

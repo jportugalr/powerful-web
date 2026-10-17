@@ -42,6 +42,14 @@ docker compose -f compose.production.yaml ps
 
 Disponible en `http://127.0.0.1:8088` (`WEB_PORT` configurable), con `/healthz` para comprobar el servidor. Esta configuración es independiente de `compose.yaml`: no combinarlos con `-f`. Los proyectos Compose `powerful-web-dev` y `powerful-web-production` mantienen redes y servicios separados. La imagen final ejecuta Nginx sin root y contiene únicamente el sitio compilado; no incorpora Node, dependencias de desarrollo ni el expediente interno. Las rutas inexistentes devuelven 404, sin fallback de aplicación SPA. Solo los recursos compilados bajo `/_astro/` usan caché inmutable; el logo conserva su URL actualizable.
 
+Con ambos servicios arriba, repetir el smoke desde Bash/WSL (requiere `curl` y `sha256sum`):
+
+```sh
+bash scripts/verify-docker.sh
+```
+
+Comprueba Compose, acceso HTTP, 404, integridad del logo, puertos locales y runtime sin root ni Node. Usa los puertos publicados reales, incluidos los personalizados. No altera fuentes ni inicia o detiene servicios; devuelve error si alguno no está arriba.
+
 ```sh
 docker compose -f compose.production.yaml down
 ```
