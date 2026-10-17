@@ -37,9 +37,22 @@ expect_status() {
     printf 'OK HTTP %s %s\n' "$actual" "$url"
 }
 
+expect_custom_404() {
+    local url="$1" response status body
+    response="$(curl --silent --show-error --connect-timeout 5 --max-time 10 \
+        --write-out '\n%{http_code}' "$url")" || fail "Sin respuesta HTTP: $url"
+    status="${response##*$'\n'}"
+    body="${response%$'\n'*}"
+    [[ "$status" == 404 ]] || fail "$url devolvió $status; se esperaba 404."
+    [[ "$body" == *'404 / NO ENCONTRADO'* ]] \
+        || fail "$url no contiene la página 404 de POWERFUL."
+    printf 'OK página 404 de POWERFUL y HTTP 404 %s\n' "$url"
+}
+
 expect_status 200 "http://$dev_endpoint/@vite/client"
 expect_status 200 "http://$web_endpoint/healthz"
-expect_status 404 "http://$web_endpoint/__docker_smoke_missing_7c1d9a__/"
+expect_status 200 "http://$web_endpoint/404.html"
+expect_custom_404 "http://$web_endpoint/__docker_smoke_missing_7c1d9a__/"
 
 local_hash="$(sha256sum public/brand/powerful-master.png)"
 local_hash="${local_hash%% *}"

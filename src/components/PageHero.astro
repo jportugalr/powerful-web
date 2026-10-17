@@ -1,11 +1,13 @@
 ---
 import type { SubpageHeroEs } from '../content/es';
+import Icon from './Icon.astro';
 
 interface Props {
   content: SubpageHeroEs;
+  action?: { label: string; href: string };
 }
 
-const { content } = Astro.props;
+const { content, action } = Astro.props;
 ---
 
 <section class="page-hero sub">
@@ -14,10 +16,18 @@ const { content } = Astro.props;
       <p class="overline">{content.eyebrow}</p>
       <h1>{content.heading.lead}{' '}<em>{content.heading.emphasis}</em></h1>
       <p class="lede">{content.lede}</p>
+      {action && (
+        <a class="btn btn-gold" href={action.href}>
+          <span>{action.label}</span>
+          <Icon name="arrow-right" />
+        </a>
+      )}
     </div>
-    <div class="page-hero-no" aria-hidden="true">
-      <span>POWERFUL / PERÚ</span>
-      <b>{content.pageNumber}</b>
-    </div>
+    {content.pageNumber && (
+      <div class="page-hero-no" aria-hidden="true">
+        <span>POWERFUL / PERÚ</span>
+        <b>{content.pageNumber}</b>
+      </div>
+    )}
   </div>
 </section>

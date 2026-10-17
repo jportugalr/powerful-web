@@ -1,0 +1,127 @@
+---
+import type { ContactFormEs } from '../content/es';
+import Icon from './Icon.astro';
+
+interface Props {
+  content: ContactFormEs;
+}
+
+const { content } = Astro.props;
+---
+
+<div class="form-shell">
+  <div class="form-shell-head">
+    <p class="overline">{content.eyebrow}</p>
+    <span>{content.code}</span>
+  </div>
+
+  <form id="contact-form" novalidate>
+    <div class="form-field">
+      <label for="tipo">{content.labels.reason} <span>{content.privacy.requiredMark}</span></label>
+      <select id="tipo" name="tipo" required>
+        <option value="">{content.placeholders.reason}</option>
+        {content.options.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+      <small class="field-error" data-error-for="tipo"></small>
+    </div>
+
+    <div class="form-two">
+      <div class="form-field">
+        <label for="nombre">{content.labels.name} <span>{content.privacy.requiredMark}</span></label>
+        <input
+          id="nombre"
+          type="text"
+          name="nombre"
+          autocomplete="name"
+          maxlength={content.limits.nameMax}
+          placeholder={content.placeholders.name}
+          required
+        />
+        <small class="field-error" data-error-for="nombre"></small>
+      </div>
+      <div class="form-field">
+        <label for="empresa">{content.labels.company}</label>
+        <input
+          id="empresa"
+          type="text"
+          name="empresa"
+          autocomplete="organization"
+          maxlength={content.limits.companyMax}
+          placeholder={content.placeholders.company}
+        />
+      </div>
+    </div>
+
+    <div class="form-two">
+      <div class="form-field">
+        <label for="email">{content.labels.email} <span>{content.privacy.requiredMark}</span></label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          maxlength={content.limits.emailMax}
+          placeholder={content.placeholders.email}
+          required
+        />
+        <small class="field-error" data-error-for="email"></small>
+      </div>
+      <div class="form-field">
+        <label for="pais">{content.labels.country}</label>
+        <input
+          id="pais"
+          name="pais"
+          type="text"
+          autocomplete="country-name"
+          maxlength={content.limits.countryMax}
+          placeholder={content.placeholders.country}
+        />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="mensaje">{content.labels.message} <span>{content.privacy.requiredMark}</span></label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        maxlength={content.limits.messageMax}
+        rows="5"
+        placeholder={content.placeholders.message}
+        required
+      ></textarea>
+      <div class="field-bottom">
+        <small class="field-error" data-error-for="mensaje"></small>
+        <span id="message-count">0 / {content.limits.messageMax}</span>
+      </div>
+    </div>
+
+    <div class="form-field honey" aria-hidden="true">
+      <label for="weburl">{content.labels.website}</label>
+      <input id="weburl" type="text" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <label class="check-row">
+      <input type="checkbox" id="privacy" name="privacy" required />
+      <span>
+        {content.privacy.prefix}<a href="/privacidad.html" target="_blank" rel="noopener">{content.privacy.linkLabel}</a>{content.privacy.suffix}
+        <b>{content.privacy.requiredMark}</b>
+      </span>
+    </label>
+    <small class="field-error" data-error-for="privacy"></small>
+
+    <button class="btn btn-dark submit-btn" type="submit" data-demo-submit disabled>
+      <span>{content.submitLabel}</span>
+      <Icon name="arrow-right" />
+    </button>
+
+    <div id="form-result" role="status" aria-live="polite" hidden>
+      <strong>{content.result.title}</strong>
+      <p>{content.result.description}</p>
+    </div>
+    <p class="form-fine">{content.finePrint}</p>
+  </form>
+</div>
+
+<script>
+  import '../scripts/contact-form';
+</script>

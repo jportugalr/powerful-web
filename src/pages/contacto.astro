@@ -1,0 +1,36 @@
+---
+import ContactForm from '../components/ContactForm.astro';
+import PageHero from '../components/PageHero.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactPageEs } from '../content/es';
+
+const page = contactPageEs;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} />
+
+  <section class="section contact-section">
+    <div class="container contact-layout">
+      <aside class="contact-aside">
+        <p class="overline gold">{page.aside.eyebrow}</p>
+        <h2>{page.aside.heading.lead}{' '}<em>{page.aside.heading.emphasis}</em></h2>
+        <p>{page.aside.description}</p>
+        {
+          page.aside.steps.map((step) => (
+            <div class="contact-aside-line">
+              <span>{step.number}</span>
+              <p>{step.description}</p>
+            </div>
+          ))
+        }
+        <div class="prototype-warning">
+          <strong>{page.aside.warning.heading}</strong>
+          <p>{page.aside.warning.description}</p>
+        </div>
+      </aside>
+
+      <ContactForm content={page.form} />
+    </div>
+  </section>
+</SiteLayout>

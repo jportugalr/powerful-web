@@ -39,3 +39,6 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
 @media(max-width:420px){.detail-row{grid-template-columns:minmax(0,1fr) 44px;gap:6px}.detail-row>*{min-width:0}.detail-index{font-size:10px;letter-spacing:.07em;overflow-wrap:anywhere}.detail-icon{width:44px;height:44px}}
 
 .mobile-toggle .menu-close-icon{display:none}.mobile-toggle[aria-expanded=true] .menu-open-icon{display:none}.mobile-toggle[aria-expanded=true] .menu-close-icon{display:block}
+
+.submit-btn:disabled,
+.submit-btn:disabled:hover{opacity:.55;cursor:not-allowed;transform:none}

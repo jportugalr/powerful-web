@@ -27,8 +27,10 @@ Se conservan los puntos de quiebre originales de `web/assets/styles.css`: 1190, 
 
 El menú móvil usa un botón con `aria-expanded` y `aria-controls`; Escape lo cierra y devuelve el foco al botón, seleccionar un enlace o hacer clic fuera lo cierra, y el cambio al viewport de escritorio limpia el estado. Sin JavaScript, el menú permanece visible en móvil y el botón no aparece. El año del footer se actualiza en el cliente.
 
-El prototipo no tiene entradas animadas, parallax ni animación de scroll. No se añade GSAP ni una segunda capa de movimiento. Los filtros de Sectores y la validación demostrativa de Contacto pertenecen a las tareas que portarán esas páginas.
+El prototipo no tiene entradas animadas, parallax ni animación de scroll. No se añade GSAP ni una segunda capa de movimiento. El filtro de Sectores y la validación de Contacto son mejoras progresivas cargadas solo en sus páginas. Contacto acepta `tipo` únicamente para las opciones conocidas y muestra una validación local de demostración; no transmite ni almacena datos. Si JavaScript no está disponible, el control de prueba permanece deshabilitado y el formulario no puede enviarse por GET.
+
+Privacidad y Condiciones conservan sus avisos de borrador y no deben tratarse como documentos legales aprobados.
 
 ## Rutas y preview
 
-Astro usa `build.format: 'preserve'`: la portada `src/pages/index.astro` se publica en `/` y páginas como `src/pages/nosotros.astro` conservan `/nosotros.html`. El layout mantiene `noindex,nofollow` para el preview; esa política no se retira sin aprobación de publicación.
+Astro usa `build.format: 'preserve'`: la portada `src/pages/index.astro` se publica en `/` y las páginas de contenido conservan sus rutas `.html`, incluidas `/nosotros.html`, `/contacto.html` y `/terminos.html`. `src/pages/404.astro` compila a `dist/404.html`; Nginx sirve ese documento como cuerpo de una ruta desconocida sin cambiar su estado HTTP 404. El layout mantiene `noindex,nofollow` para el preview; esa política no se retira sin aprobación de publicación.

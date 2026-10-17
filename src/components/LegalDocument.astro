@@ -1,0 +1,21 @@
+---
+import type { LegalPageEs } from '../content/es';
+
+interface Props {
+  content: LegalPageEs;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section legal-section">
+  <div class="container prose">
+    <div class="legal-alert">{content.alert}</div>
+    {content.sections.map((section) => (
+      <>
+        <h2>{section.heading}</h2>
+        <p>{section.paragraph}</p>
+      </>
+    ))}
+  </div>
+</section>

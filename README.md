@@ -13,7 +13,7 @@ docker compose up -d --build
 docker compose logs -f dev
 ```
 
-Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. PWP-1 sirve la portada en `/`; las páginas interiores y legales se incorporan en las siguientes unidades. `build.format: preserve` mantiene las rutas del prototipo como `/nosotros.html` y `/contacto.html`. El logo de cabecera está disponible en `/brand/wordmark-header.png`.
+Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. Las nueve rutas del prototipo están portadas: `/`, `/nosotros.html`, `/servicios.html`, `/sectores.html`, `/como-trabajamos.html`, `/contacto.html`, `/privacidad.html`, `/terminos.html` y `/404.html`. `build.format: preserve` conserva las rutas `.html`; Nginx usa el 404 de Astro como cuerpo de las rutas desconocidas y mantiene el estado HTTP 404. El logo de cabecera está disponible en `/brand/wordmark-header.png`.
 
 `src/`, `public/` y las configuraciones Astro/TypeScript se montan desde el host en modo lectura para el contenedor; las ediciones del host activan la recarga de Astro. `node_modules` queda dentro de la imagen Linux, sin mezclar dependencias del host ni volúmenes persistentes. Al modificar `package.json` o `package-lock.json`, reconstruir con `docker compose up -d --build` para instalar la versión del lock. No editar dependencias dentro del contenedor.
 
@@ -48,7 +48,7 @@ Con ambos servicios arriba, repetir el smoke desde Bash/WSL (requiere `curl` y `
 bash scripts/verify-docker.sh
 ```
 
-Comprueba Compose, acceso HTTP, 404, integridad del logo, puertos locales y runtime sin root ni Node. Usa los puertos publicados reales, incluidos los personalizados. No altera fuentes ni inicia o detiene servicios; devuelve error si alguno no está arriba.
+Comprueba Compose, acceso HTTP, página propia con estado 404, integridad del logo, puertos locales y runtime sin root ni Node. Usa los puertos publicados reales, incluidos los personalizados. No altera fuentes ni inicia o detiene servicios; devuelve error si alguno no está arriba.
 
 ```sh
 docker compose -f compose.production.yaml down
@@ -60,6 +60,6 @@ TDD estricto desactivado por decisión explícita del usuario; se realizan chequ
 
 ## Alcance y marca
 
-El sitio aún no recibe consultas ni conecta proveedores de correo o almacenamiento. No hay despliegue autorizado. El expediente original está en `Powerful/` y queda fuera de Git; no se altera ni se sustituye. `public/brand/powerful-master.png` es la copia exacta del maestro V1.2 aprobado (SHA256 `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`).
+El formulario de Contacto solo valida y presenta un borrador dentro del navegador: no transmite ni almacena consultas. Privacidad y Condiciones son borradores sin aprobación legal; todas las páginas conservan `noindex,nofollow`. No hay despliegue autorizado. El expediente original está en `Powerful/` y queda fuera de Git; no se altera ni se sustituye. `public/brand/powerful-master.png` es la copia exacta del maestro V1.2 aprobado (SHA256 `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`).
 
 `PRODUCT.md` recoge los hechos confirmados; `odd/tasks/portada-powerful.md` registra alcance, tareas, comprobaciones y pendientes. Hosting, contacto corporativo, datos legales y pruebas de trayectoria siguen pendientes de confirmación.

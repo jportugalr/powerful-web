@@ -1,0 +1,11 @@
+---
+import PageHero from '../components/PageHero.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { notFoundPageEs } from '../content/es';
+
+const page = notFoundPageEs;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} action={page.action} />
+</SiteLayout>

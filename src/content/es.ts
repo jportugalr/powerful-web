@@ -286,7 +286,7 @@ export interface SubpageHeroEs {
   eyebrow: string;
   heading: TextHeadingEs;
   lede: string;
-  pageNumber: string;
+  pageNumber?: string;
 }
 
 export interface MiniCtaEs {
@@ -724,3 +724,258 @@ export const businessPagesEs = {
     },
   },
 } as const satisfies BusinessPagesEs;
+
+export type ContactReasonEs =
+  | 'inversionista'
+  | 'proyecto'
+  | 'representacion'
+  | 'alianza'
+  | 'otro';
+
+export interface ContactPageEs {
+  metadata: PageMetadataEs;
+  hero: SubpageHeroEs;
+  aside: {
+    eyebrow: string;
+    heading: TextHeadingEs;
+    description: string;
+    steps: { number: string; description: string }[];
+    warning: { heading: string; description: string };
+  };
+  form: ContactFormEs;
+}
+
+export interface ContactFormEs {
+  eyebrow: string;
+  code: string;
+  labels: {
+    reason: string;
+    name: string;
+    company: string;
+    email: string;
+    country: string;
+    message: string;
+    website: string;
+  };
+  placeholders: {
+    reason: string;
+    name: string;
+    company: string;
+    email: string;
+    country: string;
+    message: string;
+  };
+  options: { value: ContactReasonEs; label: string }[];
+  limits: {
+    nameMin: number;
+    nameMax: number;
+    companyMax: number;
+    emailMax: number;
+    countryMax: number;
+    messageMin: number;
+    messageMax: number;
+  };
+  privacy: { prefix: string; linkLabel: string; suffix: string; requiredMark: string };
+  submitLabel: string;
+  finePrint: string;
+  errors: {
+    reason: string;
+    name: string;
+    email: string;
+    message: string;
+    privacy: string;
+  };
+  result: { title: string; description: string };
+}
+
+export interface LegalPageEs {
+  metadata: PageMetadataEs;
+  hero: SubpageHeroEs;
+  alert: string;
+  sections: { heading: string; paragraph: string }[];
+}
+
+export interface LegalPagesEs {
+  privacidad: LegalPageEs;
+  terminos: LegalPageEs;
+}
+
+export interface NotFoundPageEs {
+  metadata: PageMetadataEs;
+  hero: SubpageHeroEs;
+  action: { label: string; href: string };
+}
+
+export const contactPageEs = {
+  metadata: {
+    title: 'Contacto | POWERFUL',
+    description: 'Comunícate con POWERFUL acerca de inversiones, proyectos o representación',
+  },
+  hero: {
+    eyebrow: 'INICIEMOS UNA CONVERSACIÓN',
+    heading: {
+      lead: 'Un buen negocio comienza',
+      emphasis: 'por entendernos.',
+    },
+    lede:
+      'Si representas a un inversionista, empresa o proyecto en Perú, comparte brevemente el motivo de tu consulta.',
+    pageNumber: '06',
+  },
+  aside: {
+    eyebrow: 'CONTACTO CORPORATIVO',
+    heading: { lead: 'Cuéntanos tu', emphasis: 'objetivo.' },
+    description:
+      'Este formulario está orientado a relaciones empresariales. No envíes contratos, contraseñas, documentos personales ni información financiera confidencial en una primera consulta.',
+    steps: [
+      { number: '01 /', description: 'Selecciona el tipo de relación que buscas.' },
+      { number: '02 /', description: 'Describe tu iniciativa de manera general.' },
+      {
+        number: '03 /',
+        description:
+          'Un responsable comercial evaluará los siguientes pasos cuando el canal esté habilitado.',
+      },
+    ],
+    warning: {
+      heading: 'Modo demostración',
+      description:
+        'Este prototipo no envía correos ni registra datos en un servidor. Su objetivo es validar la experiencia.',
+    },
+  },
+  form: {
+    eyebrow: 'FORMULARIO DE CONTACTO',
+    code: 'POWERFUL / PE',
+    labels: {
+      reason: '¿Cuál es el motivo de tu consulta?',
+      name: 'Nombre completo',
+      company: 'Empresa o entidad',
+      email: 'Correo electrónico',
+      country: 'País',
+      message: 'Cuéntanos brevemente tu iniciativa',
+      website: 'Sitio web',
+    },
+    placeholders: {
+      reason: 'Selecciona una opción',
+      name: 'Tu nombre',
+      company: 'Opcional',
+      email: 'correo@empresa.com',
+      country: 'País de contacto',
+      message: '¿Qué proyecto, representación o relación empresarial deseas explorar?',
+    },
+    options: [
+      { value: 'inversionista', label: 'Represento capital o inversionistas' },
+      { value: 'proyecto', label: 'Tengo un proyecto en Perú' },
+      { value: 'representacion', label: 'Busco representación empresarial' },
+      { value: 'alianza', label: 'Propongo una alianza comercial' },
+      { value: 'otro', label: 'Otra consulta' },
+    ],
+    limits: {
+      nameMin: 2,
+      nameMax: 120,
+      companyMax: 160,
+      emailMax: 254,
+      countryMax: 80,
+      messageMin: 15,
+      messageMax: 2000,
+    },
+    privacy: {
+      prefix: 'He leído el ',
+      linkLabel: 'aviso de privacidad (borrador)',
+      suffix:
+        ' y entiendo que este formulario es una demostración sin envío real.',
+      requiredMark: '*',
+    },
+    submitLabel: 'Probar el envío',
+    finePrint:
+      '* Campos obligatorios. No se garantiza financiación ni aceptación de operaciones mediante el formulario.',
+    errors: {
+      reason: 'Selecciona una opción.',
+      name: 'Ingresa tu nombre completo (2 a 120 caracteres).',
+      email: 'Ingresa un correo válido.',
+      message: 'Describe tu consulta con al menos 15 caracteres.',
+      privacy: 'Marca la casilla para probar el flujo.',
+    },
+    result: {
+      title: 'Validación completada — demostración.',
+      description:
+        'El formulario pasó las comprobaciones de interfaz, pero NO se envió información. El envío real se habilitará al conectar el backend de Laravel y aprobar privacidad y destinatarios.',
+    },
+  },
+} as const satisfies ContactPageEs;
+
+export const legalPagesEs = {
+  privacidad: {
+    metadata: {
+      title: 'Privacidad | POWERFUL',
+      description: 'Información preliminar sobre tratamiento de datos',
+    },
+    hero: {
+      eyebrow: 'DOCUMENTACIÓN PRELIMINAR',
+      heading: { lead: 'Aviso de', emphasis: 'privacidad.' },
+      lede:
+        'Texto de trabajo pendiente de validación legal y de los datos registrales y operativos de POWERFUL. No utilizar como política de privacidad definitiva.',
+      pageNumber: '07',
+    },
+    alert: 'BORRADOR NO PUBLICABLE EN PRODUCCIÓN SIN REVISIÓN LEGAL.',
+    sections: [
+      {
+        heading: 'Tratamiento de datos',
+        paragraph:
+          'La versión de producción deberá identificar al responsable del tratamiento, sus canales oficiales, las finalidades de contacto comercial, posibles proveedores de correo/alojamiento, períodos de conservación, mecanismos para ejercer derechos y la información exigida por la normativa peruana aplicable.',
+      },
+      {
+        heading: 'Prototipo sin almacenamiento',
+        paragraph:
+          'El formulario de esta demostración realiza comprobaciones dentro del navegador, pero no transmite ni conserva la información en un backend de POWERFUL. Evita introducir información sensible real al probarlo.',
+      },
+      {
+        heading: 'Pendientes de aprobación',
+        paragraph:
+          'Razón social y RUC; correo para derechos; finalidades y base jurídica; proveedores y transferencias; conservación; seguridad; texto legal definitivo revisado y aprobado.',
+      },
+    ],
+  },
+  terminos: {
+    metadata: {
+      title: 'Condiciones | POWERFUL',
+      description: 'Condiciones preliminares de uso',
+    },
+    hero: {
+      eyebrow: 'INFORMACIÓN INSTITUCIONAL',
+      heading: { lead: 'Condiciones de', emphasis: 'uso.' },
+      lede:
+        'Borrador de estructura: no sustituye asesoría legal ni implica que exista una oferta pública de inversión.',
+      pageNumber: '08',
+    },
+    alert: 'DOCUMENTO EDITORIAL PRELIMINAR — NO APROBADO PARA PUBLICACIÓN.',
+    sections: [
+      {
+        heading: 'Finalidad informativa',
+        paragraph:
+          'La web de POWERFUL presenta el ámbito de actuación, servicios y vías de contacto de la empresa. La información no supone asesoría financiera individual, invitación pública a comprar valores, garantía de fondos ni compromiso contractual.',
+      },
+      {
+        heading: 'Relaciones empresariales',
+        paragraph:
+          'Todo negocio, mandato o participación se evalúa individualmente y requiere los acuerdos que correspondan. El contacto inicial no constituye aceptación de proyectos ni promesa de inversión.',
+      },
+      {
+        heading: 'Contenido y derechos',
+        paragraph:
+          'El titular del sitio deberá confirmar la propiedad, licencias y autorizaciones de imágenes, marca, textos y demás materiales antes de su publicación.',
+      },
+    ],
+  },
+} as const satisfies LegalPagesEs;
+
+export const notFoundPageEs = {
+  metadata: {
+    title: 'Página no encontrada | POWERFUL',
+    description: 'No pudimos encontrar esta página',
+  },
+  hero: {
+    eyebrow: '404 / NO ENCONTRADO',
+    heading: { lead: 'Esta página no está', emphasis: 'disponible.' },
+    lede: 'Vuelve al inicio o explora nuestros servicios.',
+  },
+  action: { label: 'Volver al inicio', href: '/' },
+} as const satisfies NotFoundPageEs;

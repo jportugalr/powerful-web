@@ -1,0 +1,13 @@
+---
+import LegalDocument from '../components/LegalDocument.astro';
+import PageHero from '../components/PageHero.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { legalPagesEs } from '../content/es';
+
+const page = legalPagesEs.privacidad;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+  <PageHero content={page.hero} />
+  <LegalDocument content={page} />
+</SiteLayout>
