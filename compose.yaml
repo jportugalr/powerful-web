@@ -1,0 +1,27 @@
+name: powerful-web-dev
+
+services:
+  dev:
+    build:
+      context: .
+      target: development
+    init: true
+    ports:
+      - "127.0.0.1:${DEV_PORT:-4322}:4321"
+    volumes:
+      - type: bind
+        source: ./src
+        target: /app/src
+        read_only: true
+      - type: bind
+        source: ./public
+        target: /app/public
+        read_only: true
+      - type: bind
+        source: ./astro.config.mjs
+        target: /app/astro.config.mjs
+        read_only: true
+      - type: bind
+        source: ./tsconfig.json
+        target: /app/tsconfig.json
+        read_only: true

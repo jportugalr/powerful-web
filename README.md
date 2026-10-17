@@ -2,28 +2,51 @@
 
 Portada en Astro y TypeScript para la representación empresarial en Perú. Lanzamiento en español, con contenido mantenido en el proyecto y preparado para traducción futura. Sin CMS.
 
-## Desarrollo local
+## Desarrollo con Docker
 
-Requiere Node.js >= 22.22 y npm >= 9.6.5. Entorno verificado: WSL Ubuntu 24.04 con Node 24.16.0.
+Requiere Docker Engine o Docker Desktop con Compose v2. No necesita Node ni npm en el host: la imagen usa Node 24 y ejecuta `npm ci` con el lockfile del proyecto.
 
-```sh
-npm ci
-npm run dev
-```
-
-La aplicación escucha en `http://localhost:4321`. Dentro del WSL de este proyecto, si Node no está en PATH:
+Desde la raíz del proyecto:
 
 ```sh
-export PATH=/home/jony/.nvm/versions/node/v24.16.0/bin:$PATH
+docker compose up -d --build
+docker compose logs -f dev
 ```
 
-## Verificación
+Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. El scaffold todavía no tiene páginas: `/` devuelve 404 hasta implementar la portada. El logo está disponible en `/brand/powerful-master.png`.
+
+`src/`, `public/` y las configuraciones Astro/TypeScript se montan desde el host en modo lectura para el contenedor; las ediciones del host activan la recarga de Astro. `node_modules` queda dentro de la imagen Linux, sin mezclar dependencias del host ni volúmenes persistentes. Al modificar `package.json` o `package-lock.json`, reconstruir con `docker compose up -d --build` para instalar la versión del lock. No editar dependencias dentro del contenedor.
+
+Para detener exclusivamente estos servicios:
 
 ```sh
-npm run check
-npm run build
-npm run preview
+docker compose down
 ```
+
+En este checkout WSL, ejecutar desde una shell con acceso al daemon local. Si la integración WSL de Docker Desktop no está habilitada, se puede usar Docker CLI de Windows desde la ruta del proyecto; los bind mounts requieren que Docker Desktop pueda acceder a ella.
+
+## Verificación en contenedor
+
+```sh
+docker compose exec -T dev npm run check
+docker compose exec -T dev npm run build
+```
+
+El build de desarrollo queda dentro del contenedor. Para comprobar el artefacto estático final con Nginx:
+
+```sh
+docker compose -f compose.production.yaml up -d --build
+docker compose -f compose.production.yaml exec -T web nginx -t
+docker compose -f compose.production.yaml ps
+```
+
+Disponible en `http://127.0.0.1:8088` (`WEB_PORT` configurable), con `/healthz` para comprobar el servidor. Esta configuración es independiente de `compose.yaml`: no combinarlos con `-f`. Los proyectos Compose `powerful-web-dev` y `powerful-web-production` mantienen redes y servicios separados. La imagen final ejecuta Nginx sin root y contiene únicamente el sitio compilado; no incorpora Node, dependencias de desarrollo ni el expediente interno. Las rutas inexistentes devuelven 404, sin fallback de aplicación SPA. Solo los recursos compilados bajo `/_astro/` usan caché inmutable; el logo conserva su URL actualizable.
+
+```sh
+docker compose -f compose.production.yaml down
+```
+
+Estos comandos preparan una ejecución local; no publican el sitio. Si se prefiere trabajar fuera de Docker, los scripts `npm ci`, `npm run dev`, `npm run check` y `npm run build` siguen disponibles con Node >= 22.22.
 
 TDD estricto desactivado por decisión explícita del usuario; se realizan chequeos funcionales y revisión real de navegador. El modo de review nativo está disabled/unmanaged.
 
