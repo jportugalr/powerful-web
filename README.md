@@ -1,6 +1,6 @@
 # POWERFUL — web corporativa
 
-Portada en Astro y TypeScript para la representación empresarial en Perú. Lanzamiento en español, con contenido mantenido en el proyecto y preparado para traducción futura. Sin CMS.
+Sitio corporativo en Astro y TypeScript para la representación empresarial en Perú. El prototipo estático aprobado en `web/` es la referencia visual y de contenido. Sin CMS; español de lanzamiento, preparado para traducción futura.
 
 ## Desarrollo con Docker
 
@@ -13,7 +13,7 @@ docker compose up -d --build
 docker compose logs -f dev
 ```
 
-Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. El scaffold todavía no tiene páginas: `/` devuelve 404 hasta implementar la portada. El logo está disponible en `/brand/powerful-master.png`.
+Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. PWP-1 sirve la portada en `/`; las páginas interiores y legales se incorporan en las siguientes unidades. `build.format: preserve` mantiene las rutas del prototipo como `/nosotros.html` y `/contacto.html`. El logo de cabecera está disponible en `/brand/wordmark-header.png`.
 
 `src/`, `public/` y las configuraciones Astro/TypeScript se montan desde el host en modo lectura para el contenedor; las ediciones del host activan la recarga de Astro. `node_modules` queda dentro de la imagen Linux, sin mezclar dependencias del host ni volúmenes persistentes. Al modificar `package.json` o `package-lock.json`, reconstruir con `docker compose up -d --build` para instalar la versión del lock. No editar dependencias dentro del contenedor.
 

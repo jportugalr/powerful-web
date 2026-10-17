@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+import type { HomePageEs } from '../content/es';
+
+interface Props {
+  card: HomePageEs['servicesPreview']['cards'][number];
+  actionLabel: string;
+}
+
+const { card, actionLabel } = Astro.props;
+---
+
+<article class="service-card reveal">
+  <div class="service-head">
+    <span>{card.number}</span>
+    <Icon name={card.icon} />
+  </div>
+  <h3>{card.title}</h3>
+  <p>{card.description}</p>
+  <a class="text-link" href={card.href}>
+    {actionLabel} <Icon name="arrow-right" />
+  </a>
+</article>

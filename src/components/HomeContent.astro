@@ -1,0 +1,204 @@
+---
+import Icon from './Icon.astro';
+import ServicePreviewCard from './ServicePreviewCard.astro';
+import { homePageEs } from '../content/es';
+
+const {
+  hero,
+  intro,
+  servicesPreview,
+  sectorHighlight,
+  principles,
+  processPreview,
+  miniCta,
+} = homePageEs;
+
+const artPointClasses = ['a', 'b', 'c', 'd'] as const;
+---
+
+<section class="hero home-hero">
+  <div class="hero-orbit" aria-hidden="true">
+    <div class="orbit orbit-a"></div>
+    <div class="orbit orbit-b"></div>
+    <div class="orbit orbit-c"></div>
+    <span class="orbit-node n1"></span>
+    <span class="orbit-node n2"></span>
+    <span class="orbit-node n3"></span>
+    <div class="orbit-land"></div>
+    <span class="orbit-caption">{hero.orbitCaption}</span>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="overline">
+        <span class="overline-line"></span>
+        {' '}
+        {hero.eyebrow}
+      </p>
+      <h1>
+        {hero.heading.lead}{' '}
+        <em>{hero.heading.emphasis}</em>
+        {' '}
+        {hero.heading.trailing}
+      </h1>
+      <p>{hero.description}</p>
+      <div class="hero-actions">
+        {
+          hero.actions.map((action) => (
+            <a
+              class:list={['btn', action.variant === 'gold' ? 'btn-gold' : 'btn-outline']}
+              href={action.href}
+            >
+              <span>{action.label}</span>
+              <Icon name="arrow-right" />
+            </a>
+          ))
+        }
+      </div>
+      <div class="hero-bottom">
+        {
+          hero.proofPoints.map((point, index) => (
+            <>
+              {index > 0 && <span class="hero-dot"></span>}
+              <span>{point}</span>
+            </>
+          ))
+        }
+      </div>
+    </div>
+    <div class="hero-side" aria-hidden="true">
+      <span>{hero.sideIndex}</span>
+      <div class="hero-vertical">{hero.sideCaption}</div>
+    </div>
+  </div>
+</section>
+
+<section class="intro-strip">
+  <div class="container intro-strip-inner">
+    <span class="section-index">{intro.index}</span>
+    <p>
+      {intro.lead}
+      {' '}
+      <strong>{intro.emphasis}</strong>
+    </p>
+    <Icon name="arrow-up-right" />
+  </div>
+</section>
+
+<section class="section services-preview">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="overline gold">{servicesPreview.eyebrow}</p>
+        <h2>
+          {servicesPreview.heading.lead}<br />
+          <em>{servicesPreview.heading.emphasis}</em>
+        </h2>
+      </div>
+      <p>{servicesPreview.description}</p>
+    </div>
+    <div class="service-grid">
+      {
+        servicesPreview.cards.map((card) => (
+          <ServicePreviewCard card={card} actionLabel={servicesPreview.cardAction} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section sector-highlight">
+  <div class="container">
+    <div class="sector-highlight-top">
+      <p class="overline gold">{sectorHighlight.eyebrow}</p>
+      <span>{sectorHighlight.context}</span>
+    </div>
+    <div class="sector-highlight-core">
+      <h2>
+        {sectorHighlight.heading.lead}<br />
+        {sectorHighlight.heading.secondLead} <em>{sectorHighlight.heading.emphasis}</em>
+      </h2>
+      <p>{sectorHighlight.description}</p>
+    </div>
+    <div class="sector-pill-row">
+      {
+        sectorHighlight.sectors.map((sector) => (
+          <a href={sector.href}>
+            {sector.label} <Icon name="arrow-up-right" />
+          </a>
+        ))
+      }
+    </div>
+    <a class="text-link gold-link" href={sectorHighlight.linkHref}>
+      {sectorHighlight.linkLabel} <Icon name="arrow-right" />
+    </a>
+  </div>
+</section>
+
+<section class="section principles">
+  <div class="container split-layout">
+    <div>
+      <p class="overline gold">{principles.eyebrow}</p>
+      <h2>
+        {principles.heading.lead}<br />
+        <em>{principles.heading.emphasis}</em>
+      </h2>
+      <p>{principles.description}</p>
+      <a class="btn btn-dark" href={principles.linkHref}>
+        <span>{principles.linkLabel}</span>
+        <Icon name="arrow-right" />
+      </a>
+    </div>
+    <div class="principle-art">
+      <div class="art-label">{principles.artLabel}</div>
+      <div class="art-rings"><i></i><i></i><i></i></div>
+      <div class="art-center">{principles.artCenter}</div>
+      {
+        principles.artPoints.map((point, index) => (
+          <span class:list={['art-point', artPointClasses[index]]}>{point}</span>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section process-preview">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="overline gold">{processPreview.eyebrow}</p>
+        <h2>
+          {processPreview.heading.lead}<br />
+          <em>{processPreview.heading.emphasis}</em>
+        </h2>
+      </div>
+      <p>{processPreview.description}</p>
+    </div>
+    <div class="process-line">
+      {
+        processPreview.steps.map((step) => (
+          <div>
+            <span>{step.number}</span>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="mini-cta section">
+  <div class="container">
+    <div class="mini-cta-box">
+      <div>
+        <p class="overline gold">{miniCta.eyebrow}</p>
+        <h2>{miniCta.heading}</h2>
+        <p>{miniCta.description}</p>
+      </div>
+      <a class="btn btn-gold" href={miniCta.actionHref}>
+        <span>{miniCta.actionLabel}</span>
+        <Icon name="arrow-right" />
+      </a>
+    </div>
+  </div>
+</section>

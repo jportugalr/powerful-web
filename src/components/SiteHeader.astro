@@ -1,0 +1,40 @@
+---
+import { siteNavigation } from '../content/es';
+import Icon from './Icon.astro';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const contactLink = '/contacto.html';
+---
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="POWERFUL, volver a inicio">
+      <img src="/brand/wordmark-header.png" width="2005" height="277" alt="POWERFUL" />
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      {siteNavigation.map((item) => {
+        const active = currentPath === item.href;
+        return <a class:list={['nav-link', { active }]} href={item.href} aria-current={active ? 'page' : undefined}>{item.label}</a>;
+      })}
+    </nav>
+    <div class="nav-side">
+      <span class="lang-tag" title="Sitio en español">ES <span aria-hidden="true">/ PE</span></span>
+      <a class="nav-contact" href={contactLink}>Conversemos <Icon name="arrow-up-right" /></a>
+      <button class="mobile-toggle" type="button" aria-label="Abrir menú" aria-controls="mobile-nav" aria-expanded="false">
+        <Icon name="menu" className="menu-open-icon" />
+        <Icon name="close" className="menu-close-icon" />
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil">
+    {siteNavigation.map((item) => {
+      const active = currentPath === item.href;
+      return <a class:list={['nav-link', { active }]} href={item.href} aria-current={active ? 'page' : undefined}>{item.label}</a>;
+    })}
+    <a class="mobile-highlight" href={contactLink}>Conversemos <Icon name="arrow-right" /></a>
+  </nav>
+</header>

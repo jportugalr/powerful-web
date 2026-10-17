@@ -1,0 +1,35 @@
+---
+import { footerSections } from '../content/es';
+import Icon from './Icon.astro';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-lead">
+      <div>
+        <p class="overline gold">EL SIGUIENTE PASO COMIENZA CON UNA CONVERSACIÓN</p>
+        <h2>Hablemos de lo que<br /><em>podemos construir.</em></h2>
+      </div>
+      <a class="btn btn-gold" href="/contacto.html"><span>Contactar a POWERFUL</span><Icon name="arrow-right" /></a>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-company">
+        <div class="footer-brand"><img src="/brand/wordmark-header.png" alt="POWERFUL" width="2005" height="277" /></div>
+        <p>Inversiones y Representación Empresarial</p>
+        <p class="footer-note">Oportunidades y relaciones de negocio con foco en Perú y vínculos con capital del exterior.</p>
+      </div>
+      {footerSections.map((section) => (
+        <div>
+          <span class="footer-heading">{section.heading}</span>
+          {section.links.map((link) => <a href={link.href}>{link.label}</a>)}
+          {section.heading === 'INFORMACIÓN' && <span class="footer-geography">PERÚ · RELACIONES INTERNACIONALES</span>}
+        </div>
+      ))}
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> POWERFUL. Prototipo corporativo para validación.</span>
+      <span>Versión demostrativa — Información sujeta a aprobación</span>
+      <a href="#top">Volver arriba ↑</a>
+    </div>
+  </div>
+</footer>
