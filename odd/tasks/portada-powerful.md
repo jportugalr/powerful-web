@@ -31,7 +31,7 @@ Contenido separado de componentes; ES inicial e inglés futuro sin publicar ruta
 
 ## Refinamiento autorizado — gráficos y movimiento (2026-10-17)
 
-- [ ] **P4 — Identidad gráfica y movimiento de Inicio.** El usuario solicita generar las imágenes necesarias, reducir la apariencia genérica y añadir parallax/entradas ligeras basadas en herramientas actuales investigadas online. Se conserva Atlas del Pacífico, marca aprobada, español y alcance Inicio primero/interiores después. Ruta delegada: mapeo de más de cuatro archivos, investigación oficial y escritor para página/estilos/script; la generación de imagen usa la herramienta Imagegen del padre. No se añaden dependencias si GSAP instalado resuelve el trabajo. TDD OFF por decisión de sesión; runners `npm run check`, `npm run build`, Playwright y smoke Docker. RDD disabled/unmanaged. Previsión adicional: aproximadamente 450–700 líneas de autor, activos generados excluidos; estrategia `single-pr` ya registrada, sin PR ni remoto. Checks: peso de assets y bundle antes/después, imagen local y procedencia, 320/390/768/1440 sin overflow, menú/teclado, reduced-motion, JS desactivado, entradas una vez, parallax acotado solo escritorio y scroll nativo, consola/recursos, logo intacto. Commit pendiente. Espejo Engram pendiente por herramienta no disponible.
+- [x] **P4 — Identidad gráfica y movimiento de Inicio.** El usuario solicita generar las imágenes necesarias, reducir la apariencia genérica y añadir parallax/entradas ligeras basadas en herramientas actuales investigadas online. Se conserva Atlas del Pacífico, marca aprobada, español y alcance Inicio primero/interiores después. Ruta delegada: mapeo de más de cuatro archivos, investigación oficial y escritor para página/estilos/script; la generación de imagen usa la herramienta Imagegen del padre. No se añaden dependencias si GSAP instalado resuelve el trabajo. TDD OFF por decisión de sesión; runners `npm run check`, `npm run build`, Playwright y smoke Docker. RDD disabled/unmanaged. Previsión adicional: aproximadamente 450–700 líneas de autor, activos generados excluidos; estrategia `single-pr` ya registrada, sin PR ni remoto. Checks: peso de assets y bundle antes/después, imagen local y procedencia, 320/390/768/1440 sin overflow, menú/teclado, reduced-motion, JS desactivado, entradas una vez, parallax acotado solo escritorio y scroll nativo, consola/recursos, logo intacto. Commit de trabajo `4078441` (`feat: enrich homepage imagery and scroll motion`). Espejo Engram pendiente por herramienta no disponible.
 
 ### Dirección y presupuesto de movimiento
 
@@ -44,6 +44,15 @@ Momento principal: la relación empresa exterior–POWERFUL–Perú se compone a
 ### Investigación actual
 
 GSAP 3.15 ya está instalado, pero la primera versión solo tiene una entrada inicial en `home.ts`; no usa ScrollTrigger. Se mantienen GSAP y su plugin ScrollTrigger tras contrastar documentación oficial, Motion JS (incluidas novedades 14.x de octubre 2026), CSS scroll-driven/triggered y Lenis. Motion sería una alternativa, pero duplicar motores no aporta a esta portada. CSS `animation-timeline` y `timeline-trigger` siguen con disponibilidad limitada según MDN. Referencias: https://gsap.com/docs/v3/Plugins/ScrollTrigger/ ; https://gsap.com/blog/3-15/ ; https://motion.dev/changelog ; https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-timeline .
+
+### Verificación observada de P4
+
+- Imagegen integrado generó una imagen editorial nueva; original preservado y hash comparado, prompt íntegro y procedencia en sidecars. WebP 1120×1400: 189.282 B; 640×800: 72.378 B. Caption conceptual visible; foto de Lima y PNG maestro preservados.
+- Astro check/build dentro de Docker: cero errores/avisos/hints, una ruta estática. Nginx syntax y smoke Docker pasan. HTTP con Accept-Encoding gzip: script 115.978 B raw, payload real 45.390 B, Content-Encoding gzip y Vary. Baseline 72.073 B raw sin compresión; ScrollTrigger añade 43.905 B raw (gzip calculado 28.004→44.994 B), sin nueva dependencia.
+- Playwright: 320/390/768/1440 sin overflow; imagen cargada. Desktop scroll 0/300/650: imagen y−20/−8,89/11,79 px, marco siempre cubierto. Mobile coarse no transforma. Reduced-motion revierte imagen, máscara y will-change. Sin JS: texto, imágenes, navegación y detalles disponibles; formulario usa explicación noscript.
+- Menú abre/cierra por Escape con foco, detalles y descarga borrador pasan. Sectores no repite la entrada al volver. Consola y recursos sin errores. Detector Impeccable `[]` en la única pasada; revisión visual independiente `ship`, sin defectos materiales. Capturas de la ronda en `output/playwright/p4-*`; sin FPS ni dispositivos físicos medidos.
+- DESIGN.md y brief actualizados y releídos tras la revisión. RDD sigue disabled/unmanaged; sin push ni remoto. Engram continúa pendiente por falta de herramienta.
+- Recuento en commits de trabajo observados, excluyendo lockfile, binarios y sidecars generados: `e5758af` 479, `65b84ad` 681, `f63d691` 6 y `4078441` 323; acumulado 1.489 líneas añadidas/eliminadas. El cierre documental se contabiliza en el próximo corte; se mantiene la estrategia `single-pr` ya elegida y el presupuesto como previsión, sin minificar ni dividir artificialmente.
 
 ## Aceptación original
 
@@ -65,4 +74,4 @@ El visitante identifica representación empresarial en Perú y encuentra una acc
 
 ## Siguiente paso
 
-Siguiente: sincronizar el documento completo en Engram cuando su herramienta esté disponible. Para continuar con las páginas interiores, definir primero sus contenidos verificables y canales oficiales; la versión inglesa requiere traducción revisada.
+P4 cerrado. Siguiente: sincronizar el documento completo en Engram cuando su herramienta esté disponible. Para continuar con las páginas interiores, definir primero sus contenidos verificables y canales oficiales; la versión inglesa requiere traducción revisada.
