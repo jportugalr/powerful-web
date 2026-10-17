@@ -4,11 +4,11 @@
   --color-navy: #14263d;
   --color-gold: #b79862;
   --color-ivory: #f4f1ea;
-  --font-sans: 'Manrope Variable', sans-serif;
+  --font-sans: 'Inter Variable', Inter, 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 :root {
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Inter Variable', Inter, 'Segoe UI', Arial, Helvetica, sans-serif;
   color: #14263d;
   background: #f4f1ea;
   font-synthesis: none;
@@ -97,7 +97,7 @@ h2 { font-size: clamp(35px, 3.2vw, 48px); font-weight: 500; line-height: 1.2; le
 .sectors-image-frame { overflow: hidden; background: #243346; aspect-ratio: 4 / 5; max-height: 660px; }
 .sectors-image { width: 100%; height: 100%; object-fit: cover; }
 .sectors-figure figcaption { margin-top: 12px; color: #b7c0c8; font-size: 10px; line-height: 1.6; }
-.sectors-intro h2 { font-family: 'Newsreader Variable', Georgia, serif; font-size: clamp(43px, 4.5vw, 65px); line-height: 1.05; letter-spacing: -.025em; font-weight: 400; }
+.sectors-intro h2 { font-family: var(--font-sans); font-size: clamp(43px, 4.5vw, 65px); line-height: 1.05; letter-spacing: -.025em; font-weight: 400; }
 .sectors-intro > p { color: #c8cfd4; line-height: 1.85; font-size: 14px; max-width: 400px; margin-top: 22px; }
 .sector-note { font-size: 11px; line-height: 1.8; margin-top: 22px; color: #b7c0c8; }
 .sector-list { border-top: 1px solid #4d5a69; margin-top: 31px; }
@@ -112,14 +112,14 @@ h2 { font-size: clamp(35px, 3.2vw, 48px); font-weight: 500; line-height: 1.2; le
 
 .process-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px; }
 .process-list > li { border-top: 1px solid var(--line); padding-top: 17px; }
-.step-marker { display: block; color: #80622f; font-family: 'Newsreader Variable', Georgia, serif; font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.step-marker { display: block; color: #80622f; font-family: var(--font-sans); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
 .process-list h3 { font-size: 18px; font-weight: 550; line-height: 1.45; margin-top: 15px; max-width: 220px; letter-spacing: -.025em; }
 .process-list p { color: var(--muted); font-size: 13px; line-height: 1.85; margin-top: 12px; max-width: 250px; }
 
 .firm { background: #e9e7df; padding-block: 72px; }
 .firm-inner { display: grid; grid-template-columns: .65fr 1.6fr; gap: 80px; }
 .firm-inner > h2 { max-width: 260px; font-size: 34px; }
-.firm-body > p { font-family: 'Newsreader Variable', Georgia, serif; font-size: clamp(25px, 2.7vw, 37px); line-height: 1.4; letter-spacing: -.015em; max-width: 830px; }
+.firm-body > p { font-family: var(--font-sans); font-size: clamp(25px, 2.7vw, 37px); line-height: 1.4; letter-spacing: -.015em; max-width: 830px; }
 .firm-body ul { padding: 0; list-style: none; margin: 28px 0 0; display: flex; flex-wrap: wrap; column-gap: 25px; row-gap: 13px; }
 .firm-body li { font-size: 11px; color: var(--muted); border-bottom: 1px solid #b1ab9b; padding-bottom: 7px; }
 

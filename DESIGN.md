@@ -13,9 +13,9 @@ El logotipo se sirve desde `public/brand/powerful-master.png`, idéntico al maes
 
 ## Tipografía y jerarquía
 
-`Manrope Variable` lleva navegación, cuerpo, controles y encabezados principales. `Newsreader Variable` aparece con propósito editorial: título de Sectores y descripción factual de la firma. Ambas fuentes están alojadas localmente mediante Fontsource; no se añadió una tercera familia.
+`Inter Variable` es la única familia tipográfica de la portada para navegación, cuerpo, controles y títulos, incluidos los roles editoriales de Sectores, los marcadores numéricos y la descripción factual de la firma. Se aloja localmente mediante Fontsource; la cadena de respaldo es `Inter Variable`, `Inter`, `Segoe UI`, `Arial`, `Helvetica`, `sans-serif`. El paquete declara licencia SIL Open Font License 1.1. Los roles mantienen su escala y peso; la jerarquía se apoya en tamaño, interlineado, color y espaciado, y los números del proceso conservan cifras tabulares.
 
-El `h1` conserva «Su contraparte empresarial en Perú», peso 500, interlineado 1.08 y tamaño fluido hasta 78 px. El acento es color plano. Los títulos equilibran líneas con `text-wrap: balance`; los párrafos usan `pretty`. Los `h2` Manrope van normalmente de 34 a 48 px. Sectores usa Newsreader hasta 65 px; la prosa de firma, de 25 a 37 px. El tracking no baja de -0.04em.
+El `h1` conserva «Su contraparte empresarial en Perú», peso 500, interlineado 1.08 y tamaño fluido hasta 78 px. El acento es color plano. Los títulos equilibran líneas con `text-wrap: balance`; los párrafos usan `pretty`. Los `h2` van normalmente de 34 a 48 px. El título de Sectores usa Inter hasta 65 px; la prosa de firma, de 25 a 37 px. El tracking no baja de -0.04em.
 
 ## Composición y ritmo
 
