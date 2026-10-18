@@ -107,7 +107,7 @@ El visitante identifica representación empresarial en Perú y encuentra una acc
 
 ## Siguiente paso
 
-P10.2 está implementado y verificado; registrar el commit de esta unidad y sincronizar el espejo Engram. Antes de publicar, cerrar las validaciones comerciales, legales y de evidencia enumeradas. La versión inglesa requiere traducción revisada.
+P10.2 está implementado, verificado y registrado en `d423c89`; sincronizar el espejo Engram. Antes de publicar, cerrar las validaciones comerciales, legales y de evidencia enumeradas. La versión inglesa requiere traducción revisada.
 
 ## Consistencia editorial del sitio — 2026-10-18
 
@@ -120,5 +120,5 @@ P10.2 está implementado y verificado; registrar el commit de esta unidad y sinc
   - **Conteo/entrega:** estimación inicial inferior a 400 líneas de autor; usar `exception-ok`, decisión vigente para seguir en `main` sin cadena de PRs. La carpeta `web/` continúa sin seguimiento; no stagear en bloque ni mezclar archivos ajenos.
   - **Evidencia de cierre:** `docker compose exec -T dev npm run check` pasó con 0 errores/avisos/hints; `npm run build` generó las ocho páginas de contenido y `/404.html` (9 rutas). Las ocho páginas de contenido respondieron HTTP 200 tanto en Astro `:4322` como en el prototipo `:8089`; Astro conserva 404 en `/404.html`. `git diff --check` pasó. Las búsquedas confirmaron cero menciones de «oportunidad» y cero frases de criterios/etapas de revisión de proyectos; queda una referencia general a entidades del Estado en `es.ts` y otra en `web/servicios.html`. Cinco tarjetas del prototipo muestran el CTA aprobado y enlazan sin parámetro de motivo; el build Astro contiene el mismo CTA y destino. El detector Impeccable no reporta hallazgos en fuentes Astro; sí señala avisos visuales en `web/servicios.html` y `web/sectores.html` que no se modificaron en esta tarea. No se hizo QA visual porque el alcance fue editorial.
   - **Pendientes de contenido:** confirmar comercialmente el alcance real de los servicios y resolver la categoría de formulario de representación; la revisión legal de páginas de privacidad/términos y datos corporativos sigue pendiente antes de producción. No se amplió el copy para cubrir estos puntos sin hechos aprobados.
-  - **Estado de entrega:** cambios Astro y este documento se incluirán en el commit de unidad de P10.2. Las ediciones de HTML en `web/` quedan locales y sin seguimiento, junto con el prototipo que aportó el usuario; no se incorporan al commit. Sin push, PR ni despliegue.
+  - **Estado de entrega:** commit de unidad `d423c89` (`fix: align sensitive project messaging and sector contacts`), incluye cambios Astro y este documento. Las ediciones de HTML en `web/` quedan locales y sin seguimiento, junto con el prototipo que aportó el usuario; no se incorporan al commit. Sin push, PR ni despliegue.
 - **Espejo Engram:** pendiente; no hay herramienta ni ejecutable local `engram` disponible en esta sesión. Mantener este documento como fuente local hasta sincronizar el documento completo con el localizador `odd/tasks/portada-powerful.md` en topic `odd/portada-powerful/tasks`.
