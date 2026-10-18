@@ -517,7 +517,7 @@ export const businessPagesEs = {
           emphasis: 'empresarial en Perú.',
         },
         description:
-          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al Perú. Toda representación requiere facultades expresas, alcance definido y acuerdos documentados.',
+          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al Perú. Si una iniciativa requiere representación, acordamos previamente su alcance, las facultades y las responsabilidades de cada parte.',
         icon: 'briefcase',
       },
       {
@@ -537,7 +537,7 @@ export const businessPagesEs = {
           emphasis: 'colaboración empresarial.',
         },
         description:
-          'Evaluamos posibles esquemas de colaboración o participación con inversionistas y socios, con responsabilidades y condiciones acordadas para cada operación. No se presume financiamiento ni participación directa.',
+          'Exploramos posibles esquemas de colaboración con inversionistas y socios. Las opciones de financiamiento o participación se evalúan según cada iniciativa y se definen de común acuerdo.',
         icon: 'layers',
       },
       {
@@ -780,8 +780,8 @@ export const businessPagesEs = {
         emphasis: 'acuerdan.',
       },
       paragraphs: [
-        'La intervención de POWERFUL puede adoptar diferentes formas, pero ninguna se presume: representación y participación directa dependen de facultades y acuerdos adecuados.',
-        'No prometemos aprobación de proyectos, adjudicación, liquidez ni retorno de inversión.',
+        'El rol de POWERFUL se define para cada relación. Si incluye representación o participación directa, acordamos las facultades y responsabilidades correspondientes antes de avanzar.',
+        'Los resultados de cada iniciativa, incluidas aprobaciones, adjudicaciones, liquidez o retornos, dependen de las condiciones del proyecto y de las decisiones de sus participantes.',
       ],
     },
     cta: {
@@ -958,7 +958,7 @@ export const contactPageEs = {
     },
     submitLabel: 'Probar el envío',
     finePrint:
-      '* Campos obligatorios. No se garantiza financiación ni aceptación de operaciones mediante el formulario.',
+      '* Campos obligatorios. Cada consulta se evalúa de acuerdo con sus características y las posibilidades de colaboración.',
     errors: {
       reason: 'Selecciona una opción.',
       name: 'Ingresa tu nombre completo (2 a 120 caracteres).',
@@ -1023,12 +1023,12 @@ export const legalPagesEs = {
       {
         heading: 'Finalidad informativa',
         paragraph:
-          'La web de POWERFUL presenta el ámbito de actuación, servicios y vías de contacto de la empresa. La información no supone asesoría financiera individual, invitación pública a comprar valores, garantía de fondos ni compromiso contractual.',
+          'Este sitio presenta información general sobre el ámbito de actuación, los servicios y las vías de contacto de POWERFUL. No constituye asesoría financiera individual ni una invitación pública a adquirir valores; tampoco confirma la disponibilidad de fondos ni establece por sí solo un compromiso contractual.',
       },
       {
         heading: 'Relaciones empresariales',
         paragraph:
-          'Todo negocio, mandato o participación se evalúa individualmente y requiere los acuerdos que correspondan. El contacto inicial no constituye aceptación de proyectos ni promesa de inversión.',
+          'Cada proyecto, encargo o participación se evalúa según sus características. Si las partes deciden avanzar, el alcance y las condiciones se establecen en acuerdos específicos; cualquier inversión requiere una definición expresa para cada caso.',
       },
       {
         heading: 'Contenido y derechos',
