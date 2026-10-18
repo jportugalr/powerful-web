@@ -553,9 +553,9 @@ export const businessPagesEs = {
     ],
     notice: {
       eyebrow: 'NUESTRO ALCANCE',
-      heading: 'Una propuesta no equivale a una promesa.',
+      heading: 'Cómo comienza cada colaboración',
       description:
-        'El contacto inicial no supone financiamiento, representación, constitución de empresa, permisos ni participación. Las responsabilidades se establecen por acuerdo.',
+        'Cada proyecto comienza con una conversación. Conocemos tus objetivos, exploramos posibilidades y, si hay afinidad, definimos juntos el alcance y las condiciones para avanzar.',
     },
     cta: {
       eyebrow: 'CONVERSEMOS',
