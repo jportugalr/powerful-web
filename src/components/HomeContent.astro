@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import ServicePreviewCard from './ServicePreviewCard.astro';
-import { homePageEs } from '../content/es';
+import { businessPagesEs, homePageEs } from '../content/es';
 
 const {
   hero,
@@ -13,20 +13,10 @@ const {
   miniCta,
 } = homePageEs;
 
-const artPointClasses = ['a', 'b', 'c', 'd'] as const;
+const editorialSectors = businessPagesEs.sectores.cards;
 ---
 
 <section class="hero home-hero">
-  <div class="hero-orbit" aria-hidden="true">
-    <div class="orbit orbit-a"></div>
-    <div class="orbit orbit-b"></div>
-    <div class="orbit orbit-c"></div>
-    <span class="orbit-node n1"></span>
-    <span class="orbit-node n2"></span>
-    <span class="orbit-node n3"></span>
-    <div class="orbit-land"></div>
-    <span class="orbit-caption">{hero.orbitCaption}</span>
-  </div>
   <div class="container hero-grid">
     <div class="hero-copy">
       <p class="overline">
@@ -65,10 +55,22 @@ const artPointClasses = ['a', 'b', 'c', 'd'] as const;
         }
       </div>
     </div>
-    <div class="hero-side" aria-hidden="true">
-      <span>{hero.sideIndex}</span>
-      <div class="hero-vertical">{hero.sideCaption}</div>
-    </div>
+    <figure class="hero-map">
+      <div class="hero-map-art">
+        <img
+          src="/images/peru-outline.svg"
+          width="420"
+          height="608"
+          alt={hero.mapAlt}
+          decoding="async"
+        />
+        <span class="hero-map-stamp" aria-hidden="true">{hero.mapStamp}</span>
+      </div>
+      <figcaption class="hero-map-caption">
+        <strong>{hero.mapReach}</strong>
+        <span>{hero.mapNetwork}</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -128,6 +130,38 @@ const artPointClasses = ['a', 'b', 'c', 'd'] as const;
         ))
       }
     </div>
+    <div class="sector-editorial" aria-label="Fotografías de los sectores de interés">
+      {
+        editorialSectors.map((sector, index) => (
+          <a
+            class:list={['sector-editorial-item', `sector-editorial-item-${index + 1}`]}
+            href={`/sectores.html#${sector.id}`}
+          >
+            <picture>
+              <source
+                media="(max-width: 420px)"
+                srcset={sector.image.mobileSrc}
+                width="640"
+                height="400"
+              />
+              <img
+                src={sector.image.src}
+                srcset={sector.image.srcSet}
+                sizes="(max-width: 420px) calc(100vw - 36px), (max-width: 760px) 44vw, (max-width: 1190px) 40vw, 500px"
+                width="1280"
+                height="480"
+                alt={sector.image.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <span class="sector-editorial-index" aria-hidden="true">{sector.index}</span>
+            <span class="sector-editorial-title">{sector.title}</span>
+            <Icon name="arrow-up-right" />
+          </a>
+        ))
+      }
+    </div>
     <a class="text-link gold-link" href={sectorHighlight.linkHref}>
       {sectorHighlight.linkLabel} <Icon name="arrow-right" />
     </a>
@@ -148,16 +182,25 @@ const artPointClasses = ['a', 'b', 'c', 'd'] as const;
         <Icon name="arrow-right" />
       </a>
     </div>
-    <div class="principle-art">
-      <div class="art-label">{principles.artLabel}</div>
-      <div class="art-rings"><i></i><i></i><i></i></div>
-      <div class="art-center">{principles.artCenter}</div>
-      {
-        principles.artPoints.map((point, index) => (
-          <span class:list={['art-point', artPointClasses[index]]}>{point}</span>
-        ))
-      }
-    </div>
+    <figure class="principle-art">
+      <div class="relationship-diagram">
+        <div class="relationship-node relationship-source">
+          <strong>{principles.diagramSource}</strong>
+          <span>{principles.diagramSourceDetail}</span>
+        </div>
+        <span class="relationship-connector" aria-hidden="true"></span>
+        <div class="relationship-node relationship-hub">
+          <strong>POWERFUL</strong>
+          <span>{principles.diagramRole}</span>
+        </div>
+        <span class="relationship-connector" aria-hidden="true"></span>
+        <div class="relationship-node relationship-destination">
+          <strong>{principles.diagramDestination}</strong>
+          <span>{principles.diagramDestinationDetail}</span>
+        </div>
+      </div>
+      <figcaption class="relationship-note">{principles.diagramNote}</figcaption>
+    </figure>
   </div>
 </section>
 

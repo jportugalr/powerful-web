@@ -36,7 +36,6 @@ export const footerSections = [
 
 export interface HomePageEs {
   hero: {
-    orbitCaption: string;
     eyebrow: string;
     heading: {
       lead: string;
@@ -50,8 +49,10 @@ export interface HomePageEs {
       variant: 'gold' | 'outline';
     }[];
     proofPoints: string[];
-    sideIndex: string;
-    sideCaption: string;
+    mapAlt: string;
+    mapStamp: string;
+    mapReach: string;
+    mapNetwork: string;
   };
   intro: {
     index: string;
@@ -99,9 +100,12 @@ export interface HomePageEs {
     description: string;
     linkLabel: string;
     linkHref: string;
-    artLabel: string;
-    artCenter: string;
-    artPoints: string[];
+    diagramSource: string;
+    diagramSourceDetail: string;
+    diagramRole: string;
+    diagramDestination: string;
+    diagramDestinationDetail: string;
+    diagramNote: string;
   };
   processPreview: {
     eyebrow: string;
@@ -127,7 +131,6 @@ export interface HomePageEs {
 
 export const homePageEs = {
   hero: {
-    orbitCaption: 'PROYECTOS E INVERSIÓN · PERÚ',
     eyebrow: 'INVERSIONES Y REPRESENTACIÓN EMPRESARIAL',
     heading: {
       lead: 'Tu contraparte empresarial',
@@ -153,8 +156,10 @@ export const homePageEs = {
       'MAYOR PRESENCIA EN EL NORTE Y NORORIENTE',
       'CAPITAL NACIONAL E INTERNACIONAL',
     ],
-    sideIndex: '01 / 05',
-    sideCaption: 'CAPITAL · CONEXIÓN · PARTICIPACIÓN',
+    mapAlt: 'Contorno del Perú, sin límites departamentales, ubicaciones ni rutas marcadas.',
+    mapStamp: 'INICIATIVA PERUANA',
+    mapReach: 'Proyectos en todo el Perú',
+    mapNetwork: 'Red nacional con mayor presencia en el norte y nororiente.',
   },
   intro: {
     index: '01 / NUESTRA PROPUESTA',
@@ -227,9 +232,12 @@ export const homePageEs = {
       'POWERFUL busca clientes e inversión nacionales e internacionales para proyectos en el Perú. Su red de contactos alcanza todo el país, con mayor presencia en el norte y nororiente; prioriza el capital extranjero, sin excluir el nacional.',
     linkLabel: 'Cómo trabajamos',
     linkHref: '/como-trabajamos.html',
-    artLabel: 'POWERFUL / CONNECTIONS',
-    artCenter: 'PE',
-    artPoints: ['CAPITAL', 'EMPRESAS', 'PROYECTOS', 'PERÚ'],
+    diagramSource: 'Empresas e inversionistas',
+    diagramSourceDetail: 'Nacionales e internacionales',
+    diagramRole: 'Articulación · representación · participación',
+    diagramDestination: 'Proyectos',
+    diagramDestinationDetail: 'En todo el Perú',
+    diagramNote: 'La participación y el alcance de cada relación se definen según la oportunidad.',
   },
   processPreview: {
     eyebrow: 'NUESTRA METODOLOGÍA',

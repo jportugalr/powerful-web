@@ -1,0 +1,26 @@
+{
+  "asset": "peru-outline.svg",
+  "classification": "Contorno nacional simplificado del Perú; no incluye divisiones subnacionales, ubicaciones, puntos, rutas, densidades ni datos de actividad.",
+  "purpose": "Recurso cartográfico editorial para comunicar el alcance nacional de proyectos y red de contactos de POWERFUL.",
+  "source": {
+    "dataset": "Natural Earth 1:50m Admin 0 - Countries",
+    "version": "5.1.1",
+    "feature": {
+      "ADMIN": "Peru",
+      "ADM0_A3": "PER"
+    },
+    "downloadUrl": "https://naturalearth.s3.amazonaws.com/50m_cultural/ne_50m_admin_0_countries.zip",
+    "catalogUrl": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/",
+    "termsUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "archiveSha256": "5fed433373581fa648920435f937d95f2d3c0200e067409c6478dcdf1b853139",
+    "license": "Dominio público. Natural Earth permite modificar y usar sus datos para cualquier fin; no requiere permiso ni atribución.",
+    "optionalCredit": "Made with Natural Earth."
+  },
+  "processing": {
+    "method": "Se extrajo la geometría nacional ADMIN=Peru y se normalizó desde coordenadas geográficas WGS 84 a un viewBox SVG mediante proyección equirectangular local.",
+    "geometry": "Polígono nacional Admin 0; sin capas Admin 1 ni superposiciones temáticas.",
+    "runtimeDependency": null,
+    "downloadAtRuntime": false
+  },
+  "scaleNote": "La fuente 1:50m es una geometría cartográfica generalizada; no es un límite legal ni una representación catastral."
+}
