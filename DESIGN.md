@@ -12,6 +12,7 @@ POWERFUL es una iniciativa centrada en el Perú. El público principal son empre
 - Oro `#B79862` y oro claro `#D0B57F`.
 - Marfil `#F4F1EA`, papel `#FCFBF8`, texto `#25364A`, secundario `#637185`.
 - El header usa el derivado aprobado `web/assets/brand/wordmark-header.png`, recortado solo en márgenes transparentes del master V1.2. La copia servida vive en `public/brand/wordmark-header.png`; el master no se modifica.
+- Para los iconos del navegador y dispositivos, el usuario aprobó el emblema de color V0.5 para fondos claros el 2026-10-18. `public/favicon.svg` conserva una copia exacta de `emblema_powerful_color_claro.svg`; las variantes PNG de 16, 32 y 48 px, más el Apple touch icon de 180 px, derivan del PNG oficial de 1254 × 1254 mediante Sharp/Lanczos. El expediente original de `Powerful/` permanece intacto.
 
 ## Tipografía
 

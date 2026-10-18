@@ -62,4 +62,6 @@ TDD estricto desactivado por decisión explícita del usuario; se realizan chequ
 
 El formulario de Contacto solo valida y presenta un borrador dentro del navegador: no transmite ni almacena consultas. Privacidad y Condiciones son borradores sin aprobación legal; todas las páginas conservan `noindex,nofollow`. No hay despliegue autorizado. El expediente original está en `Powerful/` y queda fuera de Git; no se altera ni se sustituye. `public/brand/powerful-master.png` es la copia exacta del maestro V1.2 aprobado (SHA256 `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`).
 
+El favicon SVG usa una copia exacta del emblema V0.5 para fondos claros, aprobada por el usuario para iconos el 2026-10-18. El layout publica fallbacks PNG de 16, 32 y 48 px, además de un Apple touch icon de 180 px, derivados del PNG oficial de 1254 × 1254 con Sharp/Lanczos. `DESIGN.md` registra la aplicación vigente de marca.
+
 `PRODUCT.md` recoge los hechos confirmados; `odd/tasks/portada-powerful.md` registra alcance, tareas, comprobaciones y pendientes. Hosting, contacto corporativo, datos legales y pruebas de trayectoria siguen pendientes de confirmación.
