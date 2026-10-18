@@ -35,7 +35,7 @@ El hero, el perfil y «Nuestro enfoque» repiten público y alcance. El cierre l
 
 ## Entrega
 
-- **Estimación:** menos de 180 líneas de autor.
+- **Estimación:** menos de 180 líneas de autor; el commit de NOS-1 contiene 128 líneas de autor (102 añadidas, 26 eliminadas).
 - **Estrategia:** `ask-on-risk` (predeterminada); el trabajo no debería superar el presupuesto de 400 líneas.
 - **Espejo Engram:** pendiente; no hay herramientas Engram disponibles en esta sesión.
 
@@ -47,5 +47,5 @@ El hero, el perfil y «Nuestro enfoque» repiten público y alcance. El cierre l
   - **Resultado:** oculté el 02 decorativo, acorté el hero/perfil/enfoque para separar sus mensajes, mantuve la declaración de transparencia, retiré el CTA local duplicado y añadí un reveal único para las tres tarjetas de valores. No se añadieron imágenes ni dependencias.
   - **Verificación:** `git diff --check` pasó. Preview revisado a 1440×1000 y 390×844; las tres tarjetas conservan el mismo peso visual, el hero no muestra 02, el CTA de cierre local ya no duplica el del pie, y el documento no desborda el ancho móvil (390 px de viewport, 375 px de documento). Consola Playwright: 0 errores y 0 advertencias. Con `prefers-reduced-motion: reduce`, los atributos de reveal no se habilitan y las tres tarjetas siguen presentes.
   - **Checks fallidos ajenos a NOS-1:** `docker compose exec -T dev npm run check` informa tres errores en `src/scripts/collaboration-motion.ts` (tipado implícito y módulos `motion`/`motion/mini` sin resolver); `docker compose exec -T dev npm run build` falla al resolver `motion/mini` desde ese mismo script. No modifiqué ese archivo. El detector Impeccable reportó tres avisos en `global.css` (bordes laterales dorados en líneas 89 y 91, fuente Inter en línea 6); no corresponden al cambio de Nosotros.
-  - **Commit:** pendiente de registrar después del commit local.
-  - **Próximo paso:** cerrar el commit de NOS-1 en `main`; mantener pendiente el espejo Engram por falta de herramienta disponible.
+  - **Commit:** `a7e2ad8 feat(nosotros): refine copy and add subtle reveal` en `main`.
+  - **Próximo paso:** conservar el espejo Engram pendiente por falta de herramienta disponible; no queda implementación pendiente para NOS-1.
