@@ -127,15 +127,15 @@ export interface HomePageEs {
 
 export const homePageEs = {
   hero: {
-    orbitCaption: 'PERÚ · PLATAFORMA DE OPORTUNIDADES',
+    orbitCaption: 'PROYECTOS E INVERSIÓN · PERÚ',
     eyebrow: 'INVERSIONES Y REPRESENTACIÓN EMPRESARIAL',
     heading: {
-      lead: 'Conectamos capital internacional con',
-      emphasis: 'oportunidades de negocio',
-      trailing: 'en Perú.',
+      lead: 'Tu contraparte empresarial',
+      emphasis: 'para proyectos',
+      trailing: 'en todo el Perú.',
     },
     description:
-      'Articulamos relaciones empresariales, representamos intereses comerciales y evaluamos nuestra participación en iniciativas y proyectos conforme a cada acuerdo.',
+      'Conectamos empresas e inversionistas nacionales e internacionales con proyectos en todo el Perú. Nuestra red tiene mayor presencia en el norte y nororiente; priorizamos el capital extranjero, sin excluir el nacional.',
     actions: [
       {
         label: 'Iniciar una conversación',
@@ -149,9 +149,9 @@ export const homePageEs = {
       },
     ],
     proofPoints: [
-      'FOCO EN PERÚ',
-      'VISIÓN EMPRESARIAL',
-      'RELACIONES INTERNACIONALES',
+      'ALCANCE NACIONAL',
+      'MAYOR PRESENCIA EN EL NORTE Y NORORIENTE',
+      'CAPITAL NACIONAL E INTERNACIONAL',
     ],
     sideIndex: '01 / 05',
     sideCaption: 'CAPITAL · CONEXIÓN · PARTICIPACIÓN',
@@ -220,11 +220,11 @@ export const homePageEs = {
   principles: {
     eyebrow: 'UN ENFOQUE CON PROPÓSITO',
     heading: {
-      lead: 'Perú como centro.',
-      emphasis: 'Relaciones sin fronteras.',
+      lead: 'Iniciativa peruana.',
+      emphasis: 'Proyectos en todo el país.',
     },
     description:
-      'La actividad y las oportunidades se concentran en Perú. El componente internacional está en el relacionamiento con empresas, contrapartes e inversionistas del exterior.',
+      'POWERFUL busca clientes e inversión nacionales e internacionales para proyectos en el Perú. Su red de contactos alcanza todo el país, con mayor presencia en el norte y nororiente; prioriza el capital extranjero, sin excluir el nacional.',
     linkLabel: 'Cómo trabajamos',
     linkHref: '/como-trabajamos.html',
     artLabel: 'POWERFUL / CONNECTIONS',
@@ -387,6 +387,11 @@ export interface BusinessPagesEs {
     cards: SectorCardEs[];
     cardAction: string;
     disclaimer: string;
+    teamExperience: {
+      heading: string;
+      fields: string[];
+      disclaimer: string;
+    };
     cta: MiniCtaEs;
   };
   comoTrabajamos: {
@@ -411,16 +416,16 @@ export const businessPagesEs = {
   nosotros: {
     metadata: {
       title: 'Nosotros | POWERFUL',
-      description: 'Nuestra identidad, modelo empresarial y enfoque en Perú',
+        description: 'Iniciativa peruana con red nacional y mayor presencia en el norte y nororiente',
     },
     hero: {
       eyebrow: 'CONOCE POWERFUL',
       heading: {
-        lead: 'Una firma peruana con',
-        emphasis: 'visión empresarial.',
+        lead: 'Una iniciativa peruana con',
+        emphasis: 'alcance nacional.',
       },
       lede:
-        'Vinculamos oportunidades en Perú con relaciones comerciales e intereses de inversión del exterior, combinando articulación y participación según cada caso.',
+        'Conectamos empresas e inversionistas nacionales e internacionales con proyectos en todo el Perú, con mayor presencia de nuestra red en el norte y nororiente.',
       pageNumber: '02',
     },
     profile: {
@@ -430,8 +435,8 @@ export const businessPagesEs = {
         emphasis: 'nuevos negocios.',
       },
       paragraphs: [
-        'POWERFUL es una iniciativa empresarial peruana orientada a identificar oportunidades, relacionar contrapartes y explorar formas de representación, gestión o participación en negocios y proyectos.',
-        'Nuestro alcance se define por las necesidades de cada iniciativa y por los acuerdos que corresponda suscribir. No todas las relaciones implican inversión directa ni representación formal.',
+        'POWERFUL es una iniciativa empresarial centrada en el Perú. Identificamos oportunidades y relacionamos empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
+        'Buscamos clientes e inversionistas nacionales e internacionales. Priorizamos el capital extranjero, sin excluir el nacional. El alcance de cada relación depende de la iniciativa y de los acuerdos correspondientes.',
       ],
       linkLabel: 'Ver qué hacemos',
       linkHref: '/servicios.html',
@@ -439,11 +444,11 @@ export const businessPagesEs = {
     approach: {
       eyebrow: 'NUESTRO ENFOQUE',
       heading: {
-        lead: 'Perú como centro',
-        emphasis: 'de actuación.',
+        lead: 'Alcance nacional',
+        emphasis: 'con mayor presencia regional.',
       },
       description:
-        'La red de oportunidades y el trabajo empresarial se orientan al mercado peruano; el carácter internacional responde principalmente a las relaciones con potenciales contrapartes y capital extranjero.',
+        'Nuestra red de contactos cubre todo el Perú, con mayor presencia en el norte y nororiente. Trabajamos con empresas e inversionistas nacionales e internacionales, y priorizamos el capital extranjero, sin excluir el nacional.',
       values: [
         {
           index: '01 /',
@@ -472,7 +477,7 @@ export const businessPagesEs = {
         emphasis: 'hechos verificables.',
       },
       description:
-        'Por ello presentamos con claridad nuestro modelo y nuestros sectores de interés, sin atribuir a POWERFUL proyectos ejecutados, alianzas institucionales o resultados que todavía no estén documentados y autorizados para difusión.',
+        'Distinguimos la experiencia profesional de integrantes del equipo de la trayectoria corporativa de POWERFUL. Los antecedentes, proyectos, alianzas y resultados de la empresa se publicarán solo cuando estén documentados y autorizados para difusión.',
     },
     cta: {
       eyebrow: 'SIGUIENTE PASO',
@@ -558,7 +563,7 @@ export const businessPagesEs = {
   sectores: {
     metadata: {
       title: 'Sectores | POWERFUL',
-      description: 'Ámbitos de oportunidad y actividad empresarial en Perú',
+        description: 'Sectores de interés y experiencia profesional del equipo en Perú',
     },
     hero: {
       eyebrow: 'SECTORES DE INTERÉS',
@@ -567,7 +572,7 @@ export const businessPagesEs = {
         emphasis: 'multisectorial.',
       },
       lede:
-        'Exploramos oportunidades empresariales en industrias clave de Perú. La evaluación de cada caso depende de sus características y del marco aplicable.',
+        'Exploramos oportunidades empresariales en todo el Perú. Nuestra red tiene mayor presencia en el norte y nororiente; cada iniciativa se evalúa según sus características y el marco aplicable.',
       pageNumber: '04',
     },
     controls: {
@@ -661,6 +666,12 @@ export const businessPagesEs = {
     cardAction: 'Consultar oportunidad',
     disclaimer:
       'Los sectores presentados describen ámbitos de interés y evaluación. No implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
+    teamExperience: {
+      heading: 'Experiencia profesional del equipo',
+      fields: ['Agua y perforación de pozos', 'Agroexportación', 'Pesca'],
+      disclaimer:
+        'Esta experiencia corresponde a integrantes del equipo y no constituye, por sí sola, trayectoria corporativa ni proyectos ejecutados por POWERFUL.',
+    },
     cta: {
       eyebrow: 'OPORTUNIDADES EN PERÚ',
       heading: '¿Tu iniciativa pertenece a alguno de estos sectores?',
@@ -841,7 +852,7 @@ export const contactPageEs = {
       emphasis: 'por entendernos.',
     },
     lede:
-      'Si representas a un inversionista, empresa o proyecto en Perú, comparte brevemente el motivo de tu consulta.',
+      'Si representas a una empresa o inversionista nacional o internacional, o a un proyecto en el Perú, comparte brevemente el motivo de tu consulta.',
     pageNumber: '06',
   },
   aside: {

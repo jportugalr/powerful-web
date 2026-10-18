@@ -1,4 +1,6 @@
-# Encargo de fotografía auténtica de Piura para el hero
+# Encargo histórico de fotografía auténtica de Piura para el hero
+
+> **SUPERSEDIDO — 2026-10-17.** La dirección vigente de POWERFUL es alcance nacional en Perú, con mayor presencia de la red en el norte y nororiente. Este brief centrado exclusivamente en la ciudad de Piura se conserva como registro histórico: no enviarlo ni usarlo para seleccionar la imagen actual de portada. Consulta [portada.md](portada.md) y [DESIGN.md](../../DESIGN.md) para la dirección vigente.
 
 Fecha: 2026-10-17. Dirección: Piura como ciudad de partida de POWERFUL, Perú como enfoque del sitio. Relacionado con [portada.md](portada.md) y [DESIGN.md](../../DESIGN.md).
 

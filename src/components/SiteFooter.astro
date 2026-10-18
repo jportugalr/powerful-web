@@ -19,13 +19,13 @@ import Icon from './Icon.astro';
           <span>POWERFUL</span>
         </div>
         <p>Inversiones y Representación Empresarial</p>
-        <p class="footer-note">Oportunidades y relaciones de negocio con foco en Perú y vínculos con capital del exterior.</p>
+        <p class="footer-note">Proyectos en todo el Perú, con inversión nacional e internacional. Mayor presencia de red en el norte y nororiente.</p>
       </div>
       {footerSections.map((section) => (
         <div>
           <span class="footer-heading">{section.heading}</span>
           {section.links.map((link) => <a href={link.href}>{link.label}</a>)}
-          {section.heading === 'INFORMACIÓN' && <span class="footer-geography">PERÚ · RELACIONES INTERNACIONALES</span>}
+          {section.heading === 'INFORMACIÓN' && <span class="footer-geography">PERÚ · ALCANCE NACIONAL</span>}
         </div>
       ))}
     </div>

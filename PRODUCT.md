@@ -12,7 +12,7 @@ Astro + TypeScript + Tailwind CSS + CSS propio; GSAP selectivo para movimiento. 
 
 ## Users
 
-Público principal: empresas e inversionistas extranjeros que buscan representación empresarial y una contraparte en Perú. Son un único público, según aclaración del usuario. Público secundario: titulares de proyectos peruanos que consultan la web para evaluar el respaldo institucional de POWERFUL.
+Clientes buscados: empresas e inversionistas nacionales e internacionales. Se prioriza el capital extranjero, sin excluir el nacional. POWERFUL se centra en proyectos y oportunidades de inversión en todo el Perú. Su red de contactos es nacional, con mayor presencia en el norte y nororiente. Los titulares de proyectos peruanos son contrapartes que evalúan la capacidad de articulación y respaldo de POWERFUL.
 
 ## Product Purpose
 
@@ -20,7 +20,7 @@ Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversacion
 
 ## Positioning
 
-POWERFUL articula relaciones y oportunidades de negocio en Perú para empresas del exterior. La representación empresarial es el eje de la comunicación; las capacidades adicionales y sus alcances se explican con prudencia y según los acuerdos correspondientes. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria medible.
+POWERFUL es una iniciativa peruana que articula relaciones y oportunidades de negocio para proyectos en todo el país. La representación empresarial es el eje de la comunicación; las capacidades adicionales y sus alcances se explican con prudencia y según los acuerdos correspondientes. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
 
 ## Operating Context
 
@@ -31,7 +31,8 @@ Expediente local en `Powerful/documentacion web/`, propuesta V0.1. El sitemap pr
 - Primera fase sin panel de administración; textos e imágenes se mantienen en el proyecto.
 - Lanzamiento en español, con separación de contenido y componentes para facilitar futuras traducciones.
 - Contacto completo previsto para otra unidad: backend, antispam, registro y correo. Aún no hay proveedor, almacenamiento, hosting ni canales corporativos oficiales confirmados. No simular recepción de consultas.
-- Sectores de interés: minería, energía, infraestructura, inmobiliario y comercio exterior. No presentarlos como proyectos ejecutados o credenciales.
+- Sectores de interés de POWERFUL: minería y minerales, energía e hidrocarburos, infraestructura y construcción, inmobiliario y bienes raíces, comercio exterior y materias primas. No presentarlos como proyectos ejecutados.
+- Experiencia profesional de integrantes del equipo en agua y perforación de pozos, agroexportación y pesca. Comunicarla en bloque separado y distinguirla explícitamente de la trayectoria corporativa de POWERFUL.
 - Verificación funcional normal elegida explícitamente por el usuario; TDD estricto desactivado para la portada.
 - No crear ni cambiar ramas, no push, PR o despliegue sin autorización.
 
@@ -41,11 +42,11 @@ Nombre POWERFUL. Presencia moderna, llamativa y sobria con efectos que capten at
 
 ## Evidence on Hand
 
-Expediente web local y paquetes de identidad en `Powerful/`. Maestro verificado SHA256: `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`. No se han confirmado nombres de equipo, contactos oficiales, clientes, testimonios, proyectos, métricas ni fotografías propias publicables; no inventarlos. Las fotografías de contexto deben identificarse como tales y registrar procedencia y licencia.
+Expediente web local y paquetes de identidad en `Powerful/`. Maestro verificado SHA256: `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`. No se han confirmado nombres de equipo, contactos oficiales, clientes, testimonios, proyectos corporativos, métricas ni fotografías propias publicables; no inventarlos. La experiencia profesional del equipo está confirmada únicamente para agua y perforación de pozos, agroexportación y pesca; no atribuir casos, años o cargos. Las fotografías de contexto deben identificarse como tales y registrar procedencia y licencia.
 
 ## Product Principles
 
-- Hablar primero a la empresa extranjera que necesita una contraparte en Perú.
+- Hablar a empresas e inversionistas nacionales e internacionales que buscan proyectos o representación en Perú; expresar la preferencia por capital extranjero como no exclusiva.
 - Construir confianza con alcance claro y evidencia verificable.
 - Facilitar el siguiente paso con un contacto honesto sobre su funcionamiento.
 - Conservar la identidad aprobada y separar hechos de propuestas.

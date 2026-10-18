@@ -3,39 +3,39 @@
 Target: `src/pages/index.astro`; related `src/components/HomeContent.astro`, `src/layouts/SiteLayout.astro`, `src/styles/global.css`, `src/content/es.ts`.
 Mode: Persuade. Build path: code, explícitamente elegido por el usuario.
 
-Dirección vigente, 2026-10-17: el prototipo aprobado en `web/` es la base visual y funcional, conforme a `DESIGN.md`. Piura es la ciudad de partida; el enfoque del sitio es el Perú. La dirección fotográfica de Lima de P2–P4 está supersedida. P5 preparó el encargo de imagen; P6 integra las cinco imágenes genéricas de sectores aportadas por el usuario en sus tarjetas Astro, conservando intacto el hero gráfico actual.
+Dirección vigente, 2026-10-17: el prototipo aprobado en `web/` es la base visual y funcional, conforme a `DESIGN.md`. POWERFUL es una iniciativa centrada en el Perú, con proyectos y red de contactos de alcance nacional y mayor presencia en el norte y nororiente. Atiende clientes e inversionistas nacionales e internacionales; prioriza el capital extranjero, sin excluir el nacional. La instrucción anterior de centrar el hero en Piura quedó supersedida. P6 integra las cinco imágenes genéricas de sectores en Astro; el cambio de copy conserva esas imágenes, filtros y servicios.
 
 ## Audience and action
 
-Empresa/inversionista extranjero que necesita representación y una contraparte en Perú, con Piura como punto de partida local. Debe entender el alcance y avanzar a preparar su consulta. Los titulares de proyectos locales evalúan respaldo. Sin evidencia de trayectoria: se explica la firma, alcance y proceso, sin inventar credenciales. Contacto exploratorio local, sin envío ni recepción simulada.
+Empresas e inversionistas nacionales e internacionales que buscan oportunidades, proyectos o representación en Perú; el capital extranjero es preferente, no exclusivo. Los titulares de proyectos peruanos son contrapartes relevantes. La web debe explicar el alcance nacional, la mayor presencia de la red en el norte y nororiente, y el proceso, sin inventar credenciales. Contacto exploratorio local, sin envío ni recepción simulada.
 
 ## Direction contract
 
-THESIS: conectar los objetivos de una empresa extranjera con una contraparte en Perú. La fotografía documental de Piura aportará contexto local sin limitar el enfoque nacional ni insinuar oficinas o proyectos no confirmados.
+THESIS: «Tu contraparte empresarial para proyectos en todo el Perú». Explicar en la bajada la atención a empresas e inversionistas nacionales e internacionales, la red nacional con mayor presencia en el norte y nororiente, y la preferencia no exclusiva por capital extranjero.
 
 OWN-WORLD: identidad del prototipo aprobado, con marfil #F4F1EA, navy #14263D y oro #B79862. Inter lleva mensaje y navegación, cargada localmente. Conservar su jerarquía editorial y los patrones existentes; la nueva fotografía debe convivir con esa base.
 
-STORY: identificar una contraparte en Perú, comprender capacidades y focos, reconocer cómo empieza la relación, preparar una consulta. Piura es el origen local de la firma; una fotografía de la ciudad será contexto, nunca prueba de un proyecto.
+STORY: identificar a POWERFUL como iniciativa centrada en Perú, comprender capacidades y focos, reconocer cómo empieza la relación y preparar una consulta. Los proyectos y la red son nacionales; el norte y nororiente representan mayor presencia, no un límite del alcance.
 
 FIRST VIEWPORT: conservar marca, navegación, titular y acciones del prototipo. Preparar la fotografía para una futura composición con texto a la izquierda y foto a la derecha; en móvil el texto y la acción deben conservar prioridad. El master será horizontal 4:3, mínimo 2400×1800, con margen para recortes responsivos. La portada actual usa arte CSS y todavía no monta una fotografía del hero. La integración y su evaluación visual quedan fuera de P5.
 
-FORM: seguir `DESIGN.md` y el prototipo como base. La imagen documental de Piura requiere origen, ubicación y derechos verificables antes de integrarse. Las imágenes genéricas de sectores pueden usarse sin un rótulo visible de «conceptual» o «ilustrativa»; su contexto y copy no deben atribuirlas a proyectos, clientes o instalaciones de POWERFUL. Procedencia y clasificación permanecen en metadata/sidecar. El movimiento futuro conserva scroll nativo, contenido visible y respeto a reduced-motion; P5 no añade ni resta efectos.
+FORM: seguir `DESIGN.md` y el prototipo como base. No hay una fotografía de una ciudad específica seleccionada para el hero; cualquier imagen futura requiere origen, ubicación y derechos verificables y no debe atribuirse a proyectos, clientes o instalaciones de POWERFUL. Las imágenes genéricas de sectores conservan sus metadatos y clasificación. El movimiento futuro conserva scroll nativo, contenido visible y respeto a reduced-motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
-## Fotografía vigente por conseguir
+## Imagen de portada pendiente
 
-Localizar o encargar una fotografía auténtica de la ciudad de Piura mediante [hero-piura-fotografia.md](hero-piura-fotografia.md). No se ha seleccionado un archivo ni aprobado una licencia para el nuevo hero. No generar una vista fotorrealista inventada de Piura ni renombrar la imagen de Lima como si mostrara esa ciudad.
+No se ha seleccionado una imagen para el hero. El brief específico de Piura está supersedido; cualquier dirección futura debe representar el Perú con ubicación y derechos verificables, sin presentar una fotografía genérica como evidencia de actividad de POWERFUL.
 
 ## Sectores integrados en P6
 
-Las cinco tarjetas de `/sectores.html` usan los PNG generados por el usuario y aportados en `web/imagenes/`: mineral/cobre, tubería industrial, acero/concreto, edificios residenciales y carga/contenedores. Los originales permanecen intactos. Se conserva el copy, filtros, enlaces, teclado y frame de 180 px; solo se sustituye el arte CSS por fotografía genérica del sector.
+Las cinco tarjetas de `/sectores.html` usan los PNG generados por el usuario y aportados en `web/imagenes/`: mineral/cobre, tubería industrial, acero/concreto, edificios residenciales y carga/contenedores. Los originales permanecen intactos. Se conservan las cinco categorías, filtros, enlaces, teclado y frame de 180 px. El nuevo bloque tipográfico separado informa experiencia profesional del equipo en agua y perforación de pozos, agroexportación y pesca; no añade tarjetas ni imágenes ni atribuye esos rubros a proyectos de POWERFUL.
 
 Los derivados WebP82 tienen recorte panorámico 640×240 y 1280×480, más un recorte 640×400 para móvil hasta 420 px. `picture`/`srcset`/`sizes`, dimensiones explícitas, lazy loading y decodificación asíncrona limitan la transferencia. No hay caption conceptual visible ni afirmación de que los recursos documenten experiencia, proyectos o instalaciones de POWERFUL.
 
 La procedencia completa está junto a los derivados en `public/images/sectors/manifest.json`: nombres originales, fecha inferida del nombre, dimensiones, hash SHA256, rol, recortes y pesos. Registra la confirmación del usuario sobre la generación a partir del prompt anterior. El texto exacto de ese prompt no quedó archivado en el repo y no se reconstruye; tampoco se afirma una licencia externa.
 
-La imagen urbana `19_26_51-1.png` no se integra. La localización de Piura no está verificada y sigue pendiente una foto documental auténtica según el encargo de P5. El hero, logo, footer y otras páginas conservan su implementación.
+La imagen urbana `19_26_51-1.png` no se integra como prueba de una ubicación o proyecto de POWERFUL. El encargo P5 de una fotografía de Piura quedó supersedido con la definición del alcance nacional. El hero, logo, footer y demás recursos visuales conservan sus activos actuales.
 
 ## Antecedente supersedido: Atlas y refinamiento P2–P4
 
@@ -49,4 +49,4 @@ Evidencia histórica de P4, 2026-10-17: finish review `ship`, check/build y smok
 
 ## Open decisions
 
-Selección, derechos y encuadre final de la fotografía auténtica de Piura; integración posterior y QA de escritorio/móvil. Canales oficiales, datos legales, hosting y backend de contacto; la portada no los inventa. Validación final de copy corporativo pendiente. Español inicial sin selector inglés vacío.
+Selección, derechos y encuadre de una eventual fotografía de portada; integración posterior y QA de escritorio/móvil. Canales oficiales, datos legales, hosting y backend de contacto; la portada no los inventa. Aprobación editorial final pendiente. Español inicial sin selector inglés vacío.
