@@ -34,6 +34,7 @@ El prototipo aprobado se apoya en fondos y recursos gráficos CSS, mientras la d
 - Ruta elegida: delegated direct.
 - Evidencia del trigger de mapeo: la evaluación necesitó relacionar `DESIGN.md`, `PRODUCT.md`, los estilos y el comportamiento JS del prototipo (4 fuentes) y contrastarlos con soporte web actual; se solicitó primero una exploración de solo lectura.
 - Evidencia del trigger de escritor: la unidad requiere el documento de recuperación y el catálogo como dos artefactos documentales; el catálogo se asigna a un escritor acotado y el documento de trabajo lo mantiene el agente coordinador.
+- Para CSSV-2 se mantiene delegated direct: la investigación abarcó varias propiedades, matrices de soporte y documentación primaria; un escritor actualizará el catálogo, mientras el coordinador mantiene este documento y el espejo.
 
 ## Criterios de aceptación
 
@@ -46,6 +47,7 @@ El prototipo aprobado se apoya en fondos y recursos gráficos CSS, mientras la d
 ## Tareas
 
 - [x] **CSSV-1 — Documentar el catálogo de fotografía, fondos, degradados y CSS moderno.** Reunir la comparación visual, las propiedades priorizadas, el análisis del Short y las fuentes técnicas actuales. Verificar lectura integral, enlaces y `git diff --check`, guardar el espejo Engram y registrar el commit de esta unidad.
+- [x] **CSSV-2 — Ampliar el catálogo con propiedades CSS recientes pertinentes.** Contrastar sintaxis, madurez y soporte actual en fuentes primarias; incorporar solo técnicas que mejoren composición, color o movimiento ligero en el prototipo, y dejar las experimentales o sin necesidad presente en observación. Se verificaron lectura integral, fuentes, fallbacks y `git diff --check`; actualizado el espejo Engram. Registrar el commit de esta unidad al terminar el cierre.
 
 ## Progreso y siguiente paso
 
@@ -53,4 +55,8 @@ El prototipo aprobado se apoya en fondos y recursos gráficos CSS, mientras la d
 - Catálogo escrito en español y leído completo. Las fuentes técnicas primarias enlazadas se contrastaron con MDN y documentación de navegadores/W3C; `git diff --no-index --check` para los archivos nuevos no reportó errores de whitespace (devuelve 1 porque cada archivo aún no está indexado).
 - El espejo Engram fue guardado y leído de vuelta; el contenido coincide con esta versión del documento, salvo el salto de línea final que Engram elimina al guardar.
 - Commit de trabajo en `main`: `e4f58cc` (`docs: add visual CSS catalog for POWERFUL`).
-- Siguiente paso: usar este catálogo como referencia cuando se revisen las imágenes recibidas y se decida qué tratamiento probar en la interfaz.
+- Al reanudar, el documento local y la observación Engram CSSV-1 se compararon y coincidieron salvo el salto de línea final. La exploración CSSV-2 confirmó que el prototipo usa cuadrícula de sectores y navegación multipágina; no necesita carrusel ni animaciones ocultas para funcionar.
+- CSSV-2 amplía las recomendaciones con `linear()`, `@starting-style`, colores relativos, `alpha()`, `shape()` y la activación de View Transitions MPA; separa los experimentos limitados de scroll/carrusel y omite `interpolate-size` para el diseño actual.
+- Se leyó completo el catálogo tras la edición delegada y se contrastaron las referencias primarias. `git diff --check -- CATALOGO_VISUAL_CSS.md odd/tasks/catalogo-visual-css.md` pasó. No se ejecutan pruebas automatizadas para Markdown; TDD continúa desactivado y la verificación funcional normal está aplicada.
+- Alcance actualizado: 2 tareas en total, ambas completadas. La previsión acumulada se mantuvo por debajo del presupuesto aproximado de 400 líneas; entrega `ask-on-risk`, sin cadena.
+- Siguiente paso: registrar el SHA del commit de trabajo CSSV-2 aquí y en el espejo Engram; luego usar el catálogo para evaluar las imágenes recibidas y elegir tratamientos para la interfaz.
