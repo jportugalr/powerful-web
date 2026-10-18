@@ -379,7 +379,6 @@ export interface BusinessPagesEs {
       heading: string;
       description: string;
     };
-    cta: MiniCtaEs;
   };
   sectores: {
     metadata: PageMetadataEs;
@@ -502,11 +501,11 @@ export const businessPagesEs = {
     hero: {
       eyebrow: 'QUÉ HACEMOS',
       heading: {
-        lead: 'Articulamos, representamos y',
-        emphasis: 'participamos.',
+        lead: 'Exploramos relaciones',
+        emphasis: 'empresariales en Perú.',
       },
       lede:
-        'Conversamos sobre el ingreso de empresas al mercado peruano, la representación comercial y posibles relaciones con inversionistas o socios, según el alcance que se acuerde.',
+        'Conversamos sobre el ingreso de empresas al mercado peruano y posibles relaciones comerciales, de inversión o alianza. Cada alcance se define según los objetivos y acuerdos de las partes.',
       pageNumber: '03',
     },
     details: [
@@ -517,27 +516,27 @@ export const businessPagesEs = {
           emphasis: 'empresarial en Perú.',
         },
         description:
-          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al Perú. Si una iniciativa requiere representación, acordamos previamente su alcance, las facultades y las responsabilidades de cada parte.',
+          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al Perú. Si una iniciativa requiere representación, acordamos previamente su alcance, facultades y responsabilidades.',
         icon: 'briefcase',
       },
       {
         index: '02 / ARTICULACIÓN',
         heading: {
-          lead: 'Proyectos y',
-          emphasis: 'posibles alianzas.',
+          lead: 'Articulación de',
+          emphasis: 'proyectos y alianzas.',
         },
         description:
-          'Conversamos sobre iniciativas peruanas con empresas, inversionistas y socios, conforme a los objetivos y acuerdos de las partes. En el Perú, algunas iniciativas se difunden por entidades del Estado.',
+          'Conversamos sobre iniciativas peruanas con empresas, inversionistas y socios, según los objetivos y acuerdos de cada parte. Algunas iniciativas se difunden por entidades del Estado.',
         icon: 'globe',
       },
       {
         index: '03 / INVERSIÓN Y PARTICIPACIÓN',
         heading: {
-          lead: 'Inversión y',
-          emphasis: 'colaboración empresarial.',
+          lead: 'Esquemas de inversión',
+          emphasis: 'y participación.',
         },
         description:
-          'Exploramos posibles esquemas de colaboración con inversionistas y socios. Las opciones de financiamiento o participación se evalúan según cada iniciativa y se definen de común acuerdo.',
+          'Exploramos posibles esquemas de inversión con inversionistas y socios. Las opciones de financiamiento o participación se evalúan según cada iniciativa y se definen de común acuerdo.',
         icon: 'layers',
       },
       {
@@ -547,7 +546,7 @@ export const businessPagesEs = {
           emphasis: 'comercio exterior.',
         },
         description:
-          'Evaluamos iniciativas vinculadas con importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
+          'Conversamos sobre iniciativas de importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
         icon: 'compass',
       },
     ],
@@ -555,15 +554,7 @@ export const businessPagesEs = {
       eyebrow: 'NUESTRO ALCANCE',
       heading: 'Cómo comienza cada colaboración',
       description:
-        'Cada proyecto comienza con una conversación. Conocemos tus objetivos, exploramos posibilidades y, si hay afinidad, definimos juntos el alcance y las condiciones para avanzar.',
-    },
-    cta: {
-      eyebrow: 'CONVERSEMOS',
-      heading: '¿Tu empresa evalúa ingresar al Perú?',
-      description:
-        'Conversemos sobre el ingreso de tu empresa al Perú y una posible representación comercial. Si eres inversionista o socio, elige el motivo de inversión o alianza en el formulario.',
-      actionLabel: 'Conversemos sobre tu ingreso',
-      actionHref: '/contacto.html?tipo=expansion',
+        'Empezamos con una conversación para conocer tus objetivos y explorar posibilidades. Si hay afinidad, definimos juntos el alcance y las condiciones para avanzar.',
     },
   },
   sectores: {

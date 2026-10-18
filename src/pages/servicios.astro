@@ -1,6 +1,5 @@
 ---
 import Icon from '../components/Icon.astro';
-import MiniCta from '../components/MiniCta.astro';
 import PageHero from '../components/PageHero.astro';
 import ServiceDetailRow from '../components/ServiceDetailRow.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
@@ -13,7 +12,7 @@ const page = businessPagesEs.servicios;
   <PageHero content={page.hero} />
 
   <section class="section">
-    <div class="container service-detail-list">
+    <div class="container service-detail-list" data-service-rows>
       {
         page.details.map((item) => (
           <ServiceDetailRow item={item} />
@@ -32,6 +31,45 @@ const page = businessPagesEs.servicios;
       <p>{page.notice.description}</p>
     </div>
   </section>
-
-  <MiniCta content={page.cta} />
 </SiteLayout>
+
+<script>
+  const list = document.querySelector<HTMLElement>('[data-service-rows]');
+  const rows = list ? Array.from(list.querySelectorAll<HTMLElement>('.detail-row')) : [];
+  const motionPreference = typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
+
+  if (list && rows.length && motionPreference && !motionPreference.matches && typeof IntersectionObserver !== 'undefined') {
+    let observer: IntersectionObserver | undefined;
+
+    const restoreStaticContent = () => {
+      observer?.disconnect();
+      list.removeAttribute('data-reveal-enabled');
+      rows.forEach((row) => row.removeAttribute('data-reveal-state'));
+    };
+
+    try {
+      observer = new IntersectionObserver((entries, activeObserver) => {
+        entries.forEach((entry) => {
+          const row = entry.target as HTMLElement;
+
+          if (entry.isIntersecting) {
+            row.dataset.revealState = 'visible';
+            activeObserver.unobserve(row);
+          } else {
+            row.dataset.revealState = 'pending';
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      list.dataset.revealEnabled = 'true';
+      rows.forEach((row) => observer?.observe(row));
+      motionPreference.addEventListener('change', (event) => {
+        if (event.matches) restoreStaticContent();
+      });
+    } catch {
+      restoreStaticContent();
+    }
+  }
+</script>
