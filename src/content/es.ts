@@ -138,7 +138,7 @@ export const homePageEs = {
       trailing: 'en el Perú.',
     },
     description:
-      'Para empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano, exploramos posibles esquemas de representación y articulación comercial según cada caso. También conversamos con inversionistas y socios interesados en proyectos en el Perú. Nuestra red cubre todo el país, con mayor presencia en el norte y nororiente; priorizamos el capital extranjero, sin excluir el nacional.',
+      'Para empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano, exploramos posibles esquemas de representación y articulación comercial según cada caso. También conversamos con empresas, inversionistas y socios peruanos e internacionales interesados en proyectos del país. Nuestra red cubre todo el Perú, con mayor presencia en el norte y nororiente.',
     actions: [
       {
         label: 'Conversemos sobre tu ingreso al Perú',
@@ -154,7 +154,7 @@ export const homePageEs = {
     proofPoints: [
       'ALCANCE NACIONAL',
       'MAYOR PRESENCIA EN EL NORTE Y NORORIENTE',
-      'CAPITAL EXTRANJERO PREFERENTE, NO EXCLUSIVO',
+      'INVERSIÓN PERUANA E INTERNACIONAL',
     ],
     mapAlt: 'Contorno del Perú, sin límites departamentales, ubicaciones ni rutas marcadas.',
     mapStamp: 'INICIATIVA PERUANA',
@@ -229,7 +229,7 @@ export const homePageEs = {
       emphasis: 'Proyectos en todo el país.',
     },
     description:
-      'POWERFUL busca relacionarse primero con empresas internacionales que evalúan ingresar al Perú, y también con inversionistas y socios interesados en proyectos peruanos. Su red alcanza todo el país, con mayor presencia en el norte y nororiente. Se prioriza el capital extranjero, sin excluir el nacional.',
+      'POWERFUL busca relacionarse primero con empresas internacionales que evalúan ingresar al Perú, y también con empresas, inversionistas y socios peruanos e internacionales interesados en proyectos en el país. Su red alcanza todo el Perú, con mayor presencia en el norte y nororiente.',
     linkLabel: 'Cómo trabajamos',
     linkHref: '/como-trabajamos.html',
     diagramSource: 'Empresas en expansión',
@@ -444,7 +444,7 @@ export const businessPagesEs = {
       },
       paragraphs: [
         'POWERFUL es una iniciativa empresarial centrada en el Perú. Facilitamos la relación entre empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
-        'Nuestra prioridad es conversar con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano. También buscamos inversionistas y socios para proyectos en Perú; titulares y representantes de iniciativas peruanas pueden formar parte de estas conversaciones. Priorizamos el capital extranjero, sin excluir el nacional.',
+        'Nuestra prioridad es conversar con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano. También buscamos inversionistas y socios, peruanos e internacionales, para proyectos en Perú; titulares y representantes de iniciativas peruanas pueden formar parte de estas conversaciones.',
       ],
       linkLabel: 'Ver qué hacemos',
       linkHref: '/servicios.html',
@@ -456,7 +456,7 @@ export const businessPagesEs = {
         emphasis: 'con mayor presencia regional.',
       },
       description:
-        'Nuestra red cubre todo el Perú, con mayor presencia en el norte y nororiente. Nos dirigimos primero a empresas internacionales que evalúan ingresar al país y también a inversionistas, socios y contrapartes nacionales. El capital extranjero es preferente, no exclusivo.',
+        'Nuestra red cubre todo el Perú, con mayor presencia en el norte y nororiente. Nos dirigimos primero a empresas internacionales que evalúan ingresar al país, y también a empresas, inversionistas y socios peruanos e internacionales interesados en proyectos peruanos.',
       values: [
         {
           index: '01 /',
