@@ -675,10 +675,10 @@ export const businessPagesEs = {
         category: 'pesca',
         index: 'SECTOR / 06',
         image: {
-          src: '/images/sectors/pesca.svg',
-          srcSet: '/images/sectors/pesca.svg',
-          mobileSrc: '/images/sectors/pesca.svg',
-          alt: 'Diagrama conceptual de conservación en frío para el sector pesquero',
+          src: '/images/sectors/pesca-1280.webp',
+          srcSet: '/images/sectors/pesca-640.webp 640w, /images/sectors/pesca-1280.webp 1280w',
+          mobileSrc: '/images/sectors/pesca-mobile-640.webp',
+          alt: 'Pescados frescos sobre hielo en una caja plástica',
         },
         title: 'Pesca',
         description:
@@ -689,10 +689,10 @@ export const businessPagesEs = {
         category: 'agroindustria',
         index: 'SECTOR / 07',
         image: {
-          src: '/images/sectors/agroindustria.svg',
-          srcSet: '/images/sectors/agroindustria.svg',
-          mobileSrc: '/images/sectors/agroindustria.svg',
-          alt: 'Diagrama conceptual de agrupación y acondicionamiento de productos agrícolas',
+          src: '/images/sectors/agroindustria-1280.webp',
+          srcSet: '/images/sectors/agroindustria-640.webp 640w, /images/sectors/agroindustria-1280.webp 1280w',
+          mobileSrc: '/images/sectors/agroindustria-mobile-640.webp',
+          alt: 'Paltas Hass en una caja frente a una línea de selección',
         },
         title: 'Agroindustria',
         description:

@@ -1,23 +1,135 @@
 {
-  "scope": "Recursos genéricos para Pesca y Agroindustria. Los cinco recursos fotográficos previos y su manifest permanecen intactos.",
+  "scope": "Fotos genéricas para Pesca y Agroindustria aportadas por el usuario. Los diagramas SVG y prompts previos fueron provisionales y han sido sustituidos como recursos activos; los SVG permanecen en el repositorio.",
   "date": "2026-10-18",
-  "rights": "Código vectorial original creado dentro del proyecto; no utiliza activos de terceros.",
+  "rights": "El usuario indicó que aportó los PNG en web/imagenes/ y autorizó su integración local. No se afirma si fueron generados o fotografiados, quién los creó ni su licencia externa.",
   "assets": [
     {
       "sector": "Pesca",
-      "path": "/images/sectors/pesca.svg",
-      "classification": "Diagrama geométrico sectorial genérico; no documenta operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
-      "origin": "SVG local creado para esta integración. Sin material externo ni generación de imágenes.",
-      "replacementStatus": "Fotografía conceptual por generar y revisar antes de reemplazar el SVG.",
-      "photoPrompt": "Genera una fotografía editorial fotorrealista de detalle para una tarjeta del sector Pesca en una web empresarial peruana. Primer plano a altura de mesa de una caja alimentaria de polímero azul grisáceo con pescado plateado fresco de tamaño mediano sobre hielo limpio, junto a una superficie de acero inoxidable; al fondo, fuera de foco, solo una pequeña parte de una zona genérica de acondicionamiento y conservación en frío. La imagen debe comunicar producto pesquero, cuidado y cadena de frío, sin presentar una instalación identificable. Composición horizontal panorámica 8:3, salida mínima 2560 × 960 px, sujeto principal concentrado en el 55 % central para permitir también un recorte móvil 8:5. Fotografía sobria, luz natural difusa, texturas precisas de escamas, hielo y acero; azules grisáceos, plata y tonos neutros coherentes con una marca navy, oro y marfil. Cámara a nivel del producto, distancia cercana, perspectiva realista y profundidad de campo moderada. Sin personas, barcos, paisajes turísticos, mapas, marcas, logotipos, texto, rótulos, certificaciones, sangre, vísceras ni dramatización publicitaria. Sin filtros cinematográficos fuertes ni aspecto de ilustración o render 3D. Recurso genérico de sector; no debe sugerir una planta, cliente, proyecto, captura ni operación real de POWERFUL."
+      "activePhoto": {
+        "original": {
+          "path": "web/imagenes/Imagen de ChatGPT 18 oct 2026, 15_36_26-1.png",
+          "width": 2048,
+          "height": 768,
+          "bytes": 2253583,
+          "sha256": "9c37d37746cc8e1761a6a73ca72da863901ba409f11f19966747b6a59a6f1669"
+        },
+        "derivatives": [
+          {
+            "path": "public/images/sectors/pesca-640.webp",
+            "width": 640,
+            "height": 240,
+            "bytes": 24634,
+            "cropInOriginalPixels": {
+              "left": 0,
+              "top": 0,
+              "width": 2048,
+              "height": 768
+            }
+          },
+          {
+            "path": "public/images/sectors/pesca-1280.webp",
+            "width": 1280,
+            "height": 480,
+            "bytes": 66376,
+            "cropInOriginalPixels": {
+              "left": 0,
+              "top": 0,
+              "width": 2048,
+              "height": 768
+            }
+          },
+          {
+            "path": "public/images/sectors/pesca-mobile-640.webp",
+            "width": 640,
+            "height": 400,
+            "bytes": 37434,
+            "cropInOriginalPixels": {
+              "left": 412,
+              "top": 1,
+              "width": 1224,
+              "height": 765
+            }
+          }
+        ],
+        "alt": "Pescados frescos sobre hielo en una caja plástica"
+      },
+      "classification": "Fotografía genérica de producto; no documenta capturas, operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
+      "provenance": "El usuario indicó que aportó este PNG en web/imagenes/. No se afirma si fue generado, tomado ni quién es su autor.",
+      "rights": "El usuario autorizó su integración local en el sitio. La autoría y licencia externa no están verificadas.",
+      "supersededProvisionalVisuals": {
+        "svg": {
+          "path": "public/images/sectors/pesca.svg",
+          "status": "inactivo y sustituido; se conserva en el repositorio"
+        },
+        "photoPrompt": {
+          "status": "provisional; el PNG aportado reemplaza su uso previsto",
+          "text": "Genera una fotografía editorial fotorrealista de detalle para una tarjeta del sector Pesca en una web empresarial peruana. Primer plano a altura de mesa de una caja alimentaria de polímero azul grisáceo con pescado plateado fresco de tamaño mediano sobre hielo limpio, junto a una superficie de acero inoxidable; al fondo, fuera de foco, solo una pequeña parte de una zona genérica de acondicionamiento y conservación en frío. La imagen debe comunicar producto pesquero, cuidado y cadena de frío, sin presentar una instalación identificable. Composición horizontal panorámica 8:3, salida mínima 2560 × 960 px, sujeto principal concentrado en el 55 % central para permitir también un recorte móvil 8:5. Fotografía sobria, luz natural difusa, texturas precisas de escamas, hielo y acero; azules grisáceos, plata y tonos neutros coherentes con una marca navy, oro y marfil. Cámara a nivel del producto, distancia cercana, perspectiva realista y profundidad de campo moderada. Sin personas, barcos, paisajes turísticos, mapas, marcas, logotipos, texto, rótulos, certificaciones, sangre, vísceras ni dramatización publicitaria. Sin filtros cinematográficos fuertes ni aspecto de ilustración o render 3D. Recurso genérico de sector; no debe sugerir una planta, cliente, proyecto, captura ni operación real de POWERFUL."
+        }
+      }
     },
     {
       "sector": "Agroindustria",
-      "path": "/images/sectors/agroindustria.svg",
-      "classification": "Diagrama geométrico sectorial genérico; no documenta operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
-      "origin": "SVG local creado para esta integración. Sin material externo ni generación de imágenes.",
-      "replacementStatus": "Fotografía conceptual por generar y revisar antes de reemplazar el SVG.",
-      "photoPrompt": "Genera una fotografía editorial fotorrealista de detalle para una tarjeta del sector Agroindustria en una web empresarial peruana. Primer plano a altura de mesa de paltas Hass enteras, limpias y sin cortar, en una caja alimentaria gris verdosa situada junto a una cinta de selección de acero inoxidable; al fondo, fuera de foco, solo una pequeña parte de una línea genérica de acondicionamiento y empaque agrícola. La imagen debe comunicar transformación y preparación comercial de productos agrícolas, sin presentar una finca o planta identificable. Composición horizontal panorámica 8:3, salida mínima 2560 × 960 px, producto y detalle industrial concentrados en el 55 % central para permitir también un recorte móvil 8:5. Fotografía sobria, luz natural difusa, textura de la piel de la palta y materiales industriales creíbles; verdes oliva apagados, grises, marfil y un acento cálido discreto, coherentes con una marca navy, oro y marfil. Cámara a nivel del producto, perspectiva realista y profundidad de campo moderada. Sin personas, campos panorámicos, bodegones de cocina, frutas mezcladas, marcas, logotipos, texto, rótulos, sellos orgánicos, certificaciones ni promesas de exportación o sostenibilidad. Sin filtros cinematográficos fuertes ni aspecto de ilustración o render 3D. Recurso genérico de sector; no debe sugerir una planta, cliente, proyecto, producción ni operación real de POWERFUL."
+      "activePhoto": {
+        "original": {
+          "path": "web/imagenes/Imagen de ChatGPT 18 oct 2026, 15_36_27-2.png",
+          "width": 2048,
+          "height": 768,
+          "bytes": 2292290,
+          "sha256": "e841db9d35789adb40a7e1350df5038af2dcfe633ad2c4f5d6377b1766a9341f"
+        },
+        "derivatives": [
+          {
+            "path": "public/images/sectors/agroindustria-640.webp",
+            "width": 640,
+            "height": 240,
+            "bytes": 25020,
+            "cropInOriginalPixels": {
+              "left": 0,
+              "top": 0,
+              "width": 2048,
+              "height": 768
+            }
+          },
+          {
+            "path": "public/images/sectors/agroindustria-1280.webp",
+            "width": 1280,
+            "height": 480,
+            "bytes": 68064,
+            "cropInOriginalPixels": {
+              "left": 0,
+              "top": 0,
+              "width": 2048,
+              "height": 768
+            }
+          },
+          {
+            "path": "public/images/sectors/agroindustria-mobile-640.webp",
+            "width": 640,
+            "height": 400,
+            "bytes": 38738,
+            "cropInOriginalPixels": {
+              "left": 412,
+              "top": 1,
+              "width": 1224,
+              "height": 765
+            }
+          }
+        ],
+        "alt": "Paltas Hass en una caja frente a una línea de selección"
+      },
+      "classification": "Fotografía genérica de producto y acondicionamiento; no documenta cosechas, operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
+      "provenance": "El usuario indicó que aportó este PNG en web/imagenes/. No se afirma si fue generado, tomado ni quién es su autor.",
+      "rights": "El usuario autorizó su integración local en el sitio. La autoría y licencia externa no están verificadas.",
+      "supersededProvisionalVisuals": {
+        "svg": {
+          "path": "public/images/sectors/agroindustria.svg",
+          "status": "inactivo y sustituido; se conserva en el repositorio"
+        },
+        "photoPrompt": {
+          "status": "provisional; el PNG aportado reemplaza su uso previsto",
+          "text": "Genera una fotografía editorial fotorrealista de detalle para una tarjeta del sector Agroindustria en una web empresarial peruana. Primer plano a altura de mesa de paltas Hass enteras, limpias y sin cortar, en una caja alimentaria gris verdosa situada junto a una cinta de selección de acero inoxidable; al fondo, fuera de foco, solo una pequeña parte de una línea genérica de acondicionamiento y empaque agrícola. La imagen debe comunicar transformación y preparación comercial de productos agrícolas, sin presentar una finca o planta identificable. Composición horizontal panorámica 8:3, salida mínima 2560 × 960 px, producto y detalle industrial concentrados en el 55 % central para permitir también un recorte móvil 8:5. Fotografía sobria, luz natural difusa, textura de la piel de la palta y materiales industriales creíbles; verdes oliva apagados, grises, marfil y un acento cálido discreto, coherentes con una marca navy, oro y marfil. Cámara a nivel del producto, perspectiva realista y profundidad de campo moderada. Sin personas, campos panorámicos, bodegones de cocina, frutas mezcladas, marcas, logotipos, texto, rótulos, sellos orgánicos, certificaciones ni promesas de exportación o sostenibilidad. Sin filtros cinematográficos fuertes ni aspecto de ilustración o render 3D. Recurso genérico de sector; no debe sugerir una planta, cliente, proyecto, producción ni operación real de POWERFUL."
+        }
+      }
     }
   ]
 }
