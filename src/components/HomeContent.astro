@@ -13,7 +13,9 @@ const {
   miniCta,
 } = homePageEs;
 
-const editorialSectors = businessPagesEs.sectores.cards;
+// Keep this photo selection deliberate; the complete set remains available in the sector links.
+const editorialSectorIds = new Set(['mineria', 'energia', 'infraestructura', 'inmobiliario', 'comercio']);
+const editorialSectors = businessPagesEs.sectores.cards.filter((sector) => editorialSectorIds.has(sector.id));
 ---
 
 <section class="hero home-hero">
@@ -240,3 +242,32 @@ const editorialSectors = businessPagesEs.sectores.cards;
     </div>
   </div>
 </section>
+
+<style>
+  .sector-pill-row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .sector-pill-row > a {
+    grid-column: span 3;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 48px;
+  }
+
+  .sector-pill-row > a:nth-child(n + 5) {
+    grid-column: span 4;
+  }
+
+  @media (max-width: 760px) {
+    .sector-pill-row {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sector-pill-row > a,
+    .sector-pill-row > a:nth-child(n + 5) {
+      grid-column: auto;
+    }
+  }
+</style>

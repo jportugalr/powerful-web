@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" fill="none">
+  <title>Agroindustria y acondicionamiento</title>
+  <desc>Diagrama geométrico conceptual de agrupación y acondicionamiento de productos agrícolas. No representa instalaciones, datos ni operaciones reales de POWERFUL.</desc>
+  <rect width="1280" height="480" fill="#F4F1EA"/>
+  <g transform="translate(640 240) scale(1.75 1.22) translate(-640 -240)">
+  <path d="M416 102H864V378H416Z" stroke="#14263D" stroke-width="3"/>
+  <path d="M440 126H840V354H440Z" fill="#D0B57F"/>
+  <g fill="#F4F1EA" stroke="#14263D" stroke-width="2">
+    <path d="M468 154H548V218H468ZM600 154H680V218H600ZM732 154H812V218H732Z"/>
+  </g>
+  <g stroke="#14263D" stroke-width="2">
+    <path d="M508 218V248H772V218M640 218V280"/>
+    <path d="M484 178H532M484 194H532M616 178H664M616 194H664M748 178H796M748 194H796"/>
+  </g>
+  <path d="M536 280H744V330H536Z" fill="#14263D"/>
+  <path d="M560 305H720" stroke="#F4F1EA" stroke-width="3"/>
+  </g>
+</svg>

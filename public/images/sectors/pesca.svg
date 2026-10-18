@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" fill="none">
+  <title>Pesca y conservación</title>
+  <desc>Diagrama geométrico conceptual de contención y conservación en frío para productos pesqueros. No representa instalaciones, datos ni operaciones reales de POWERFUL.</desc>
+  <rect width="1280" height="480" fill="#14263D"/>
+  <g transform="translate(640 240) scale(1.75 1.22) translate(-640 -240)">
+  <path d="M416 102H864V378H416Z" stroke="#D0B57F" stroke-width="3"/>
+  <path d="M440 126H840V354H440Z" fill="#1D3752"/>
+  <path d="M568 126V354" stroke="#D0B57F" stroke-width="2"/>
+  <g stroke="#F4F1EA" stroke-width="4" stroke-linecap="square">
+    <path d="M504 192V288M462 216L546 264M462 264L546 216"/>
+    <path d="M490 205L504 219L518 205M490 275L504 261L518 275"/>
+    <path d="M480 215L485 234L466 239M528 265L523 246L542 241"/>
+    <path d="M466 241L485 246L480 265M542 239L523 234L528 215"/>
+  </g>
+  <g stroke="#F4F1EA" stroke-width="2">
+    <path d="M600 160H696V218H600ZM716 160H808V218H716Z"/>
+    <path d="M600 240H696V298H600ZM716 240H808V298H716Z"/>
+  </g>
+  <path d="M600 326H808" stroke="#D0B57F" stroke-width="4"/>
+  </g>
+</svg>

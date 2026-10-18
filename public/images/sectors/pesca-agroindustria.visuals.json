@@ -1,0 +1,23 @@
+{
+  "scope": "Recursos genéricos para Pesca y Agroindustria. Los cinco recursos fotográficos previos y su manifest permanecen intactos.",
+  "date": "2026-10-18",
+  "rights": "Código vectorial original creado dentro del proyecto; no utiliza activos de terceros.",
+  "assets": [
+    {
+      "sector": "Pesca",
+      "path": "/images/sectors/pesca.svg",
+      "classification": "Diagrama geométrico sectorial genérico; no documenta operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
+      "origin": "SVG local creado para esta integración. Sin material externo ni generación de imágenes.",
+      "replacementStatus": "Fotografía conceptual por generar y revisar antes de reemplazar el SVG.",
+      "photoPrompt": "Genera una fotografía editorial fotorrealista de detalle para una tarjeta del sector Pesca en una web empresarial peruana. Primer plano a altura de mesa de una caja alimentaria de polímero azul grisáceo con pescado plateado fresco de tamaño mediano sobre hielo limpio, junto a una superficie de acero inoxidable; al fondo, fuera de foco, solo una pequeña parte de una zona genérica de acondicionamiento y conservación en frío. La imagen debe comunicar producto pesquero, cuidado y cadena de frío, sin presentar una instalación identificable. Composición horizontal panorámica 8:3, salida mínima 2560 × 960 px, sujeto principal concentrado en el 55 % central para permitir también un recorte móvil 8:5. Fotografía sobria, luz natural difusa, texturas precisas de escamas, hielo y acero; azules grisáceos, plata y tonos neutros coherentes con una marca navy, oro y marfil. Cámara a nivel del producto, distancia cercana, perspectiva realista y profundidad de campo moderada. Sin personas, barcos, paisajes turísticos, mapas, marcas, logotipos, texto, rótulos, certificaciones, sangre, vísceras ni dramatización publicitaria. Sin filtros cinematográficos fuertes ni aspecto de ilustración o render 3D. Recurso genérico de sector; no debe sugerir una planta, cliente, proyecto, captura ni operación real de POWERFUL."
+    },
+    {
+      "sector": "Agroindustria",
+      "path": "/images/sectors/agroindustria.svg",
+      "classification": "Diagrama geométrico sectorial genérico; no documenta operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
+      "origin": "SVG local creado para esta integración. Sin material externo ni generación de imágenes.",
+      "replacementStatus": "Fotografía conceptual por generar y revisar antes de reemplazar el SVG.",
+      "photoPrompt": "Genera una fotografía editorial fotorrealista de detalle para una tarjeta del sector Agroindustria en una web empresarial peruana. Primer plano a altura de mesa de paltas Hass enteras, limpias y sin cortar, en una caja alimentaria gris verdosa situada junto a una cinta de selección de acero inoxidable; al fondo, fuera de foco, solo una pequeña parte de una línea genérica de acondicionamiento y empaque agrícola. La imagen debe comunicar transformación y preparación comercial de productos agrícolas, sin presentar una finca o planta identificable. Composición horizontal panorámica 8:3, salida mínima 2560 × 960 px, producto y detalle industrial concentrados en el 55 % central para permitir también un recorte móvil 8:5. Fotografía sobria, luz natural difusa, textura de la piel de la palta y materiales industriales creíbles; verdes oliva apagados, grises, marfil y un acento cálido discreto, coherentes con una marca navy, oro y marfil. Cámara a nivel del producto, perspectiva realista y profundidad de campo moderada. Sin personas, campos panorámicos, bodegones de cocina, frutas mezcladas, marcas, logotipos, texto, rótulos, sellos orgánicos, certificaciones ni promesas de exportación o sostenibilidad. Sin filtros cinematográficos fuertes ni aspecto de ilustración o render 3D. Recurso genérico de sector; no debe sugerir una planta, cliente, proyecto, producción ni operación real de POWERFUL."
+    }
+  ]
+}

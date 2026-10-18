@@ -212,6 +212,8 @@ export const homePageEs = {
       { label: 'Infraestructura', href: '/sectores.html#infraestructura' },
       { label: 'Inmobiliario', href: '/sectores.html#inmobiliario' },
       { label: 'Comercio exterior', href: '/sectores.html#comercio' },
+      { label: 'Pesca', href: '/sectores.html#pesca' },
+      { label: 'Agroindustria', href: '/sectores.html#agroindustria' },
     ],
     linkLabel: 'Ver todos los sectores',
     linkHref: '/sectores.html',
@@ -311,7 +313,9 @@ export type SectorCategoryEs =
   | 'energia'
   | 'infraestructura'
   | 'inmobiliario'
-  | 'comercio';
+  | 'comercio'
+  | 'pesca'
+  | 'agroindustria';
 
 export interface SectorFilterEs {
   value: 'all' | SectorCategoryEs;
@@ -591,6 +595,8 @@ export const businessPagesEs = {
         { value: 'infraestructura', label: 'Construcción' },
         { value: 'inmobiliario', label: 'Inmobiliario' },
         { value: 'comercio', label: 'Comercio exterior' },
+        { value: 'pesca', label: 'Pesca' },
+        { value: 'agroindustria', label: 'Agroindustria' },
       ],
     },
     cards: [
@@ -663,6 +669,34 @@ export const businessPagesEs = {
         title: 'Comercio exterior y materias primas',
         description:
           'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',
+      },
+      {
+        id: 'pesca',
+        category: 'pesca',
+        index: 'SECTOR / 06',
+        image: {
+          src: '/images/sectors/pesca.svg',
+          srcSet: '/images/sectors/pesca.svg',
+          mobileSrc: '/images/sectors/pesca.svg',
+          alt: 'Diagrama conceptual de conservación en frío para el sector pesquero',
+        },
+        title: 'Pesca',
+        description:
+          'Posibles relaciones comerciales vinculadas con actividades pesqueras, procesamiento y cadena de frío, sujetas a evaluación técnica, contractual y normativa.',
+      },
+      {
+        id: 'agroindustria',
+        category: 'agroindustria',
+        index: 'SECTOR / 07',
+        image: {
+          src: '/images/sectors/agroindustria.svg',
+          srcSet: '/images/sectors/agroindustria.svg',
+          mobileSrc: '/images/sectors/agroindustria.svg',
+          alt: 'Diagrama conceptual de agrupación y acondicionamiento de productos agrícolas',
+        },
+        title: 'Agroindustria',
+        description:
+          'Iniciativas de transformación, acondicionamiento y comercialización de productos agrícolas, sujetas a evaluación técnica, comercial y normativa.',
       },
     ],
     cardAction: 'Conversemos sobre este sector',
