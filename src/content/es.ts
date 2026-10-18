@@ -394,8 +394,8 @@ export interface BusinessPagesEs {
     disclaimer: string;
     teamExperience: {
       heading: string;
-      fields: string[];
-      disclaimer: string;
+      description: string;
+      note: string;
     };
     cta: MiniCtaEs;
   };
@@ -560,7 +560,7 @@ export const businessPagesEs = {
   sectores: {
     metadata: {
       title: 'Sectores | POWERFUL',
-      description: 'Sectores de interés en Perú para empresas, inversionistas y socios; experiencia profesional del equipo en agua, agroexportación y pesca.',
+      description: 'Sectores de interés en Perú para empresas, inversionistas y socios; experiencia multisectorial del equipo.',
     },
     hero: {
       eyebrow: 'SECTORES DE INTERÉS',
@@ -694,10 +694,10 @@ export const businessPagesEs = {
     disclaimer:
       'Los sectores presentados describen ámbitos de interés; no implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
     teamExperience: {
-      heading: 'Experiencia profesional del equipo',
-      fields: ['Agua y perforación de pozos', 'Agroexportación', 'Pesca'],
-      disclaimer:
-        'Esta experiencia corresponde a integrantes del equipo y no constituye, por sí sola, trayectoria corporativa ni proyectos ejecutados por POWERFUL.',
+      heading: 'Experiencia que aporta perspectiva',
+      description:
+        'Nuestro equipo combina experiencia profesional en todos los sectores que presentamos. Sus trayectorias reúnen un conocimiento amplio y práctico de distintas actividades empresariales del Perú. Esa mirada transversal enriquece nuestras conversaciones con empresas, inversionistas y quienes impulsan iniciativas en el país.',
+      note: 'La trayectoria mencionada corresponde a los integrantes del equipo.',
     },
     cta: {
       eyebrow: 'INVERSIÓN Y ALIANZAS EN PERÚ',

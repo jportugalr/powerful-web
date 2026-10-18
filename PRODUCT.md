@@ -32,7 +32,7 @@ Expediente local en `Powerful/documentacion web/`, propuesta V0.1. El sitemap pr
 - Lanzamiento en español, con separación de contenido y componentes para facilitar futuras traducciones.
 - Contacto completo previsto para otra unidad: backend, antispam, registro y correo. Aún no hay proveedor, almacenamiento, hosting ni canales corporativos oficiales confirmados. La demo valida localmente y no envía ni simula recepción de consultas. Motivos: expansión/ingreso al Perú, inversión o asociación en proyectos peruanos, representación, alianza, propuesta de proyecto y otro.
 - Sectores de interés de POWERFUL: minería y minerales, energía e hidrocarburos, infraestructura y construcción, inmobiliario y bienes raíces, comercio exterior y materias primas. No presentarlos como proyectos ejecutados.
-- Experiencia profesional de integrantes del equipo en agua y perforación de pozos, agroexportación y pesca. Comunicarla en bloque separado y distinguirla explícitamente de la trayectoria corporativa de POWERFUL.
+- El usuario confirma que los integrantes del equipo tienen amplia experiencia profesional en todos los sectores abordados en la página Sectores. Comunicarla en bloque separado y distinguirla explícitamente de la trayectoria corporativa de POWERFUL; no atribuir a POWERFUL los proyectos o la experiencia individual.
 - Verificación funcional normal elegida explícitamente por el usuario; TDD estricto desactivado para la portada.
 - No crear ni cambiar ramas, no push, PR o despliegue sin autorización.
 
@@ -42,7 +42,7 @@ Nombre POWERFUL. Presencia moderna, llamativa y sobria con efectos que capten at
 
 ## Evidence on Hand
 
-Expediente web local y paquetes de identidad en `Powerful/`. Maestro verificado SHA256: `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`. No se han confirmado nombres de equipo, contactos oficiales, clientes, testimonios, proyectos corporativos, métricas ni fotografías propias publicables; no inventarlos. La experiencia profesional del equipo está confirmada únicamente para agua y perforación de pozos, agroexportación y pesca; no atribuir casos, años o cargos. Las fotografías de contexto deben identificarse como tales y registrar procedencia y licencia.
+Expediente web local y paquetes de identidad en `Powerful/`. Maestro verificado SHA256: `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`. No se han confirmado nombres de equipo, cargos, años, casos específicos, contactos oficiales, clientes, testimonios, proyectos corporativos, métricas ni fotografías propias publicables; no inventarlos. El usuario confirma amplia experiencia profesional de los integrantes en todos los sectores abordados en la página Sectores; mantenerla diferenciada de la trayectoria corporativa de POWERFUL. Las fotografías de contexto deben identificarse como tales y registrar procedencia y licencia.
 
 ## Product Principles
 
