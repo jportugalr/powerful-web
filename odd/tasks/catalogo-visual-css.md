@@ -47,7 +47,7 @@ El prototipo aprobado se apoya en fondos y recursos gráficos CSS, mientras la d
 ## Tareas
 
 - [x] **CSSV-1 — Documentar el catálogo de fotografía, fondos, degradados y CSS moderno.** Reunir la comparación visual, las propiedades priorizadas, el análisis del Short y las fuentes técnicas actuales. Verificar lectura integral, enlaces y `git diff --check`, guardar el espejo Engram y registrar el commit de esta unidad.
-- [x] **CSSV-2 — Ampliar el catálogo con propiedades CSS recientes pertinentes.** Contrastar sintaxis, madurez y soporte actual en fuentes primarias; incorporar solo técnicas que mejoren composición, color o movimiento ligero en el prototipo, y dejar las experimentales o sin necesidad presente en observación. Se verificaron lectura integral, fuentes, fallbacks y `git diff --check`; actualizado el espejo Engram. Registrar el commit de esta unidad al terminar el cierre.
+- [x] **CSSV-2 — Ampliar el catálogo con propiedades CSS recientes pertinentes.** Contrastar sintaxis, madurez y soporte actual en fuentes primarias; incorporar solo técnicas que mejoren composición, color o movimiento ligero en el prototipo, y dejar las experimentales o sin necesidad presente en observación. Se verificaron lectura integral, fuentes, fallbacks y `git diff --check`; actualizado el espejo Engram. Commit de trabajo: `c00a63e`.
 
 ## Progreso y siguiente paso
 
@@ -58,5 +58,6 @@ El prototipo aprobado se apoya en fondos y recursos gráficos CSS, mientras la d
 - Al reanudar, el documento local y la observación Engram CSSV-1 se compararon y coincidieron salvo el salto de línea final. La exploración CSSV-2 confirmó que el prototipo usa cuadrícula de sectores y navegación multipágina; no necesita carrusel ni animaciones ocultas para funcionar.
 - CSSV-2 amplía las recomendaciones con `linear()`, `@starting-style`, colores relativos, `alpha()`, `shape()` y la activación de View Transitions MPA; separa los experimentos limitados de scroll/carrusel y omite `interpolate-size` para el diseño actual.
 - Se leyó completo el catálogo tras la edición delegada y se contrastaron las referencias primarias. `git diff --check -- CATALOGO_VISUAL_CSS.md odd/tasks/catalogo-visual-css.md` pasó. No se ejecutan pruebas automatizadas para Markdown; TDD continúa desactivado y la verificación funcional normal está aplicada.
+- Commit de trabajo CSSV-2 en `main`: `c00a63e` (`docs: expand modern CSS visual catalog`).
 - Alcance actualizado: 2 tareas en total, ambas completadas. La previsión acumulada se mantuvo por debajo del presupuesto aproximado de 400 líneas; entrega `ask-on-risk`, sin cadena.
-- Siguiente paso: registrar el SHA del commit de trabajo CSSV-2 aquí y en el espejo Engram; luego usar el catálogo para evaluar las imágenes recibidas y elegir tratamientos para la interfaz.
+- Siguiente paso: usar el catálogo para evaluar las imágenes recibidas y elegir tratamientos para la interfaz.
