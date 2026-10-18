@@ -6,9 +6,10 @@ interface Props {
   content: SubpageHeroEs;
   action?: { label: string; href: string };
   variant?: 'default' | 'process';
+  hideDecorativeNumber?: boolean;
 }
 
-const { content, action, variant = 'default' } = Astro.props;
+const { content, action, variant = 'default', hideDecorativeNumber = false } = Astro.props;
 ---
 
 <section class:list={['page-hero', 'sub', { 'page-hero-process': variant === 'process' }]}>
@@ -27,7 +28,7 @@ const { content, action, variant = 'default' } = Astro.props;
     {content.pageNumber && (
       <div class="page-hero-no" aria-hidden="true">
         <span>POWERFUL / PERÚ</span>
-        <b>{content.pageNumber}</b>
+        {!hideDecorativeNumber && <b>{content.pageNumber}</b>}
       </div>
     )}
   </div>

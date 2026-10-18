@@ -22,12 +22,16 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 ## Tareas
 
 - [x] **RS-1 — Conservar el diseño y añadir vida a Sectores.** Se conservaron las tarjetas con fotos y se añadieron estados discretos de hover/foco, elevación, acercamiento de imagen y movimiento de flecha. Se revisó el copy y quedó intacto porque ya es conciso y distingue los sectores de interés de la experiencia individual del equipo. Filtros y preview local verificados; el comportamiento de movimiento reducido se revisó en CSS.
+- [x] **RS-2 — Retirar el número decorativo del hero y evaluar efectos complementarios.** Se ocultó el «04» solo en Sectores y se confirmó que los otros heroes conservan su numeración. Comparados los efectos vigentes con «Cómo trabajamos», se recomendó mantener las interacciones actuales de las tarjetas y considerar solo una transición breve en los filtros; no se añadieron efectos nuevos.
 
 ## Autorización y ruta
 
 - Alcance autorizado directamente por el usuario: implementar una mejora visual de Sectores y abrir la vista previa local. El usuario corrigió la dirección: revertir la nueva composición y conservar la anterior; el nuevo foco son efectos y un posible ajuste conciso de textos.
 - Ruta de RS-1: **delegated direct**. Evidencia: el mapeo inspeccionó más de cuatro archivos y disparó el trigger de exploración; el escritor terminó cambiando solo `src/components/SectorCard.astro` y `src/styles/global.css`. El copy no requirió cambios.
 - Cambios de autoría observados: 36 adiciones y 1 eliminación (sin generados). Estrategia de entrega: `ask-on-risk` (default); el cambio queda bajo el umbral aproximado de 400, así que no falta estrategia de cadena.
+- Alcance RS-2 autorizado por el usuario el 2026-10-18: ocultar el número «04» del hero de Sectores y evaluar efectos posibles en sus componentes.
+- Ruta de RS-2: **delegated direct**. Evidencia: el cambio requiere coordinar el dato/uso de `PageHero` con la página Sectores; el trigger de mapeo delegó una exploración de 4+ archivos. La propuesta de efectos es read-only; no autoriza implementarlos.
+- Forecast RS-2: 15–40 líneas de autoría (adiciones + eliminaciones). Estrategia de entrega heredada: `ask-on-risk`; bajo el umbral aproximado de 400.
 
 ## Verificación
 
@@ -39,6 +43,7 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 - `prefers-reduced-motion`: las transformaciones se anulan en la regla `reduce`; no se emuló esa preferencia en el navegador.
 - `git diff --check`: pasó; el commit de trabajo incluyó solo `src/components/SectorCard.astro`, `src/styles/global.css` y este documento de RS-1.
 - `impeccable detect --json`: señaló dos bordes laterales en las secciones de Contacto/Legal y la fuente base `Inter`. La inspección del diff confirma que son reglas preexistentes, fuera de los selectores modificados; quedan fuera de RS-1.
+- RS-2: `npm run check` pasó (32 archivos, cero diagnósticos); `npm run build` pasó (9 rutas); `git diff --check` pasó. En preview local `/sectores.html`, el número «04» ya no aparece y se conserva la etiqueta «POWERFUL / PERÚ»; la salida construida confirma que otros heroes mantienen 02, 03, 06, 07 y 08. La propuesta de efectos se basa en los componentes y estilos vigentes.
 - RDD: `gentle-ai review mode status` confirmó `off (decided by default)` el 2026-10-18; no se inicia revisión RDD.
 
 ## Progreso y siguiente paso
@@ -48,3 +53,4 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 - Commit de trabajo: `2c904bd` (`feat: add subtle interaction to sector cards`).
 - Mirror Engram: pendiente; no hay herramientas Engram/mem_* ni recursos configurados en este runtime. Conservar este documento y sincronizar el documento completo cuando el servicio esté disponible.
 - Siguiente paso: sincronizar el mirror Engram cuando esté disponible. Quedan anotadas como no realizadas la captura visual de teléfono y la emulación de movimiento reducido; la regla móvil existente y la regla CSS de movimiento reducido se inspeccionaron en código.
+- RS-2: implementación y verificación completadas. Las tarjetas ya elevan 3 px, cambian borde/sombra, escalan foto 1.035 y mueven la flecha 4 px al hover/foco; «Cómo trabajamos» revela su bracket y sus cinco principios al entrar en viewport. Recomendación: conservar las tarjetas y considerar únicamente una transición breve de color/fondo/borde en filtros; no añadir reveal secuencial a siete tarjetas. Aún falta registrar el commit de RS-2 después del commit de trabajo.
