@@ -107,7 +107,7 @@ El visitante identifica representación empresarial en Perú y encuentra una acc
 
 ## Siguiente paso
 
-P10.2 está implementado, verificado y registrado en `d423c89`; sincronizar el espejo Engram. Antes de publicar, cerrar las validaciones comerciales, legales y de evidencia enumeradas. La versión inglesa requiere traducción revisada.
+P10.3 está implementado, verificado y registrado en `9d8f05b`; sincronizar el espejo Engram. Antes de publicar, cerrar las validaciones comerciales, legales y de evidencia enumeradas. La versión inglesa requiere traducción revisada.
 
 ## Consistencia editorial del sitio — 2026-10-18
 
@@ -126,5 +126,5 @@ P10.2 está implementado, verificado y registrado en `d423c89`; sincronizar el e
   - **Criterios de aceptación:** no se presenta el capital extranjero como preferente; la web conserva a las empresas internacionales como primera audiencia; las referencias a empresas, inversionistas y socios reconocen a públicos peruanos e internacionales; Astro y el prototipo mantienen el mismo mensaje; ninguna capacidad nueva se afirma.
   - **Checks:** búsqueda en Astro y `web/` de la frase y etiqueta retiradas, lectura de los textos Inicio/Nosotros en ambas versiones, `npm run check`, `npm run build`, `git diff --check`. Sin push, PR ni despliegue.
   - **Evidencia:** `npm run check` pasó con 0 errores/avisos/hints; `npm run build` generó 9 rutas. Búsqueda de las formulaciones anteriores: 0 resultados en Astro y `web/`; la etiqueta inclusiva aparece una vez en cada versión. Inicio y Nosotros respondieron HTTP 200 en `:4322` y `:8089`, y los documentos servidos contienen el nuevo mensaje. `git diff --check` pasó. No hubo cambios CSS ni se requirió QA visual.
-  - **Entrega:** seguir en `main` con estrategia `exception-ok`; `web/` sigue sin seguimiento y se conserva localmente. Espejo Engram pendiente por falta de herramienta disponible en la sesión. Commit de unidad por registrar tras el cierre.
+  - **Entrega:** commit de unidad `9d8f05b` (`fix: make investment messaging inclusive`), incluye el copy Astro y este documento. El copy equivalente de `web/` queda local y sin seguimiento, junto con el prototipo del usuario. Seguir en `main` con estrategia `exception-ok`, sin push, PR ni despliegue. Espejo Engram pendiente por falta de herramienta disponible en la sesión.
 - **Espejo Engram:** pendiente; no hay herramienta ni ejecutable local `engram` disponible en esta sesión. Mantener este documento como fuente local hasta sincronizar el documento completo con el localizador `odd/tasks/portada-powerful.md` en topic `odd/portada-powerful/tasks`.
