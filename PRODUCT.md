@@ -12,15 +12,15 @@ Astro + TypeScript + Tailwind CSS + CSS propio; GSAP selectivo para movimiento. 
 
 ## Users
 
-Clientes buscados: empresas e inversionistas nacionales e internacionales. Se prioriza el capital extranjero, sin excluir el nacional. POWERFUL se centra en proyectos y oportunidades de inversión en todo el Perú. Su red de contactos es nacional, con mayor presencia en el norte y nororiente. Los titulares de proyectos peruanos son contrapartes que evalúan la capacidad de articulación y respaldo de POWERFUL.
+Clientes buscados: empresas e inversionistas nacionales e internacionales. Se prioriza el capital extranjero, sin excluir el nacional. POWERFUL se centra en proyectos empresariales y de inversión en todo el Perú. Su red de contactos es nacional, con mayor presencia en el norte y nororiente. Los titulares de proyectos peruanos son contrapartes que evalúan la capacidad de articulación y respaldo de POWERFUL.
 
 ## Product Purpose
 
-Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversaciones comerciales calificadas sobre representación y oportunidades empresariales en Perú. La primera entrega es una portada navegable real para escritorio y móvil.
+Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversaciones comerciales calificadas sobre representación y proyectos empresariales en Perú. La primera entrega es una portada navegable real para escritorio y móvil.
 
 ## Positioning
 
-POWERFUL es una iniciativa peruana que articula relaciones y oportunidades de negocio para proyectos en todo el país. La representación empresarial es el eje de la comunicación; las capacidades adicionales y sus alcances se explican con prudencia y según los acuerdos correspondientes. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
+POWERFUL es una iniciativa peruana que articula relaciones comerciales en torno a proyectos en todo el país. La representación empresarial es el eje de la comunicación; las capacidades adicionales y sus alcances se explican con prudencia y según los acuerdos correspondientes. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
 
 ## Operating Context
 

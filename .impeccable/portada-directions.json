@@ -69,7 +69,7 @@
           "raise": "Orquestación de una única secuencia de movimiento."
         },
         {
-          "from": "Ventanas de oportunidad",
+          "from": "Paneles superpuestos",
           "raise": "Jerarquía mediante proporciones y contraste de superficies."
         },
         {
@@ -171,7 +171,7 @@
     },
     {
       "id": "glazier",
-      "label": "Ventanas de oportunidad",
+      "label": "Paneles superpuestos",
       "thesis": "Cada panel abre una capacidad o sector.",
       "palette": [
         "#14263D",

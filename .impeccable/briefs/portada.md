@@ -7,7 +7,7 @@ Dirección vigente, 2026-10-17: el prototipo aprobado en `web/` es la base visua
 
 ## Audience and action
 
-Empresas e inversionistas nacionales e internacionales que buscan oportunidades, proyectos o representación en Perú; el capital extranjero es preferente, no exclusivo. Los titulares de proyectos peruanos son contrapartes relevantes. La web debe explicar el alcance nacional, la mayor presencia de la red en el norte y nororiente, y el proceso, sin inventar credenciales. Contacto exploratorio local, sin envío ni recepción simulada.
+Empresas e inversionistas nacionales e internacionales que buscan participar en proyectos o contar con representación en Perú; el capital extranjero es preferente, no exclusivo. Los titulares de proyectos peruanos son contrapartes relevantes. La web debe explicar el alcance nacional, la mayor presencia de la red en el norte y nororiente, y el proceso, sin inventar credenciales. Contacto exploratorio local, sin envío ni recepción simulada.
 
 ## Direction contract
 

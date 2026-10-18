@@ -30,14 +30,14 @@ Inter es la familia del prototipo. Astro la carga localmente con `@fontsource-va
 
 Antecedente supersedido, 2026-10-17: P2–P4 siguieron «Atlas del Pacífico» y usaron una foto de Miraflores/Lima de Maria Camila Castaño, [Pexels 7332783](https://www.pexels.com/photo/a-coastal-city-by-the-beach-7332783/) ([licencia](https://www.pexels.com/license/)), conservada en `public/images/miraflores-lima.webp`. Ese archivo muestra Lima y no debe identificarse como otra localidad. También se conservan los materiales genéricos generados para Sectores y sus sidecars. La decisión posterior de centrar la imagen en Piura fue válida como antecedente, pero quedó supersedida por el alcance nacional actual, con mayor presencia de la red en el norte y nororiente. La portada actual basada en el prototipo no monta esas imágenes.
 
-## Oportunidades visuales para evaluar
+## Recursos visuales para evaluar
 
 1. Comunicar el alcance nacional de proyectos y red, mostrando el norte y nororiente como zonas de mayor presencia solo con recursos geográficos verificables.
 2. Mantener las imágenes diferenciadas de los cinco sectores integradas en P6, con tratamiento compartido y sin convertirlas en supuestos casos de éxito.
 3. Reducir la repetición de órbitas, anillos y puntos: reservar el motivo de conexión para una sección y variar el resto con fotografía, espacio editorial e infografía.
 4. Mantener un primer viewport claro para empresas e inversionistas nacionales e internacionales: proyectos en Perú, función de POWERFUL y una acción de contacto visible.
 
-Estas oportunidades orientan la evaluación; no obligan a aplicar todos los recursos en todas las páginas.
+Estas opciones orientan la evaluación; no obligan a aplicar todos los recursos en todas las páginas.
 
 ## Responsive y estados
 

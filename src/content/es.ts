@@ -173,15 +173,15 @@ export const homePageEs = {
       emphasis: 'generar conexión.',
     },
     description:
-      'El modelo de POWERFUL combina articulación, representación y participación, ajustándose a las características de cada oportunidad.',
+      'El modelo de POWERFUL combina articulación, representación y participación, ajustándose a las características de cada proyecto.',
     cardAction: 'Explorar servicio',
     cards: [
       {
         number: '01',
         icon: 'globe',
-        title: 'Articulación de oportunidades',
+        title: 'Articulación de proyectos',
         description:
-          'Identificamos posibles conexiones entre oportunidades en Perú, empresas y potenciales aliados o inversionistas.',
+          'Identificamos posibles conexiones entre iniciativas en Perú, empresas y potenciales aliados o inversionistas.',
         href: '/servicios.html',
       },
       {
@@ -211,7 +211,7 @@ export const homePageEs = {
       emphasis: 'estructura.',
     },
     description:
-      'Exploramos oportunidades relacionadas con actividades productivas, comerciales e infraestructura. Cada iniciativa requiere revisión particular.',
+      'Exploramos iniciativas en ámbitos productivos, comerciales y de infraestructura, cada una sujeta a revisión particular.',
     sectors: [
       { label: 'Minería y minerales', href: '/sectores.html#mineria' },
       { label: 'Energía e hidrocarburos', href: '/sectores.html#energia' },
@@ -237,7 +237,7 @@ export const homePageEs = {
     diagramRole: 'Articulación · representación · participación',
     diagramDestination: 'Proyectos',
     diagramDestinationDetail: 'En todo el Perú',
-    diagramNote: 'La participación y el alcance de cada relación se definen según la oportunidad.',
+    diagramNote: 'La participación y el alcance de cada relación se definen según las características de cada proyecto.',
   },
   processPreview: {
     eyebrow: 'NUESTRA METODOLOGÍA',
@@ -246,7 +246,7 @@ export const homePageEs = {
       emphasis: 'Luego actuar.',
     },
     description:
-      'No todas las oportunidades requieren la misma estructura. Nuestro punto de partida es comprender a las partes y evaluar el alcance real de cada iniciativa.',
+      'No todas las iniciativas requieren la misma estructura. Nuestro punto de partida es comprender a las partes y evaluar el alcance real de cada iniciativa.',
     steps: [
       {
         number: '01',
@@ -272,10 +272,10 @@ export const homePageEs = {
   },
   miniCta: {
     eyebrow: 'RELACIONES CON PROPÓSITO',
-    heading: '¿Tienes una oportunidad que merece una conversación?',
+    heading: '¿Tienes un proyecto que merece una conversación?',
     description:
       'Ya sea una iniciativa en Perú o una búsqueda de representación y aliados, cuéntanos tu objetivo.',
-    actionLabel: 'Presentar una oportunidad',
+    actionLabel: 'Presentar un proyecto',
     actionHref: '/contacto.html?tipo=proyecto',
   },
 } as const satisfies HomePageEs;
@@ -443,7 +443,7 @@ export const businessPagesEs = {
         emphasis: 'nuevos negocios.',
       },
       paragraphs: [
-        'POWERFUL es una iniciativa empresarial centrada en el Perú. Identificamos oportunidades y relacionamos empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
+        'POWERFUL es una iniciativa empresarial centrada en el Perú. Facilitamos la relación entre empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
         'Buscamos clientes e inversionistas nacionales e internacionales. Priorizamos el capital extranjero, sin excluir el nacional. El alcance de cada relación depende de la iniciativa y de los acuerdos correspondientes.',
       ],
       linkLabel: 'Ver qué hacemos',
@@ -462,7 +462,7 @@ export const businessPagesEs = {
           index: '01 /',
           title: 'Criterio',
           description:
-            'Comprender el contexto, la oportunidad y a las contrapartes antes de avanzar.',
+            'Comprender el proyecto, su contexto y a las contrapartes antes de avanzar.',
         },
         {
           index: '02 /',
@@ -491,7 +491,7 @@ export const businessPagesEs = {
       eyebrow: 'SIGUIENTE PASO',
       heading: 'Hablemos de la relación que buscas.',
       description:
-        'Podemos explorar si existe una oportunidad pertinente para conversar.',
+        'Podemos revisar si la iniciativa es pertinente para conversar.',
       actionLabel: 'Contactar',
       actionHref: '/contacto.html',
     },
@@ -515,7 +515,7 @@ export const businessPagesEs = {
       {
         index: '01 / ARTICULACIÓN',
         heading: {
-          lead: 'Oportunidades y',
+          lead: 'Proyectos y',
           emphasis: 'contrapartes.',
         },
         description:
@@ -549,7 +549,7 @@ export const businessPagesEs = {
           emphasis: 'comercio exterior.',
         },
         description:
-          'Exploramos oportunidades vinculadas con importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
+          'Evaluamos iniciativas vinculadas con importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
         icon: 'compass',
       },
     ],
@@ -557,7 +557,7 @@ export const businessPagesEs = {
       eyebrow: 'NUESTRO ALCANCE',
       heading: 'Una propuesta no equivale a una promesa.',
       description:
-        'La recepción y evaluación de una oportunidad no comprometen financiamiento, representación, contratación ni participación. Las responsabilidades se establecen únicamente mediante acuerdos aplicables.',
+        'La evaluación inicial de un proyecto no implica compromisos de financiamiento, representación, contratación ni participación. Las responsabilidades se establecen únicamente mediante los acuerdos aplicables.',
     },
     cta: {
       eyebrow: 'CONVERSEMOS',
@@ -580,7 +580,7 @@ export const businessPagesEs = {
         emphasis: 'multisectorial.',
       },
       lede:
-        'Exploramos oportunidades empresariales en todo el Perú. Nuestra red tiene mayor presencia en el norte y nororiente; cada iniciativa se evalúa según sus características y el marco aplicable.',
+        'Exploramos iniciativas empresariales en todo el Perú. Nuestra red tiene mayor presencia en el norte y nororiente; cada iniciativa se evalúa según sus características y el marco aplicable.',
       pageNumber: '04',
     },
     controls: {
@@ -612,7 +612,7 @@ export const businessPagesEs = {
         },
         title: 'Minería y minerales',
         description:
-          'Relaciones comerciales y oportunidades vinculadas con proyectos, minerales y materias primas, sujetas a análisis técnico, contractual y normativo.',
+          'Relaciones comerciales vinculadas con proyectos, minerales y materias primas, sujetas a análisis técnico, contractual y normativo.',
       },
       {
         id: 'energia',
@@ -654,7 +654,7 @@ export const businessPagesEs = {
         },
         title: 'Inmobiliario y bienes raíces',
         description:
-          'Oportunidades empresariales relacionadas con activos, proyectos de inversión y negocios del mercado inmobiliario peruano.',
+          'Proyectos empresariales relacionados con activos y negocios del mercado inmobiliario peruano.',
       },
       {
         id: 'comercio',
@@ -671,7 +671,7 @@ export const businessPagesEs = {
           'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',
       },
     ],
-    cardAction: 'Consultar oportunidad',
+    cardAction: 'Consultar sobre un proyecto',
     disclaimer:
       'Los sectores presentados describen ámbitos de interés y evaluación. No implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
     teamExperience: {
@@ -681,7 +681,7 @@ export const businessPagesEs = {
         'Esta experiencia corresponde a integrantes del equipo y no constituye, por sí sola, trayectoria corporativa ni proyectos ejecutados por POWERFUL.',
     },
     cta: {
-      eyebrow: 'OPORTUNIDADES EN PERÚ',
+      eyebrow: 'PROYECTOS EN PERÚ',
       heading: '¿Tu iniciativa pertenece a alguno de estos sectores?',
       description:
         'Cuéntanos el tipo de proyecto y la relación comercial que deseas desarrollar.',
@@ -701,7 +701,7 @@ export const businessPagesEs = {
         emphasis: 'relación estructurada.',
       },
       lede:
-        'El trabajo empieza comprendiendo la oportunidad. Cada iniciativa se evalúa individualmente antes de definir posibles compromisos.',
+        'El trabajo empieza por comprender la iniciativa y su contexto. Cada una se evalúa individualmente antes de definir posibles compromisos.',
       pageNumber: '05',
     },
     process: {
@@ -717,7 +717,7 @@ export const businessPagesEs = {
           number: '01',
           title: 'Primer contacto',
           description:
-            'Recibimos una descripción inicial del interés empresarial, la oportunidad o el proyecto.',
+            'Recibimos una descripción inicial del interés empresarial y, si corresponde, de la iniciativa o el proyecto.',
         },
         {
           number: '02',
