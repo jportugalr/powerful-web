@@ -1,11 +1,7 @@
 {
   "asset": "peru-continents-network.svg",
-  "classification": "Ilustración referencial: silueta del Perú y grupos de puntos etiquetados por continente, conectados visualmente hacia Perú.",
-  "purpose": "Representar al Perú como foco de la portada y mostrar conexiones visuales esquemáticas con cinco continentes.",
-  "geography": {
-    "scale": "No está a escala. La ubicación relativa, el espaciado y las conexiones son compositivos y no representan posiciones ni distancias geográficas.",
-    "regions": "Los puntos por continente no indican ciudades, países ni destinos concretos."
-  },
+  "classification": "Ilustración cartográfica referencial compuesta manualmente; Perú está resaltado dentro de una sola silueta de América. No representa geografía a escala, rutas ni relaciones comerciales confirmadas.",
+  "purpose": "Mostrar América como una sola silueta con Perú destacado en Sudamérica y enlazado visualmente con Europa, África, Asia y Oceanía.",
   "peruGeometry": {
     "sourceAsset": "peru-outline.svg",
     "sourceMetadata": "peru-outline.svg.json",
@@ -16,69 +12,117 @@
       "ADM0_A3": "PER"
     },
     "downloadUrl": "https://naturalearth.s3.amazonaws.com/50m_cultural/ne_50m_admin_0_countries.zip",
-    "catalogUrl": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/",
     "archiveSha256": "5fed433373581fa648920435f937d95f2d3c0200e067409c6478dcdf1b853139",
+    "license": "Dominio público; Natural Earth permite modificar y usar los datos sin permiso ni atribución.",
+    "termsUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "method": "Se reutilizó el path documentado de peru-outline.svg y se amplió de forma moderada para destacarlo en la posición aproximada de Perú dentro de Sudamérica."
+  },
+  "continentGeometry": {
+    "dataset": "Natural Earth 1:10m Physical - Land",
+    "version": "5.1.1",
+    "downloadUrl": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_land.zip",
+    "catalogUrl": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+    "archiveSha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc",
     "license": "Dominio público. Natural Earth permite modificar y usar sus datos para cualquier fin; no requiere permiso ni atribución.",
     "termsUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
-    "method": "Geometría Admin 0 del Perú reutilizada del SVG fuente documentado; transformada para la composición."
+    "optionalCredit": "Made with Natural Earth.",
+    "method": "Se leyeron los polígonos del shapefile oficial, se recortaron por ventanas geográficas amplias por continente y se convirtieron en paths SVG. Luego se simplificaron con Ramer-Douglas-Peucker a 0.82 unidades del viewBox y se descartaron componentes menores de 0.55 unidades cuadradas para priorizar siluetas principales."
+  },
+  "geography": {
+    "scale": "No está a escala. El tamaño, las ventanas, las ubicaciones y el espacio oceánico se compusieron manualmente para el equilibrio visual.",
+    "regions": "El contorno de América incluye América del Norte, Central y del Sur; Perú se resalta dentro de Sudamérica. Europa, África, Asia y Oceanía aparecen como siluetas independientes."
   },
   "composition": {
     "viewBox": "0 0 540 480",
     "continents": [
       {
-        "label": "Norteamérica",
-        "pointCount": 8
+        "label": "América",
+        "polygonCount": 37,
+        "simplifiedPointCount": 1278
       },
       {
         "label": "Europa",
-        "pointCount": 6
+        "polygonCount": 5,
+        "simplifiedPointCount": 295
       },
       {
         "label": "África",
-        "pointCount": 7
+        "polygonCount": 2,
+        "simplifiedPointCount": 117
       },
       {
         "label": "Asia",
-        "pointCount": 8
+        "polygonCount": 25,
+        "simplifiedPointCount": 554
       },
       {
         "label": "Oceanía",
-        "pointCount": 7
+        "polygonCount": 10,
+        "simplifiedPointCount": 158
       }
     ],
+    "peruAnchorViewBox": [
+      139,
+      290
+    ],
     "connections": {
-      "count": 5,
-      "type": "Trazos rectos y finos desde un punto por grupo hasta un punto compositivo dentro de la silueta peruana.",
-      "peruAnchorViewBox": [
-        275,
-        258
-      ],
-      "regionAnchorsViewBox": [
-        [
-          88,
-          110
-        ],
-        [
-          275,
-          89
-        ],
-        [
-          448,
-          109
-        ],
-        [
-          103,
-          382
-        ],
-        [
-          443,
-          386
-        ]
-      ],
-      "meaning": "Recurso visual referencial; no confirma contactos, relaciones comerciales, inversiones, alianzas ni rutas.",
-      "arrows": false
+      "count": 4,
+      "type": "Curvas Bézier cúbicas dibujadas manualmente desde Europa, África, Asia y Oceanía hacia el contorno resaltado de Perú; sin flechas ni trayectos precisos.",
+      "endpointsViewBox": {
+        "europe": {
+          "start": [
+            293,
+            123
+          ],
+          "end": [
+            144,
+            257
+          ]
+        },
+        "africa": {
+          "start": [
+            265,
+            349
+          ],
+          "end": [
+            143,
+            319
+          ]
+        },
+        "asia": {
+          "start": [
+            354,
+            155
+          ],
+          "end": [
+            156,
+            282
+          ]
+        },
+        "oceania": {
+          "start": [
+            406,
+            350
+          ],
+          "end": [
+            123,
+            297
+          ]
+        }
+      },
+      "meaning": "Recurso visual referencial; no confirma contactos, relaciones comerciales, inversiones, alianzas ni rutas."
     },
-    "pointPlacement": "Puntos distribuidos manualmente para formar grupos visuales; no son coordenadas geográficas ni ubicaciones operativas."
+    "placement": "América se presenta como una sola silueta. Europa, África, Asia y Oceanía se ajustaron a cajas visuales independientes; Perú conserva su posición aproximada en Sudamérica y se amplió para legibilidad. Las separaciones y el espacio oceánico no representan escala.",
+    "peruHighlightViewBox": [
+      120,
+      255,
+      38,
+      68
+    ],
+    "peruLabelViewBox": [
+      95,
+      294
+    ]
   },
   "runtimeDependency": null,
   "downloadAtRuntime": false

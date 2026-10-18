@@ -153,7 +153,7 @@ export const homePageEs = {
       'MAYOR PRESENCIA EN EL NORTE Y NORORIENTE',
       'INVERSIÓN PERUANA E INTERNACIONAL',
     ],
-    mapAlt: 'Ilustración referencial: Perú al centro, con puntos y conexiones hacia cinco continentes.',
+    mapAlt: 'Ilustración referencial: contornos de América, Europa, África, Asia y Oceanía; Perú resaltado en Sudamérica, con conexiones visuales hacia los demás continentes.',
   },
   intro: {
     index: '01 / NUESTRA PROPUESTA',
