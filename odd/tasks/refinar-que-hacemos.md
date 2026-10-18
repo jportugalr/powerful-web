@@ -43,5 +43,5 @@ La página tiene una base editorial legible, pero el titular expresa capacidades
   - **Ruta:** delegada directa. El trigger de escritor aplica porque el ajuste coordina `src/pages/servicios.astro`, `src/content/es.ts` y `src/styles/global.css`; el mapeo previo de más de cuatro fuentes se completó en la revisión read-only.
   - **Aceptación:** las cuatro filas conservan idéntico tratamiento; el titular no sobrepromete; las áreas 02 y 03 se distinguen sin verborrea; hay un solo CTA al final de Servicios; el reveal es discreto, se ejecuta una vez y respeta `prefers-reduced-motion`; el contenido queda visible en el fallback; las filas siguen legibles entre 761 y 1000 px.
   - **Evidencia:** el hero y las cuatro descripciones mantienen un alcance prudente; 02 y 03 distinguen articulación de proyectos y esquemas de inversión/participación; permanece el CTA global del pie; el reveal usa IntersectionObserver y CSS, dura 320 ms, es de una sola entrada, deja el contenido visible sin JavaScript y desactiva el movimiento reducido; el ajuste de tablet solo afecta las filas de Servicios.
-  - **Commit de implementación:** pendiente de crear.
-  - **Próximo paso:** crear el commit local de la unidad y registrar su identidad aquí. Sin push, PR ni despliegue.
+  - **Commit de implementación:** `49be85b` — `feat(servicios): refine copy and add row reveal`.
+  - **Próximo paso:** revisar la vista previa abierta. Sin push, PR ni despliegue.
