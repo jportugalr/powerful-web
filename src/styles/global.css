@@ -476,3 +476,193 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
     margin-inline: auto;
   }
 }
+
+/* Collaboration page: connected principles and a distinctive page hero. */
+.page-hero-process {
+  color: var(--ivory);
+  background: linear-gradient(118deg, #14263D 0%, #14263D 66%, #0C1D31 100%);
+  border-color: #263B50;
+}
+.page-hero-process::after {
+  width: min(40vw, 520px);
+  height: 100%;
+  top: 0;
+  right: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: linear-gradient(145deg, rgba(183, 152, 98, 0.15), rgba(183, 152, 98, 0.025) 58%, transparent 58.2%);
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+}
+.page-hero-process .overline {
+  color: var(--gold-light);
+}
+.page-hero-process h1 {
+  color: var(--ivory);
+}
+.page-hero-process h1 em {
+  color: var(--gold-light);
+}
+.page-hero-process .lede {
+  color: #C2CED8;
+}
+.page-hero-process .page-hero-no {
+  color: #AAB8C5;
+}
+.page-hero-process .page-hero-no b {
+  color: rgba(244, 241, 234, 0.13);
+}
+
+.collaboration-diagram {
+  min-height: 570px;
+  margin: 64px 0 0;
+  position: relative;
+  isolation: isolate;
+}
+.collaboration-connectors {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  color: rgba(183, 152, 98, 0.75);
+  pointer-events: none;
+}
+.collaboration-connectors path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+.collaboration-hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  background: var(--gold);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.collaboration-principles {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(174px, auto));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.collaboration-principle {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid #DCE1E5;
+  background: var(--paper);
+  box-shadow: 0 12px 32px rgba(13, 34, 57, 0.055);
+}
+.collaboration-principle article {
+  min-width: 0;
+}
+.collaboration-principle h3 {
+  margin: 0 0 13px;
+  color: var(--navy);
+  font-size: clamp(18px, 1.8vw, 23px);
+  line-height: 1.2;
+}
+.collaboration-principle p {
+  margin: 0;
+  color: #637285;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.collaboration-principle:nth-child(1) {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+.collaboration-principle:nth-child(2) {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+.collaboration-principle:nth-child(3) {
+  grid-column: 5 / span 2;
+  grid-row: 2;
+}
+.collaboration-principle:nth-child(4) {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+.collaboration-principle:nth-child(5) {
+  grid-column: 5 / span 2;
+  grid-row: 3;
+}
+
+@keyframes collaboration-settle {
+  from { transform: translateY(8px); }
+  to { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .collaboration-principle {
+    animation: collaboration-settle 320ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+  .collaboration-principle:nth-child(2) { animation-delay: 35ms; }
+  .collaboration-principle:nth-child(3) { animation-delay: 70ms; }
+  .collaboration-principle:nth-child(4) { animation-delay: 105ms; }
+  .collaboration-principle:nth-child(5) { animation-delay: 140ms; }
+}
+
+@media (max-width: 760px) {
+  .page-hero-process::after {
+    width: 45%;
+    opacity: 0.7;
+  }
+  .collaboration-diagram {
+    min-height: 0;
+    margin-top: 38px;
+    padding-left: 38px;
+  }
+  .collaboration-diagram::before {
+    content: "";
+    position: absolute;
+    top: 76px;
+    bottom: 24px;
+    left: 13px;
+    width: 1px;
+    background: rgba(183, 152, 98, 0.75);
+  }
+  .collaboration-connectors {
+    display: none;
+  }
+  .collaboration-hub { display: none; }
+  .collaboration-principles {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    gap: 14px;
+  }
+  .collaboration-principle,
+  .collaboration-principle:nth-child(n) {
+    min-height: 0;
+    grid-column: 1;
+    grid-row: auto;
+    position: relative;
+    padding: 22px;
+  }
+  .collaboration-principle::before {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 26px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid var(--paper);
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 1px rgba(183, 152, 98, 0.55);
+  }
+  .collaboration-principle h3 {
+    font-size: 21px;
+  }
+}

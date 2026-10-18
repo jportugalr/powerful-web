@@ -5,12 +5,13 @@ import Icon from './Icon.astro';
 interface Props {
   content: SubpageHeroEs;
   action?: { label: string; href: string };
+  variant?: 'default' | 'process';
 }
 
-const { content, action } = Astro.props;
+const { content, action, variant = 'default' } = Astro.props;
 ---
 
-<section class="page-hero sub">
+<section class:list={['page-hero', 'sub', { 'page-hero-process': variant === 'process' }]}>
   <div class="container page-hero-inner">
     <div class="page-hero-copy">
       <p class="overline">{content.eyebrow}</p>

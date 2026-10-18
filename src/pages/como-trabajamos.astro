@@ -1,7 +1,6 @@
 ---
 import MiniCta from '../components/MiniCta.astro';
 import PageHero from '../components/PageHero.astro';
-import ProcessStep from '../components/ProcessStep.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { businessPagesEs } from '../content/es';
 
@@ -9,24 +8,41 @@ const page = businessPagesEs.comoTrabajamos;
 ---
 
 <SiteLayout title={page.metadata.title} description={page.metadata.description}>
-  <PageHero content={page.hero} />
+  <PageHero content={page.hero} variant="process" />
 
   <section class="section">
     <div class="container">
       <div class="section-heading">
         <div>
           <p class="overline gold">{page.process.eyebrow}</p>
-          <h2>{page.process.heading.lead}{' '}<em>{page.process.heading.emphasis}</em></h2>
+          <h2 id="collaboration-heading">{page.process.heading.lead}{' '}<em>{page.process.heading.emphasis}</em></h2>
         </div>
         <p>{page.process.description}</p>
       </div>
-      <div class="step-list">
-        {
-          page.process.steps.map((step) => (
-            <ProcessStep step={step} />
-          ))
-        }
-      </div>
+      <figure class="collaboration-diagram" aria-labelledby="collaboration-heading">
+        <svg
+          class="collaboration-connectors"
+          viewBox="0 0 1000 570"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M500 285V174 M500 285H333 M500 285H667 M500 285L333 483 M500 285L667 483" />
+        </svg>
+        <span class="collaboration-hub" aria-hidden="true"></span>
+        <ul class="collaboration-principles" aria-label={page.process.eyebrow}>
+          {
+            page.process.steps.map((step) => (
+              <li class="collaboration-principle">
+                <article>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </figure>
     </div>
   </section>
 
