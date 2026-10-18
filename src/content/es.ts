@@ -206,9 +206,9 @@ export const homePageEs = {
     eyebrow: 'ÁMBITOS DE ACTUACIÓN',
     context: 'PERÚ / VISIÓN MULTISECTORIAL',
     heading: {
-      lead: 'Donde el potencial',
-      secondLead: 'encuentra',
-      emphasis: 'estructura.',
+      lead: 'Sectores de interés',
+      secondLead: 'para la actividad empresarial',
+      emphasis: 'en el Perú.',
     },
     description:
       'Exploramos relaciones comerciales e iniciativas en distintos sectores del Perú. La información y las condiciones de cada caso se revisan antes de avanzar.',
