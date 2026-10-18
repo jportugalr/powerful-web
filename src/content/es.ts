@@ -19,10 +19,10 @@ export const footerSections = [
   {
     heading: 'CONTACTO',
     links: [
-      { label: 'Inversionistas', href: '/contacto.html?tipo=inversionista' },
-      { label: 'Titulares de proyectos', href: '/contacto.html?tipo=proyecto' },
-      { label: 'Representación', href: '/contacto.html?tipo=representacion' },
-      { label: 'Consulta general', href: '/contacto.html' },
+      { label: 'Empresas que evalúan ingresar al Perú', href: '/contacto.html?tipo=expansion' },
+      { label: 'Inversionistas y socios', href: '/contacto.html?tipo=inversionista' },
+      { label: 'Representantes de proyectos peruanos', href: '/contacto.html?tipo=proyecto' },
+      { label: 'Alianzas comerciales', href: '/contacto.html?tipo=alianza' },
     ],
   },
   {
@@ -133,71 +133,71 @@ export const homePageEs = {
   hero: {
     eyebrow: 'INVERSIONES Y REPRESENTACIÓN EMPRESARIAL',
     heading: {
-      lead: 'Tu contraparte empresarial',
-      emphasis: 'para proyectos',
-      trailing: 'en todo el Perú.',
+      lead: 'Tu empresa, con una',
+      emphasis: 'contraparte local',
+      trailing: 'en el Perú.',
     },
     description:
-      'Conectamos empresas e inversionistas nacionales e internacionales con proyectos en todo el Perú. Nuestra red tiene mayor presencia en el norte y nororiente; priorizamos el capital extranjero, sin excluir el nacional.',
+      'Para empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano, exploramos posibles esquemas de representación y articulación comercial según cada caso. También conversamos con inversionistas y socios interesados en proyectos en el Perú. Nuestra red cubre todo el país, con mayor presencia en el norte y nororiente; priorizamos el capital extranjero, sin excluir el nacional.',
     actions: [
       {
-        label: 'Iniciar una conversación',
-        href: '/contacto.html',
+        label: 'Conversemos sobre tu ingreso al Perú',
+        href: '/contacto.html?tipo=expansion',
         variant: 'gold',
       },
       {
-        label: 'Conocer POWERFUL',
-        href: '/nosotros.html',
+        label: 'Busco invertir o asociarme',
+        href: '/contacto.html?tipo=inversionista',
         variant: 'outline',
       },
     ],
     proofPoints: [
       'ALCANCE NACIONAL',
       'MAYOR PRESENCIA EN EL NORTE Y NORORIENTE',
-      'CAPITAL NACIONAL E INTERNACIONAL',
+      'CAPITAL EXTRANJERO PREFERENTE, NO EXCLUSIVO',
     ],
     mapAlt: 'Contorno del Perú, sin límites departamentales, ubicaciones ni rutas marcadas.',
     mapStamp: 'INICIATIVA PERUANA',
-    mapReach: 'Proyectos en todo el Perú',
+    mapReach: 'Proyectos e iniciativas en todo el Perú',
     mapNetwork: 'Red nacional con mayor presencia en el norte y nororiente.',
   },
   intro: {
     index: '01 / NUESTRA PROPUESTA',
-    lead: 'Más que vincular partes:',
-    emphasis: 'construir relaciones comerciales con un papel activo.',
+    lead: 'Una contraparte para explorar el Perú:',
+    emphasis: 'relaciones comerciales con alcance definido.',
   },
   servicesPreview: {
     eyebrow: 'NUESTRO ENFOQUE',
     heading: {
-      lead: 'Tres maneras de',
-      emphasis: 'generar conexión.',
+      lead: 'Tres vías para',
+      emphasis: 'desarrollar relaciones.',
     },
     description:
-      'El modelo de POWERFUL combina articulación, representación y participación, ajustándose a las características de cada proyecto.',
+      'Una vía para empresas que evalúan ingresar al Perú, otra para inversionistas y socios que exploran proyectos, y otra para titulares o representantes de iniciativas peruanas. Cada posible relación se evalúa según su objetivo y alcance.',
     cardAction: 'Explorar servicio',
     cards: [
       {
         number: '01',
-        icon: 'globe',
-        title: 'Articulación de proyectos',
+        icon: 'briefcase',
+        title: 'Representación empresarial en Perú',
         description:
-          'Identificamos posibles conexiones entre iniciativas en Perú, empresas y potenciales aliados o inversionistas.',
+          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano, para explorar representación y articulación comercial según cada caso.',
         href: '/servicios.html',
       },
       {
         number: '02',
-        icon: 'briefcase',
-        title: 'Representación empresarial',
+        icon: 'globe',
+        title: 'Inversión y alianzas',
         description:
-          'Actuamos dentro de facultades y acuerdos específicos para acompañar intereses comerciales y relaciones de negocio.',
+          'Exploramos proyectos e iniciativas disponibles en el Perú, incluidos los difundidos por entidades del Estado, y evaluamos posibles vínculos con inversionistas y socios. La información pública no supone cartera propia ni acceso especial.',
         href: '/servicios.html',
       },
       {
         number: '03',
         icon: 'layers',
-        title: 'Participación en negocios',
+        title: 'Articulación de iniciativas peruanas',
         description:
-          'Evaluamos esquemas de involucramiento directo, coordinación o participación empresarial cuando una operación lo requiere.',
+          'Los titulares o representantes de proyectos pueden compartir una iniciativa para una revisión inicial y una posible conversación con contrapartes pertinentes.',
         href: '/servicios.html',
       },
     ],
@@ -211,7 +211,7 @@ export const homePageEs = {
       emphasis: 'estructura.',
     },
     description:
-      'Exploramos iniciativas en ámbitos productivos, comerciales y de infraestructura, cada una sujeta a revisión particular.',
+      'Exploramos relaciones comerciales e iniciativas en distintos sectores del Perú. La información y las condiciones de cada caso se revisan antes de avanzar.',
     sectors: [
       { label: 'Minería y minerales', href: '/sectores.html#mineria' },
       { label: 'Energía e hidrocarburos', href: '/sectores.html#energia' },
@@ -229,15 +229,15 @@ export const homePageEs = {
       emphasis: 'Proyectos en todo el país.',
     },
     description:
-      'POWERFUL busca clientes e inversión nacionales e internacionales para proyectos en el Perú. Su red de contactos alcanza todo el país, con mayor presencia en el norte y nororiente; prioriza el capital extranjero, sin excluir el nacional.',
+      'POWERFUL busca relacionarse primero con empresas internacionales que evalúan ingresar al Perú, y también con inversionistas y socios interesados en proyectos peruanos. Su red alcanza todo el país, con mayor presencia en el norte y nororiente. Se prioriza el capital extranjero, sin excluir el nacional.',
     linkLabel: 'Cómo trabajamos',
     linkHref: '/como-trabajamos.html',
-    diagramSource: 'Empresas e inversionistas',
-    diagramSourceDetail: 'Nacionales e internacionales',
-    diagramRole: 'Articulación · representación · participación',
-    diagramDestination: 'Proyectos',
-    diagramDestinationDetail: 'En todo el Perú',
-    diagramNote: 'La participación y el alcance de cada relación se definen según las características de cada proyecto.',
+    diagramSource: 'Empresas en expansión',
+    diagramSourceDetail: 'Con presencia internacional',
+    diagramRole: 'Representación · articulación · participación',
+    diagramDestination: 'Proyectos peruanos',
+    diagramDestinationDetail: 'En todo el país',
+    diagramNote: 'La disponibilidad y las condiciones de cada iniciativa se revisan antes de acordar cualquier intervención.',
   },
   processPreview: {
     eyebrow: 'NUESTRA METODOLOGÍA',
@@ -246,17 +246,17 @@ export const homePageEs = {
       emphasis: 'Luego actuar.',
     },
     description:
-      'No todas las iniciativas requieren la misma estructura. Nuestro punto de partida es comprender a las partes y evaluar el alcance real de cada iniciativa.',
+      'Comprendemos si el objetivo es explorar el ingreso de una empresa al Perú, evaluar una inversión o alianza, o presentar un proyecto peruano. El alcance de cualquier intervención se acuerda antes de actuar.',
     steps: [
       {
         number: '01',
         title: 'Conocer',
-        description: 'Comprender el interés y las condiciones iniciales.',
+        description: 'Entender si buscas ingresar al Perú, invertir, asociarte o presentar un proyecto.',
       },
       {
         number: '02',
         title: 'Evaluar',
-        description: 'Identificar pertinencia y posibilidades de colaboración.',
+        description: 'Revisar objetivos, sector e información disponible para cada caso.',
       },
       {
         number: '03',
@@ -271,12 +271,12 @@ export const homePageEs = {
     ],
   },
   miniCta: {
-    eyebrow: 'RELACIONES CON PROPÓSITO',
-    heading: '¿Tienes un proyecto que merece una conversación?',
+    eyebrow: 'EXPANSIÓN EMPRESARIAL EN PERÚ',
+    heading: '¿Tu empresa evalúa ingresar al mercado peruano?',
     description:
-      'Ya sea una iniciativa en Perú o una búsqueda de representación y aliados, cuéntanos tu objetivo.',
-    actionLabel: 'Presentar un proyecto',
-    actionHref: '/contacto.html?tipo=proyecto',
+      'Conversemos sobre representación y articulación comercial. Si buscas invertir o asociarte a un proyecto peruano, elige esa ruta en el formulario.',
+    actionLabel: 'Conversemos sobre tu ingreso al Perú',
+    actionHref: '/contacto.html?tipo=expansion',
   },
 } as const satisfies HomePageEs;
 
@@ -424,7 +424,7 @@ export const businessPagesEs = {
   nosotros: {
     metadata: {
       title: 'Nosotros | POWERFUL',
-        description: 'Iniciativa peruana con red nacional y mayor presencia en el norte y nororiente',
+      description: 'Iniciativa peruana que conversa con empresas que evalúan ingresar al país e inversionistas interesados en proyectos peruanos.',
     },
     hero: {
       eyebrow: 'CONOCE POWERFUL',
@@ -433,7 +433,7 @@ export const businessPagesEs = {
         emphasis: 'alcance nacional.',
       },
       lede:
-        'Conectamos empresas e inversionistas nacionales e internacionales con proyectos en todo el Perú, con mayor presencia de nuestra red en el norte y nororiente.',
+        'Exploramos relaciones de representación para empresas que evalúan ingresar al Perú y conversaciones de inversión o alianza sobre proyectos del país. Nuestra red es nacional, con mayor presencia en el norte y nororiente.',
       pageNumber: '02',
     },
     profile: {
@@ -444,7 +444,7 @@ export const businessPagesEs = {
       },
       paragraphs: [
         'POWERFUL es una iniciativa empresarial centrada en el Perú. Facilitamos la relación entre empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
-        'Buscamos clientes e inversionistas nacionales e internacionales. Priorizamos el capital extranjero, sin excluir el nacional. El alcance de cada relación depende de la iniciativa y de los acuerdos correspondientes.',
+        'Nuestra prioridad es conversar con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano. También buscamos inversionistas y socios para proyectos en Perú; los titulares de iniciativas pueden presentar información para una evaluación inicial. Priorizamos el capital extranjero, sin excluir el nacional.',
       ],
       linkLabel: 'Ver qué hacemos',
       linkHref: '/servicios.html',
@@ -456,7 +456,7 @@ export const businessPagesEs = {
         emphasis: 'con mayor presencia regional.',
       },
       description:
-        'Nuestra red de contactos cubre todo el Perú, con mayor presencia en el norte y nororiente. Trabajamos con empresas e inversionistas nacionales e internacionales, y priorizamos el capital extranjero, sin excluir el nacional.',
+        'Nuestra red cubre todo el Perú, con mayor presencia en el norte y nororiente. Nos dirigimos primero a empresas internacionales que evalúan ingresar al país y también a inversionistas, socios y contrapartes nacionales. El capital extranjero es preferente, no exclusivo.',
       values: [
         {
           index: '01 /',
@@ -489,17 +489,17 @@ export const businessPagesEs = {
     },
     cta: {
       eyebrow: 'SIGUIENTE PASO',
-      heading: 'Hablemos de la relación que buscas.',
+      heading: '¿Tu empresa evalúa ingresar al Perú?',
       description:
-        'Podemos revisar si la iniciativa es pertinente para conversar.',
-      actionLabel: 'Contactar',
-      actionHref: '/contacto.html',
+        'Conversemos sobre representación y relaciones comerciales. También atendemos consultas de inversión, alianzas y proyectos peruanos.',
+      actionLabel: 'Conversemos sobre tu ingreso',
+      actionHref: '/contacto.html?tipo=expansion',
     },
   },
   servicios: {
     metadata: {
       title: 'Qué hacemos | POWERFUL',
-      description: 'Articulación, representación y participación empresarial',
+      description: 'Representación y articulación comercial en Perú para empresas que evalúan ingresar al mercado peruano.',
     },
     hero: {
       eyebrow: 'QUÉ HACEMOS',
@@ -508,38 +508,38 @@ export const businessPagesEs = {
         emphasis: 'participamos.',
       },
       lede:
-        'El alcance de POWERFUL puede abarcar distintas etapas de una relación empresarial, dependiendo del proyecto, las contrapartes y los acuerdos aplicables.',
+        'Conversamos sobre el ingreso de empresas al mercado peruano, la representación comercial y posibles relaciones con inversionistas o socios, según el alcance que se acuerde.',
       pageNumber: '03',
     },
     details: [
       {
-        index: '01 / ARTICULACIÓN',
+        index: '01 / REPRESENTACIÓN',
         heading: {
-          lead: 'Proyectos y',
-          emphasis: 'contrapartes.',
+          lead: 'Representación',
+          emphasis: 'empresarial en Perú.',
         },
         description:
-          'Identificamos iniciativas y posibles espacios de colaboración entre titulares de proyectos en Perú, empresas y actores con interés comercial o de inversión.',
-        icon: 'globe',
-      },
-      {
-        index: '02 / REPRESENTACIÓN',
-        heading: {
-          lead: 'Gestión y',
-          emphasis: 'representación empresarial.',
-        },
-        description:
-          'Podemos asumir funciones de representación, coordinación o gestión comercial dentro de facultades expresamente acordadas y documentadas.',
+          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al Perú. Toda representación requiere facultades expresas, alcance definido y acuerdos documentados.',
         icon: 'briefcase',
       },
       {
-        index: '03 / PARTICIPACIÓN',
+        index: '02 / ARTICULACIÓN',
         heading: {
-          lead: 'Involucramiento en',
-          emphasis: 'negocios y proyectos.',
+          lead: 'Proyectos y',
+          emphasis: 'posibles alianzas.',
         },
         description:
-          'Evaluamos esquemas de participación directa o colaboración sostenida, con responsabilidades y condiciones pactadas para cada operación.',
+          'Exploramos proyectos e iniciativas disponibles en Perú, incluidos los difundidos por entidades del Estado, y evaluamos posibles vínculos con empresas, inversionistas y socios. La información pública no implica cartera propia, mandato ni relación oficial.',
+        icon: 'globe',
+      },
+      {
+        index: '03 / INVERSIÓN Y PARTICIPACIÓN',
+        heading: {
+          lead: 'Inversión y',
+          emphasis: 'colaboración empresarial.',
+        },
+        description:
+          'Evaluamos posibles esquemas de colaboración o participación con inversionistas y socios, con responsabilidades y condiciones acordadas para cada operación. No se presume financiamiento ni participación directa.',
         icon: 'layers',
       },
       {
@@ -557,21 +557,21 @@ export const businessPagesEs = {
       eyebrow: 'NUESTRO ALCANCE',
       heading: 'Una propuesta no equivale a una promesa.',
       description:
-        'La evaluación inicial de un proyecto no implica compromisos de financiamiento, representación, contratación ni participación. Las responsabilidades se establecen únicamente mediante los acuerdos aplicables.',
+        'La revisión de información pública, incluidos proyectos difundidos por entidades del Estado, no implica cartera validada, acceso especial, mandato ni relación oficial. La conversación inicial tampoco supone financiamiento, representación, constitución de empresa, permisos ni participación; las responsabilidades se establecen por acuerdo.',
     },
     cta: {
       eyebrow: 'CONVERSEMOS',
-      heading: 'Cada operación tiene su propio contexto.',
+      heading: '¿Tu empresa evalúa ingresar al Perú?',
       description:
-        'Describe brevemente la relación empresarial o necesidad que te interesa explorar.',
-      actionLabel: 'Solicitar conversación',
-      actionHref: '/contacto.html?tipo=representacion',
+        'Conversemos sobre el ingreso de tu empresa al Perú y una posible representación comercial. Si eres inversionista o socio, elige el motivo de inversión o alianza en el formulario.',
+      actionLabel: 'Conversemos sobre tu ingreso',
+      actionHref: '/contacto.html?tipo=expansion',
     },
   },
   sectores: {
     metadata: {
       title: 'Sectores | POWERFUL',
-        description: 'Sectores de interés y experiencia profesional del equipo en Perú',
+      description: 'Sectores de interés en Perú para empresas, inversionistas y socios; experiencia profesional del equipo en agua, agroexportación y pesca.',
     },
     hero: {
       eyebrow: 'SECTORES DE INTERÉS',
@@ -580,7 +580,7 @@ export const businessPagesEs = {
         emphasis: 'multisectorial.',
       },
       lede:
-        'Exploramos iniciativas empresariales en todo el Perú. Nuestra red tiene mayor presencia en el norte y nororiente; cada iniciativa se evalúa según sus características y el marco aplicable.',
+        'Exploramos relaciones comerciales, inversión y alianzas en distintos sectores del Perú. La red tiene mayor presencia en el norte y nororiente; cada caso se evalúa según su información y marco aplicable.',
       pageNumber: '04',
     },
     controls: {
@@ -671,7 +671,7 @@ export const businessPagesEs = {
           'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',
       },
     ],
-    cardAction: 'Consultar sobre un proyecto',
+    cardAction: 'Conversar sobre este sector',
     disclaimer:
       'Los sectores presentados describen ámbitos de interés y evaluación. No implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
     teamExperience: {
@@ -681,18 +681,18 @@ export const businessPagesEs = {
         'Esta experiencia corresponde a integrantes del equipo y no constituye, por sí sola, trayectoria corporativa ni proyectos ejecutados por POWERFUL.',
     },
     cta: {
-      eyebrow: 'PROYECTOS EN PERÚ',
-      heading: '¿Tu iniciativa pertenece a alguno de estos sectores?',
+      eyebrow: 'INVERSIÓN Y ALIANZAS EN PERÚ',
+      heading: '¿Buscas invertir o asociarte en estos sectores?',
       description:
-        'Cuéntanos el tipo de proyecto y la relación comercial que deseas desarrollar.',
-      actionLabel: 'Presentar consulta',
-      actionHref: '/contacto.html?tipo=proyecto',
+        'Exploramos proyectos e iniciativas disponibles en el país, incluidos los difundidos por entidades del Estado. Cada caso requiere revisión; no anunciamos una cartera de proyectos validada.',
+      actionLabel: 'Conversar sobre inversión y alianzas',
+      actionHref: '/contacto.html?tipo=inversionista',
     },
   },
   comoTrabajamos: {
     metadata: {
       title: 'Cómo trabajamos | POWERFUL',
-      description: 'Proceso de evaluación, vinculación y colaboración empresarial',
+      description: 'Conoce cómo evaluamos consultas de expansión empresarial, inversión, alianzas y proyectos en Perú.',
     },
     hero: {
       eyebrow: 'NUESTRO PROCESO',
@@ -701,7 +701,7 @@ export const businessPagesEs = {
         emphasis: 'relación estructurada.',
       },
       lede:
-        'El trabajo empieza por comprender la iniciativa y su contexto. Cada una se evalúa individualmente antes de definir posibles compromisos.',
+        'El primer paso es entender tu objetivo: si tu empresa evalúa ingresar al Perú, si buscas invertir o asociarte, o si representas un proyecto peruano. Cada caso se revisa antes de definir compromisos.',
       pageNumber: '05',
     },
     process: {
@@ -717,13 +717,13 @@ export const businessPagesEs = {
           number: '01',
           title: 'Primer contacto',
           description:
-            'Recibimos una descripción inicial del interés empresarial y, si corresponde, de la iniciativa o el proyecto.',
+            'Conocemos el objetivo: explorar el ingreso al mercado peruano, evaluar inversión o alianza, o presentar un proyecto en el país.',
         },
         {
           number: '02',
           title: 'Revisión de pertinencia',
           description:
-            'Consideramos el tipo de iniciativa, el objetivo de las partes y si existe espacio para una conversación.',
+            'Revisamos el sector, las partes y la información disponible. Encontrar información pública no implica vigencia, validación, mandato ni relación oficial.',
         },
         {
           number: '03',
@@ -758,16 +758,17 @@ export const businessPagesEs = {
     },
     cta: {
       eyebrow: 'EMPECEMOS',
-      heading: 'Cuéntanos qué necesitas explorar.',
+        heading: 'Cuéntanos qué buscas en el Perú.',
       description:
-        'Un primer mensaje con el contexto suficiente es el punto de partida.',
-      actionLabel: 'Enviar una consulta',
+          'Puedes consultar sobre ingreso empresarial, inversión, alianzas o presentar un proyecto peruano.',
+        actionLabel: 'Elegir motivo de consulta',
       actionHref: '/contacto.html',
     },
   },
 } as const satisfies BusinessPagesEs;
 
 export type ContactReasonEs =
+  | 'expansion'
   | 'inversionista'
   | 'proyecto'
   | 'representacion'
@@ -851,7 +852,7 @@ export interface NotFoundPageEs {
 export const contactPageEs = {
   metadata: {
     title: 'Contacto | POWERFUL',
-    description: 'Comunícate con POWERFUL acerca de inversiones, proyectos o representación',
+    description: 'Conversemos sobre el ingreso de tu empresa al Perú, inversiones, alianzas o proyectos peruanos.',
   },
   hero: {
     eyebrow: 'INICIEMOS UNA CONVERSACIÓN',
@@ -860,17 +861,17 @@ export const contactPageEs = {
       emphasis: 'por entendernos.',
     },
     lede:
-      'Si representas a una empresa o inversionista nacional o internacional, o a un proyecto en el Perú, comparte brevemente el motivo de tu consulta.',
+      'Si representas a una empresa con presencia internacional que evalúa ingresar al Perú, buscas invertir o asociarte a proyectos del país, o representas una iniciativa peruana, cuéntanos tu objetivo.',
     pageNumber: '06',
   },
   aside: {
     eyebrow: 'CONTACTO CORPORATIVO',
     heading: { lead: 'Cuéntanos tu', emphasis: 'objetivo.' },
     description:
-      'Este formulario está orientado a relaciones empresariales. No envíes contratos, contraseñas, documentos personales ni información financiera confidencial en una primera consulta.',
+      'Este formulario orienta consultas de expansión empresarial, inversión y alianzas. Los titulares o representantes de iniciativas peruanas también pueden compartir un resumen general. No envíes contratos, contraseñas, documentos personales ni información financiera confidencial.',
     steps: [
-      { number: '01 /', description: 'Selecciona el tipo de relación que buscas.' },
-      { number: '02 /', description: 'Describe tu iniciativa de manera general.' },
+      { number: '01 /', description: 'Indica si buscas ingresar al Perú, invertir, asociarte o presentar una iniciativa.' },
+      { number: '02 /', description: 'Describe el objetivo de tu empresa o consulta en términos generales.' },
       {
         number: '03 /',
         description:
@@ -900,14 +901,15 @@ export const contactPageEs = {
       name: 'Tu nombre',
       company: 'Opcional',
       email: 'correo@empresa.com',
-      country: 'País de contacto',
-      message: '¿Qué proyecto, representación o relación empresarial deseas explorar?',
+      country: 'País donde opera tu empresa o resides',
+      message: '¿Tu empresa evalúa ingresar al Perú, buscas invertir o asociarte, o representas un proyecto peruano?',
     },
     options: [
-      { value: 'inversionista', label: 'Represento capital o inversionistas' },
-      { value: 'proyecto', label: 'Tengo un proyecto en Perú' },
+      { value: 'expansion', label: 'Represento una empresa que evalúa ingresar al Perú' },
+      { value: 'inversionista', label: 'Busco invertir o asociarme a proyectos peruanos' },
       { value: 'representacion', label: 'Busco representación empresarial' },
       { value: 'alianza', label: 'Propongo una alianza comercial' },
+      { value: 'proyecto', label: 'Represento un proyecto o iniciativa en Perú' },
       { value: 'otro', label: 'Otra consulta' },
     ],
     limits: {

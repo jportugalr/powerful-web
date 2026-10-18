@@ -12,15 +12,15 @@ Astro + TypeScript + Tailwind CSS + CSS propio; GSAP selectivo para movimiento. 
 
 ## Users
 
-Clientes buscados: empresas e inversionistas nacionales e internacionales. Se prioriza el capital extranjero, sin excluir el nacional. POWERFUL se centra en proyectos empresariales y de inversión en todo el Perú. Su red de contactos es nacional, con mayor presencia en el norte y nororiente. Los titulares de proyectos peruanos son contrapartes que evalúan la capacidad de articulación y respaldo de POWERFUL.
+Público principal: empresas y grupos con presencia internacional que evalúan ingresar al Perú o abrir operaciones en el país. Segundo recorrido: inversionistas y socios, nacionales o internacionales, interesados en proyectos peruanos; se prefiere capital extranjero, sin excluir el nacional. POWERFUL busca y evalúa iniciativas disponibles en Perú, incluidas las difundidas por fuentes públicas y estatales, sin afirmar una cartera propia, mandato, acceso especial o vínculo oficial. El alcance de proyectos y contactos es nacional, con una red más fuerte en el norte y nororiente. Los titulares de iniciativas peruanas son un público secundario.
 
 ## Product Purpose
 
-Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversaciones comerciales calificadas sobre representación y proyectos empresariales en Perú. La primera entrega es una portada navegable real para escritorio y móvil.
+Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversaciones comerciales calificadas de empresas que evalúan ingresar u operar en Perú y, en segundo lugar, de inversionistas y socios para proyectos peruanos. Los titulares de iniciativas locales tienen un canal secundario de contacto. La primera entrega es una portada navegable real para escritorio y móvil.
 
 ## Positioning
 
-POWERFUL es una iniciativa peruana que articula relaciones comerciales en torno a proyectos en todo el país. La representación empresarial es el eje de la comunicación; las capacidades adicionales y sus alcances se explican con prudencia y según los acuerdos correspondientes. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
+POWERFUL es una iniciativa centrada en Perú que busca ser contraparte local de empresas y grupos con presencia internacional que evalúan ingresar u operar en el país. También busca inversionistas y socios para iniciativas peruanas, que identifica y evalúa a partir de información disponible, incluidas fuentes públicas y estatales. La exploración no supone cartera propia, mandato ni relación oficial. El alcance es nacional, con mayor presencia de la red en el norte y nororiente. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
 
 ## Operating Context
 
@@ -30,7 +30,7 @@ Expediente local en `Powerful/documentacion web/`, propuesta V0.1. El sitemap pr
 
 - Primera fase sin panel de administración; textos e imágenes se mantienen en el proyecto.
 - Lanzamiento en español, con separación de contenido y componentes para facilitar futuras traducciones.
-- Contacto completo previsto para otra unidad: backend, antispam, registro y correo. Aún no hay proveedor, almacenamiento, hosting ni canales corporativos oficiales confirmados. No simular recepción de consultas.
+- Contacto completo previsto para otra unidad: backend, antispam, registro y correo. Aún no hay proveedor, almacenamiento, hosting ni canales corporativos oficiales confirmados. La demo valida localmente y no envía ni simula recepción de consultas. Motivos: expansión/ingreso al Perú, inversión o asociación en proyectos peruanos, representación, alianza, propuesta de proyecto y otro.
 - Sectores de interés de POWERFUL: minería y minerales, energía e hidrocarburos, infraestructura y construcción, inmobiliario y bienes raíces, comercio exterior y materias primas. No presentarlos como proyectos ejecutados.
 - Experiencia profesional de integrantes del equipo en agua y perforación de pozos, agroexportación y pesca. Comunicarla en bloque separado y distinguirla explícitamente de la trayectoria corporativa de POWERFUL.
 - Verificación funcional normal elegida explícitamente por el usuario; TDD estricto desactivado para la portada.
@@ -46,7 +46,9 @@ Expediente web local y paquetes de identidad en `Powerful/`. Maestro verificado 
 
 ## Product Principles
 
-- Hablar a empresas e inversionistas nacionales e internacionales que buscan proyectos o representación en Perú; expresar la preferencia por capital extranjero como no exclusiva.
+- Priorizar a empresas y grupos con presencia internacional que evalúan ingresar u operar en Perú; ofrecer un segundo recorrido a inversionistas y socios de proyectos peruanos, y uno secundario a titulares de iniciativas.
+- Comunicar que los proyectos se buscan y evalúan desde información disponible en Perú, incluidas fuentes públicas o estatales, sin sugerir cartera validada, mandato, acceso especial ni vínculo oficial.
+- Expresar la preferencia por capital extranjero como no exclusiva y el alcance nacional con mayor presencia de red en el norte y nororiente.
 - Construir confianza con alcance claro y evidencia verificable.
 - Facilitar el siguiente paso con un contacto honesto sobre su funcionamiento.
 - Conservar la identidad aprobada y separar hechos de propuestas.

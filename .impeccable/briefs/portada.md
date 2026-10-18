@@ -3,19 +3,23 @@
 Target: `src/pages/index.astro`; related `src/components/HomeContent.astro`, `src/layouts/SiteLayout.astro`, `src/styles/global.css`, `src/content/es.ts`.
 Mode: Persuade. Build path: code, explícitamente elegido por el usuario.
 
-Dirección vigente, 2026-10-17: el prototipo aprobado en `web/` es la base visual y funcional, conforme a `DESIGN.md`. POWERFUL es una iniciativa centrada en el Perú, con proyectos y red de contactos de alcance nacional y mayor presencia en el norte y nororiente. Atiende clientes e inversionistas nacionales e internacionales; prioriza el capital extranjero, sin excluir el nacional. La instrucción anterior de centrar el hero en Piura quedó supersedida. P6 integra las cinco imágenes genéricas de sectores en Astro; el cambio de copy conserva esas imágenes, filtros y servicios.
+Dirección vigente, 2026-10-18: el prototipo aprobado en `web/` es la base visual y funcional, conforme a `DESIGN.md`. El público principal son empresas y grupos con presencia internacional que evalúan ingresar al Perú o abrir operaciones en el país. El segundo recorrido es para inversionistas y socios de proyectos peruanos; se prefiere capital extranjero, sin excluir el nacional. Titulares de iniciativas locales son público secundario. El alcance es nacional, con red más fuerte en el norte y nororiente. POWERFUL puede explorar proyectos disponibles en el país, incluidas fuentes públicas y estatales, pero no debe afirmar cartera propia validada, mandato, acceso especial ni relación oficial. P6 integra las cinco imágenes genéricas de sectores en Astro; el cambio de copy conserva esas imágenes, filtros y servicios.
 
 ## Audience and action
 
-Empresas e inversionistas nacionales e internacionales que buscan participar en proyectos o contar con representación en Perú; el capital extranjero es preferente, no exclusivo. Los titulares de proyectos peruanos son contrapartes relevantes. La web debe explicar el alcance nacional, la mayor presencia de la red en el norte y nororiente, y el proceso, sin inventar credenciales. Contacto exploratorio local, sin envío ni recepción simulada.
+1. Empresas y grupos con presencia internacional que evalúan ingresar al Perú o abrir operaciones en el país.
+2. Inversionistas y socios, nacionales o internacionales, que buscan participar en proyectos peruanos; se prefiere capital extranjero, sin excluir el peruano.
+3. Titulares y representantes de iniciativas en Perú, como público secundario.
+
+La web debe explicar el alcance nacional, la mayor presencia de la red en el norte y nororiente, y el proceso, sin inventar credenciales. Contacto de demostración, sin envío ni recepción simulada.
 
 ## Direction contract
 
-THESIS: «Tu contraparte empresarial para proyectos en todo el Perú». Explicar en la bajada la atención a empresas e inversionistas nacionales e internacionales, la red nacional con mayor presencia en el norte y nororiente, y la preferencia no exclusiva por capital extranjero.
+THESIS: «Tu empresa, con una contraparte local en el Perú». La bajada prioriza a grupos con presencia internacional que evalúan ingresar u operar en el país. El CTA principal abre `tipo=expansion`; el CTA secundario abre `tipo=inversionista` para inversión o asociación en proyectos peruanos. La oferta describe búsqueda y evaluación de iniciativas disponibles en Perú, incluidas fuentes públicas/estatales, sin insinuar cartera validada o acceso institucional. Explicar el alcance nacional, la red más fuerte en el norte y nororiente, y la preferencia no exclusiva por capital extranjero.
 
 OWN-WORLD: identidad del prototipo aprobado, con marfil #F4F1EA, navy #14263D y oro #B79862. Inter lleva mensaje y navegación, cargada localmente. Conservar su jerarquía editorial y los patrones existentes; la nueva fotografía debe convivir con esa base.
 
-STORY: identificar a POWERFUL como iniciativa centrada en Perú, comprender capacidades y focos, reconocer cómo empieza la relación y preparar una consulta. Los proyectos y la red son nacionales; el norte y nororiente representan mayor presencia, no un límite del alcance.
+STORY: una empresa con presencia internacional evalúa ingresar al Perú; entiende el papel local de POWERFUL y prepara una consulta de expansión. El inversionista o socio encuentra un recorrido secundario para conversar sobre proyectos peruanos que POWERFUL busca y evalúa desde información disponible. Los titulares de iniciativas pueden contactar por un canal secundario. Los proyectos y la red son nacionales; el norte y nororiente representan mayor presencia, no un límite del alcance.
 
 FIRST VIEWPORT: conservar marca, navegación, titular y acciones del prototipo. Preparar la fotografía para una futura composición con texto a la izquierda y foto a la derecha; en móvil el texto y la acción deben conservar prioridad. El master será horizontal 4:3, mínimo 2400×1800, con margen para recortes responsivos. La portada actual usa arte CSS y todavía no monta una fotografía del hero. La integración y su evaluación visual quedan fuera de P5.
 
