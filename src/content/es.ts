@@ -173,7 +173,7 @@ export const homePageEs = {
       emphasis: 'desarrollar relaciones.',
     },
     description:
-      'Una vía para empresas que evalúan ingresar al Perú, otra para inversionistas y socios que exploran proyectos, y otra para titulares o representantes de iniciativas peruanas. Cada posible relación se evalúa según su objetivo y alcance.',
+      'Una vía para empresas que evalúan ingresar al Perú, otra para inversionistas y socios que exploran proyectos, y otra para titulares o representantes de iniciativas peruanas.',
     cardAction: 'Explorar servicio',
     cards: [
       {
@@ -189,7 +189,7 @@ export const homePageEs = {
         icon: 'globe',
         title: 'Inversión y alianzas',
         description:
-          'Exploramos proyectos e iniciativas disponibles en el Perú, incluidos los difundidos por entidades del Estado, y evaluamos posibles vínculos con inversionistas y socios. La información pública no supone cartera propia ni acceso especial.',
+          'Conversamos con inversionistas y socios interesados en proyectos del Perú.',
         href: '/servicios.html',
       },
       {
@@ -197,7 +197,7 @@ export const homePageEs = {
         icon: 'layers',
         title: 'Articulación de iniciativas peruanas',
         description:
-          'Los titulares o representantes de proyectos pueden compartir una iniciativa para una revisión inicial y una posible conversación con contrapartes pertinentes.',
+          'Las conversaciones con titulares o representantes de iniciativas peruanas se enmarcan en los objetivos y acuerdos de las partes.',
         href: '/servicios.html',
       },
     ],
@@ -211,7 +211,7 @@ export const homePageEs = {
       emphasis: 'en el Perú.',
     },
     description:
-      'Exploramos relaciones comerciales e iniciativas en distintos sectores del Perú. La información y las condiciones de cada caso se revisan antes de avanzar.',
+      'Los sectores destacados reflejan la diversidad de actividades empresariales presentes en distintas regiones del Perú.',
     sectors: [
       { label: 'Minería y minerales', href: '/sectores.html#mineria' },
       { label: 'Energía e hidrocarburos', href: '/sectores.html#energia' },
@@ -237,36 +237,36 @@ export const homePageEs = {
     diagramRole: 'Representación · articulación · participación',
     diagramDestination: 'Proyectos peruanos',
     diagramDestinationDetail: 'En todo el país',
-    diagramNote: 'La disponibilidad y las condiciones de cada iniciativa se revisan antes de acordar cualquier intervención.',
+    diagramNote: 'Conexiones entre empresas, inversión e iniciativas en todo el país.',
   },
   processPreview: {
-    eyebrow: 'NUESTRA METODOLOGÍA',
+    eyebrow: 'PRINCIPIOS DE COLABORACIÓN',
     heading: {
-      lead: 'Primero entender.',
-      emphasis: 'Luego actuar.',
+      lead: 'Relaciones con propósito.',
+      emphasis: 'Acuerdos con claridad.',
     },
     description:
-      'Comprendemos si el objetivo es explorar el ingreso de una empresa al Perú, evaluar una inversión o alianza, o presentar un proyecto peruano. El alcance de cualquier intervención se acuerda antes de actuar.',
+      'Las conversaciones parten de objetivos compartidos y de responsabilidades y alcances definidos entre las partes.',
     steps: [
       {
         number: '01',
-        title: 'Conocer',
-        description: 'Entender si buscas ingresar al Perú, invertir, asociarte o presentar un proyecto.',
+        title: 'Objetivos compartidos',
+        description: 'Cada relación parte del propósito expresado por las partes.',
       },
       {
         number: '02',
-        title: 'Evaluar',
-        description: 'Revisar objetivos, sector e información disponible para cada caso.',
+        title: 'Roles claros',
+        description: 'La función de cada participante se define con claridad.',
       },
       {
         number: '03',
-        title: 'Definir',
-        description: 'Precisar responsabilidades, facultades y acuerdos.',
+        title: 'Responsabilidades',
+        description: 'Las responsabilidades corresponden a las facultades de cada parte.',
       },
       {
         number: '04',
-        title: 'Participar',
-        description: 'Actuar según el rol y las condiciones pactadas.',
+        title: 'Acuerdos claros',
+        description: 'El alcance de la relación se establece mediante los acuerdos correspondientes.',
       },
     ],
   },
@@ -444,7 +444,7 @@ export const businessPagesEs = {
       },
       paragraphs: [
         'POWERFUL es una iniciativa empresarial centrada en el Perú. Facilitamos la relación entre empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
-        'Nuestra prioridad es conversar con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano. También buscamos inversionistas y socios para proyectos en Perú; los titulares de iniciativas pueden presentar información para una evaluación inicial. Priorizamos el capital extranjero, sin excluir el nacional.',
+        'Nuestra prioridad es conversar con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano. También buscamos inversionistas y socios para proyectos en Perú; titulares y representantes de iniciativas peruanas pueden formar parte de estas conversaciones. Priorizamos el capital extranjero, sin excluir el nacional.',
       ],
       linkLabel: 'Ver qué hacemos',
       linkHref: '/servicios.html',
@@ -460,9 +460,9 @@ export const businessPagesEs = {
       values: [
         {
           index: '01 /',
-          title: 'Criterio',
+          title: 'Claridad',
           description:
-            'Comprender el proyecto, su contexto y a las contrapartes antes de avanzar.',
+            'Definir objetivos, alcances y responsabilidades en cada relación.',
         },
         {
           index: '02 /',
@@ -529,7 +529,7 @@ export const businessPagesEs = {
           emphasis: 'posibles alianzas.',
         },
         description:
-          'Exploramos proyectos e iniciativas disponibles en Perú, incluidos los difundidos por entidades del Estado, y evaluamos posibles vínculos con empresas, inversionistas y socios. La información pública no implica cartera propia, mandato ni relación oficial.',
+          'Conversamos sobre iniciativas peruanas con empresas, inversionistas y socios, conforme a los objetivos y acuerdos de las partes. En el Perú, algunas iniciativas se difunden por entidades del Estado.',
         icon: 'globe',
       },
       {
@@ -557,7 +557,7 @@ export const businessPagesEs = {
       eyebrow: 'NUESTRO ALCANCE',
       heading: 'Una propuesta no equivale a una promesa.',
       description:
-        'La revisión de información pública, incluidos proyectos difundidos por entidades del Estado, no implica cartera validada, acceso especial, mandato ni relación oficial. La conversación inicial tampoco supone financiamiento, representación, constitución de empresa, permisos ni participación; las responsabilidades se establecen por acuerdo.',
+        'El contacto inicial no supone financiamiento, representación, constitución de empresa, permisos ni participación. Las responsabilidades se establecen por acuerdo.',
     },
     cta: {
       eyebrow: 'CONVERSEMOS',
@@ -580,7 +580,7 @@ export const businessPagesEs = {
         emphasis: 'multisectorial.',
       },
       lede:
-        'Exploramos relaciones comerciales, inversión y alianzas en distintos sectores del Perú. La red tiene mayor presencia en el norte y nororiente; cada caso se evalúa según su información y marco aplicable.',
+        'Exploramos relaciones comerciales, inversión y alianzas en distintos sectores del Perú. Nuestra red tiene mayor presencia en el norte y nororiente.',
       pageNumber: '04',
     },
     controls: {
@@ -671,9 +671,9 @@ export const businessPagesEs = {
           'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',
       },
     ],
-    cardAction: 'Conversar sobre este sector',
+    cardAction: 'Conversemos sobre este sector',
     disclaimer:
-      'Los sectores presentados describen ámbitos de interés y evaluación. No implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
+      'Los sectores presentados describen ámbitos de interés; no implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
     teamExperience: {
       heading: 'Experiencia profesional del equipo',
       fields: ['Agua y perforación de pozos', 'Agroexportación', 'Pesca'],
@@ -684,7 +684,7 @@ export const businessPagesEs = {
       eyebrow: 'INVERSIÓN Y ALIANZAS EN PERÚ',
       heading: '¿Buscas invertir o asociarte en estos sectores?',
       description:
-        'Exploramos proyectos e iniciativas disponibles en el país, incluidos los difundidos por entidades del Estado. Cada caso requiere revisión; no anunciamos una cartera de proyectos validada.',
+        'Los sectores presentados son ámbitos de interés para proyectos y relaciones empresariales en el Perú.',
       actionLabel: 'Conversar sobre inversión y alianzas',
       actionHref: '/contacto.html?tipo=inversionista',
     },
@@ -692,56 +692,56 @@ export const businessPagesEs = {
   comoTrabajamos: {
     metadata: {
       title: 'Cómo trabajamos | POWERFUL',
-      description: 'Conoce cómo evaluamos consultas de expansión empresarial, inversión, alianzas y proyectos en Perú.',
+      description: 'Conoce los principios que guían las relaciones de POWERFUL con empresas, inversionistas, socios y representantes de iniciativas en Perú.',
     },
     hero: {
-      eyebrow: 'NUESTRO PROCESO',
+      eyebrow: 'RELACIONES DE TRABAJO',
       heading: {
-        lead: 'De la primera conversación a una',
-        emphasis: 'relación estructurada.',
+        lead: 'Relaciones',
+        emphasis: 'con propósito.',
       },
       lede:
-        'El primer paso es entender tu objetivo: si tu empresa evalúa ingresar al Perú, si buscas invertir o asociarte, o si representas un proyecto peruano. Cada caso se revisa antes de definir compromisos.',
+        'Las conversaciones reúnen objetivos, responsabilidades y alcances que las partes acuerdan para cada relación.',
       pageNumber: '05',
     },
     process: {
-      eyebrow: 'LA FORMA DE TRABAJAR',
+      eyebrow: 'PRINCIPIOS DE COLABORACIÓN',
       heading: {
-        lead: 'Un proceso',
-        emphasis: 'con criterio.',
+        lead: 'Relaciones con',
+        emphasis: 'acuerdos claros.',
       },
       description:
-        'El siguiente recorrido es orientativo. No sustituye las validaciones técnicas, legales, comerciales o contractuales que correspondan.',
+        'Cada relación se guía por objetivos compartidos, roles definidos y acuerdos claros entre las partes.',
       steps: [
         {
           number: '01',
-          title: 'Primer contacto',
+          title: 'Objetivos compartidos',
           description:
-            'Conocemos el objetivo: explorar el ingreso al mercado peruano, evaluar inversión o alianza, o presentar un proyecto en el país.',
+            'Cada parte expresa el propósito que busca en una relación empresarial en el Perú.',
         },
         {
           number: '02',
-          title: 'Revisión de pertinencia',
+          title: 'Roles claros',
           description:
-            'Revisamos el sector, las partes y la información disponible. Encontrar información pública no implica vigencia, validación, mandato ni relación oficial.',
+            'La función de cada participante se define con claridad.',
         },
         {
           number: '03',
-          title: 'Conversaciones y validaciones',
+          title: 'Responsabilidades',
           description:
-            'Cuando corresponde, se coordinan acercamientos y un intercambio adecuado de información.',
+            'Las responsabilidades corresponden a las facultades de cada parte.',
         },
         {
           number: '04',
-          title: 'Definición contractual',
+          title: 'Acuerdos claros',
           description:
-            'El rol de articulación, representación, gestión o participación se establece mediante acuerdos.',
+            'El alcance de la relación se establece mediante los acuerdos correspondientes.',
         },
         {
           number: '05',
-          title: 'Seguimiento según alcance',
+          title: 'Colaboración responsable',
           description:
-            'Se realizan las actividades pactadas, con responsabilidades y condiciones propias de cada operación.',
+            'Las partes colaboran conforme a las responsabilidades y condiciones que acuerdan.',
         },
       ],
     },
