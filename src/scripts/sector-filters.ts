@@ -4,12 +4,14 @@ const filterButtons = Array.from(
 const sectorCards = Array.from(
   document.querySelectorAll<HTMLElement>('[data-category]'),
 );
+const sectorGrid = document.querySelector<HTMLElement>('.sector-cards');
 
 if (filterButtons.length > 0 && sectorCards.length > 0) {
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const selected = button.dataset.filter;
       if (!selected) return;
+      if (sectorGrid) sectorGrid.dataset.selectedFilter = selected;
 
       filterButtons.forEach((filter) => {
         const active = filter === button;
