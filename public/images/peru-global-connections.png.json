@@ -1,0 +1,18 @@
+{
+  "asset": "peru-global-connections.png",
+  "source": {
+    "type": "user-provided",
+    "path": "web/imagenes/Conexiones globales hacia Perú.png",
+    "sha256": "1c6238425b6032be13c91fcc81f52664122159e300d6409147fa3dd9a065eee0",
+    "sizeBytes": 1132187,
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    },
+    "format": "PNG",
+    "colorModel": "RGBA",
+    "hasTransparency": true
+  },
+  "classification": "Ilustración referencial proporcionada por el usuario; su composición no está a escala y no representa rutas, distancias ni relaciones comerciales confirmadas.",
+  "generator": "No identificado; no se encontró un prompt de generación."
+}
