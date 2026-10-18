@@ -23,6 +23,7 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 
 - [x] **RS-1 — Conservar el diseño y añadir vida a Sectores.** Se conservaron las tarjetas con fotos y se añadieron estados discretos de hover/foco, elevación, acercamiento de imagen y movimiento de flecha. Se revisó el copy y quedó intacto porque ya es conciso y distingue los sectores de interés de la experiencia individual del equipo. Filtros y preview local verificados; el comportamiento de movimiento reducido se revisó en CSS.
 - [x] **RS-2 — Retirar el número decorativo del hero y evaluar efectos complementarios.** Se ocultó el «04» solo en Sectores y se confirmó que los otros heroes conservan su numeración. Comparados los efectos vigentes con «Cómo trabajamos», se recomendó mantener las interacciones actuales de las tarjetas y considerar solo una transición breve en los filtros; no se añadieron efectos nuevos.
+- [x] **RS-3 — Añadir transición breve a los filtros.** Se aplicó una transición CSS de 160 ms a color, fondo y borde al estado seleccionado, sin nuevas dependencias ni cambios al filtrado. La regla solo aplica con `prefers-reduced-motion: no-preference`.
 
 ## Autorización y ruta
 
@@ -32,6 +33,9 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 - Alcance RS-2 autorizado por el usuario el 2026-10-18: ocultar el número «04» del hero de Sectores y evaluar efectos posibles en sus componentes.
 - Ruta de RS-2: **delegated direct**. Evidencia: el cambio requiere coordinar el dato/uso de `PageHero` con la página Sectores; el trigger de mapeo delegó una exploración de 4+ archivos. La propuesta de efectos es read-only; no autoriza implementarlos.
 - Forecast RS-2: 15–40 líneas de autoría (adiciones + eliminaciones). Estrategia de entrega heredada: `ask-on-risk`; bajo el umbral aproximado de 400.
+- Alcance RS-3 autorizado por el usuario el 2026-10-18: implementar la transición breve de selección en filtros y aprovechar herramientas apropiadas del catálogo.
+- Ruta de RS-3: **direct inline**. Evidencia: la exploración del catálogo se delegó al revisar más de cuatro fuentes; la implementación queda limitada a una regla CSS del selector `.filter-pill` en `src/styles/global.css`, sin escritura delegada ni cambios de markup/script.
+- Forecast RS-3: 5–12 líneas de autoría (adiciones + eliminaciones). Estrategia de entrega heredada: `ask-on-risk`; bajo el umbral aproximado de 400.
 
 ## Verificación
 
@@ -44,13 +48,19 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 - `git diff --check`: pasó; el commit de trabajo incluyó solo `src/components/SectorCard.astro`, `src/styles/global.css` y este documento de RS-1.
 - `impeccable detect --json`: señaló dos bordes laterales en las secciones de Contacto/Legal y la fuente base `Inter`. La inspección del diff confirma que son reglas preexistentes, fuera de los selectores modificados; quedan fuera de RS-1.
 - RS-2: `npm run check` pasó (32 archivos, cero diagnósticos); `npm run build` pasó (9 rutas); `git diff --check` pasó. En preview local `/sectores.html`, el número «04» ya no aparece y se conserva la etiqueta «POWERFUL / PERÚ»; la salida construida confirma que otros heroes mantienen 02, 03, 06, 07 y 08. La propuesta de efectos se basa en los componentes y estilos vigentes.
+- RS-3: `npm run check` pasó (32 archivos, cero diagnósticos); `npm run build` pasó (9 rutas); `git diff --check` pasó. En preview local, Enter seleccionó Pesca y mantuvo foco visible; `aria-pressed` quedó sincronizado y las otras seis tarjetas permanecieron ocultas. El clic de mouse en Agroindustria mostró solo esa tarjeta; «Todos» restauró las siete. El CSS limita la transición a `prefers-reduced-motion: no-preference`; no se emuló la preferencia reducida en el navegador. La transición computada es 160 ms para fondo, texto y borde. Herramienta seleccionada: CSS nativo del catálogo; GSAP, Motion y Tailwind no aportan valor a este cambio puntual.
 - RDD: `gentle-ai review mode status` confirmó `off (decided by default)` el 2026-10-18; no se inicia revisión RDD.
 
 ## Progreso y siguiente paso
 
 - Estado: implementación revisada y preview abierta en `http://localhost:4323/sectores.html`. Se conservaron hero, filtros, copy y fotos originales; se añadieron estados de hover/foco a las tarjetas, sin nuevas dependencias ni recursos.
-- Archivos de código incluidos: `src/components/SectorCard.astro`, `src/styles/global.css`. No se modificaron `src/pages/sectores.astro` ni `src/content/es.ts`.
-- Commit de trabajo: `2c904bd` (`feat: add subtle interaction to sector cards`).
+- Archivos de código de RS-1: `src/components/SectorCard.astro`, `src/styles/global.css`. No se modificaron `src/pages/sectores.astro` ni `src/content/es.ts` en ese commit.
+- Commit de trabajo de RS-1: `2c904bd` (`feat: add subtle interaction to sector cards`).
 - Mirror Engram: pendiente; no hay herramientas Engram/mem_* ni recursos configurados en este runtime. Conservar este documento y sincronizar el documento completo cuando el servicio esté disponible.
 - Siguiente paso: sincronizar el mirror Engram cuando esté disponible. Quedan anotadas como no realizadas la captura visual de teléfono y la emulación de movimiento reducido; la regla móvil existente y la regla CSS de movimiento reducido se inspeccionaron en código.
-- RS-2: implementación y verificación completadas. Las tarjetas ya elevan 3 px, cambian borde/sombra, escalan foto 1.035 y mueven la flecha 4 px al hover/foco; «Cómo trabajamos» revela su bracket y sus cinco principios al entrar en viewport. Recomendación: conservar las tarjetas y considerar únicamente una transición breve de color/fondo/borde en filtros; no añadir reveal secuencial a siete tarjetas. Aún falta registrar el commit de RS-2 después del commit de trabajo.
+- RS-2: implementación y verificación completadas. Las tarjetas ya elevan 3 px, cambian borde/sombra, escalan foto 1.035 y mueven la flecha 4 px al hover/foco; «Cómo trabajamos» revela su bracket y sus cinco principios al entrar en viewport. Recomendación: conservar las tarjetas y considerar únicamente una transición breve de color/fondo/borde en filtros; no añadir reveal secuencial a siete tarjetas.
+- Archivos de código de RS-2: `src/components/PageHero.astro`, `src/pages/sectores.astro`.
+- Commit de trabajo de RS-2: `2f21ce6` (`fix: hide decorative sector hero number`).
+- RS-3: mapeo, implementación y verificación completados. El markup y el script ya sincronizan `.active` con `aria-pressed`; el catálogo y `DESIGN.md` recomiendan CSS para transiciones simples. Se añadieron solo `background-color`, `color` y `border-color` durante 160 ms bajo movimiento permitido; el foco visible se conserva y no se anima el cambio `hidden`.
+- Archivo de código de RS-3: `src/styles/global.css`.
+- Commit de trabajo de RS-3: pendiente de registrar después del commit de implementación.
