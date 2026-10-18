@@ -52,4 +52,5 @@ El prototipo aprobado se apoya en fondos y recursos gráficos CSS, mientras la d
 - Exploración y contraste de fuentes primarias completados; el Short se pudo identificar por su título, pero no se pudo verificar su técnica exacta mediante frames o transcripción.
 - Catálogo escrito en español y leído completo. Las fuentes técnicas primarias enlazadas se contrastaron con MDN y documentación de navegadores/W3C; `git diff --no-index --check` para los archivos nuevos no reportó errores de whitespace (devuelve 1 porque cada archivo aún no está indexado).
 - El espejo Engram fue guardado y leído de vuelta; el contenido coincide con esta versión del documento, salvo el salto de línea final que Engram elimina al guardar.
-- Siguiente paso: crear el commit de trabajo en `main` y registrar su identidad en este documento y en el espejo.
+- Commit de trabajo en `main`: `e4f58cc` (`docs: add visual CSS catalog for POWERFUL`).
+- Siguiente paso: usar este catálogo como referencia cuando se revisen las imágenes recibidas y se decida qué tratamiento probar en la interfaz.
