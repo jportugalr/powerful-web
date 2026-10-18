@@ -37,7 +37,7 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 - `npm run build`: pasó y generó 9 rutas.
 - Revisión visual en la vista previa local (viewport aproximado de 863 px): composición anterior, filtros y tarjetas presentes; el estado de foco se ve al navegar con teclado. El filtro Pesca muestra su tarjeta y «Todos» restaura la lista. Se revisó la regla móvil existente de una columna y que los cambios no alteran el layout; no se capturó un viewport de teléfono.
 - `prefers-reduced-motion`: las transformaciones se anulan en la regla `reduce`; no se emuló esa preferencia en el navegador.
-- `git diff --check`: pasó. Revisar que solo se incluyan los archivos de RS-1 en el commit.
+- `git diff --check`: pasó; el commit de trabajo incluyó solo `src/components/SectorCard.astro`, `src/styles/global.css` y este documento de RS-1.
 - `impeccable detect --json`: señaló dos bordes laterales en las secciones de Contacto/Legal y la fuente base `Inter`. La inspección del diff confirma que son reglas preexistentes, fuera de los selectores modificados; quedan fuera de RS-1.
 - RDD: `gentle-ai review mode status` confirmó `off (decided by default)` el 2026-10-18; no se inicia revisión RDD.
 
@@ -45,6 +45,6 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 
 - Estado: implementación revisada y preview abierta en `http://localhost:4323/sectores.html`. Se conservaron hero, filtros, copy y fotos originales; se añadieron estados de hover/foco a las tarjetas, sin nuevas dependencias ni recursos.
 - Archivos de código incluidos: `src/components/SectorCard.astro`, `src/styles/global.css`. No se modificaron `src/pages/sectores.astro` ni `src/content/es.ts`.
-- Commit de trabajo: pendiente; se registrará después de crear el commit.
+- Commit de trabajo: `2c904bd` (`feat: add subtle interaction to sector cards`).
 - Mirror Engram: pendiente; no hay herramientas Engram/mem_* ni recursos configurados en este runtime. Conservar este documento y sincronizar el documento completo cuando el servicio esté disponible.
-- Siguiente paso: crear el commit con los dos archivos de código y este documento; después registrar su identidad aquí. La captura visual de teléfono y la emulación de movimiento reducido quedan anotadas como no realizadas.
+- Siguiente paso: sincronizar el mirror Engram cuando esté disponible. Quedan anotadas como no realizadas la captura visual de teléfono y la emulación de movimiento reducido; la regla móvil existente y la regla CSS de movimiento reducido se inspeccionaron en código.
