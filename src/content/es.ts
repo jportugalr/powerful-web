@@ -50,9 +50,6 @@ export interface HomePageEs {
     }[];
     proofPoints: string[];
     mapAlt: string;
-    mapStamp: string;
-    mapReach: string;
-    mapNetwork: string;
   };
   intro: {
     index: string;
@@ -156,10 +153,7 @@ export const homePageEs = {
       'MAYOR PRESENCIA EN EL NORTE Y NORORIENTE',
       'INVERSIÓN PERUANA E INTERNACIONAL',
     ],
-    mapAlt: 'Contorno del Perú, sin límites departamentales, ubicaciones ni rutas marcadas.',
-    mapStamp: 'INICIATIVA PERUANA',
-    mapReach: 'Proyectos e iniciativas en todo el Perú',
-    mapNetwork: 'Red nacional con mayor presencia en el norte y nororiente.',
+    mapAlt: 'Ilustración referencial: Perú al centro, con puntos y conexiones hacia cinco continentes.',
   },
   intro: {
     index: '01 / NUESTRA PROPUESTA',

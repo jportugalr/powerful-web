@@ -1,0 +1,85 @@
+{
+  "asset": "peru-continents-network.svg",
+  "classification": "Ilustración referencial: silueta del Perú y grupos de puntos etiquetados por continente, conectados visualmente hacia Perú.",
+  "purpose": "Representar al Perú como foco de la portada y mostrar conexiones visuales esquemáticas con cinco continentes.",
+  "geography": {
+    "scale": "No está a escala. La ubicación relativa, el espaciado y las conexiones son compositivos y no representan posiciones ni distancias geográficas.",
+    "regions": "Los puntos por continente no indican ciudades, países ni destinos concretos."
+  },
+  "peruGeometry": {
+    "sourceAsset": "peru-outline.svg",
+    "sourceMetadata": "peru-outline.svg.json",
+    "dataset": "Natural Earth 1:50m Admin 0 - Countries",
+    "version": "5.1.1",
+    "feature": {
+      "ADMIN": "Peru",
+      "ADM0_A3": "PER"
+    },
+    "downloadUrl": "https://naturalearth.s3.amazonaws.com/50m_cultural/ne_50m_admin_0_countries.zip",
+    "catalogUrl": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/",
+    "archiveSha256": "5fed433373581fa648920435f937d95f2d3c0200e067409c6478dcdf1b853139",
+    "license": "Dominio público. Natural Earth permite modificar y usar sus datos para cualquier fin; no requiere permiso ni atribución.",
+    "termsUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "method": "Geometría Admin 0 del Perú reutilizada del SVG fuente documentado; transformada para la composición."
+  },
+  "composition": {
+    "viewBox": "0 0 540 480",
+    "continents": [
+      {
+        "label": "Norteamérica",
+        "pointCount": 8
+      },
+      {
+        "label": "Europa",
+        "pointCount": 6
+      },
+      {
+        "label": "África",
+        "pointCount": 7
+      },
+      {
+        "label": "Asia",
+        "pointCount": 8
+      },
+      {
+        "label": "Oceanía",
+        "pointCount": 7
+      }
+    ],
+    "connections": {
+      "count": 5,
+      "type": "Trazos rectos y finos desde un punto por grupo hasta un punto compositivo dentro de la silueta peruana.",
+      "peruAnchorViewBox": [
+        275,
+        258
+      ],
+      "regionAnchorsViewBox": [
+        [
+          88,
+          110
+        ],
+        [
+          275,
+          89
+        ],
+        [
+          448,
+          109
+        ],
+        [
+          103,
+          382
+        ],
+        [
+          443,
+          386
+        ]
+      ],
+      "meaning": "Recurso visual referencial; no confirma contactos, relaciones comerciales, inversiones, alianzas ni rutas.",
+      "arrows": false
+    },
+    "pointPlacement": "Puntos distribuidos manualmente para formar grupos visuales; no son coordenadas geográficas ni ubicaciones operativas."
+  },
+  "runtimeDependency": null,
+  "downloadAtRuntime": false
+}
