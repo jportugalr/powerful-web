@@ -3,7 +3,7 @@
 Target: `src/pages/index.astro`; related `src/components/HomeContent.astro`, `src/layouts/SiteLayout.astro`, `src/styles/global.css`, `src/content/es.ts`.
 Mode: Persuade. Build path: code, explícitamente elegido por el usuario.
 
-Dirección vigente, 2026-10-17: el prototipo aprobado en `web/` es la base visual y funcional, conforme a `DESIGN.md`. Piura es la ciudad de partida; el enfoque del sitio es el Perú. La dirección fotográfica de Lima de P2–P4 está supersedida. P5 actualiza documentación y prepara el encargo de imagen; no modifica la implementación.
+Dirección vigente, 2026-10-17: el prototipo aprobado en `web/` es la base visual y funcional, conforme a `DESIGN.md`. Piura es la ciudad de partida; el enfoque del sitio es el Perú. La dirección fotográfica de Lima de P2–P4 está supersedida. P5 preparó el encargo de imagen; P6 integra las cinco imágenes genéricas de sectores aportadas por el usuario en sus tarjetas Astro, conservando intacto el hero gráfico actual.
 
 ## Audience and action
 
@@ -26,6 +26,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 ## Fotografía vigente por conseguir
 
 Localizar o encargar una fotografía auténtica de la ciudad de Piura mediante [hero-piura-fotografia.md](hero-piura-fotografia.md). No se ha seleccionado un archivo ni aprobado una licencia para el nuevo hero. No generar una vista fotorrealista inventada de Piura ni renombrar la imagen de Lima como si mostrara esa ciudad.
+
+## Sectores integrados en P6
+
+Las cinco tarjetas de `/sectores.html` usan los PNG generados por el usuario y aportados en `web/imagenes/`: mineral/cobre, tubería industrial, acero/concreto, edificios residenciales y carga/contenedores. Los originales permanecen intactos. Se conserva el copy, filtros, enlaces, teclado y frame de 180 px; solo se sustituye el arte CSS por fotografía genérica del sector.
+
+Los derivados WebP82 tienen recorte panorámico 640×240 y 1280×480, más un recorte 640×400 para móvil hasta 420 px. `picture`/`srcset`/`sizes`, dimensiones explícitas, lazy loading y decodificación asíncrona limitan la transferencia. No hay caption conceptual visible ni afirmación de que los recursos documenten experiencia, proyectos o instalaciones de POWERFUL.
+
+La procedencia completa está junto a los derivados en `public/images/sectors/manifest.json`: nombres originales, fecha inferida del nombre, dimensiones, hash SHA256, rol, recortes y pesos. Registra la confirmación del usuario sobre la generación a partir del prompt anterior. El texto exacto de ese prompt no quedó archivado en el repo y no se reconstruye; tampoco se afirma una licencia externa.
+
+La imagen urbana `19_26_51-1.png` no se integra. La localización de Piura no está verificada y sigue pendiente una foto documental auténtica según el encargo de P5. El hero, logo, footer y otras páginas conservan su implementación.
 
 ## Antecedente supersedido: Atlas y refinamiento P2–P4
 

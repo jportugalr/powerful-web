@@ -311,13 +311,6 @@ export type SectorCategoryEs =
   | 'inmobiliario'
   | 'comercio';
 
-export type SectorArtClassEs =
-  | 'art-mineria'
-  | 'art-energia'
-  | 'art-infraestructura'
-  | 'art-inmobiliario'
-  | 'art-comercio';
-
 export interface SectorFilterEs {
   value: 'all' | SectorCategoryEs;
   label: string;
@@ -327,7 +320,12 @@ export interface SectorCardEs {
   id: SectorCategoryEs;
   category: SectorCategoryEs;
   index: string;
-  artClass: SectorArtClassEs;
+  image: {
+    src: string;
+    srcSet: string;
+    mobileSrc: string;
+    alt: string;
+  };
   title: string;
   description: string;
 }
@@ -593,7 +591,12 @@ export const businessPagesEs = {
         id: 'mineria',
         category: 'mineria',
         index: 'SECTOR / 01',
-        artClass: 'art-mineria',
+        image: {
+          src: '/images/sectors/mineria-1280.webp',
+          srcSet: '/images/sectors/mineria-640.webp 640w, /images/sectors/mineria-1280.webp 1280w',
+          mobileSrc: '/images/sectors/mineria-mobile-640.webp',
+          alt: 'Mineral de cobre y fragmentos sobre una mesa de trabajo',
+        },
         title: 'Minería y minerales',
         description:
           'Relaciones comerciales y oportunidades vinculadas con proyectos, minerales y materias primas, sujetas a análisis técnico, contractual y normativo.',
@@ -602,7 +605,12 @@ export const businessPagesEs = {
         id: 'energia',
         category: 'energia',
         index: 'SECTOR / 02',
-        artClass: 'art-energia',
+        image: {
+          src: '/images/sectors/energia-1280.webp',
+          srcSet: '/images/sectors/energia-640.webp 640w, /images/sectors/energia-1280.webp 1280w',
+          mobileSrc: '/images/sectors/energia-mobile-640.webp',
+          alt: 'Detalle de una brida y tuberías industriales',
+        },
         title: 'Energía e hidrocarburos',
         description:
           'Iniciativas de generación eléctrica, petróleo, gas y actividades relacionadas que puedan requerir alianzas o participación empresarial.',
@@ -611,7 +619,12 @@ export const businessPagesEs = {
         id: 'infraestructura',
         category: 'infraestructura',
         index: 'SECTOR / 03',
-        artClass: 'art-infraestructura',
+        image: {
+          src: '/images/sectors/infraestructura-1280.webp',
+          srcSet: '/images/sectors/infraestructura-640.webp 640w, /images/sectors/infraestructura-1280.webp 1280w',
+          mobileSrc: '/images/sectors/infraestructura-mobile-640.webp',
+          alt: 'Unión de perfiles de acero, pernos y estructura de concreto',
+        },
         title: 'Infraestructura y construcción',
         description:
           'Proyectos, suministro de materiales, ejecución y relaciones comerciales para infraestructura y obras.',
@@ -620,7 +633,12 @@ export const businessPagesEs = {
         id: 'inmobiliario',
         category: 'inmobiliario',
         index: 'SECTOR / 04',
-        artClass: 'art-inmobiliario',
+        image: {
+          src: '/images/sectors/inmobiliario-1280.webp',
+          srcSet: '/images/sectors/inmobiliario-640.webp 640w, /images/sectors/inmobiliario-1280.webp 1280w',
+          mobileSrc: '/images/sectors/inmobiliario-mobile-640.webp',
+          alt: 'Edificios residenciales con balcones y áreas verdes',
+        },
         title: 'Inmobiliario y bienes raíces',
         description:
           'Oportunidades empresariales relacionadas con activos, proyectos de inversión y negocios del mercado inmobiliario peruano.',
@@ -629,7 +647,12 @@ export const businessPagesEs = {
         id: 'comercio',
         category: 'comercio',
         index: 'SECTOR / 05',
-        artClass: 'art-comercio',
+        image: {
+          src: '/images/sectors/comercio-1280.webp',
+          srcSet: '/images/sectors/comercio-640.webp 640w, /images/sectors/comercio-1280.webp 1280w',
+          mobileSrc: '/images/sectors/comercio-mobile-640.webp',
+          alt: 'Carga sobre pallets y contenedores de transporte',
+        },
         title: 'Comercio exterior y materias primas',
         description:
           'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',

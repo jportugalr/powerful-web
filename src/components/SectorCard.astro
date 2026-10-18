@@ -15,10 +15,25 @@ const { sector, actionLabel } = Astro.props;
     <span>{sector.index}</span>
     <Icon name="arrow-up-right" />
   </div>
-  <div class:list={['sector-card-art', sector.artClass]} aria-hidden="true">
-    <i></i>
-    <i></i>
-    <i></i>
+  <div class="sector-card-art">
+    <picture>
+      <source
+        media="(max-width: 420px)"
+        srcset={sector.image.mobileSrc}
+        width="640"
+        height="400"
+      />
+      <img
+        src={sector.image.src}
+        srcset={sector.image.srcSet}
+        sizes="(max-width: 760px) calc(100vw - 38px), (max-width: 1190px) calc((100vw - 98px) / 2), (max-width: 1344px) calc((100vw - 114px) / 2), 615px"
+        width="1280"
+        height="480"
+        alt={sector.image.alt}
+        loading="lazy"
+        decoding="async"
+      />
+    </picture>
   </div>
   <div class="sector-card-bottom">
     <h2>{sector.title}</h2>

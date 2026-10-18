@@ -1,0 +1,268 @@
+{
+  "classification": "Imágenes genéricas de sectores generadas por el usuario; no documentan proyectos, instalaciones, clientes ni experiencia de POWERFUL.",
+  "provenance": "El usuario confirmó que generó estas imágenes a partir del prompt compartido previamente en la conversación.",
+  "dateInferredFromOriginalNames": "2026-10-17",
+  "exactPrompt": null,
+  "promptStatus": "El texto exacto del prompt no quedó archivado en el repositorio; no se reconstruye ni se inventa.",
+  "rights": "Activos aportados y autorizados para esta integración por el usuario. No se afirma una licencia externa.",
+  "originalsPolicy": "Los originales se conservan sin modificaciones en web/imagenes/.",
+  "processing": {
+    "tool": "Sharp disponible en el proyecto",
+    "format": "WebP",
+    "quality": 82,
+    "effort": 6,
+    "withoutEnlargement": true
+  },
+  "assets": [
+    {
+      "role": "Minería y minerales: mineral de cobre y fragmentos",
+      "sector": "mineria",
+      "original": {
+        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_52-2.png",
+        "name": "Imagen de ChatGPT 17 oct 2026, 19_26_52-2.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2693368,
+        "sha256": "eeb6d414d5ddffc5b770b3f305e6840976daae441b7320d62d87e96eba5434ce"
+      },
+      "derivatives": [
+        {
+          "path": "public/images/sectors/mineria-640.webp",
+          "width": 640,
+          "height": 240,
+          "bytes": 35108,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 95,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/mineria-1280.webp",
+          "width": 1280,
+          "height": 480,
+          "bytes": 107532,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 95,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/mineria-mobile-640.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 56630,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 32,
+            "width": 1536,
+            "height": 960
+          }
+        }
+      ]
+    },
+    {
+      "role": "Energía e hidrocarburos: tubería y brida industrial",
+      "sector": "energia",
+      "original": {
+        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_53-3.png",
+        "name": "Imagen de ChatGPT 17 oct 2026, 19_26_53-3.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2358825,
+        "sha256": "88c74aa781fc3c41ad5280686698f0b3b80680563646806884fca32014082347"
+      },
+      "derivatives": [
+        {
+          "path": "public/images/sectors/energia-640.webp",
+          "width": 640,
+          "height": 240,
+          "bytes": 24752,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 220,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/energia-1280.webp",
+          "width": 1280,
+          "height": 480,
+          "bytes": 75048,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 220,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/energia-mobile-640.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 37012,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 32,
+            "width": 1536,
+            "height": 960
+          }
+        }
+      ]
+    },
+    {
+      "role": "Infraestructura y construcción: acero, pernos y concreto",
+      "sector": "infraestructura",
+      "original": {
+        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_54-4.png",
+        "name": "Imagen de ChatGPT 17 oct 2026, 19_26_54-4.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2633820,
+        "sha256": "1c19bfdab8df3c3dc7267b46048f0c39169ea61ca4346e157cd3411b31c6b887"
+      },
+      "derivatives": [
+        {
+          "path": "public/images/sectors/infraestructura-640.webp",
+          "width": 640,
+          "height": 240,
+          "bytes": 28690,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 260,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/infraestructura-1280.webp",
+          "width": 1280,
+          "height": 480,
+          "bytes": 89610,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 260,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/infraestructura-mobile-640.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 43988,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 32,
+            "width": 1536,
+            "height": 960
+          }
+        }
+      ]
+    },
+    {
+      "role": "Inmobiliario y bienes raíces: edificios residenciales",
+      "sector": "inmobiliario",
+      "original": {
+        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_54-5.png",
+        "name": "Imagen de ChatGPT 17 oct 2026, 19_26_54-5.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2565135,
+        "sha256": "27510abc04edb61bd096c70c9dca7a7a4efd2839b8fe58d68702d01a0d8eb3ef"
+      },
+      "derivatives": [
+        {
+          "path": "public/images/sectors/inmobiliario-640.webp",
+          "width": 640,
+          "height": 240,
+          "bytes": 30014,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 300,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/inmobiliario-1280.webp",
+          "width": 1280,
+          "height": 480,
+          "bytes": 97014,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 300,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/inmobiliario-mobile-640.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 45932,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 32,
+            "width": 1536,
+            "height": 960
+          }
+        }
+      ]
+    },
+    {
+      "role": "Comercio exterior y materias primas: carga y contenedores",
+      "sector": "comercio",
+      "original": {
+        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_55-6.png",
+        "name": "Imagen de ChatGPT 17 oct 2026, 19_26_55-6.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2373448,
+        "sha256": "f7972c0380081bb8538e3fe684317bbb3e2890868065f7ed4d1fe9def2e8e0dc"
+      },
+      "derivatives": [
+        {
+          "path": "public/images/sectors/comercio-640.webp",
+          "width": 640,
+          "height": 240,
+          "bytes": 29462,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 215,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/comercio-1280.webp",
+          "width": 1280,
+          "height": 480,
+          "bytes": 94908,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 215,
+            "width": 1536,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/sectors/comercio-mobile-640.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 40682,
+          "cropInOriginalPixels": {
+            "left": 0,
+            "top": 32,
+            "width": 1536,
+            "height": 960
+          }
+        }
+      ]
+    }
+  ]
+}
