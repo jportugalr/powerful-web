@@ -68,6 +68,9 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
   align-items: center;
   gap: clamp(34px, 5vw, 74px);
 }
+.hero-grid > * {
+  min-width: 0;
+}
 .hero-copy {
   max-width: 760px;
 }
@@ -86,7 +89,7 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
   z-index: 2;
 }
 .hero-map-art {
-  min-height: 430px;
+  min-height: 365px;
   display: grid;
   place-items: center;
   position: relative;
@@ -100,29 +103,20 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
   z-index: -1;
   background: radial-gradient(ellipse at center, rgba(183, 152, 98, 0.14), transparent 68%);
 }
-.hero-map-art > img:not(.hero-map-emblem) {
-  width: auto;
-  height: 398px;
+.hero-map-art > img {
+  display: block;
+  width: 100%;
+  height: auto;
   max-width: 100%;
+  min-width: 0;
   object-fit: contain;
   filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.2));
   position: relative;
   z-index: 1;
 }
-.hero-map-emblem {
-  position: absolute;
-  top: 50%;
-  right: -205px;
-  z-index: 0;
-  width: clamp(260px, 30vw, 320px);
-  height: auto;
-  opacity: 0.14;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
 .hero-map-stamp {
   position: absolute;
-  top: 36px;
+  top: 28px;
   left: 0;
   z-index: 2;
   color: var(--gold-light);
@@ -322,7 +316,7 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
 }
 @media (max-width: 1000px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
     min-height: 0;
   }
@@ -336,12 +330,10 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
   .hero-map {
     width: min(100%, 540px);
     margin-bottom: 58px;
+    min-width: 0;
   }
   .hero-map-art {
     min-height: 365px;
-  }
-  .hero-map-art > img:not(.hero-map-emblem) {
-    height: 330px;
   }
   .hero-map-stamp {
     left: 7%;
@@ -354,17 +346,19 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
   .hero-copy {
     padding: 64px 0 24px;
   }
+  .hero-actions .btn {
+    min-width: 0;
+    gap: 16px;
+    white-space: normal;
+  }
+  .hero-actions .btn > span {
+    min-width: 0;
+  }
   .hero-map {
     margin-bottom: 46px;
   }
   .hero-map-art {
     min-height: 315px;
-  }
-  .hero-map-art > img:not(.hero-map-emblem) {
-    height: 284px;
-  }
-  .hero-map-emblem {
-    display: none;
   }
   .hero-map-stamp {
     top: 17px;
@@ -441,9 +435,6 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
 @media (max-width: 420px) {
   .hero-map-art {
     min-height: 290px;
-  }
-  .hero-map-art > img:not(.hero-map-emblem) {
-    height: 262px;
   }
   .sector-editorial {
     grid-template-columns: 1fr;

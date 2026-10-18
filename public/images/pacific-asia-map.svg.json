@@ -1,0 +1,70 @@
+{
+  "asset": "pacific-asia-map.svg",
+  "classification": "Mapa esquemático del océano Pacífico con Perú resaltado y dos arcos gráficos conceptuales. No representa rutas, relaciones comerciales, inversiones ni alianzas confirmadas.",
+  "purpose": "Visual localizado en el hero de Inicio para expresar Perú como origen y Asia-Pacífico como horizonte conceptual, conservando la geografía verificable.",
+  "extent": {
+    "west": "90° E",
+    "east": "65° W",
+    "south": "50° S",
+    "north": "65° N",
+    "centerMeridian": "180°"
+  },
+  "projection": {
+    "name": "Proyección cilíndrica equidistante (equirectangular) con paralelo estándar de 30° N",
+    "sourceCrs": "GCS WGS 1984 (WGS 84 geográfico, coordenadas en grados), según los archivos .prj incluidos en ambos ZIP.",
+    "formula": "El eje X usa longitud continua de 90° E a 295° E con factor cos(30°); el eje Y usa latitud. Ventana occidental desplazada +360° después del recorte para centrar el Pacífico y evitar unir geometrías por Greenwich.",
+    "meridian": "180°"
+  },
+  "sources": [
+    {
+      "dataset": "Natural Earth 1:50m Physical Vectors — Land",
+      "catalogUrl": "https://www.naturalearthdata.com/downloads/50m-physical-vectors/",
+      "downloadUrl": "https://naturalearth.s3.amazonaws.com/50m_physical/ne_50m_land.zip",
+      "catalogVersion": "4.0.0",
+      "archiveVersionFile": "4.1.0",
+      "archiveReadmeVersion": "4.0.0",
+      "versionNote": "El catálogo oficial y el README incluido en el ZIP muestran 4.0.0; el archivo ne_50m_land.VERSION.txt declara 4.1.0. Se conserva esta discrepancia y se identifica exactamente el contenido usado por su SHA-256.",
+      "archiveSha256": "0b8e670cf80dce9cbebe2a193bc44ba5602758c22e1fa603980553646d7ff162",
+      "archiveFilesChecked": [
+        "ne_50m_land.VERSION.txt",
+        "ne_50m_land.README.html",
+        "ne_50m_land.prj"
+      ]
+    },
+    {
+      "dataset": "Natural Earth 1:50m Admin 0 — Countries",
+      "version": "5.1.1",
+      "feature": {
+        "ADMIN": "Peru",
+        "ADM0_A3": "PER"
+      },
+      "downloadUrl": "https://naturalearth.s3.amazonaws.com/50m_cultural/ne_50m_admin_0_countries.zip",
+      "catalogUrl": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/",
+      "archiveSha256": "5fed433373581fa648920435f937d95f2d3c0200e067409c6478dcdf1b853139"
+    }
+  ],
+  "license": {
+    "name": "Dominio público",
+    "termsUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "summary": "Natural Earth permite modificar y usar sus datos; no requiere permiso ni atribución.",
+    "optionalCredit": "Made with Natural Earth."
+  },
+  "processing": {
+    "method": "Se extrajeron los polígonos de tierra y la geometría Admin 0 del Perú desde los shapefiles. Se recortó la geometría original en dos ventanas geográficas antes de desplazar longitudes negativas al rango continuo del Pacífico; esto evita saltos o rellenos a través de Greenwich y del antimeridiano.",
+    "simplification": "Simplificación topológica en coordenadas del SVG con tolerancia 1.25 unidades para tierra y 0.45 para Perú; se omitieron polígonos terrestres menores de 2.4 unidades cuadradas del viewBox. No se añadieron divisiones de países, puntos por país, destinos ni flechas.",
+    "stylizedSpacing": "La composición del océano y el espaciado son estilizados para mantener costas reconocibles y la posición relativa de Perú y Asia-Pacífico; no se deben medir distancias.",
+    "conceptualArcs": {
+      "count": 2,
+      "geometry": "Curvas Bézier cuadráticas finas, sin flechas ni nodos.",
+      "originAnchor": "Coordenada de composición dentro de Perú (-75°, -9.5°); no representa una ciudad, oficina o ubicación operativa.",
+      "openOceanEndpoints": [
+        "160° E, 35° N",
+        "155° E, 5° S"
+      ],
+      "meaning": "Recursos gráficos conceptuales hacia Asia-Pacífico; no son rutas ni vínculos reales."
+    },
+    "runtimeDependency": null,
+    "downloadAtRuntime": false
+  },
+  "scaleNote": "Natural Earth 1:50m es cartografía generalizada; además, el espaciado del océano del gráfico es estilizado y no debe usarse para medir distancias. No constituye un límite legal ni una representación catastral."
+}
