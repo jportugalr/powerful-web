@@ -368,7 +368,6 @@ export interface BusinessPagesEs {
       heading: TextHeadingEs;
       description: string;
     };
-    cta: MiniCtaEs;
   };
   servicios: {
     metadata: PageMetadataEs;
@@ -430,7 +429,7 @@ export const businessPagesEs = {
         emphasis: 'alcance nacional.',
       },
       lede:
-        'Exploramos relaciones de representación para empresas que evalúan ingresar al Perú y conversaciones de inversión o alianza sobre proyectos del país. Nuestra red es nacional, con mayor presencia en el norte y nororiente.',
+        'Exploramos relaciones de representación y conversaciones de inversión o alianza vinculadas al Perú.',
       pageNumber: '02',
     },
     profile: {
@@ -440,8 +439,8 @@ export const businessPagesEs = {
         emphasis: 'nuevos negocios.',
       },
       paragraphs: [
-        'POWERFUL es una iniciativa empresarial centrada en el Perú. Facilitamos la relación entre empresas, inversionistas y titulares de proyectos en distintas regiones del país.',
-        'Nuestra prioridad es conversar con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano. También buscamos inversionistas y socios, peruanos e internacionales, para proyectos en Perú; titulares y representantes de iniciativas peruanas pueden formar parte de estas conversaciones.',
+        'Nuestra prioridad son las empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano.',
+        'También conversamos con inversionistas y socios interesados en proyectos peruanos, así como con sus titulares y representantes.',
       ],
       linkLabel: 'Ver qué hacemos',
       linkHref: '/servicios.html',
@@ -449,48 +448,40 @@ export const businessPagesEs = {
     approach: {
       eyebrow: 'NUESTRO ENFOQUE',
       heading: {
-        lead: 'Alcance nacional',
-        emphasis: 'con mayor presencia regional.',
+        lead: 'Relaciones guiadas por',
+        emphasis: 'claridad y acuerdos.',
       },
       description:
-        'Nuestra red cubre todo el Perú, con mayor presencia en el norte y nororiente. Nos dirigimos primero a empresas internacionales que evalúan ingresar al país, y también a empresas, inversionistas y socios peruanos e internacionales interesados en proyectos peruanos.',
+        'El alcance de proyectos y contactos es nacional, con mayor presencia de la red en el norte y nororiente.',
       values: [
         {
           index: '01 /',
           title: 'Claridad',
           description:
-            'Definir objetivos, alcances y responsabilidades en cada relación.',
+            'Acordar objetivos, alcances y responsabilidades para cada relación.',
         },
         {
           index: '02 /',
           title: 'Relaciones',
           description:
-            'Promover vínculos comerciales con objetivos y alcances claramente definidos.',
+            'Promover vínculos comerciales con objetivos claros y compartidos.',
         },
         {
           index: '03 /',
           title: 'Participación',
           description:
-            'Evaluar un rol activo en cada negocio cuando el acuerdo lo permita.',
+            'Evaluar un rol activo cuando el acuerdo de cada iniciativa lo permita.',
         },
       ],
     },
     transparency: {
-      eyebrow: 'UNA IDENTIDAD EN CONSTRUCCIÓN',
+      eyebrow: 'TRANSPARENCIA',
       heading: {
-        lead: 'La confianza debe sustentarse en',
+        lead: 'La confianza se construye con',
         emphasis: 'hechos verificables.',
       },
       description:
-        'Distinguimos la experiencia profesional de integrantes del equipo de la trayectoria corporativa de POWERFUL. Los antecedentes, proyectos, alianzas y resultados de la empresa se publicarán solo cuando estén documentados y autorizados para difusión.',
-    },
-    cta: {
-      eyebrow: 'SIGUIENTE PASO',
-      heading: '¿Tu empresa evalúa ingresar al Perú?',
-      description:
-        'Conversemos sobre representación y relaciones comerciales. También atendemos consultas de inversión, alianzas y proyectos peruanos.',
-      actionLabel: 'Conversemos sobre tu ingreso',
-      actionHref: '/contacto.html?tipo=expansion',
+        'Distinguimos la experiencia profesional del equipo de la trayectoria corporativa de POWERFUL. Compartiremos antecedentes, proyectos, alianzas y resultados cuando estén documentados y autorizados.',
     },
   },
   servicios: {

@@ -1,7 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Icon from '../components/Icon.astro';
-import MiniCta from '../components/MiniCta.astro';
 import PageHero from '../components/PageHero.astro';
 import { businessPagesEs } from '../content/es';
 
@@ -9,7 +8,7 @@ const page = businessPagesEs.nosotros;
 ---
 
 <SiteLayout title={page.metadata.title} description={page.metadata.description}>
-  <PageHero content={page.hero} />
+  <PageHero content={page.hero} hideDecorativeNumber />
 
   <section class="section">
     <div class="container split-layout content-split">
@@ -39,7 +38,7 @@ const page = businessPagesEs.nosotros;
         </div>
         <p>{page.approach.description}</p>
       </div>
-      <div class="values-grid">
+      <div class="values-grid" data-values-reveal>
         {
           page.approach.values.map((value) => (
             <article>
@@ -60,6 +59,39 @@ const page = businessPagesEs.nosotros;
       <p>{page.transparency.description}</p>
     </div>
   </section>
-
-  <MiniCta content={page.cta} />
 </SiteLayout>
+
+<script>
+  const values = document.querySelector<HTMLElement>('[data-values-reveal]');
+  const motionPreference = typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
+
+  if (values && motionPreference && !motionPreference.matches && typeof IntersectionObserver !== 'undefined') {
+    let observer: IntersectionObserver | undefined;
+
+    const restoreStaticContent = () => {
+      observer?.disconnect();
+      values.removeAttribute('data-reveal-enabled');
+      values.removeAttribute('data-reveal-state');
+    };
+
+    try {
+      observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          values.dataset.revealState = 'visible';
+          observer?.disconnect();
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      values.dataset.revealEnabled = 'true';
+      values.dataset.revealState = 'pending';
+      observer.observe(values);
+      motionPreference.addEventListener('change', (event) => {
+        if (event.matches) restoreStaticContent();
+      });
+    } catch {
+      restoreStaticContent();
+    }
+  }
+</script>
