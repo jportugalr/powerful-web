@@ -63,4 +63,4 @@ El usuario rechazó la propuesta de reemplazar el hero y las imágenes de las ta
 - Commit de trabajo de RS-2: `2f21ce6` (`fix: hide decorative sector hero number`).
 - RS-3: mapeo, implementación y verificación completados. El markup y el script ya sincronizan `.active` con `aria-pressed`; el catálogo y `DESIGN.md` recomiendan CSS para transiciones simples. Se añadieron solo `background-color`, `color` y `border-color` durante 160 ms bajo movimiento permitido; el foco visible se conserva y no se anima el cambio `hidden`.
 - Archivo de código de RS-3: `src/styles/global.css`.
-- Commit de trabajo de RS-3: pendiente de registrar después del commit de implementación.
+- Commit de trabajo de RS-3: `654c424` (`feat: add subtle sector filter transitions`).
