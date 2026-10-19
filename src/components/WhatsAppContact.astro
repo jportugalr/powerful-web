@@ -1,0 +1,42 @@
+---
+import type { ContactPageEs } from '../content/es';
+import Icon from './Icon.astro';
+
+interface Props {
+  content: ContactPageEs['whatsapp'];
+}
+
+const { content } = Astro.props;
+const initialHref = `https://wa.me/51947982249?text=${encodeURIComponent(content.defaultMessage)}`;
+---
+
+<section class="contact-panel" aria-labelledby="whatsapp-heading">
+  <div class="contact-panel-head">
+    <p class="overline gold">{content.eyebrow}</p>
+    <span>POWERFUL / PE</span>
+  </div>
+  <h2 id="whatsapp-heading">{content.heading}</h2>
+  <p class="contact-panel-description">{content.description}</p>
+
+  <div class="contact-panel-number">
+    <span>NÚMERO OFICIAL</span>
+    <strong>{content.phone}</strong>
+  </div>
+
+  <a
+    id="whatsapp-contact-link"
+    class="btn btn-dark contact-whatsapp-btn"
+    href={initialHref}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>{content.buttonLabel}</span>
+    <Icon name="arrow-up-right" />
+  </a>
+
+  <p class="contact-panel-note">{content.note}</p>
+</section>
+
+<script>
+  import '../scripts/contact-whatsapp';
+</script>

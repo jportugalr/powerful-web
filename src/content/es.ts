@@ -270,7 +270,7 @@ export const homePageEs = {
     eyebrow: 'EXPANSIÓN EMPRESARIAL EN PERÚ',
     heading: '¿Tu empresa evalúa ingresar al mercado peruano?',
     description:
-      'Conversemos sobre representación y articulación comercial. Si buscas invertir o asociarte a un proyecto peruano, elige esa ruta en el formulario.',
+      'Conversemos sobre representación y articulación comercial. Si buscas invertir o asociarte a un proyecto peruano, cuéntanoslo al iniciar la conversación por WhatsApp.',
     actionLabel: 'Conversemos sobre tu ingreso al Perú',
     actionHref: '/contacto.html?tipo=expansion',
   },
@@ -771,7 +771,7 @@ export const businessPagesEs = {
         heading: 'Cuéntanos qué buscas en el Perú.',
       description:
           'Puedes consultar sobre ingreso empresarial, inversión, alianzas o presentar un proyecto peruano.',
-        actionLabel: 'Elegir motivo de consulta',
+        actionLabel: 'Contactar por WhatsApp',
       actionHref: '/contacto.html',
     },
   },
@@ -793,52 +793,17 @@ export interface ContactPageEs {
     heading: TextHeadingEs;
     description: string;
     steps: { number: string; description: string }[];
-    warning: { heading: string; description: string };
   };
-  form: ContactFormEs;
-}
-
-export interface ContactFormEs {
-  eyebrow: string;
-  code: string;
-  labels: {
-    reason: string;
-    name: string;
-    company: string;
-    email: string;
-    country: string;
-    message: string;
-    website: string;
+  whatsapp: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+    phone: string;
+    buttonLabel: string;
+    note: string;
+    defaultMessage: string;
+    messages: Record<ContactReasonEs, string>;
   };
-  placeholders: {
-    reason: string;
-    name: string;
-    company: string;
-    email: string;
-    country: string;
-    message: string;
-  };
-  options: { value: ContactReasonEs; label: string }[];
-  limits: {
-    nameMin: number;
-    nameMax: number;
-    companyMax: number;
-    emailMax: number;
-    countryMax: number;
-    messageMin: number;
-    messageMax: number;
-  };
-  privacy: { prefix: string; linkLabel: string; suffix: string; requiredMark: string };
-  submitLabel: string;
-  finePrint: string;
-  errors: {
-    reason: string;
-    name: string;
-    email: string;
-    message: string;
-    privacy: string;
-  };
-  result: { title: string; description: string };
 }
 
 export interface LegalPageEs {
@@ -878,80 +843,36 @@ export const contactPageEs = {
     eyebrow: 'CONTACTO CORPORATIVO',
     heading: { lead: 'Cuéntanos tu', emphasis: 'objetivo.' },
     description:
-      'Este formulario orienta consultas de expansión empresarial, inversión y alianzas. Los titulares o representantes de iniciativas peruanas también pueden compartir un resumen general. No envíes contratos, contraseñas, documentos personales ni información financiera confidencial.',
+      'Conversemos sobre expansión empresarial, inversión, alianzas o iniciativas peruanas. Comparte el contexto general de tu empresa o consulta; evita enviar contratos, contraseñas, documentos personales o información financiera confidencial.',
     steps: [
-      { number: '01 /', description: 'Indica si buscas ingresar al Perú, invertir, asociarte o presentar una iniciativa.' },
-      { number: '02 /', description: 'Describe el objetivo de tu empresa o consulta en términos generales.' },
-      {
-        number: '03 /',
-        description:
-          'Un responsable comercial evaluará los siguientes pasos cuando el canal esté habilitado.',
-      },
+      { number: '01 /', description: 'Abre WhatsApp con un mensaje inicial relacionado con el motivo de tu consulta.' },
+      { number: '02 /', description: 'Revisa y edita el texto para contar tu objetivo con tus propias palabras.' },
+      { number: '03 /', description: 'Envía el mensaje cuando esté listo; llegará a la cuenta oficial de POWERFUL.' },
     ],
-    warning: {
-      heading: 'Modo demostración',
-      description:
-        'Este prototipo no envía correos ni registra datos en un servidor. Su objetivo es validar la experiencia.',
-    },
   },
-  form: {
-    eyebrow: 'FORMULARIO DE CONTACTO',
-    code: 'POWERFUL / PE',
-    labels: {
-      reason: '¿Cuál es el motivo de tu consulta?',
-      name: 'Nombre completo',
-      company: 'Empresa o entidad',
-      email: 'Correo electrónico',
-      country: 'País',
-      message: 'Cuéntanos brevemente tu iniciativa',
-      website: 'Sitio web',
-    },
-    placeholders: {
-      reason: 'Selecciona una opción',
-      name: 'Tu nombre',
-      company: 'Opcional',
-      email: 'correo@empresa.com',
-      country: 'País donde opera tu empresa o resides',
-      message: '¿Tu empresa evalúa ingresar al Perú, buscas invertir o asociarte, o representas un proyecto peruano?',
-    },
-    options: [
-      { value: 'expansion', label: 'Represento una empresa que evalúa ingresar al Perú' },
-      { value: 'inversionista', label: 'Busco invertir o asociarme a proyectos peruanos' },
-      { value: 'representacion', label: 'Busco representación empresarial' },
-      { value: 'alianza', label: 'Propongo una alianza comercial' },
-      { value: 'proyecto', label: 'Represento un proyecto o iniciativa en Perú' },
-      { value: 'otro', label: 'Otra consulta' },
-    ],
-    limits: {
-      nameMin: 2,
-      nameMax: 120,
-      companyMax: 160,
-      emailMax: 254,
-      countryMax: 80,
-      messageMin: 15,
-      messageMax: 2000,
-    },
-    privacy: {
-      prefix: 'He leído el ',
-      linkLabel: 'aviso de privacidad (borrador)',
-      suffix:
-        ' y entiendo que este formulario es una demostración sin envío real.',
-      requiredMark: '*',
-    },
-    submitLabel: 'Probar el envío',
-    finePrint:
-      '* Campos obligatorios. Cada consulta se evalúa de acuerdo con sus características y las posibilidades de colaboración.',
-    errors: {
-      reason: 'Selecciona una opción.',
-      name: 'Ingresa tu nombre completo (2 a 120 caracteres).',
-      email: 'Ingresa un correo válido.',
-      message: 'Describe tu consulta con al menos 15 caracteres.',
-      privacy: 'Marca la casilla para probar el flujo.',
-    },
-    result: {
-      title: 'Validación completada — demostración.',
-      description:
-        'El formulario pasó las comprobaciones de interfaz, pero NO se envió información. El envío real se habilitará al conectar el backend de Laravel y aprobar privacidad y destinatarios.',
+  whatsapp: {
+    eyebrow: 'CONTACTO DIRECTO',
+    heading: 'Conversemos por WhatsApp',
+    description:
+      'Cuéntanos brevemente qué buscas y el contexto de tu empresa o iniciativa.',
+    phone: '+51 947 982 249',
+    buttonLabel: 'Escríbenos por WhatsApp',
+    note: 'WhatsApp se abrirá con un mensaje que podrás revisar y editar antes de enviarlo.',
+    defaultMessage:
+      'Hola, equipo POWERFUL. Les contacto desde su web y quisiera conversar sobre una consulta empresarial.',
+    messages: {
+      expansion:
+        'Hola, equipo POWERFUL. Les contacto desde su web. Mi empresa está evaluando ingresar al Perú y quisiera conversar sobre nuestro objetivo.',
+      inversionista:
+        'Hola, equipo POWERFUL. Les contacto desde su web. Busco invertir o asociarme a proyectos peruanos y quisiera conversar sobre las opciones.',
+      proyecto:
+        'Hola, equipo POWERFUL. Les contacto desde su web. Represento una iniciativa peruana y quisiera compartirles un resumen general.',
+      representacion:
+        'Hola, equipo POWERFUL. Les contacto desde su web. Busco representación empresarial en el Perú y quisiera conversar sobre mi objetivo.',
+      alianza:
+        'Hola, equipo POWERFUL. Les contacto desde su web. Quisiera proponer una alianza comercial y conversar sobre el contexto.',
+      otro:
+        'Hola, equipo POWERFUL. Les contacto desde su web y quisiera conversar sobre una consulta empresarial.',
     },
   },
 } as const satisfies ContactPageEs;
@@ -977,9 +898,9 @@ export const legalPagesEs = {
           'La versión de producción deberá identificar al responsable del tratamiento, sus canales oficiales, las finalidades de contacto comercial, posibles proveedores de correo/alojamiento, períodos de conservación, mecanismos para ejercer derechos y la información exigida por la normativa peruana aplicable.',
       },
       {
-        heading: 'Prototipo sin almacenamiento',
+        heading: 'Contacto por WhatsApp',
         paragraph:
-          'El formulario de esta demostración realiza comprobaciones dentro del navegador, pero no transmite ni conserva la información en un backend de POWERFUL. Evita introducir información sensible real al probarlo.',
+          'Este sitio no recopila ni almacena el texto del mensaje. Si eliges abrir WhatsApp y enviarlo, la comunicación se cursará a través de ese servicio y llegará a la cuenta asociada al número oficial de contacto. Evita compartir información confidencial.',
       },
       {
         heading: 'Pendientes de aprobación',

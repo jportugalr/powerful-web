@@ -52,7 +52,7 @@ Se permiten entradas al desplazarse, transiciones de imagen y parallax sutil cua
 
 Mantener scroll nativo, contenido visible aunque JavaScript falle y animaciones que no bloqueen lectura ni interacción. Priorizar `transform` y `opacity`, ejecutar reveals una sola vez y limitar parallax a escritorio con puntero fino. Desactivar movimiento no esencial en móvil y respetar `prefers-reduced-motion`. Evitar video de fondo, bucles decorativos, scroll hijacking y efectos que retrasen el contenido principal.
 
-El filtro de Sectores y la validación de Contacto son mejoras progresivas cargadas solo en sus páginas. Contacto acepta `tipo` únicamente para las opciones conocidas y muestra una validación local de demostración; no transmite ni almacena datos. Si JavaScript no está disponible, el control de prueba permanece deshabilitado y el formulario no puede enviarse por GET.
+El filtro de Sectores y el enlace contextual de WhatsApp en Contacto son mejoras progresivas cargadas solo en sus páginas. Contacto conserva su acción directa aunque JavaScript no esté disponible; cuando JavaScript está activo, acepta `tipo` solo para los motivos conocidos y prepara un mensaje que la persona puede revisar y editar en WhatsApp antes de enviarlo. Este sitio no incluye un formulario, no transmite mensajes ni almacena consultas.
 
 Privacidad y Condiciones conservan sus avisos de borrador y no deben tratarse como documentos legales aprobados.
 

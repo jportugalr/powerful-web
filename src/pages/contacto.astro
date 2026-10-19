@@ -1,13 +1,13 @@
 ---
-import ContactForm from '../components/ContactForm.astro';
 import PageHero from '../components/PageHero.astro';
+import WhatsAppContact from '../components/WhatsAppContact.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { contactPageEs } from '../content/es';
 
 const page = contactPageEs;
 ---
 
-<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+<SiteLayout title={page.metadata.title} description={page.metadata.description} showFooterLead={false}>
   <PageHero content={page.hero} />
 
   <section class="section contact-section">
@@ -24,13 +24,9 @@ const page = contactPageEs;
             </div>
           ))
         }
-        <div class="prototype-warning">
-          <strong>{page.aside.warning.heading}</strong>
-          <p>{page.aside.warning.description}</p>
-        </div>
       </aside>
 
-      <ContactForm content={page.form} />
+      <WhatsAppContact content={page.whatsapp} />
     </div>
   </section>
 </SiteLayout>

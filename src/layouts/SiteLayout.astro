@@ -7,9 +7,10 @@ import SiteFooter from '../components/SiteFooter.astro';
 interface Props {
   title: string;
   description: string;
+  showFooterLead?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, showFooterLead = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,7 +33,7 @@ const { title, description } = Astro.props;
     <a class="skip" href="#main">Saltar al contenido</a>
     <SiteHeader currentPath={Astro.url.pathname} />
     <main id="main"><slot /></main>
-    <SiteFooter />
+    <SiteFooter showLead={showFooterLead} />
     <script>
       import '../scripts/navigation';
     </script>
