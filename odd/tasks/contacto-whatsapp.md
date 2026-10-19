@@ -58,8 +58,8 @@ RDD: `gentle-ai review mode status` indicó `off (decided by default)`; no se so
 - El formulario de demostración se reemplazó con un panel de WhatsApp y el enlace oficial `https://wa.me/51947982249`. El script permite solo seis motivos conocidos y usa mensaje general ante motivos ausentes/no reconocidos; el texto se prepara, no se envía.
 - Eliminadas `src/components/ContactForm.astro` y `src/scripts/contact-form.ts`; creadas `src/components/WhatsAppContact.astro` y `src/scripts/contact-whatsapp.ts`. Se actualizaron copy, privacidad, CSS, el comportamiento exclusivo del footer en Contacto y `DESIGN.md`.
 - Comprobaciones observadas: `npm run check` sin diagnósticos; `npm run build` generó 9 páginas; `git diff --check` pasó. Preview visual revisado en escritorio y móvil (390 × 844); `tipo=expansion` y `tipo=alianza` preparan su texto esperado. No se abrió WhatsApp ni se transmitió ningún mensaje.
-- Revisión de cambio completada. El trabajo está listo para commit en `main`; registrar su identidad en esta ficha inmediatamente después.
+- Commit de trabajo: `371a8fb feat(contact): replace demo form with WhatsApp contact` (rama `main`). El commit incluye la ficha ODD junto con los cambios de comportamiento y su documentación.
 
 ## Siguiente paso
 
-Crear el commit de WA-1 con solo archivos de este alcance, registrar su identidad y leer de nuevo la ficha. Sincronizar el espejo Engram cuando exista la herramienta.
+Sincronizar el espejo Engram cuando la integración esté disponible; no queda trabajo de implementación pendiente.
