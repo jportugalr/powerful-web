@@ -200,9 +200,9 @@ export const homePageEs = {
     eyebrow: 'ÁMBITOS DE ACTUACIÓN',
     context: 'PERÚ / VISIÓN MULTISECTORIAL',
     heading: {
-      lead: 'Sectores de interés',
-      secondLead: 'para la actividad empresarial',
-      emphasis: 'en el Perú.',
+      lead: 'Experiencia en',
+      secondLead: 'diversos sectores',
+      emphasis: 'del Perú.',
     },
     description:
       'Los sectores destacados reflejan la diversidad de actividades empresariales presentes en distintas regiones del Perú.',
@@ -442,7 +442,7 @@ export const businessPagesEs = {
         emphasis: 'alcance nacional.',
       },
       lede:
-        'Exploramos relaciones de representación y conversaciones de inversión o alianza vinculadas al Perú.',
+        'Articulamos iniciativas de expansión empresarial, inversión y alianzas vinculadas al Perú.',
       pageNumber: '02',
     },
     profile: {
@@ -573,7 +573,7 @@ export const businessPagesEs = {
         emphasis: 'multisectorial.',
       },
       lede:
-        'Exploramos relaciones comerciales, inversión y alianzas en distintos sectores del Perú. Nuestra red tiene mayor presencia en el norte y nororiente.',
+        'Articulamos relaciones comerciales, oportunidades de inversión y alianzas en distintos sectores del Perú. Nuestra red tiene mayor presencia en el norte y nororiente.',
       pageNumber: '04',
     },
     controls: {
@@ -696,7 +696,7 @@ export const businessPagesEs = {
     ],
     cardAction: 'Conversemos sobre este sector',
     disclaimer:
-      'Los sectores presentados reflejan la experiencia profesional y el conocimiento práctico de nuestro equipo. Nuestra mirada multisectorial también nos permite explorar oportunidades en otras actividades empresariales, según los objetivos de cada iniciativa.',
+      'Nuestro equipo aporta experiencia profesional y conocimiento práctico en los sectores presentados, y pone esa capacidad al servicio de iniciativas en otros ámbitos empresariales, según los objetivos de cada proyecto.',
     technologyCapability: {
       eyebrow: 'ÁMBITO TECNOLÓGICO',
       heading: {
