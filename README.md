@@ -1,6 +1,6 @@
 # POWERFUL — web corporativa
 
-Sitio corporativo en Astro y TypeScript para la representación empresarial en Perú. La aplicación Astro (`src/` y `public/`) es la fuente canónica. Los diez PNG originales se conservan sin alteración en `source-assets/imagenes/`; `source-assets/brand/` conserva el manifiesto de marca y `public/` los assets aprobados y sus derivados publicados. Sin CMS; español de lanzamiento, preparado para traducción futura.
+Sitio corporativo en Astro y TypeScript para la representación empresarial en Perú. La aplicación Astro (`src/` y `public/`) es la fuente canónica: el contenido en español vive en `src/content/es.ts`, las rutas en `src/pages/` y los componentes compartidos en `src/components/`. Los diez PNG originales se conservan sin alteración en `source-assets/imagenes/`; `source-assets/brand/` conserva el manifiesto de marca y `public/` los assets aprobados y sus derivados publicados. Sin CMS; español de lanzamiento, preparado para traducción futura.
 
 ## Desarrollo con Docker
 
