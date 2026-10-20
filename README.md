@@ -1,6 +1,6 @@
 # POWERFUL — web corporativa
 
-Sitio corporativo en Astro y TypeScript para la representación empresarial en Perú. El prototipo estático aprobado en `web/` es la referencia visual y de contenido. Sin CMS; español de lanzamiento, preparado para traducción futura.
+Sitio corporativo en Astro y TypeScript para la representación empresarial en Perú. La aplicación Astro (`src/` y `public/`) es la fuente canónica. Los diez PNG originales se conservan sin alteración en `source-assets/imagenes/`; `source-assets/brand/` conserva el manifiesto de marca y `public/` los assets aprobados y sus derivados publicados. Sin CMS; español de lanzamiento, preparado para traducción futura.
 
 ## Desarrollo con Docker
 
@@ -13,7 +13,7 @@ docker compose up -d --build
 docker compose logs -f dev
 ```
 
-Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. Las nueve rutas del prototipo están portadas: `/`, `/nosotros.html`, `/servicios.html`, `/sectores.html`, `/como-trabajamos.html`, `/contacto.html`, `/privacidad.html`, `/terminos.html` y `/404.html`. `build.format: preserve` conserva las rutas `.html`; Nginx usa el 404 de Astro como cuerpo de las rutas desconocidas y mantiene el estado HTTP 404. El logo de cabecera está disponible en `/brand/wordmark-header.png`.
+Astro escucha en `http://127.0.0.1:4322`, accesible solo desde el equipo local. `DEV_PORT` permite cambiar ese puerto. El sitio publica nueve rutas: `/`, `/nosotros.html`, `/servicios.html`, `/sectores.html`, `/como-trabajamos.html`, `/contacto.html`, `/privacidad.html`, `/terminos.html` y `/404.html`. `build.format: preserve` conserva las rutas `.html`; Nginx usa el 404 de Astro como cuerpo de las rutas desconocidas y mantiene el estado HTTP 404. El logo de cabecera está disponible en `/brand/wordmark-header.png`.
 
 `src/`, `public/` y las configuraciones Astro/TypeScript se montan desde el host en modo lectura para el contenedor; las ediciones del host activan la recarga de Astro. `node_modules` queda dentro de la imagen Linux, sin mezclar dependencias del host ni volúmenes persistentes. Al modificar `package.json` o `package-lock.json`, reconstruir con `docker compose up -d --build` para instalar la versión del lock. No editar dependencias dentro del contenedor.
 

@@ -1,0 +1,17 @@
+{
+  "original_filename": "Imagen de ChatGPT 17 oct 2026, 01_16_42.png",
+  "master_file": "../../public/brand/powerful-master.png",
+  "master_sha256": "762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4",
+  "master_dimensions": [
+    2048,
+    682
+  ],
+  "derivative": "../../public/brand/wordmark-header.png",
+  "derivative_operation": "crop transparent margins only; original pixels unaltered",
+  "crop_bbox": [
+    14,
+    212,
+    2019,
+    489
+  ]
+}

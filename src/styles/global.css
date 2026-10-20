@@ -1,4 +1,4 @@
-/* POWERFUL · UI prototipo V0.2 · CSS autocontenido y sin dependencias externas
+/* POWERFUL · UI V0.2 · CSS autocontenido y sin dependencias externas
    Identidad: azul #14263D, oro #B79862, marfil #F4F1EA. Logotipo: PNG master V1.2 sin regenerar. */
 :root{--navy:#14263D;--navy2:#0C1D31;--navy3:#1D3752;--gold:#B79862;--gold-light:#D0B57F;--ivory:#F4F1EA;--paper:#FCFBF8;--white:#fff;--muted:#637185;--line:#DCE1E5;--text:#25364A;--radius:16px;--max:1256px;--shadow:0 24px 70px rgba(13,34,57,.08)}
 *,*::before,*::after{box-sizing:border-box}

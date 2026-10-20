@@ -5,7 +5,7 @@
   "exactPrompt": null,
   "promptStatus": "El texto exacto del prompt no quedó archivado en el repositorio; no se reconstruye ni se inventa.",
   "rights": "Activos aportados y autorizados para esta integración por el usuario. No se afirma una licencia externa.",
-  "originalsPolicy": "Los originales se conservan sin modificaciones en web/imagenes/.",
+  "originalsPolicy": "Los originales se conservan sin modificaciones en source-assets/imagenes/.",
   "processing": {
     "tool": "Sharp disponible en el proyecto",
     "format": "WebP",
@@ -18,7 +18,7 @@
       "role": "Minería y minerales: mineral de cobre y fragmentos",
       "sector": "mineria",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_52-2.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_52-2.png",
         "name": "Imagen de ChatGPT 17 oct 2026, 19_26_52-2.png",
         "width": 1536,
         "height": 1024,
@@ -68,7 +68,7 @@
       "role": "Energía e hidrocarburos: tubería y brida industrial",
       "sector": "energia",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_53-3.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_53-3.png",
         "name": "Imagen de ChatGPT 17 oct 2026, 19_26_53-3.png",
         "width": 1536,
         "height": 1024,
@@ -118,7 +118,7 @@
       "role": "Infraestructura y construcción: acero, pernos y concreto",
       "sector": "infraestructura",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_54-4.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_54-4.png",
         "name": "Imagen de ChatGPT 17 oct 2026, 19_26_54-4.png",
         "width": 1536,
         "height": 1024,
@@ -168,7 +168,7 @@
       "role": "Inmobiliario y bienes raíces: edificios residenciales",
       "sector": "inmobiliario",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_54-5.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_54-5.png",
         "name": "Imagen de ChatGPT 17 oct 2026, 19_26_54-5.png",
         "width": 1536,
         "height": 1024,
@@ -218,7 +218,7 @@
       "role": "Comercio exterior y materias primas: carga y contenedores",
       "sector": "comercio",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_55-6.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 17 oct 2026, 19_26_55-6.png",
         "name": "Imagen de ChatGPT 17 oct 2026, 19_26_55-6.png",
         "width": 1536,
         "height": 1024,
@@ -268,11 +268,11 @@
       "role": "Pesca: pescados frescos sobre hielo en una caja plástica",
       "sector": "pesca",
       "classification": "Fotografía genérica de producto; no documenta capturas, operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
-      "provenance": "El usuario indicó que aportó este archivo en web/imagenes/. No se afirma si fue generado, tomado ni quién es su autor.",
+      "provenance": "El usuario indicó que aportó este archivo en source-assets/imagenes/. No se afirma si fue generado, tomado ni quién es su autor.",
       "rights": "El usuario autorizó su integración local en el sitio. La autoría y licencia externa no están verificadas.",
       "dateInferredFromOriginalName": "2026-10-18",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 18 oct 2026, 15_36_26-1.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 18 oct 2026, 15_36_26-1.png",
         "name": "Imagen de ChatGPT 18 oct 2026, 15_36_26-1.png",
         "width": 2048,
         "height": 768,
@@ -326,11 +326,11 @@
       "role": "Agroindustria: paltas Hass en una caja frente a una línea de selección",
       "sector": "agroindustria",
       "classification": "Fotografía genérica de producto y acondicionamiento; no documenta cosechas, operaciones, instalaciones, clientes ni experiencia de POWERFUL.",
-      "provenance": "El usuario indicó que aportó este archivo en web/imagenes/. No se afirma si fue generado, tomado ni quién es su autor.",
+      "provenance": "El usuario indicó que aportó este archivo en source-assets/imagenes/. No se afirma si fue generado, tomado ni quién es su autor.",
       "rights": "El usuario autorizó su integración local en el sitio. La autoría y licencia externa no están verificadas.",
       "dateInferredFromOriginalName": "2026-10-18",
       "original": {
-        "path": "web/imagenes/Imagen de ChatGPT 18 oct 2026, 15_36_27-2.png",
+        "path": "source-assets/imagenes/Imagen de ChatGPT 18 oct 2026, 15_36_27-2.png",
         "name": "Imagen de ChatGPT 18 oct 2026, 15_36_27-2.png",
         "width": 2048,
         "height": 768,

@@ -2,7 +2,7 @@
   "asset": "peru-global-connections.png",
   "source": {
     "type": "user-provided",
-    "path": "web/imagenes/Conexiones globales hacia Perú.png",
+    "path": "source-assets/imagenes/Conexiones globales hacia Perú.png",
     "sha256": "1c6238425b6032be13c91fcc81f52664122159e300d6409147fa3dd9a065eee0",
     "sizeBytes": 1132187,
     "dimensions": {
