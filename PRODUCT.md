@@ -16,11 +16,11 @@ Público principal: empresas y grupos con presencia internacional que evalúan i
 
 ## Product Purpose
 
-Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversaciones comerciales calificadas de empresas que evalúan ingresar u operar en Perú y, en segundo lugar, de inversionistas y socios para proyectos peruanos. Los titulares de iniciativas locales tienen un canal secundario de contacto. La primera entrega es una portada navegable real para escritorio y móvil.
+Presentar a POWERFUL con claridad, transmitir confianza y facilitar conversaciones comerciales calificadas de empresas que evalúan ingresar u operar en Perú y, en segundo lugar, de inversionistas y socios para proyectos peruanos. También presentar las capacidades de desarrollo de software, automatización e inteligencia artificial aplicada a procesos empresariales. Los titulares de iniciativas locales tienen un canal secundario de contacto. La primera entrega es una portada navegable real para escritorio y móvil.
 
 ## Positioning
 
-POWERFUL es una iniciativa centrada en Perú que busca ser contraparte local de empresas y grupos con presencia internacional que evalúan ingresar u operar en el país. También busca inversionistas y socios para iniciativas peruanas, que identifica y evalúa a partir de información disponible, incluidas fuentes públicas y estatales. La exploración no supone cartera propia, mandato ni relación oficial. El alcance es nacional, con mayor presencia de la red en el norte y nororiente. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
+POWERFUL es una iniciativa centrada en Perú que busca ser contraparte local de empresas y grupos con presencia internacional que evalúan ingresar u operar en el país. También busca inversionistas y socios para iniciativas peruanas, que identifica y evalúa a partir de información disponible, incluidas fuentes públicas y estatales. La exploración no supone cartera propia, mandato ni relación oficial. El alcance es nacional, con mayor presencia de la red en el norte y nororiente. POWERFUL también ofrece desarrollo de software de gestión, integración de sistemas, automatización de procesos e inteligencia artificial aplicada a tareas empresariales concretas, con atención al contexto peruano. No hay evidencia disponible para afirmar resultados, liderazgo o trayectoria corporativa medible.
 
 ## Operating Context
 
@@ -30,6 +30,7 @@ Expediente local en `Powerful/documentacion web/`, propuesta V0.1. El sitemap pr
 
 - Primera fase sin panel de administración; textos e imágenes se mantienen en el proyecto.
 - Lanzamiento en español, con separación de contenido y componentes para facilitar futuras traducciones.
+- La oferta tecnológica comprende desarrollo de software de gestión a medida, integración de sistemas, automatización de procesos e inteligencia artificial aplicada. Comunicarla como solución a necesidades concretas, sin atribuir clientes, resultados, productos implantados o trayectoria corporativa no verificados.
 - Contacto completo previsto para otra unidad: backend, antispam, registro y correo. Aún no hay proveedor, almacenamiento, hosting ni canales corporativos oficiales confirmados. La demo valida localmente y no envía ni simula recepción de consultas. Motivos: expansión/ingreso al Perú, inversión o asociación en proyectos peruanos, representación, alianza, propuesta de proyecto y otro.
 - Sectores de interés de POWERFUL: minería y minerales, energía e hidrocarburos, infraestructura y construcción, inmobiliario y bienes raíces, comercio exterior y materias primas. No presentarlos como proyectos ejecutados.
 - El usuario confirma que los integrantes del equipo tienen amplia experiencia profesional en todos los sectores abordados en la página Sectores. Comunicarla en bloque separado y distinguirla explícitamente de la trayectoria corporativa de POWERFUL; no atribuir a POWERFUL los proyectos o la experiencia individual.

@@ -1,0 +1,33 @@
+{
+  "asset": "technology-development-automation-ai.png",
+  "source": {
+    "type": "user-provided",
+    "path": "web/imagenes/Desarrollador analizando automatización inteligente.png",
+    "sha256": "b5d67b74b2546bd594e308187316e0bfa91a00f8ac229eeee65796320f309507",
+    "sizeBytes": 1908104,
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    },
+    "format": "PNG",
+    "colorModel": "RGB",
+    "hasTransparency": false
+  },
+  "classification": "Imagen conceptual de una persona desarrollando software con código, un flujo de automatización e interfaces de inteligencia artificial. No representa personal, productos, clientes ni implementaciones reales de POWERFUL.",
+  "generator": "No identificado; el usuario aportó la imagen después de solicitar un prompt. La herramienta de generación no quedó registrada.",
+  "prompt": "Usa la imagen adjunta solo para entender qué evitar: no muestres una reunión ni un equipo mirando una laptop. Crea una imagen para el servicio ‘Desarrollo tecnológico, automatización e inteligencia artificial’ de POWERFUL. El foco es una solución empresarial que se está construyendo. Muestra una aplicación propia en desarrollo, con código visible en una pantalla y una interfaz funcional en otra. Integra visualmente dos capacidades: automatización, mediante un flujo claro de tareas que conecta sistemas, valida información y deriva aprobaciones; e inteligencia artificial aplicada, mediante un asistente que analiza documentos o datos, propone una clasificación o resumen y deja la decisión final a una persona. Haz que las tres partes se perciban como componentes de una misma solución conectada. Usa una composición tecnológica editorial y sobria, con la estación de desarrollo como escena principal y diagramas de flujo y procesamiento de información incorporados a la imagen. Debe comunicar que POWERFUL puede diseñar, desarrollar e integrar herramientas que ayudan a operar mejor una empresa. Formato horizontal 4:3, apropiado para una tarjeta web, y coherente con la identidad visual del sitio si se proporciona como referencia. Evita reuniones, dashboards genéricos como único elemento, robots, cerebros luminosos, hologramas, íconos flotantes decorativos y efectos de neón. No incluyas texto legible, logotipos ni marcas.",
+  "rights": "El usuario autorizó su integración local en el sitio. La autoría y licencia externa no están verificadas.",
+  "alt": "Escena conceptual de una persona desarrollando software frente a código y una interfaz con un flujo automatizado y funciones de inteligencia artificial.",
+  "derivatives": [
+    {
+      "path": "public/images/technology-development-automation-ai.webp",
+      "format": "WebP",
+      "sha256": "8ac8783f944c091721d7599256d5b1ed0d5287f3d992c29d762e9773a0c3fd00",
+      "width": 1448,
+      "height": 1086,
+      "sizeBytes": 121088,
+      "quality": 84,
+      "effort": 6
+    }
+  ]
+}
