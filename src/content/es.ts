@@ -408,7 +408,6 @@ export interface BusinessPagesEs {
     teamExperience: {
       heading: string;
       description: string;
-      note: string;
     };
     cta: MiniCtaEs;
   };
@@ -718,7 +717,6 @@ export const businessPagesEs = {
       heading: 'Experiencia que aporta perspectiva',
       description:
         'Nuestro equipo combina experiencia profesional en todos los sectores que presentamos. Sus trayectorias reúnen un conocimiento amplio y práctico de distintas actividades empresariales del Perú. Esa mirada transversal enriquece nuestras conversaciones con empresas, inversionistas y quienes impulsan iniciativas en el país.',
-      note: 'La trayectoria mencionada corresponde a los integrantes del equipo.',
     },
     cta: {
       eyebrow: 'INVERSIÓN Y ALIANZAS EN PERÚ',
