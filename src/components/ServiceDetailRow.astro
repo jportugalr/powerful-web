@@ -11,26 +11,9 @@ const { item } = Astro.props;
 
 <article class="detail-row">
   <div class="detail-index">{item.index}</div>
-  <div class:list={['detail-main', item.image && 'detail-main-with-image']}>
-    <div>
-      <h2>{item.heading.lead}{' '}<em>{item.heading.emphasis}</em></h2>
-      <p>{item.description}</p>
-    </div>
-    {
-      item.image && (
-        <picture class="detail-visual">
-          <source srcset={item.image.webpSrc} type="image/webp" />
-          <img
-            src={item.image.src}
-            alt={item.image.alt}
-            width={item.image.width}
-            height={item.image.height}
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
-      )
-    }
+  <div>
+    <h2>{item.heading.lead}{' '}<em>{item.heading.emphasis}</em></h2>
+    <p>{item.description}</p>
   </div>
   <div class="detail-icon">
     <Icon name={item.icon} />

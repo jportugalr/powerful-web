@@ -2,6 +2,7 @@
 import MiniCta from '../components/MiniCta.astro';
 import PageHero from '../components/PageHero.astro';
 import SectorCard from '../components/SectorCard.astro';
+import TechnologyCapability from '../components/TechnologyCapability.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { businessPagesEs } from '../content/es';
 
@@ -41,6 +42,7 @@ const page = businessPagesEs.sectores;
         }
       </div>
       <p class="sector-disclaimer">{page.disclaimer}</p>
+      <TechnologyCapability content={page.technologyCapability} />
       <div class="team-experience">
         <h2>{page.teamExperience.heading}</h2>
         <p class="team-experience-copy">{page.teamExperience.description}</p>
@@ -91,5 +93,6 @@ const page = businessPagesEs.sectores;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       max-width: none;
     }
+
   }
 </style>

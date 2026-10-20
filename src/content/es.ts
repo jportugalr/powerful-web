@@ -306,13 +306,6 @@ export interface ServiceDetailEs {
   heading: TextHeadingEs;
   description: string;
   icon: 'globe' | 'briefcase' | 'layers' | 'compass';
-  image?: {
-    src: string;
-    webpSrc: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
 }
 
 export type SectorCategoryEs =
@@ -341,6 +334,19 @@ export interface SectorCardEs {
   };
   title: string;
   description: string;
+}
+
+export interface TechnologyCapabilityEs {
+  eyebrow: string;
+  heading: TextHeadingEs;
+  description: string;
+  image: {
+    src: string;
+    webpSrc: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
 }
 
 export interface ProcessStepEs {
@@ -398,6 +404,7 @@ export interface BusinessPagesEs {
     cards: SectorCardEs[];
     cardAction: string;
     disclaimer: string;
+    technologyCapability: TechnologyCapabilityEs;
     teamExperience: {
       heading: string;
       description: string;
@@ -494,7 +501,7 @@ export const businessPagesEs = {
   servicios: {
     metadata: {
       title: 'Qué hacemos | POWERFUL',
-      description: 'Representación empresarial, articulación comercial y soluciones de software, automatización e inteligencia artificial aplicada en el contexto peruano.',
+      description: 'Representación y articulación comercial en Perú para empresas que evalúan ingresar al mercado peruano.',
     },
     hero: {
       eyebrow: 'QUÉ HACEMOS',
@@ -547,23 +554,6 @@ export const businessPagesEs = {
           'Conversamos sobre iniciativas de importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
         icon: 'compass',
       },
-      {
-        index: '05 / TECNOLOGÍA',
-        heading: {
-          lead: 'Desarrollo de software,',
-          emphasis: 'automatización e IA.',
-        },
-        description:
-          'Diseñamos software de gestión a medida, conectamos sistemas y automatizamos procesos. Integramos inteligencia artificial para consultar información y apoyar tareas concretas, según los objetivos de cada organización y con atención al contexto empresarial peruano.',
-        icon: 'layers',
-        image: {
-          src: '/images/technology-development-automation-ai.png',
-          webpSrc: '/images/technology-development-automation-ai.webp',
-          alt: 'Escena conceptual de una persona desarrollando software frente a código y una interfaz con un flujo automatizado y funciones de inteligencia artificial.',
-          width: 1448,
-          height: 1086,
-        },
-      },
     ],
     notice: {
       eyebrow: 'NUESTRO ALCANCE',
@@ -575,7 +565,7 @@ export const businessPagesEs = {
   sectores: {
     metadata: {
       title: 'Sectores | POWERFUL',
-      description: 'Sectores de interés en Perú para empresas, inversionistas y socios; experiencia multisectorial del equipo.',
+      description: 'Sectores de interés en Perú para empresas, inversionistas y socios; capacidad tecnológica aplicada y experiencia multisectorial del equipo.',
     },
     hero: {
       eyebrow: 'SECTORES DE INTERÉS',
@@ -708,6 +698,22 @@ export const businessPagesEs = {
     cardAction: 'Conversemos sobre este sector',
     disclaimer:
       'Los sectores presentados describen ámbitos de interés; no implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
+    technologyCapability: {
+      eyebrow: 'ÁMBITO TECNOLÓGICO',
+      heading: {
+        lead: 'Desarrollo tecnológico',
+        emphasis: 'para necesidades empresariales.',
+      },
+      description:
+        'Desarrollamos software de gestión a medida; integramos sistemas y automatizamos procesos como partes de una misma solución empresarial. Aplicamos inteligencia artificial a tareas concretas, como consultar información, según los objetivos de cada organización y con atención al contexto empresarial peruano.',
+      image: {
+        src: '/images/technology-development-automation-ai.png',
+        webpSrc: '/images/technology-development-automation-ai.webp',
+        alt: 'Escena conceptual de una persona desarrollando software frente a código y una interfaz con un flujo automatizado y funciones de inteligencia artificial.',
+        width: 1448,
+        height: 1086,
+      },
+    },
     teamExperience: {
       heading: 'Experiencia que aporta perspectiva',
       description:

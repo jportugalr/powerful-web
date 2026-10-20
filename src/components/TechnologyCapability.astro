@@ -1,0 +1,30 @@
+---
+import type { TechnologyCapabilityEs } from '../content/es';
+
+interface Props {
+  content: TechnologyCapabilityEs;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="technology-capability" aria-labelledby="technology-capability-heading">
+  <div class="technology-capability-copy">
+    <p class="overline gold">{content.eyebrow}</p>
+    <h2 id="technology-capability-heading">
+      {content.heading.lead}{' '}<em>{content.heading.emphasis}</em>
+    </h2>
+    <p>{content.description}</p>
+  </div>
+  <picture class="technology-capability-visual">
+    <source srcset={content.image.webpSrc} type="image/webp" />
+    <img
+      src={content.image.src}
+      alt={content.image.alt}
+      width={content.image.width}
+      height={content.image.height}
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+</section>
