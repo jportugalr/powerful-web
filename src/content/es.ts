@@ -135,11 +135,11 @@ export const homePageEs = {
       trailing: 'en el Perú.',
     },
     description:
-      'Para empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano, exploramos posibles esquemas de representación y articulación comercial según cada caso. También conversamos con empresas, inversionistas y socios peruanos e internacionales interesados en proyectos del país. Nuestra red cubre todo el Perú, con mayor presencia en el norte y nororiente.',
+      'Desde el Perú, POWERFUL articula oportunidades y relaciones comerciales con empresas, inversionistas y socios peruanos e internacionales. Nuestra red alcanza todo el país, con mayor presencia en el norte y nororiente.',
     actions: [
       {
-        label: 'Conversemos sobre tu ingreso al Perú',
-        href: '/contacto.html?tipo=expansion',
+        label: 'Conversemos sobre tu iniciativa',
+        href: '/contacto.html',
         variant: 'gold',
       },
       {
@@ -157,17 +157,17 @@ export const homePageEs = {
   },
   intro: {
     index: '01 / NUESTRA PROPUESTA',
-    lead: 'Una contraparte para explorar el Perú:',
+    lead: 'Una contraparte para impulsar oportunidades en el Perú:',
     emphasis: 'relaciones comerciales con alcance definido.',
   },
   servicesPreview: {
     eyebrow: 'NUESTRO ENFOQUE',
     heading: {
-      lead: 'Tres vías para',
-      emphasis: 'desarrollar relaciones.',
+      lead: 'Capacidades para',
+      emphasis: 'impulsar oportunidades.',
     },
     description:
-      'Una vía para empresas que evalúan ingresar al Perú, otra para inversionistas y socios que exploran proyectos, y otra para titulares o representantes de iniciativas peruanas.',
+      'Integramos representación empresarial, articulación de proyectos, inversión y alianzas para impulsar oportunidades en el Perú, con el alcance definido junto a cada iniciativa.',
     cardAction: 'Explorar servicio',
     cards: [
       {
@@ -175,7 +175,7 @@ export const homePageEs = {
         icon: 'briefcase',
         title: 'Representación empresarial en Perú',
         description:
-          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano, para explorar representación y articulación comercial según cada caso.',
+          'Impulsamos relaciones de representación empresarial y articulación comercial para desarrollar oportunidades en el Perú.',
         href: '/servicios.html',
       },
       {
@@ -183,7 +183,7 @@ export const homePageEs = {
         icon: 'globe',
         title: 'Inversión y alianzas',
         description:
-          'Conversamos con inversionistas y socios interesados en proyectos del Perú.',
+          'Articulamos iniciativas de inversión y alianzas con objetivos y acuerdos definidos para cada proyecto.',
         href: '/servicios.html',
       },
       {
@@ -191,7 +191,7 @@ export const homePageEs = {
         icon: 'layers',
         title: 'Articulación de iniciativas peruanas',
         description:
-          'Las conversaciones con titulares o representantes de iniciativas peruanas se enmarcan en los objetivos y acuerdos de las partes.',
+          'Conectamos proyectos empresariales con oportunidades de articulación, colaboración y desarrollo en el Perú.',
         href: '/servicios.html',
       },
     ],
@@ -225,7 +225,7 @@ export const homePageEs = {
       emphasis: 'Proyectos en todo el país.',
     },
     description:
-      'POWERFUL busca relacionarse primero con empresas internacionales que evalúan ingresar al Perú, y también con empresas, inversionistas y socios peruanos e internacionales interesados en proyectos en el país. Su red alcanza todo el Perú, con mayor presencia en el norte y nororiente.',
+      'Desde el Perú, POWERFUL articula relaciones con empresas, inversionistas y socios peruanos e internacionales para impulsar oportunidades y proyectos en distintas regiones del país. Su red alcanza todo el Perú, con mayor presencia en el norte y nororiente.',
     linkLabel: 'Cómo trabajamos',
     linkHref: '/como-trabajamos.html',
     diagramSource: 'Empresas en expansión',
@@ -267,12 +267,12 @@ export const homePageEs = {
     ],
   },
   miniCta: {
-    eyebrow: 'EXPANSIÓN EMPRESARIAL EN PERÚ',
-    heading: '¿Tu empresa evalúa ingresar al mercado peruano?',
+    eyebrow: 'INICIATIVAS EMPRESARIALES EN EL PERÚ',
+    heading: '¿Qué oportunidad quieres impulsar?',
     description:
-      'Conversemos sobre representación y articulación comercial. Si buscas invertir o asociarte a un proyecto peruano, cuéntanoslo al iniciar la conversación por WhatsApp.',
-    actionLabel: 'Conversemos sobre tu ingreso al Perú',
-    actionHref: '/contacto.html?tipo=expansion',
+      'Conversemos sobre representación, inversión, alianzas y proyectos empresariales en el Perú.',
+    actionLabel: 'Conversemos sobre tu iniciativa',
+    actionHref: '/contacto.html',
   },
 } as const satisfies HomePageEs;
 
@@ -433,7 +433,7 @@ export const businessPagesEs = {
   nosotros: {
     metadata: {
       title: 'Nosotros | POWERFUL',
-      description: 'Iniciativa peruana que conversa con empresas que evalúan ingresar al país e inversionistas interesados en proyectos peruanos.',
+      description: 'Iniciativa peruana que articula relaciones con empresas, inversionistas y socios peruanos e internacionales para impulsar oportunidades y proyectos en el país.',
     },
     hero: {
       eyebrow: 'CONOCE POWERFUL',
@@ -452,8 +452,8 @@ export const businessPagesEs = {
         emphasis: 'nuevos negocios.',
       },
       paragraphs: [
-        'Nuestra prioridad son las empresas y grupos con presencia internacional que evalúan ingresar al mercado peruano.',
-        'También conversamos con inversionistas y socios interesados en proyectos peruanos, así como con sus titulares y representantes.',
+        'Desde el Perú, trabajamos con empresas, inversionistas y socios peruanos e internacionales para impulsar oportunidades y proyectos en el país.',
+        'También articulamos relaciones con titulares y representantes de iniciativas peruanas.',
       ],
       linkLabel: 'Ver qué hacemos',
       linkHref: '/servicios.html',
@@ -494,7 +494,7 @@ export const businessPagesEs = {
         emphasis: 'hechos verificables.',
       },
       description:
-        'Distinguimos la experiencia profesional del equipo de la trayectoria corporativa de POWERFUL. Compartiremos antecedentes, proyectos, alianzas y resultados cuando estén documentados y autorizados.',
+        'Nuestro equipo aporta experiencia profesional y conocimiento práctico en diversas actividades empresariales del Perú. Las referencias a proyectos, alianzas y resultados de POWERFUL se comparten con respaldo documental y las autorizaciones correspondientes.',
     },
   },
   servicios: {
@@ -564,10 +564,10 @@ export const businessPagesEs = {
   sectores: {
     metadata: {
       title: 'Sectores | POWERFUL',
-      description: 'Sectores de interés en Perú para empresas, inversionistas y socios; capacidad tecnológica aplicada y experiencia multisectorial del equipo.',
+      description: 'Experiencia multisectorial del equipo y oportunidades empresariales en diversos sectores del Perú, junto con desarrollo tecnológico aplicado.',
     },
     hero: {
-      eyebrow: 'SECTORES DE INTERÉS',
+      eyebrow: 'EXPERIENCIA MULTISECTORIAL Y OPORTUNIDADES',
       heading: {
         lead: 'Una perspectiva',
         emphasis: 'multisectorial.',
@@ -607,7 +607,7 @@ export const businessPagesEs = {
         },
         title: 'Minería y minerales',
         description:
-          'Relaciones comerciales vinculadas con proyectos, minerales y materias primas, sujetas a análisis técnico, contractual y normativo.',
+          'Articulamos oportunidades en minería, minerales y materias primas, con revisión técnica, contractual y normativa para cada iniciativa.',
       },
       {
         id: 'energia',
@@ -621,7 +621,7 @@ export const businessPagesEs = {
         },
         title: 'Energía e hidrocarburos',
         description:
-          'Iniciativas de generación eléctrica, petróleo, gas y actividades relacionadas que puedan requerir alianzas o participación empresarial.',
+          'Conectamos iniciativas de generación eléctrica, petróleo y gas con oportunidades de alianza y participación empresarial.',
       },
       {
         id: 'infraestructura',
@@ -663,7 +663,7 @@ export const businessPagesEs = {
         },
         title: 'Comercio exterior y materias primas',
         description:
-          'Operaciones de importación, exportación, suministros y comercialización en los ámbitos donde existan condiciones viables.',
+          'Articulamos operaciones de importación, exportación, suministro y comercialización, con revisión técnica, contractual y normativa para cada iniciativa.',
       },
       {
         id: 'pesca',
@@ -677,7 +677,7 @@ export const businessPagesEs = {
         },
         title: 'Pesca',
         description:
-          'Posibles relaciones comerciales vinculadas con actividades pesqueras, procesamiento y cadena de frío, sujetas a evaluación técnica, contractual y normativa.',
+          'Articulamos oportunidades comerciales en pesca, procesamiento y cadena de frío, con revisión técnica, contractual y normativa para cada iniciativa.',
       },
       {
         id: 'agroindustria',
@@ -691,7 +691,7 @@ export const businessPagesEs = {
         },
         title: 'Agroindustria',
         description:
-          'Iniciativas de transformación, acondicionamiento y comercialización de productos agrícolas, sujetas a evaluación técnica, comercial y normativa.',
+          'Articulamos iniciativas para transformar, acondicionar y comercializar productos agrícolas, con revisión técnica, contractual y normativa en cada caso.',
       },
     ],
     cardAction: 'Conversemos sobre este sector',
@@ -719,12 +719,12 @@ export const businessPagesEs = {
         'Nuestro equipo combina experiencia profesional en todos los sectores que presentamos. Sus trayectorias reúnen un conocimiento amplio y práctico de distintas actividades empresariales del Perú. Esa mirada transversal enriquece nuestras conversaciones con empresas, inversionistas y quienes impulsan iniciativas en el país.',
     },
     cta: {
-      eyebrow: 'INVERSIÓN Y ALIANZAS EN PERÚ',
-      heading: '¿Buscas invertir o asociarte en estos sectores?',
+      eyebrow: 'OPORTUNIDADES EMPRESARIALES EN PERÚ',
+      heading: '¿Qué oportunidad quieres impulsar?',
       description:
-        'Los sectores presentados son ámbitos de interés para proyectos y relaciones empresariales en el Perú.',
-      actionLabel: 'Conversar sobre inversión y alianzas',
-      actionHref: '/contacto.html?tipo=inversionista',
+        'Conversemos sobre proyectos, alianzas e iniciativas empresariales en el Perú.',
+      actionLabel: 'Conversemos sobre tu iniciativa',
+      actionHref: '/contacto.html',
     },
   },
   comoTrabajamos: {
