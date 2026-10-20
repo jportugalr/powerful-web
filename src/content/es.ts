@@ -483,7 +483,7 @@ export const businessPagesEs = {
           index: '03 /',
           title: 'Participación',
           description:
-            'Evaluar un rol activo cuando el acuerdo de cada iniciativa lo permita.',
+            'Definimos nuestra participación según el alcance y las responsabilidades acordadas para cada iniciativa.',
         },
       ],
     },
@@ -500,16 +500,16 @@ export const businessPagesEs = {
   servicios: {
     metadata: {
       title: 'Qué hacemos | POWERFUL',
-      description: 'Representación y articulación comercial en Perú para empresas que evalúan ingresar al mercado peruano.',
+      description: 'Representación y articulación empresarial para iniciativas de expansión, inversión y alianzas en el Perú.',
     },
     hero: {
       eyebrow: 'QUÉ HACEMOS',
       heading: {
-        lead: 'Exploramos relaciones',
-        emphasis: 'empresariales en Perú.',
+        lead: 'Articulamos oportunidades',
+        emphasis: 'empresariales en el Perú.',
       },
       lede:
-        'Conversamos sobre el ingreso de empresas al mercado peruano y posibles relaciones comerciales, de inversión o alianza. Cada alcance se define según los objetivos y acuerdos de las partes.',
+        'Impulsamos iniciativas de expansión, inversión y alianzas vinculadas al Perú. Definimos con cada parte los objetivos, el alcance y los acuerdos para avanzar.',
       pageNumber: '03',
     },
     details: [
@@ -520,7 +520,7 @@ export const businessPagesEs = {
           emphasis: 'empresarial en Perú.',
         },
         description:
-          'Conversamos con empresas y grupos con presencia internacional que evalúan ingresar al Perú. Si una iniciativa requiere representación, acordamos previamente su alcance, facultades y responsabilidades.',
+          'Articulamos la representación empresarial y las relaciones comerciales de iniciativas vinculadas al Perú. Acordamos con cada parte las facultades, responsabilidades y alcance del encargo.',
         icon: 'briefcase',
       },
       {
@@ -530,7 +530,7 @@ export const businessPagesEs = {
           emphasis: 'proyectos y alianzas.',
         },
         description:
-          'Conversamos sobre iniciativas peruanas con empresas, inversionistas y socios, según los objetivos y acuerdos de cada parte. Algunas iniciativas se difunden por entidades del Estado.',
+          'Articulamos iniciativas peruanas con empresas, inversionistas y socios, conforme a los objetivos y acuerdos de cada parte. Algunas iniciativas se difunden por entidades del Estado.',
         icon: 'globe',
       },
       {
@@ -540,7 +540,7 @@ export const businessPagesEs = {
           emphasis: 'y participación.',
         },
         description:
-          'Exploramos posibles esquemas de inversión con inversionistas y socios. Las opciones de financiamiento o participación se evalúan según cada iniciativa y se definen de común acuerdo.',
+          'Articulamos opciones de inversión y participación con inversionistas y socios. Las condiciones de financiamiento o participación se definen para cada iniciativa y de común acuerdo.',
         icon: 'layers',
       },
       {
@@ -550,7 +550,7 @@ export const businessPagesEs = {
           emphasis: 'comercio exterior.',
         },
         description:
-          'Conversamos sobre iniciativas de importación, exportación, comercialización y suministro de bienes o materias primas, según las capacidades y requisitos del caso.',
+          'Articulamos iniciativas de importación, exportación, comercialización y suministro de bienes o materias primas, conforme a las capacidades y requisitos de cada caso.',
         icon: 'compass',
       },
     ],
@@ -558,7 +558,7 @@ export const businessPagesEs = {
       eyebrow: 'NUESTRO ALCANCE',
       heading: 'Cómo comienza cada colaboración',
       description:
-        'Empezamos con una conversación para conocer tus objetivos y explorar posibilidades. Si hay afinidad, definimos juntos el alcance y las condiciones para avanzar.',
+        'Iniciamos cada colaboración definiendo con las partes los objetivos, el alcance y las condiciones para avanzar.',
     },
   },
   sectores: {
@@ -716,7 +716,7 @@ export const businessPagesEs = {
     teamExperience: {
       heading: 'Experiencia que aporta perspectiva',
       description:
-        'Nuestro equipo combina experiencia profesional en todos los sectores que presentamos. Sus trayectorias reúnen un conocimiento amplio y práctico de distintas actividades empresariales del Perú. Esa mirada transversal enriquece nuestras conversaciones con empresas, inversionistas y quienes impulsan iniciativas en el país.',
+        'Nuestro equipo combina experiencia profesional en todos los sectores que presentamos. Sus trayectorias reúnen un conocimiento amplio y práctico de distintas actividades empresariales del Perú. Esa mirada transversal amplía nuestra capacidad para articular oportunidades con empresas, inversionistas y quienes impulsan iniciativas en el país.',
     },
     cta: {
       eyebrow: 'OPORTUNIDADES EMPRESARIALES EN PERÚ',
@@ -855,7 +855,7 @@ export interface NotFoundPageEs {
 export const contactPageEs = {
   metadata: {
     title: 'Contacto | POWERFUL',
-    description: 'Conversemos sobre el ingreso de tu empresa al Perú, inversiones, alianzas o proyectos peruanos.',
+    description: 'Contacto para iniciativas de expansión, inversión, alianzas y proyectos empresariales vinculados al Perú.',
   },
   hero: {
     eyebrow: 'INICIEMOS UNA CONVERSACIÓN',
@@ -864,7 +864,7 @@ export const contactPageEs = {
       emphasis: 'por entendernos.',
     },
     lede:
-      'Si representas a una empresa con presencia internacional que evalúa ingresar al Perú, buscas invertir o asociarte a proyectos del país, o representas una iniciativa peruana, cuéntanos tu objetivo.',
+      'Cuéntanos sobre una iniciativa de expansión empresarial, inversión, alianza o proyecto peruano. Trabajamos con empresas, inversionistas, socios y representantes de iniciativas vinculadas al país.',
     pageNumber: '06',
   },
   aside: {
