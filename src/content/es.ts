@@ -697,7 +697,7 @@ export const businessPagesEs = {
     ],
     cardAction: 'Conversemos sobre este sector',
     disclaimer:
-      'Los sectores presentados describen ámbitos de interés; no implican que POWERFUL haya ejecutado proyectos en todos ellos ni constituyen una oferta pública de inversión.',
+      'Los sectores presentados reflejan la experiencia profesional y el conocimiento práctico de nuestro equipo. Nuestra mirada multisectorial también nos permite explorar oportunidades en otras actividades empresariales, según los objetivos de cada iniciativa.',
     technologyCapability: {
       eyebrow: 'ÁMBITO TECNOLÓGICO',
       heading: {
