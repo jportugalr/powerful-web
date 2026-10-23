@@ -1,6 +1,7 @@
 ---
 import type { SiteShellContent } from '../content/types';
 import type { Locale } from '../i18n/types';
+import { isCommercialHomeRoute } from '../i18n/routes';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -12,11 +13,17 @@ interface Props {
 }
 
 const { currentPath, locale, content, languageSwitchHref, languageSwitchLocale } = Astro.props;
+const isHomePage = isCommercialHomeRoute(currentPath, locale);
 ---
 
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href={content.homeHref} aria-label={content.brandHomeLabel}>
+    <a
+      class="brand"
+      href={content.homeHref}
+      aria-label={content.brandHomeLabel}
+      data-home-brand={isHomePage ? '' : undefined}
+    >
       <img src="/brand/wordmark-header-registered.png" width="2105" height="277" alt="POWERFUL" />
     </a>
     <nav class="desktop-nav" aria-label={content.desktopNavigationLabel}>
@@ -61,3 +68,15 @@ const { currentPath, locale, content, languageSwitchHref, languageSwitchLocale }
     <a class="mobile-highlight" href={content.contactHref}>{content.contactLabel} <Icon name="arrow-right" /></a>
   </nav>
 </header>
+
+<script>
+  const brandMotion = new URLSearchParams(window.location.search).get('brand-motion');
+
+  if (brandMotion === 'wordmark' || brandMotion === 'emblem-glow') {
+    const homeBrand = document.querySelector('[data-home-brand]');
+
+    if (homeBrand) {
+      homeBrand.setAttribute('data-brand-motion', brandMotion);
+    }
+  }
+</script>
