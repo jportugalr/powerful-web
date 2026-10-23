@@ -305,10 +305,8 @@ export interface SiteShellContent {
     mobileToggleCloseLabel: string;
     languageTitle: string;
     languageLabel: string;
-    languageRegion: string;
     languageSwitchTitle: string;
     languageSwitchLabel: string;
-    languageSwitchRegion: string;
     contactLabel: string;
     contactHref: string;
     navigation: { label: string; href: string }[];

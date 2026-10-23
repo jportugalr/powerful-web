@@ -27,12 +27,13 @@ const { currentPath, locale, content, languageSwitchHref, languageSwitchLocale }
     </nav>
     <div class="nav-side">
       {languageSwitchHref && languageSwitchLocale ? (
-        <a class="lang-tag" href={languageSwitchHref} hreflang={languageSwitchLocale} title={content.languageSwitchTitle} aria-label={content.languageSwitchTitle}>
-          {content.languageSwitchLabel} <span aria-hidden="true">{content.languageSwitchRegion}</span>
+        <a class="language-switch language-switch-desktop" href={languageSwitchHref} hreflang={languageSwitchLocale} title={content.languageSwitchTitle} aria-label={content.languageSwitchTitle}>
+          <Icon name="globe" />
+          <span>{content.languageSwitchLabel}</span>
         </a>
       ) : (
         <span class="lang-tag" lang={locale} title={content.languageTitle}>
-          {content.languageLabel} <span aria-hidden="true">{content.languageRegion}</span>
+          {content.languageLabel}
         </span>
       )}
       <a class="nav-contact" href={content.contactHref}>{content.contactLabel} <Icon name="arrow-up-right" /></a>
@@ -48,12 +49,13 @@ const { currentPath, locale, content, languageSwitchHref, languageSwitchLocale }
       return <a class:list={['nav-link', { active }]} href={item.href} aria-current={active ? 'page' : undefined}>{item.label}</a>;
     })}
     {languageSwitchHref && languageSwitchLocale ? (
-      <a class="mobile-language-control" href={languageSwitchHref} hreflang={languageSwitchLocale} title={content.languageSwitchTitle} aria-label={content.languageSwitchTitle}>
-        {content.languageSwitchLabel} <span aria-hidden="true">{content.languageSwitchRegion}</span>
+      <a class="language-switch language-switch-mobile" href={languageSwitchHref} hreflang={languageSwitchLocale} title={content.languageSwitchTitle} aria-label={content.languageSwitchTitle}>
+        <Icon name="globe" />
+        <span>{content.languageSwitchLabel}</span>
       </a>
     ) : (
-      <span class="mobile-language-control" lang={locale} title={content.languageTitle}>
-        {content.languageLabel} <span aria-hidden="true">{content.languageRegion}</span>
+      <span class="mobile-language-current" lang={locale} title={content.languageTitle}>
+        {content.languageLabel}
       </span>
     )}
     <a class="mobile-highlight" href={content.contactHref}>{content.contactLabel} <Icon name="arrow-right" /></a>
