@@ -5,7 +5,7 @@ import ServiceDetailRow from '../../components/ServiceDetailRow.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { resolveCommercialCatalog } from '../../i18n/catalog';
 
-const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const { catalog, locale } = resolveCommercialCatalog('en');
 const page = catalog.businessPages.servicios;
 ---
 

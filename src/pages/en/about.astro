@@ -4,7 +4,7 @@ import Icon from '../../components/Icon.astro';
 import PageHero from '../../components/PageHero.astro';
 import { resolveCommercialCatalog } from '../../i18n/catalog';
 
-const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const { catalog, locale } = resolveCommercialCatalog('en');
 const page = catalog.businessPages.nosotros;
 ---
 
