@@ -54,7 +54,9 @@ PUBLIC_SITE_URL=https://powerful.pe PUBLIC_INDEXING_ENABLED=true npm run build
 
 Sin una URL HTTPS válida, el build falla claramente cuando se activa el flag. La compilación habilitada genera canonical y Open Graph de texto solo para páginas comerciales, además de `sitemap-index.xml`; Privacidad, Condiciones y 404 conservan `noindex` y quedan fuera del sitemap. Este build no publica el sitio ni confirma su indexación.
 
-Antes de habilitar indexación, falta verificar DNS y TLS de `powerful.pe`, completar y aprobar los textos legales, y publicar mediante el proceso autorizado. Si `powerfulglobal.pe` sirve el mismo contenido, debe redirigir con 301 a las URLs equivalentes de `powerful.pe`; si tendrá contenido distinto, hay que definirlo antes de indexar ambos dominios. Luego se verifican ambas propiedades en Google Search Console y se envía `https://powerful.pe/sitemap-index.xml`. El sitemap ayuda al descubrimiento, pero no garantiza que Google indexe las páginas.
+`powerfulglobal.pe` tendrá el mismo contenido y debe redirigir con 301 a la URL equivalente en `https://powerful.pe`, conservando la ruta y los parámetros. Esa regla debe configurarse en el proxy público que recibe ambos dominios; este repositorio solo contiene el Nginx de la aplicación y no la configuración del proxy público.
+
+Antes de habilitar indexación, falta verificar DNS y TLS de ambos dominios, aplicar y probar esa redirección, completar y aprobar los textos legales, y publicar mediante el proceso autorizado. Luego se verifican ambas propiedades en Google Search Console y se envía `https://powerful.pe/sitemap-index.xml`. El sitemap ayuda al descubrimiento, pero no garantiza que Google indexe las páginas.
 
 Con ambos servicios arriba, repetir el smoke desde Bash/WSL (requiere `curl` y `sha256sum`):
 

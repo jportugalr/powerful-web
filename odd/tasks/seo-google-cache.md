@@ -14,6 +14,7 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
 
 - Configurar un dominio de publicación mediante `PUBLIC_SITE_URL`, sin asumir que el dominio previsto en documentos internos ya esté validado para DNS o que `www` sea la versión canónica.
 - El usuario confirmó `https://powerful.pe` como dominio canónico. La compilación seguirá requiriendo configurar `PUBLIC_SITE_URL`; DNS/TLS y la conducta de `powerfulglobal.pe` aún no están verificados.
+- El usuario confirmó que `powerfulglobal.pe` tendrá el mismo contenido y redirigirá a `powerful.pe`. El 301 debe preservar ruta y query y configurarse en el proxy público; el repositorio solo contiene el Nginx interno de la aplicación.
 - Mantener el sitio en `noindex` y sin sitemap de indexación hasta que `PUBLIC_INDEXING_ENABLED=true` y exista un `PUBLIC_SITE_URL` HTTPS válido.
 - Cuando se habilite, exponer contenido comercial con canonical, metadatos sociales de texto, `robots.txt` y sitemap absoluto.
 - Privacidad, Condiciones y 404 permanecen noindex y fuera del sitemap mientras los textos legales sigan como borradores.
@@ -40,7 +41,7 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
   - Ruta: delegated direct por mapeo 4+ archivos y escritura coordinada.
   - Evidencia: `npm run check` pasó (33 archivos, 0 diagnósticos); build predeterminado y build con dominio de prueba HTTPS pasaron; tras la confirmación del dominio, `PUBLIC_SITE_URL=https://powerful.pe PUBLIC_INDEXING_ENABLED=true npm run build` generó canonical y sitemap con `powerful.pe` y seis rutas comerciales; luego el build predeterminado volvió a noindex y sin sitemap. El sitemap excluye Privacidad, Condiciones, 404 y parámetros; flag sin URL falla con error claro; `git diff --check` pasó.
   - Commit: `058bbad` (`feat(seo): gate Google indexing on launch configuration`).
-  - Seguimiento: README actualizado para usar el dominio canónico confirmado; commit pendiente.
+  - Seguimiento: README actualizado para usar el dominio canónico confirmado; commit `d837f4d` (`docs(seo): use confirmed canonical domain in launch guide`).
 
 - [x] **CACHE-01 — Definir cabeceras HTTP para HTML y assets públicos versionados.** Mantener `/_astro/` en un año con `immutable`; definir `no-cache` para páginas HTML; usar un TTL moderado en imágenes/favicon de `/public` con nombres estables, evitando que la regla de imágenes reemplace la regla de `/_astro/`.
   - Aceptación: configuración Nginx aplica la política adecuada por tipo/ruta; la documentación refleja la conducta; no se añade infraestructura de caché externa.
@@ -53,7 +54,7 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
 
 - Inspección local confirma Astro estático, títulos/descripciones existentes, y bloqueo global `noindex,nofollow` en el layout.
 - Dominio previsto en el expediente: `https://powerful.pe`; el usuario confirmó que será canónico. DNS/TLS aún no están verificados. El build toma el host de `PUBLIC_SITE_URL` y mantiene el flag de indexación explícito.
-- El usuario confirmó `https://powerful.pe` como canónico y README ahora muestra el comando de build real. Queda pendiente comprobar DNS/TLS y definir si `powerfulglobal.pe` mostrará contenido distinto o redirigirá al canónico.
+- El usuario confirmó `https://powerful.pe` como canónico y que `powerfulglobal.pe` es un alias con el mismo contenido. README documenta el 301 equivalente con ruta y query preservados, pendiente de configurar en el proxy público.
 - Las rutas de Privacidad y Condiciones contienen borradores legales; no se les quitará noindex.
 - Nginx actualmente da `public, max-age=31536000, immutable` a `/_astro/`; los assets tienen hash. Las imágenes/favicons en `/public` usan nombres estables. HTML y assets públicos carecen de cabeceras explícitas en la configuración.
 - Google recomienda páginas útiles y rastreables, títulos claros, y sitemap como ayuda de descubrimiento; un sitemap no garantiza indexación. Indexación real, rendimiento medido, cobertura y consultas requieren el sitio público y Search Console.
@@ -63,4 +64,4 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
 
 ## Siguiente paso
 
-SEO-01 quedó cerrado en `058bbad` y CACHE-01 en `8f95369`; ambas unidades tienen checks aplicables registrados. El comando de build ahora usa `https://powerful.pe`. Antes de activar `PUBLIC_INDEXING_ENABLED`, verificar DNS/TLS y los textos legales; definir antes del despliegue si `powerfulglobal.pe` tendrá contenido distinto o redirección 301.
+SEO-01 quedó cerrado en `058bbad` con guía actualizada en `d837f4d`, y CACHE-01 en `8f95369`; los checks aplicables están registrados. El build usa `https://powerful.pe`. Antes de activar `PUBLIC_INDEXING_ENABLED`, configurar y probar en el proxy público el 301 desde `powerfulglobal.pe` conservando path/query, verificar DNS/TLS y aprobar los textos legales. La configuración del edge no está en este repositorio; para modificarla falta identificar el destino y autorizar explícitamente esa operación/sesión.
