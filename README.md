@@ -76,6 +76,14 @@ docker compose -f compose.production.yaml down
 
 La imagen final contiene el sitio Astro generado y la configuración Nginx; no copia `.env`, documentación interna ni herramientas de desarrollo. `PUBLIC_SITE_URL` y `PUBLIC_INDEXING_ENABLED` se evalúan durante el build y no se leen desde el `.env` del VPS. Esta publicación mantiene la indexación deshabilitada por defecto.
 
+## Despliegue manual en VPS
+
+El workflow `.github/workflows/deploy-production.yml` solo despliega cuando se inicia manualmente desde `Actions` → `Deploy production`, seleccionando `main`. Usa el environment `production` y serializa sus ejecuciones. En la configuración de ese environment, crea estas variables (`Settings` → `Environments` → `production`): `VPS_HOST`, `VPS_USER` y `POWERFUL_VPS_APP_DIR`. Agrega como secrets `VPS_SSH_PRIVATE_KEY` y `VPS_SSH_KNOWN_HOSTS`; la clave debe permitir SSH no interactivo y `known_hosts` debe contener la clave de host verificada para `VPS_HOST`. El workflow autentica temporalmente en GHCR con su `GITHUB_TOKEN` y permiso `packages: read`; no requiere un PAT de larga duración. Si el paquete GHCR es privado, concede acceso de lectura al repositorio para Actions desde la configuración del paquete.
+
+Antes de ejecutarlo, la clave pública debe estar autorizada para `VPS_USER`, la clave privada del secret debe ser utilizable sin interacción (sin passphrase) y el servidor debe aceptar SSH por el puerto 22. Ese usuario necesita Docker Engine con Compose v2 y acceso a la red externa `edge`. `POWERFUL_VPS_APP_DIR` debe ser la carpeta de destino y ya contener `compose.vps.yaml` y `.env`; el workflow no copia ni modifica esos archivos. El `.env` remoto debe incluir `POWERFUL_IMAGE_REPOSITORY=ghcr.io/jportugalr/powerful-web`. Omite `POWERFUL_IMAGE_TAG` para descargar `latest`. El workflow inicia el servicio `web`, sin compilar en el VPS, y espera a que su healthcheck esté saludable.
+
+Para volver a una versión concreta, define en el `.env` remoto `POWERFUL_IMAGE_TAG=sha-<commit>` usando el SHA publicado por CI y vuelve a iniciar manualmente el workflow desde `main`. Para regresar al canal más reciente, elimina `POWERFUL_IMAGE_TAG` o configúralo como `latest`.
+
 Estos comandos preparan una ejecución local; no publican el sitio. Si se prefiere trabajar fuera de Docker, los scripts `npm ci`, `npm run dev`, `npm run check` y `npm run build` siguen disponibles con Node >= 22.22.
 
 TDD estricto desactivado por decisión explícita del usuario; se realizan chequeos funcionales y revisión real de navegador. El modo de review nativo está disabled/unmanaged.

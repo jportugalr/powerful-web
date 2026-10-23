@@ -1,0 +1,17 @@
+# Set the image repository in .env; omit POWERFUL_IMAGE_TAG to use latest.
+name: powerful-web-vps
+
+services:
+  web:
+    image: "${POWERFUL_IMAGE_REPOSITORY:?Set POWERFUL_IMAGE_REPOSITORY in .env}:${POWERFUL_IMAGE_TAG:-latest}"
+    init: true
+    restart: unless-stopped
+    networks:
+      edge:
+        aliases:
+          - powerful-web
+
+networks:
+  edge:
+    external: true
+    name: edge
