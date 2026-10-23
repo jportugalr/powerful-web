@@ -13,6 +13,7 @@ El layout aplica `noindex,nofollow` a todas las páginas. El sitio no tiene domi
 El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde exista una ventaja. Alcance local en el checkout actual; no incluye Search Console, cuenta de Google, edición de textos legales, aprobación de publicación, push ni despliegue.
 
 - Configurar un dominio de publicación mediante `PUBLIC_SITE_URL`, sin asumir que el dominio previsto en documentos internos ya esté validado para DNS o que `www` sea la versión canónica.
+- El usuario confirmó `https://powerful.pe` como dominio canónico. La compilación seguirá requiriendo configurar `PUBLIC_SITE_URL`; DNS/TLS y la conducta de `powerfulglobal.pe` aún no están verificados.
 - Mantener el sitio en `noindex` y sin sitemap de indexación hasta que `PUBLIC_INDEXING_ENABLED=true` y exista un `PUBLIC_SITE_URL` HTTPS válido.
 - Cuando se habilite, exponer contenido comercial con canonical, metadatos sociales de texto, `robots.txt` y sitemap absoluto.
 - Privacidad, Condiciones y 404 permanecen noindex y fuera del sitemap mientras los textos legales sigan como borradores.
@@ -34,30 +35,32 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
 ## Tareas
 
 - [x] **SEO-01 — Establecer rastreo, canonical y sitemap bajo configuración explícita de lanzamiento.** Resolver URL desde `PUBLIC_SITE_URL` y activar indexación solo con `PUBLIC_INDEXING_ENABLED=true`; no incorporar dominios de ejemplo ni inferir `www`/apex. En indexación habilitada, añadir self-canonical que excluya query strings, `og:title`/`og:description`/`og:url`, sitemap filtrado y `robots.txt` coherente. Mantener noindex por defecto, y excluir Privacidad, Condiciones y 404. Ajustar metadatos comerciales solo con afirmaciones respaldadas por el contenido aprobado.
-  - Aceptación: build sin configuración permanece noindex y no publica sitemap; build con HTTPS + flag explícito incluye rutas comerciales y excluye borradores legales/404; URLs canónicas/sitemap usan el host configurado y no contienen parámetros de CTA. No se inventan hechos empresariales ni datos estructurados incompletos.
+  - Aceptación: build sin configuración permanece noindex y no publica sitemap; build con HTTPS + flag explícito incluye rutas comerciales y excluye borradores legales/404; URLs canónicas/sitemap usan el host configurado (`https://powerful.pe` para el lanzamiento) y no contienen parámetros de CTA. No se inventan hechos empresariales ni datos estructurados incompletos.
   - Checks: `npm run check`, build local en ambos modos de indexación, inspección del HTML/robots/sitemap generados, `git diff --check`.
   - Ruta: delegated direct por mapeo 4+ archivos y escritura coordinada.
-  - Evidencia: `npm run check` pasó (33 archivos, 0 diagnósticos); build predeterminado y build con `PUBLIC_SITE_URL=https://powerful.example PUBLIC_INDEXING_ENABLED=true` pasaron; el sitemap contiene seis rutas comerciales `.html` y excluye Privacidad, Condiciones, 404 y parámetros; canonical/robots coinciden con el host configurado; flag sin URL falla con error claro; `git diff --check` pasó con aviso de conversión CRLF en `astro.config.mjs`.
+  - Evidencia: `npm run check` pasó (33 archivos, 0 diagnósticos); build predeterminado y build con dominio de prueba HTTPS pasaron; tras la confirmación del dominio, `PUBLIC_SITE_URL=https://powerful.pe PUBLIC_INDEXING_ENABLED=true npm run build` generó canonical y sitemap con `powerful.pe` y seis rutas comerciales; luego el build predeterminado volvió a noindex y sin sitemap. El sitemap excluye Privacidad, Condiciones, 404 y parámetros; flag sin URL falla con error claro; `git diff --check` pasó.
   - Commit: `058bbad` (`feat(seo): gate Google indexing on launch configuration`).
+  - Seguimiento: README actualizado para usar el dominio canónico confirmado; commit pendiente.
 
 - [x] **CACHE-01 — Definir cabeceras HTTP para HTML y assets públicos versionados.** Mantener `/_astro/` en un año con `immutable`; definir `no-cache` para páginas HTML; usar un TTL moderado en imágenes/favicon de `/public` con nombres estables, evitando que la regla de imágenes reemplace la regla de `/_astro/`.
   - Aceptación: configuración Nginx aplica la política adecuada por tipo/ruta; la documentación refleja la conducta; no se añade infraestructura de caché externa.
   - Checks: `npm run check`, build, revisar `nginx.conf` y su sintaxis mediante runtime local disponible, `git diff --check`.
   - Ruta: delegated direct para el cambio coordinado a configuración y documentación.
   - Evidencia: `npm run check` pasó (33 archivos, 0 diagnósticos); `npm run build` generó las nueve páginas estáticas; `git diff --check` pasó. `nginx -t` se omitió: no hay binario Nginx en el host ni contenedor local Nginx activo; no se iniciaron servicios. Revisión de configuración confirma `^~ /_astro/` preserva el año inmutable, las imágenes/favicons usan un día y páginas/documentos usan `no-cache`.
-  - Commit: pendiente de registrar tras cerrar la unidad de trabajo.
+  - Commit: `8f95369` (`perf(cache): add revalidation and static asset TTLs`).
 
 ## Evidencia y progreso
 
 - Inspección local confirma Astro estático, títulos/descripciones existentes, y bloqueo global `noindex,nofollow` en el layout.
-- Dominio previsto en expediente interno: `https://powerful.pe`; DNS y elección apex/www no están cerrados. Por eso el código no fija ese dominio.
+- Dominio previsto en el expediente: `https://powerful.pe`; el usuario confirmó que será canónico. DNS/TLS aún no están verificados. El build toma el host de `PUBLIC_SITE_URL` y mantiene el flag de indexación explícito.
+- El usuario confirmó `https://powerful.pe` como canónico y README ahora muestra el comando de build real. Queda pendiente comprobar DNS/TLS y definir si `powerfulglobal.pe` mostrará contenido distinto o redirigirá al canónico.
 - Las rutas de Privacidad y Condiciones contienen borradores legales; no se les quitará noindex.
 - Nginx actualmente da `public, max-age=31536000, immutable` a `/_astro/`; los assets tienen hash. Las imágenes/favicons en `/public` usan nombres estables. HTML y assets públicos carecen de cabeceras explícitas en la configuración.
 - Google recomienda páginas útiles y rastreables, títulos claros, y sitemap como ayuda de descubrimiento; un sitemap no garantiza indexación. Indexación real, rendimiento medido, cobertura y consultas requieren el sitio público y Search Console.
-- SEO-01 implementado: la indexación sigue apagada por defecto y requiere `PUBLIC_INDEXING_ENABLED=true` más un origen HTTPS en `PUBLIC_SITE_URL`; canonicals, Open Graph, `robots.txt` y sitemap se habilitan solo con esa configuración. Se probó salida estática en ambos modos y el error ante configuración incompleta. No se fijó dominio ni se cambiaron textos legales.
+- SEO-01 implementado: la indexación sigue apagada por defecto y requiere `PUBLIC_INDEXING_ENABLED=true` más un origen HTTPS en `PUBLIC_SITE_URL`; canonicals, Open Graph, `robots.txt` y sitemap se habilitan solo con esa configuración. Se probó salida estática en ambos modos y el error ante configuración incompleta. Se confirmó `https://powerful.pe` como canónico; DNS/TLS y textos legales siguen pendientes.
 - CACHE-01 implementado: `docker/nginx.conf` revalida HTML/documentos, mantiene el año inmutable para `/_astro/` y aplica TTL de un día a imágenes/favicon públicos con URL fija. README describe la posible demora de hasta un día al reemplazar esos assets.
 - Se conservaron los cambios locales preexistentes ajenos a este feature.
 
 ## Siguiente paso
 
-SEO-01 quedó cerrado en `058bbad`. CACHE-01 está implementado y sus checks aplicables pasaron; registrar su commit y actualizar el espejo Engram. La activación de `PUBLIC_INDEXING_ENABLED` queda para cuando el usuario tenga fijados el dominio canónico y la preparación pública/legal.
+SEO-01 quedó cerrado en `058bbad` y CACHE-01 en `8f95369`; ambas unidades tienen checks aplicables registrados. El comando de build ahora usa `https://powerful.pe`. Antes de activar `PUBLIC_INDEXING_ENABLED`, verificar DNS/TLS y los textos legales; definir antes del despliegue si `powerfulglobal.pe` tendrá contenido distinto o redirección 301.

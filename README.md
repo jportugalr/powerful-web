@@ -46,15 +46,15 @@ Nginx envía `Cache-Control: no-cache` para HTML y los demás documentos, de mod
 
 ## Preparación para Google
 
-Por defecto, las páginas conservan `noindex,nofollow`, `robots.txt` permite el rastreo para que Google pueda leer esa directiva y no se genera un sitemap. Para preparar una compilación indexable, configura `PUBLIC_SITE_URL` con el origen HTTPS definitivo (sin ruta, query ni fragmento) y `PUBLIC_INDEXING_ENABLED=true`. Por ejemplo, reemplaza `https://example.com` por el dominio canónico confirmado:
+Por defecto, las páginas conservan `noindex,nofollow`, `robots.txt` permite el rastreo para que Google pueda leer esa directiva y no se genera un sitemap. El dominio canónico confirmado para el lanzamiento es `https://powerful.pe`. Para preparar una compilación indexable, configura `PUBLIC_SITE_URL` con ese origen HTTPS (sin ruta, query ni fragmento) y `PUBLIC_INDEXING_ENABLED=true`:
 
 ```sh
-PUBLIC_SITE_URL=https://example.com PUBLIC_INDEXING_ENABLED=true npm run build
+PUBLIC_SITE_URL=https://powerful.pe PUBLIC_INDEXING_ENABLED=true npm run build
 ```
 
 Sin una URL HTTPS válida, el build falla claramente cuando se activa el flag. La compilación habilitada genera canonical y Open Graph de texto solo para páginas comerciales, además de `sitemap-index.xml`; Privacidad, Condiciones y 404 conservan `noindex` y quedan fuera del sitemap. Este build no publica el sitio ni confirma su indexación.
 
-Antes de habilitar indexación en el dominio definitivo, falta confirmar DNS y el host canónico, completar y aprobar los textos legales, publicar mediante el proceso autorizado y verificar la propiedad en Google Search Console. Después se puede enviar allí `https://<dominio-canonico>/sitemap-index.xml` y revisar los informes de cobertura e indexación. El sitemap ayuda al descubrimiento, pero no garantiza que Google indexe las páginas.
+Antes de habilitar indexación, falta verificar DNS y TLS de `powerful.pe`, completar y aprobar los textos legales, y publicar mediante el proceso autorizado. Si `powerfulglobal.pe` sirve el mismo contenido, debe redirigir con 301 a las URLs equivalentes de `powerful.pe`; si tendrá contenido distinto, hay que definirlo antes de indexar ambos dominios. Luego se verifican ambas propiedades en Google Search Console y se envía `https://powerful.pe/sitemap-index.xml`. El sitemap ayuda al descubrimiento, pero no garantiza que Google indexe las páginas.
 
 Con ambos servicios arriba, repetir el smoke desde Bash/WSL (requiere `curl` y `sha256sum`):
 
