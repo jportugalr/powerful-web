@@ -24,14 +24,14 @@ POWERFUL es una iniciativa centrada en Perú que articula oportunidades con empr
 
 ## Operating Context
 
-El sitio corporativo vigente está implementado en Astro; sus rutas canónicas incluyen Inicio, Nosotros, Qué hacemos, Sectores, Cómo trabajamos, Contacto y los borradores legales. El contenido reside en `src/` y los recursos publicados en `public/`. `source-assets/` conserva originales aportados fuera del sitio compilado. La revisión es local; no hay publicación remota autorizada.
+El sitio corporativo vigente está implementado como sitio estático en Astro; sus páginas incluyen Inicio, Nosotros, Qué hacemos, Sectores, Cómo trabajamos, Contacto, Privacidad y Condiciones. Estas dos páginas legales muestran un aviso visible de que su contenido está incompleto y no ha sido aprobado legalmente, y conservan `noindex,nofollow`. El contenido reside en `src/` y los recursos publicados en `public/`; `source-assets/` conserva originales y metadata interna fuera del sitio compilado. La revisión es local; no hay publicación remota autorizada.
 
 ## Capabilities and Constraints
 
 - Primera fase sin panel de administración; textos e imágenes se mantienen en el proyecto.
 - Lanzamiento en español, con separación de contenido y componentes para facilitar futuras traducciones.
 - La oferta tecnológica comprende desarrollo de software de gestión a medida, integración de sistemas, automatización de procesos e inteligencia artificial aplicada. Comunicarla como solución a necesidades concretas, sin atribuir clientes, resultados, productos implantados o trayectoria corporativa no verificados.
-- Contacto completo previsto para otra unidad: backend, antispam, registro y correo. Aún no hay proveedor, almacenamiento, hosting ni canales corporativos oficiales confirmados. La demo valida localmente y no envía ni simula recepción de consultas. Motivos: expansión/ingreso al Perú, inversión o asociación en proyectos peruanos, representación, alianza, propuesta de proyecto y otro.
+- Contacto usa un enlace que abre WhatsApp con texto prellenado; la persona puede revisarlo o editarlo y debe enviarlo desde esa aplicación. El sitio estático no incorpora un formulario ni endpoint que transmita o almacene consultas. No se ha confirmado que el número mostrado sea un canal oficial para solicitudes de privacidad o derechos, ni se han verificado el proveedor de hosting o la conservación de registros técnicos. Motivos disponibles: expansión/ingreso al Perú, inversión o asociación en proyectos peruanos, representación, alianza, propuesta de proyecto y otro.
 - El equipo tiene experiencia profesional en los ámbitos presentados en la página Sectores y está abierto a evaluar otras iniciativas empresariales en el Perú. Comunicar la experiencia como propia de sus integrantes, no como trayectoria corporativa de POWERFUL, y no presentar esos ámbitos como proyectos ejecutados.
 - Verificación funcional normal elegida explícitamente por el usuario; TDD estricto desactivado para la portada.
 - No crear ni cambiar ramas, no push, PR o despliegue sin autorización.

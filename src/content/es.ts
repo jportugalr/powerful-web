@@ -28,8 +28,8 @@ export const footerSections = [
   {
     heading: 'INFORMACIÓN',
     links: [
-      { label: 'Privacidad (borrador)', href: '/privacidad.html' },
-      { label: 'Condiciones (borrador)', href: '/terminos.html' },
+      { label: 'Privacidad', href: '/privacidad.html' },
+      { label: 'Condiciones', href: '/terminos.html' },
     ],
   },
 ] as const;
@@ -875,7 +875,7 @@ export const contactPageEs = {
     steps: [
       { number: '01 /', description: 'Abre WhatsApp con un mensaje inicial relacionado con el motivo de tu consulta.' },
       { number: '02 /', description: 'Revisa y edita el texto para contar tu objetivo con tus propias palabras.' },
-      { number: '03 /', description: 'Envía el mensaje cuando esté listo; llegará a la cuenta oficial de POWERFUL.' },
+      { number: '03 /', description: 'Envía el mensaje cuando esté listo; el sitio no lo envía por ti.' },
     ],
   },
   whatsapp: {
@@ -909,62 +909,67 @@ export const legalPagesEs = {
   privacidad: {
     metadata: {
       title: 'Privacidad | POWERFUL',
-      description: 'Información preliminar sobre tratamiento de datos',
+      description: 'Información sobre el funcionamiento actual del sitio y sus vías de contacto.',
     },
     hero: {
-      eyebrow: 'DOCUMENTACIÓN PRELIMINAR',
+      eyebrow: 'AVISO DE PRIVACIDAD',
       heading: { lead: 'Aviso de', emphasis: 'privacidad.' },
       lede:
-        'Texto de trabajo pendiente de validación legal y de los datos registrales y operativos de POWERFUL. No utilizar como política de privacidad definitiva.',
+        'Este texto está incompleto y no ha sido aprobado legalmente; no constituye un aviso de privacidad completo.',
       pageNumber: '07',
     },
-    alert: 'BORRADOR NO PUBLICABLE EN PRODUCCIÓN SIN REVISIÓN LEGAL.',
+    alert: 'AVISO: Texto incompleto y no aprobado legalmente. No constituye un documento legal completo.',
     sections: [
       {
-        heading: 'Tratamiento de datos',
+        heading: 'Funcionamiento del sitio',
         paragraph:
-          'La versión de producción deberá identificar al responsable del tratamiento, sus canales oficiales, las finalidades de contacto comercial, posibles proveedores de correo/alojamiento, períodos de conservación, mecanismos para ejercer derechos y la información exigida por la normativa peruana aplicable.',
+          'El sitio es estático y no incluye un formulario que envíe o almacene consultas. El enlace de contacto abre WhatsApp con un texto prellenado; puedes revisarlo o editarlo y solo se enviará si eliges hacerlo dentro de WhatsApp. POWERFUL no recibe ese texto mediante un formulario de la web.',
       },
       {
-        heading: 'Contacto por WhatsApp',
+        heading: 'Datos técnicos de conexión',
         paragraph:
-          'Este sitio no recopila ni almacena el texto del mensaje. Si eliges abrir WhatsApp y enviarlo, la comunicación se cursará a través de ese servicio y llegará a la cuenta asociada al número oficial de contacto. Evita compartir información confidencial.',
+          'La infraestructura que sirve el sitio puede procesar datos técnicos necesarios para atender las conexiones. No se ha confirmado qué proveedor interviene, qué registros conserva ni por cuánto tiempo.',
       },
       {
-        heading: 'Pendientes de aprobación',
+        heading: 'Mensajes por WhatsApp',
         paragraph:
-          'Razón social y RUC; correo para derechos; finalidades y base jurídica; proveedores y transferencias; conservación; seguridad; texto legal definitivo revisado y aprobado.',
+          'Si decides enviar el mensaje prellenado, la comunicación se cursa por WhatsApp. El número mostrado en el sitio no está confirmado como canal oficial para solicitudes de privacidad o ejercicio de derechos. Evita compartir información confidencial.',
+      },
+      {
+        heading: 'Información por completar',
+        paragraph:
+          'Este texto aún no identifica al responsable del tratamiento ni detalla todas las finalidades, destinatarios, plazos de conservación o un canal confirmado para ejercer derechos. Esos datos requieren confirmación y revisión antes de considerar completo el aviso.',
       },
     ],
   },
   terminos: {
     metadata: {
       title: 'Condiciones | POWERFUL',
-      description: 'Condiciones preliminares de uso',
+      description: 'Información general sobre el uso de este sitio y sus vías de contacto.',
     },
     hero: {
-      eyebrow: 'INFORMACIÓN INSTITUCIONAL',
+      eyebrow: 'CONDICIONES DEL SITIO',
       heading: { lead: 'Condiciones de', emphasis: 'uso.' },
       lede:
-        'Borrador de estructura: no sustituye asesoría legal ni implica que exista una oferta pública de inversión.',
+        'Este texto está incompleto y no ha sido aprobado legalmente; no constituye un documento de condiciones completo.',
       pageNumber: '08',
     },
-    alert: 'DOCUMENTO EDITORIAL PRELIMINAR — NO APROBADO PARA PUBLICACIÓN.',
+    alert: 'AVISO: Texto incompleto y no aprobado legalmente. No constituye un documento legal completo.',
     sections: [
       {
-        heading: 'Finalidad informativa',
+        heading: 'Información del sitio',
         paragraph:
-          'Este sitio presenta información general sobre el ámbito de actuación, los servicios y las vías de contacto de POWERFUL. No constituye asesoría financiera individual ni una invitación pública a adquirir valores; tampoco confirma la disponibilidad de fondos ni establece por sí solo un compromiso contractual.',
+          'Este sitio estático presenta información general sobre POWERFUL, sus ámbitos de actuación y sus vías de contacto. La publicación de una iniciativa no confirma su disponibilidad ni establece por sí sola un encargo o compromiso; cada relación requiere acuerdos específicos entre las partes.',
       },
       {
-        heading: 'Relaciones empresariales',
+        heading: 'Contacto',
         paragraph:
-          'Cada proyecto, encargo o participación se evalúa según sus características. Si las partes deciden avanzar, el alcance y las condiciones se establecen en acuerdos específicos; cualquier inversión requiere una definición expresa para cada caso.',
+          'El enlace de contacto abre WhatsApp con un texto prellenado. El sitio no lo envía por ti: puedes revisarlo o editarlo y decides si lo envías desde esa aplicación.',
       },
       {
-        heading: 'Contenido y derechos',
+        heading: 'Materiales del sitio',
         paragraph:
-          'El titular del sitio deberá confirmar la propiedad, licencias y autorizaciones de imágenes, marca, textos y demás materiales antes de su publicación.',
+          'Este documento no declara titularidad ni licencia sobre imágenes u otros materiales cuya autorización no se haya verificado.',
       },
     ],
   },
