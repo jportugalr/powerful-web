@@ -1,0 +1,97 @@
+---
+import MiniCta from '../../components/MiniCta.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectorCard from '../../components/SectorCard.astro';
+import TechnologyCapability from '../../components/TechnologyCapability.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { resolveCommercialCatalog } from '../../i18n/catalog';
+
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.businessPages.sectores;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true} locale={locale} shell={catalog.shell}>
+  <PageHero content={page.hero} hideDecorativeNumber countryLabel="PERU" />
+
+  <section class="section sectors-section">
+    <div class="container">
+      <div class="sector-controls">
+        <div>
+          <p class="overline gold">{page.controls.eyebrow}</p>
+          <h2>{page.controls.heading.lead}{' '}<em>{page.controls.heading.emphasis}</em></h2>
+        </div>
+        <div class="filter-set" role="group" aria-label={page.controls.ariaLabel}>
+          {
+            page.controls.filters.map((filter) => (
+              <button
+                type="button"
+                class:list={['filter-pill', { active: filter.value === 'all' }]}
+                data-filter={filter.value}
+                aria-pressed={filter.value === 'all' ? 'true' : 'false'}
+              >
+                {filter.label}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+      <div class="sector-cards" data-selected-filter="all">
+        {
+          page.cards.map((sector) => (
+            <SectorCard sector={sector} actionLabel={page.cardAction} actionHref={page.cta.actionHref} />
+          ))
+        }
+      </div>
+      <p class="sector-disclaimer">{page.disclaimer}</p>
+      <TechnologyCapability content={page.technologyCapability} />
+      <div class="team-experience">
+        <h2>{page.teamExperience.heading}</h2>
+        <p class="team-experience-copy">{page.teamExperience.description}</p>
+      </div>
+    </div>
+  </section>
+
+  <MiniCta content={page.cta} />
+
+  <script>
+    import '../../scripts/sector-filters';
+  </script>
+</SiteLayout>
+
+<style>
+  .filter-set {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: min(100%, 690px);
+  }
+
+  .filter-pill {
+    min-width: 0;
+    min-height: 40px;
+    padding-inline: 10px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 761px) {
+    .sector-cards {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .sector-cards :global(.sector-card) {
+      grid-column: span 2;
+      min-width: 0;
+    }
+
+    .sector-cards[data-selected-filter='all'] :global(.sector-card:last-child),
+    .sector-cards:not([data-selected-filter='all']) :global(.sector-card) {
+      grid-column: 2 / span 2;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .filter-set {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: none;
+    }
+  }
+</style>

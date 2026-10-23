@@ -17,9 +17,13 @@ export const siteShellEs = {
     desktopNavigationLabel: 'Navegación principal',
     mobileNavigationLabel: 'Navegación móvil',
     mobileToggleLabel: 'Abrir menú',
+    mobileToggleCloseLabel: 'Cerrar menú',
     languageTitle: 'Sitio en español',
     languageLabel: 'ES',
     languageRegion: ' / PE',
+    languageSwitchTitle: 'Ver esta página en inglés',
+    languageSwitchLabel: 'EN',
+    languageSwitchRegion: '',
     contactLabel: 'Conversemos',
     contactHref: commercialPageRoutes.contact['es-PE'],
     navigation: [
@@ -76,6 +80,7 @@ export const homePageEs = {
     title: 'POWERFUL | Conectamos capital, proyectos y negocios',
     description: 'Originamos e impulsamos operaciones estratégicas en el Perú con la participación de empresas, inversionistas y socios nacionales e internacionales.',
   },
+  sectorGalleryLabel: 'Fotografías de sectores en los que nuestro equipo tiene experiencia',
   hero: {
     eyebrow: 'OPERACIONES ESTRATÉGICAS',
     heading: {

@@ -1,0 +1,18 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import HomeContent from '../../components/HomeContent.astro';
+import { resolveCommercialCatalog } from '../../i18n/catalog';
+
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.home;
+---
+
+<SiteLayout
+  title={page.metadata.title}
+  description={page.metadata.description}
+  indexable={true}
+  locale={locale}
+  shell={catalog.shell}
+>
+  <HomeContent catalog={catalog} />
+</SiteLayout>

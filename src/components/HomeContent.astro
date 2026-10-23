@@ -135,12 +135,12 @@ const editorialSectors = sectorCards.filter((sector) => editorialSectorIds.has(s
         ))
       }
     </div>
-    <div class="sector-editorial" aria-label="Fotografías de sectores en los que nuestro equipo tiene experiencia">
+    <div class="sector-editorial" aria-label={homePage.sectorGalleryLabel}>
       {
         editorialSectors.map((sector, index) => (
           <a
             class:list={['sector-editorial-item', `sector-editorial-item-${index + 1}`]}
-            href={`/sectores.html#${sector.id}`}
+            href={`${sectorHighlight.linkHref}#${sector.id}`}
           >
             <picture>
               <source

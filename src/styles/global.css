@@ -660,3 +660,7 @@ a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}b
     font-size: 21px;
   }
 }
+.lang-tag { text-decoration: none; }
+.lang-tag:hover { color: var(--gold); }
+.mobile-language-control { display: block; padding: 14px 2px; color: var(--navy); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-decoration: none; border-bottom: 1px solid #e7ebee; }
+.mobile-language-control span { color: #95A0AA; }

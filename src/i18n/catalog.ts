@@ -1,9 +1,11 @@
 import { commercialCatalogEs } from '../content/es';
+import { commercialCatalogEn } from '../content/en';
 import type { CommercialCatalog } from '../content/types';
 import { locales, type Locale } from './types';
 
 const commercialCatalogs: Partial<Record<Locale, CommercialCatalog>> = {
   'es-PE': commercialCatalogEs,
+  en: commercialCatalogEn,
 };
 
 export interface ResolvedCommercialCatalog {

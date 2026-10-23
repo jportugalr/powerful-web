@@ -1,4 +1,4 @@
-import type { LocaleCatalog } from '../i18n/types';
+import type { Locale, LocaleCatalog } from '../i18n/types';
 
 export interface TextHeading {
   lead: string;
@@ -81,6 +81,7 @@ export interface ProcessStep {
 
 export interface HomePage {
   metadata: PageMetadata;
+  sectorGalleryLabel: string;
   hero: {
     eyebrow: string;
     heading: {
@@ -301,9 +302,13 @@ export interface SiteShellContent {
     desktopNavigationLabel: string;
     mobileNavigationLabel: string;
     mobileToggleLabel: string;
+    mobileToggleCloseLabel: string;
     languageTitle: string;
     languageLabel: string;
     languageRegion: string;
+    languageSwitchTitle: string;
+    languageSwitchLabel: string;
+    languageSwitchRegion: string;
     contactLabel: string;
     contactHref: string;
     navigation: { label: string; href: string }[];
@@ -319,7 +324,7 @@ export interface SiteShellContent {
     companyNote: string;
     sections: {
       heading: string;
-      links: { label: string; href: string }[];
+      links: { label: string; href: string; hreflang?: Locale }[];
       footerNote?: string;
     }[];
     backToTopLabel: string;

@@ -33,7 +33,7 @@ const { showLead = true, content } = Astro.props;
       {content.sections.map((section) => (
         <div>
           <span class="footer-heading">{section.heading}</span>
-          {section.links.map((link) => <a href={link.href}>{link.label}</a>)}
+          {section.links.map((link) => <a href={link.href} hreflang={link.hreflang}>{link.label}</a>)}
           {section.footerNote && <span class="footer-geography">{section.footerNote}</span>}
         </div>
       ))}

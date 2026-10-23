@@ -1,8 +1,7 @@
 import type { CommercialRouteMap } from './types';
 
 /**
- * Commercial route counterparts. English paths are a future contract only;
- * do not link to them until translated pages exist.
+ * Commercial route counterparts used by navigation and the contextual language switch.
  */
 export const commercialPageRoutes = {
   home: {
@@ -30,3 +29,20 @@ export const commercialPageRoutes = {
     en: '/en/contact.html',
   },
 } as const satisfies CommercialRouteMap;
+
+export function getCommercialLanguageSwitch(pathname: string, locale: 'es-PE' | 'en') {
+  const normalizePath = (path: string) => {
+    const withoutHtmlExtension = path.endsWith('.html') ? path.slice(0, -5) : path;
+    const withoutTrailingSlash = withoutHtmlExtension.length > 1
+      ? withoutHtmlExtension.replace(/\/$/, '')
+      : withoutHtmlExtension;
+    return withoutTrailingSlash || '/';
+  };
+  const currentRoute = normalizePath(pathname);
+  const page = Object.values(commercialPageRoutes).find((routes) => normalizePath(routes[locale]) === currentRoute);
+
+  if (!page) return undefined;
+
+  const targetLocale = locale === 'en' ? 'es-PE' : 'en';
+  return { href: page[targetLocale], locale: targetLocale } as const;
+}

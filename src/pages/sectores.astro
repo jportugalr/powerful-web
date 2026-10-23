@@ -38,7 +38,7 @@ const page = catalog.businessPages.sectores;
       <div class="sector-cards" data-selected-filter="all">
         {
           page.cards.map((sector) => (
-            <SectorCard sector={sector} actionLabel={page.cardAction} />
+            <SectorCard sector={sector} actionLabel={page.cardAction} actionHref={page.cta.actionHref} />
           ))
         }
       </div>

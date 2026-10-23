@@ -5,9 +5,10 @@ import type { SectorCard } from '../content/types';
 interface Props {
   sector: SectorCard;
   actionLabel: string;
+  actionHref: string;
 }
 
-const { sector, actionLabel: sectorActionLabel } = Astro.props;
+const { sector, actionLabel: sectorActionLabel, actionHref } = Astro.props;
 ---
 
 <article class="sector-card" id={sector.id} data-category={sector.category}>
@@ -38,7 +39,7 @@ const { sector, actionLabel: sectorActionLabel } = Astro.props;
   <div class="sector-card-bottom">
     <h2>{sector.title}</h2>
     <p>{sector.description}</p>
-    <a href="/contacto.html" class="text-link sector-card-link">
+    <a href={actionHref} class="text-link sector-card-link">
       {sectorActionLabel} <Icon name="arrow-right" />
     </a>
   </div>

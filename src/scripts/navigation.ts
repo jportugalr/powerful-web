@@ -1,6 +1,8 @@
 const menuButton = document.querySelector<HTMLButtonElement>('.mobile-toggle');
 const mobileNav = document.querySelector<HTMLElement>('#mobile-nav');
 const mobileViewport = window.matchMedia('(max-width: 1000px)');
+const openMenuLabel = menuButton?.dataset.openLabel ?? 'Open menu';
+const closeMenuLabel = menuButton?.dataset.closeLabel ?? 'Close menu';
 
 document.documentElement.classList.add('has-js');
 
@@ -8,7 +10,7 @@ function closeMenu(returnFocus = false) {
   if (!menuButton || !mobileNav) return;
   mobileNav.hidden = true;
   menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Abrir menú');
+  menuButton.setAttribute('aria-label', openMenuLabel);
   if (returnFocus) menuButton.focus();
 }
 
@@ -17,7 +19,7 @@ menuButton?.addEventListener('click', () => {
   const opening = menuButton.getAttribute('aria-expanded') !== 'true';
   mobileNav.hidden = !opening;
   menuButton.setAttribute('aria-expanded', String(opening));
-  menuButton.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
+  menuButton.setAttribute('aria-label', opening ? closeMenuLabel : openMenuLabel);
 });
 
 mobileNav?.addEventListener('click', (event) => {

@@ -7,9 +7,10 @@ interface Props {
   action?: { label: string; href: string };
   variant?: 'default' | 'process';
   hideDecorativeNumber?: boolean;
+  countryLabel?: string;
 }
 
-const { content, action, variant = 'default', hideDecorativeNumber = false } = Astro.props;
+const { content, action, variant = 'default', hideDecorativeNumber = false, countryLabel = 'PERÚ' } = Astro.props;
 ---
 
 <section class:list={['page-hero', 'sub', { 'page-hero-process': variant === 'process' }]}>
@@ -27,7 +28,7 @@ const { content, action, variant = 'default', hideDecorativeNumber = false } = A
     </div>
     {content.pageNumber && (
       <div class="page-hero-no" aria-hidden="true">
-        <span>POWERFUL / PERÚ</span>
+        <span>POWERFUL / {countryLabel}</span>
         {!hideDecorativeNumber && <b>{content.pageNumber}</b>}
       </div>
     )}

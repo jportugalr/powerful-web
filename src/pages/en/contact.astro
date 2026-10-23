@@ -1,0 +1,33 @@
+---
+import PageHero from '../../components/PageHero.astro';
+import WhatsAppContact from '../../components/WhatsAppContact.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { resolveCommercialCatalog } from '../../i18n/catalog';
+
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.contact;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description} showFooterLead={false} indexable={true} locale={locale} shell={catalog.shell}>
+  <PageHero content={page.hero} countryLabel="PERU" />
+
+  <section class="section contact-section">
+    <div class="container contact-layout">
+      <aside class="contact-aside">
+        <p class="overline gold">{page.aside.eyebrow}</p>
+        <h2>{page.aside.heading.lead}{' '}<em>{page.aside.heading.emphasis}</em></h2>
+        <p>{page.aside.description}</p>
+        {
+          page.aside.steps.map((step) => (
+            <div class="contact-aside-line">
+              <span>{step.number}</span>
+              <p>{step.description}</p>
+            </div>
+          ))
+        }
+      </aside>
+
+      <WhatsAppContact content={page.whatsapp} />
+    </div>
+  </section>
+</SiteLayout>

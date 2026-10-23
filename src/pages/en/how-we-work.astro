@@ -1,0 +1,32 @@
+---
+import MiniCta from '../../components/MiniCta.astro';
+import CollaborationFramework from '../../components/CollaborationFramework.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { resolveCommercialCatalog } from '../../i18n/catalog';
+
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.businessPages.comoTrabajamos;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true} locale={locale} shell={catalog.shell}>
+  <CollaborationFramework content={page} />
+
+  <section class="section navy-panel">
+    <div class="container split-layout">
+      <div>
+        <p class="overline gold">{page.responsibilities.eyebrow}</p>
+        <h2>{page.responsibilities.heading.lead}{' '}<em>{page.responsibilities.heading.emphasis}</em></h2>
+      </div>
+      <div>
+        <p>{page.responsibilities.paragraphs[0]}</p>
+        <p>{page.responsibilities.paragraphs[1]}</p>
+      </div>
+    </div>
+  </section>
+
+  <MiniCta content={page.cta} />
+</SiteLayout>
+
+<script>
+  import '../../scripts/collaboration-motion';
+</script>

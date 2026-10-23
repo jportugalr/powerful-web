@@ -1,0 +1,98 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Icon from '../../components/Icon.astro';
+import PageHero from '../../components/PageHero.astro';
+import { resolveCommercialCatalog } from '../../i18n/catalog';
+
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.businessPages.nosotros;
+---
+
+<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true} locale={locale} shell={catalog.shell}>
+  <PageHero content={page.hero} hideDecorativeNumber countryLabel="PERU" />
+
+  <section class="section">
+    <div class="container split-layout content-split">
+      <div>
+        <p class="overline gold">{page.profile.eyebrow}</p>
+        <h2>{page.profile.heading.lead}{' '}<em>{page.profile.heading.emphasis}</em></h2>
+      </div>
+      <div>
+        <p class="body-xl">{page.profile.paragraphs[0]}</p>
+        <p>{page.profile.paragraphs[1]}</p>
+        <a href={page.profile.linkHref} class="text-link">
+          {page.profile.linkLabel} <Icon name="arrow-right" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section navy-panel">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="overline gold">{page.approach.eyebrow}</p>
+          <h2>
+            {page.approach.heading.lead}<br />
+            <em>{page.approach.heading.emphasis}</em>
+          </h2>
+        </div>
+        <p>{page.approach.description}</p>
+      </div>
+      <div class="values-grid" data-values-reveal>
+        {
+          page.approach.values.map((value) => (
+            <article>
+              <span>{value.index}</span>
+              <h3>{value.title}</h3>
+              <p>{value.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section narrow-section">
+    <div class="container">
+      <p class="overline gold">{page.transparency.eyebrow}</p>
+      <h2>{page.transparency.heading.lead}{' '}<em>{page.transparency.heading.emphasis}</em></h2>
+      <p>{page.transparency.description}</p>
+    </div>
+  </section>
+</SiteLayout>
+
+<script>
+  const values = document.querySelector<HTMLElement>('[data-values-reveal]');
+  const motionPreference = typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
+
+  if (values && motionPreference && !motionPreference.matches && typeof IntersectionObserver !== 'undefined') {
+    let observer: IntersectionObserver | undefined;
+
+    const restoreStaticContent = () => {
+      observer?.disconnect();
+      values.removeAttribute('data-reveal-enabled');
+      values.removeAttribute('data-reveal-state');
+    };
+
+    try {
+      observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          values.dataset.revealState = 'visible';
+          observer?.disconnect();
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      values.dataset.revealEnabled = 'true';
+      values.dataset.revealState = 'pending';
+      observer.observe(values);
+      motionPreference.addEventListener('change', (event) => {
+        if (event.matches) restoreStaticContent();
+      });
+    } catch {
+      restoreStaticContent();
+    }
+  }
+</script>

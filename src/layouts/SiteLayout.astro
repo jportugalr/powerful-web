@@ -6,6 +6,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { siteShellEs } from '../content/es';
 import type { SiteShellContent } from '../content/types';
 import type { Locale } from '../i18n/types';
+import { getCommercialLanguageSwitch } from '../i18n/routes';
 
 interface Props {
   title: string;
@@ -27,6 +28,7 @@ const {
 const canonicalUrl = import.meta.env.PUBLIC_INDEXING_ENABLED === 'true' && indexable && Astro.site
   ? new URL(Astro.url.pathname, Astro.site).toString()
   : undefined;
+const languageSwitch = getCommercialLanguageSwitch(Astro.url.pathname, locale);
 ---
 
 <!doctype html>
@@ -51,7 +53,7 @@ const canonicalUrl = import.meta.env.PUBLIC_INDEXING_ENABLED === 'true' && index
   </head>
   <body>
     <a class="skip" href="#main">{shell.skipLink}</a>
-    <SiteHeader currentPath={Astro.url.pathname} locale={locale} content={shell.header} />
+    <SiteHeader currentPath={Astro.url.pathname} locale={locale} content={shell.header} languageSwitchHref={languageSwitch?.href} languageSwitchLocale={languageSwitch?.locale} />
     <main id="main"><slot /></main>
     <SiteFooter showLead={showFooterLead} content={shell.footer} />
     <script>
