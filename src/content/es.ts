@@ -166,6 +166,7 @@ export const homePageEs = {
       { label: 'Comercio exterior', href: '/sectores.html#comercio' },
       { label: 'Pesca', href: '/sectores.html#pesca' },
       { label: 'Agroindustria', href: '/sectores.html#agroindustria' },
+      { label: 'Tecnología', href: '/sectores.html#tecnologia' },
     ],
     linkLabel: 'Ver todos los sectores',
     linkHref: '/sectores.html',
@@ -391,6 +392,7 @@ export const businessPagesEs = {
         { value: 'comercio', label: 'Comercio exterior' },
         { value: 'pesca', label: 'Pesca' },
         { value: 'agroindustria', label: 'Agroindustria' },
+        { value: 'technology', label: 'Tecnología' },
       ],
     },
     cards: [
@@ -497,6 +499,7 @@ export const businessPagesEs = {
     disclaimer:
       'Nuestro equipo aporta experiencia profesional y conocimiento práctico en los sectores presentados, y pone esa capacidad al servicio de iniciativas en otros ámbitos empresariales, según los objetivos de cada proyecto.',
     technologyCapability: {
+      anchor: 'tecnologia',
       eyebrow: 'ÁMBITO TECNOLÓGICO',
       heading: {
         lead: 'Desarrollo tecnológico',

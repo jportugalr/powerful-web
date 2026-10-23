@@ -42,7 +42,7 @@ export type SectorCategoryId =
   | 'agroindustria';
 
 export interface SectorFilter {
-  value: 'all' | SectorCategoryId;
+  value: 'all' | SectorCategoryId | 'technology';
   label: string;
 }
 
@@ -61,6 +61,7 @@ export interface SectorCard {
 }
 
 export interface TechnologyCapability {
+  anchor: string;
   eyebrow: string;
   heading: TextHeading;
   description: string;

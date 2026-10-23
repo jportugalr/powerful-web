@@ -8,7 +8,11 @@ interface Props {
 const { content } = Astro.props;
 ---
 
-<section class="technology-capability" aria-labelledby="technology-capability-heading">
+<section
+  id={content.anchor}
+  class="technology-capability"
+  aria-labelledby="technology-capability-heading"
+>
   <div class="technology-capability-copy">
     <p class="overline gold">{content.eyebrow}</p>
     <h2 id="technology-capability-heading">
@@ -28,3 +32,9 @@ const { content } = Astro.props;
     />
   </picture>
 </section>
+
+<style>
+  .technology-capability[hidden] {
+    display: none;
+  }
+</style>

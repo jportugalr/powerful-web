@@ -5,6 +5,9 @@ const sectorCards = Array.from(
   document.querySelectorAll<HTMLElement>('[data-category]'),
 );
 const sectorGrid = document.querySelector<HTMLElement>('.sector-cards');
+const technologyCapability = document.querySelector<HTMLElement>(
+  '.technology-capability',
+);
 
 if (filterButtons.length > 0 && sectorCards.length > 0) {
   filterButtons.forEach((button) => {
@@ -21,8 +24,14 @@ if (filterButtons.length > 0 && sectorCards.length > 0) {
 
       sectorCards.forEach((card) => {
         card.hidden =
-          selected !== 'all' && card.dataset.category !== selected;
+          selected === 'technology' ||
+          (selected !== 'all' && card.dataset.category !== selected);
       });
+
+      if (technologyCapability) {
+        technologyCapability.hidden =
+          selected !== 'all' && selected !== 'technology';
+      }
     });
   });
 }

@@ -158,6 +158,7 @@ const home = {
       { label: 'International trade', href: `${commercialPageRoutes.sectors.en}#comercio` },
       { label: 'Fishing', href: `${commercialPageRoutes.sectors.en}#pesca` },
       { label: 'Agribusiness', href: `${commercialPageRoutes.sectors.en}#agroindustria` },
+      { label: 'Technology', href: `${commercialPageRoutes.sectors.en}#technology` },
     ],
     linkLabel: 'Explore all sectors',
     linkHref: commercialPageRoutes.sectors.en,
@@ -380,6 +381,7 @@ const businessPages = {
         { value: 'comercio', label: 'International trade' },
         { value: 'pesca', label: 'Fishing' },
         { value: 'agroindustria', label: 'Agribusiness' },
+        { value: 'technology', label: 'Technology' },
       ],
     },
     cards: [
@@ -486,6 +488,7 @@ const businessPages = {
     disclaimer:
       'Our team brings professional experience and practical knowledge in the sectors shown. We apply that experience to initiatives in other areas of business according to each project’s objectives.',
     technologyCapability: {
+      anchor: 'technology',
       eyebrow: 'TECHNOLOGY',
       heading: {
         lead: 'Technology development',
