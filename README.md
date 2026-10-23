@@ -70,6 +70,12 @@ Comprueba Compose, acceso HTTP, página propia con estado 404, integridad del lo
 docker compose -f compose.production.yaml down
 ```
 
+## CI y publicación de imagen
+
+`.github/workflows/ci.yml` valida cada pull request y cada push a `main`. Construye la imagen `runtime` una sola vez; el build ejecuta `npm ci`, `npm run check` y `npm run build`, y `scripts/smoke-image.sh` comprueba `/healthz`, la portada, un asset y la página 404 en un contenedor limpio. Un pull request no publica imágenes. Tras un push validado a `main`, el workflow pasa exactamente esa imagen al job separado de publicación y la publica en `ghcr.io/jportugalr/powerful-web` con los tags `sha-<commit>` y `latest`; `latest` se actualiza solo después de publicar el tag SHA. `latest` es mutable y sirve para descargar la versión más reciente, mientras que el tag SHA identifica una compilación para rollback. CI no despliega. La imagen incluye etiquetas OCI para vincularla con este repositorio; si ya existe un paquete GHCR con ese nombre sin vínculo, hay que asociarlo al repositorio antes de que `GITHUB_TOKEN` pueda publicarlo.
+
+La imagen final contiene el sitio Astro generado y la configuración Nginx; no copia `.env`, documentación interna ni herramientas de desarrollo. `PUBLIC_SITE_URL` y `PUBLIC_INDEXING_ENABLED` se evalúan durante el build y no se leen desde el `.env` del VPS. Esta publicación mantiene la indexación deshabilitada por defecto.
+
 Estos comandos preparan una ejecución local; no publican el sitio. Si se prefiere trabajar fuera de Docker, los scripts `npm ci`, `npm run dev`, `npm run check` y `npm run build` siguen disponibles con Node >= 22.22.
 
 TDD estricto desactivado por decisión explícita del usuario; se realizan chequeos funcionales y revisión real de navegador. El modo de review nativo está disabled/unmanaged.
