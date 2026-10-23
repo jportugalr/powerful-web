@@ -38,7 +38,7 @@ El usuario pidió preparar la revisión final, retirar referencias públicas a b
   - Checks: `npm run build`, comprobar que los diez sidecars no aparecen bajo `dist/`, `bash scripts/smoke-image.sh <local-image-ref>`, `git diff --check`.
   - Ruta: delegated direct; el mapa de 10 archivos precede a la escritura y activa el disparador de escritor.
   - Evidencia: `npm run build` pasó; la inspección completa de `dist/` encontró las imágenes publicadas y ninguna de las diez sidecars JSON. Los SHA-256 antes/después coinciden para los diez archivos. `git diff --check` pasó. El smoke no estuvo disponible: el Dockerfile requiere `nginx:1.29-alpine`, ausente localmente; no se descargaron imágenes ni se fabricó un runtime alternativo.
-  - Commit: se registra el SHA del work-unit commit al completar el commit.
+  - Commit: `5d8748d` — `chore(assets): move internal image metadata out of public`.
 
 - [ ] **LAUNCH-02 — Corregir la presentación pública sin declarar aprobación legal.** Mantener en Privacidad y Condiciones un aviso visible, explícito y claro de que el texto no es completo ni legalmente aprobado. Solo retirar del menú las etiquetas “borrador/preliminar” si ese aviso permanece claramente visible en cada página; no presentar las páginas como textos legales definitivos. Explicar en términos concretos el funcionamiento observado: el sitio es estático, no envía ni almacena formularios, el botón de contacto abre WhatsApp con texto prellenado y el usuario decide si lo envía. Explicar que la infraestructura puede procesar datos técnicos de conexión sin inventar proveedor o plazo de conservación; evitar presentar el canal de WhatsApp como canal de derechos confirmado. Mantener ambas rutas noindex y excluidas del sitemap. Corregir menciones obsoletas en `README.md`/`PRODUCT.md` y quitar “provisional” de la descripción accesible del favicon sin alterar su arte.
   - Aceptación: las páginas mantienen un aviso visible y claro de que no son textos legales completos ni aprobados; las etiquetas del menú solo se retiran si el aviso se conserva dentro de ambas páginas; el copy no inventa identidad, contacto legal, proveedores, conservación, aprobaciones ni derechos de assets; Privacidad y Condiciones siguen fuera de `sitemap-index.xml` y conservan `noindex,nofollow`; la indexación general continúa apagada por defecto.
@@ -58,4 +58,4 @@ El usuario pidió preparar la revisión final, retirar referencias públicas a b
 
 ## Siguiente paso
 
-LAUNCH-01 está implementada; completar y verificar su work-unit commit, sincronizar este documento íntegro con Engram y dejar LAUNCH-02 pendiente. No hacer push ni despliegue.
+LAUNCH-01 está completa en `5d8748d`. Verificar el commit, sincronizar este documento íntegro con Engram y dejar LAUNCH-02 pendiente hasta que el agente principal la asigne. No hacer push ni despliegue.
