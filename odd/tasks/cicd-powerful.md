@@ -62,10 +62,10 @@ No hay workflows de GitHub Actions. El Compose local de VPS todavía solicita un
 - [x] Iniciar web con up -d --no-build --wait y tiempo de espera acotado.
 - [x] Verificar salud, conexión a edge con alias powerful-web y respuesta HTTP local.
 - [x] Registrar evidencia y límites de acceso público.
-- [ ] Crear el commit Conventional Commit y registrar su identidad.
+- [x] Crear el commit Conventional Commit y registrar su identidad.
 - Evidencia: pull exitoso de ghcr.io/jportugalr/powerful-web:latest. Compose creó powerful-web-vps-web-1 y up terminó con Healthy. Docker inspect reporta health Status=healthy, FailingStreak=0 y red edge con alias powerful-web. La imagen se identifica como sha256:8060759ee6372271d754406b948c377c0315b3188fe4ed5c01e1c96e0e0aed59 (RepoDigest de GHCR registrado solo para trazabilidad; el Compose sigue usando latest). wget a http://127.0.0.1:8080/healthz dentro del contenedor y a http://powerful-web:8080/healthz desde infra-vps-caddy-1 devolvió ok.
 - Límite público: desde el VPS, curl no pudo resolver powerful.pe ni powerfulglobal.pe. No se cambiaron DNS ni Caddy; HTTPS público y la redirección canónica siguen sin verificarse.
-- Commit: pendiente.
+- Commit de despliegue: fb70041 (ops: record POWERFUL VPS deployment).
 
 ## Criterios de aceptación
 
