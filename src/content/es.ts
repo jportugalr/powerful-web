@@ -1,132 +1,81 @@
-export const siteNavigation = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Nosotros', href: '/nosotros.html' },
-  { label: 'Qué hacemos', href: '/servicios.html' },
-  { label: 'Sectores', href: '/sectores.html' },
-  { label: 'Cómo trabajamos', href: '/como-trabajamos.html' },
-] as const;
+import { commercialPageRoutes } from '../i18n/routes';
+import type {
+  BusinessPages,
+  CommercialCatalog,
+  ContactPage,
+  HomePage,
+  LegalPages,
+  NotFoundPage,
+  SiteShellContent,
+} from './types';
 
-export const footerSections = [
-  {
-    heading: 'EXPLORAR',
-    links: [
-      { label: 'Nosotros', href: '/nosotros.html' },
-      { label: 'Qué hacemos', href: '/servicios.html' },
-      { label: 'Sectores', href: '/sectores.html' },
-      { label: 'Cómo trabajamos', href: '/como-trabajamos.html' },
+export const siteShellEs = {
+  skipLink: 'Saltar al contenido',
+  header: {
+    brandHomeLabel: 'POWERFUL, volver a inicio',
+    homeHref: commercialPageRoutes.home['es-PE'],
+    desktopNavigationLabel: 'Navegación principal',
+    mobileNavigationLabel: 'Navegación móvil',
+    mobileToggleLabel: 'Abrir menú',
+    languageTitle: 'Sitio en español',
+    languageLabel: 'ES',
+    languageRegion: ' / PE',
+    contactLabel: 'Conversemos',
+    contactHref: commercialPageRoutes.contact['es-PE'],
+    navigation: [
+      { label: 'Inicio', href: commercialPageRoutes.home['es-PE'] },
+      { label: 'Nosotros', href: commercialPageRoutes.about['es-PE'] },
+      { label: 'Qué hacemos', href: commercialPageRoutes.services['es-PE'] },
+      { label: 'Sectores', href: commercialPageRoutes.sectors['es-PE'] },
+      { label: 'Cómo trabajamos', href: commercialPageRoutes.process['es-PE'] },
     ],
   },
-  {
-    heading: 'CONTACTO',
-    links: [
-      { label: 'Empresas que evalúan ingresar al Perú', href: '/contacto.html?tipo=expansion' },
-      { label: 'Inversionistas y socios', href: '/contacto.html?tipo=inversionista' },
-      { label: 'Representantes de proyectos peruanos', href: '/contacto.html?tipo=proyecto' },
-      { label: 'Alianzas comerciales', href: '/contacto.html?tipo=alianza' },
+  footer: {
+    lead: {
+      eyebrow: 'INICIATIVAS EMPRESARIALES EN EL PERÚ',
+      heading: { lead: '¿Qué buscas desarrollar', emphasis: 'en el Perú?' },
+      actionLabel: 'Conversemos sobre tu iniciativa',
+      actionHref: commercialPageRoutes.contact['es-PE'],
+    },
+    companyDescription: 'Originación y articulación de negocios',
+    companyNote: 'Red con mayor presencia en el norte y nororiente.',
+    sections: [
+      {
+        heading: 'EXPLORAR',
+        links: [
+          { label: 'Nosotros', href: commercialPageRoutes.about['es-PE'] },
+          { label: 'Qué hacemos', href: commercialPageRoutes.services['es-PE'] },
+          { label: 'Sectores', href: commercialPageRoutes.sectors['es-PE'] },
+          { label: 'Cómo trabajamos', href: commercialPageRoutes.process['es-PE'] },
+        ],
+      },
+      {
+        heading: 'CONTACTO',
+        links: [
+          { label: 'Empresas que evalúan ingresar al Perú', href: `${commercialPageRoutes.contact['es-PE']}?tipo=expansion` },
+          { label: 'Inversionistas y socios', href: `${commercialPageRoutes.contact['es-PE']}?tipo=inversionista` },
+          { label: 'Representantes de proyectos peruanos', href: `${commercialPageRoutes.contact['es-PE']}?tipo=proyecto` },
+          { label: 'Alianzas comerciales', href: `${commercialPageRoutes.contact['es-PE']}?tipo=alianza` },
+        ],
+      },
+      {
+        heading: 'INFORMACIÓN',
+        links: [
+          { label: 'Privacidad', href: '/privacidad.html' },
+          { label: 'Condiciones', href: '/terminos.html' },
+        ],
+        footerNote: 'PERÚ · ALCANCE NACIONAL',
+      },
     ],
+    backToTopLabel: 'Volver arriba',
   },
-  {
-    heading: 'INFORMACIÓN',
-    links: [
-      { label: 'Privacidad', href: '/privacidad.html' },
-      { label: 'Condiciones', href: '/terminos.html' },
-    ],
-  },
-] as const;
-
-export interface HomePageEs {
-  hero: {
-    eyebrow: string;
-    heading: {
-      lead: string;
-      emphasis: string;
-      trailing: string;
-    };
-    description: string;
-    actions: {
-      label: string;
-      href: string;
-      variant: 'gold' | 'outline';
-    }[];
-    proofPoints: string[];
-    mapAlt: string;
-  };
-  intro: {
-    index: string;
-    lead: string;
-    emphasis: string;
-  };
-  servicesPreview: {
-    eyebrow: string;
-    heading: {
-      lead: string;
-      emphasis: string;
-    };
-    description: string;
-    cardAction: string;
-    cards: {
-      number: string;
-      icon: 'globe' | 'briefcase' | 'layers';
-      title: string;
-      description: string;
-      href: string;
-    }[];
-  };
-  sectorHighlight: {
-    eyebrow: string;
-    context: string;
-    heading: {
-      lead: string;
-      secondLead: string;
-      emphasis: string;
-    };
-    description: string;
-    sectors: {
-      label: string;
-      href: string;
-    }[];
-    linkLabel: string;
-    linkHref: string;
-  };
-  principles: {
-    eyebrow: string;
-    heading: {
-      lead: string;
-      emphasis: string;
-    };
-    description: string;
-    linkLabel: string;
-    linkHref: string;
-    diagramSource: string;
-    diagramSourceDetail: string;
-    diagramRole: string;
-    diagramDestination: string;
-    diagramDestinationDetail: string;
-    diagramNote: string;
-  };
-  processPreview: {
-    eyebrow: string;
-    heading: {
-      lead: string;
-      emphasis: string;
-    };
-    description: string;
-    steps: {
-      number: string;
-      title: string;
-      description: string;
-    }[];
-  };
-  miniCta: {
-    eyebrow: string;
-    heading: string;
-    description: string;
-    actionLabel: string;
-    actionHref: string;
-  };
-}
+} as const satisfies SiteShellContent;
 
 export const homePageEs = {
+  metadata: {
+    title: 'POWERFUL | Conectamos capital, proyectos y negocios',
+    description: 'Originamos e impulsamos operaciones estratégicas en el Perú con la participación de empresas, inversionistas y socios nacionales e internacionales.',
+  },
   hero: {
     eyebrow: 'OPERACIONES ESTRATÉGICAS',
     heading: {
@@ -274,160 +223,7 @@ export const homePageEs = {
     actionLabel: 'Conversemos sobre tu iniciativa',
     actionHref: '/contacto.html',
   },
-} as const satisfies HomePageEs;
-
-export interface TextHeadingEs {
-  lead: string;
-  emphasis: string;
-}
-
-export interface PageMetadataEs {
-  title: string;
-  description: string;
-}
-
-export interface SubpageHeroEs {
-  eyebrow: string;
-  heading: TextHeadingEs;
-  lede: string;
-  pageNumber?: string;
-}
-
-export interface MiniCtaEs {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  actionLabel: string;
-  actionHref: string;
-}
-
-export interface ServiceDetailEs {
-  index: string;
-  heading: TextHeadingEs;
-  description: string;
-  icon: 'globe' | 'briefcase' | 'layers' | 'compass';
-}
-
-export type SectorCategoryEs =
-  | 'mineria'
-  | 'energia'
-  | 'infraestructura'
-  | 'inmobiliario'
-  | 'comercio'
-  | 'pesca'
-  | 'agroindustria';
-
-export interface SectorFilterEs {
-  value: 'all' | SectorCategoryEs;
-  label: string;
-}
-
-export interface SectorCardEs {
-  id: SectorCategoryEs;
-  category: SectorCategoryEs;
-  index: string;
-  image: {
-    src: string;
-    srcSet: string;
-    mobileSrc: string;
-    alt: string;
-  };
-  title: string;
-  description: string;
-}
-
-export interface TechnologyCapabilityEs {
-  eyebrow: string;
-  heading: TextHeadingEs;
-  description: string;
-  image: {
-    src: string;
-    webpSrc: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-}
-
-export interface ProcessStepEs {
-  number: string;
-  title: string;
-  description: string;
-}
-
-export interface BusinessPagesEs {
-  nosotros: {
-    metadata: PageMetadataEs;
-    hero: SubpageHeroEs;
-    profile: {
-      eyebrow: string;
-      heading: TextHeadingEs;
-      paragraphs: [string, string];
-      linkLabel: string;
-      linkHref: string;
-    };
-    approach: {
-      eyebrow: string;
-      heading: TextHeadingEs;
-      description: string;
-      values: {
-        index: string;
-        title: string;
-        description: string;
-      }[];
-    };
-    transparency: {
-      eyebrow: string;
-      heading: TextHeadingEs;
-      description: string;
-    };
-  };
-  servicios: {
-    metadata: PageMetadataEs;
-    hero: SubpageHeroEs;
-    details: ServiceDetailEs[];
-    notice: {
-      eyebrow: string;
-      heading: string;
-      description: string;
-    };
-  };
-  sectores: {
-    metadata: PageMetadataEs;
-    hero: SubpageHeroEs;
-    controls: {
-      eyebrow: string;
-      heading: TextHeadingEs;
-      ariaLabel: string;
-      filters: SectorFilterEs[];
-    };
-    cards: SectorCardEs[];
-    cardAction: string;
-    disclaimer: string;
-    technologyCapability: TechnologyCapabilityEs;
-    teamExperience: {
-      heading: string;
-      description: string;
-    };
-    cta: MiniCtaEs;
-  };
-  comoTrabajamos: {
-    metadata: PageMetadataEs;
-    hero: SubpageHeroEs;
-    process: {
-      eyebrow: string;
-      heading: TextHeadingEs;
-      description: string;
-      steps: ProcessStepEs[];
-    };
-    responsibilities: {
-      eyebrow: string;
-      heading: TextHeadingEs;
-      paragraphs: [string, string];
-    };
-    cta: MiniCtaEs;
-  };
-}
+} as const satisfies HomePage;
 
 export const businessPagesEs = {
   nosotros: {
@@ -803,54 +599,7 @@ export const businessPagesEs = {
       actionHref: '/contacto.html',
     },
   },
-} as const satisfies BusinessPagesEs;
-
-export type ContactReasonEs =
-  | 'expansion'
-  | 'inversionista'
-  | 'proyecto'
-  | 'representacion'
-  | 'alianza'
-  | 'otro';
-
-export interface ContactPageEs {
-  metadata: PageMetadataEs;
-  hero: SubpageHeroEs;
-  aside: {
-    eyebrow: string;
-    heading: TextHeadingEs;
-    description: string;
-    steps: { number: string; description: string }[];
-  };
-  whatsapp: {
-    eyebrow: string;
-    heading: string;
-    description: string;
-    phone: string;
-    buttonLabel: string;
-    note: string;
-    defaultMessage: string;
-    messages: Record<ContactReasonEs, string>;
-  };
-}
-
-export interface LegalPageEs {
-  metadata: PageMetadataEs;
-  hero: SubpageHeroEs;
-  alert: string;
-  sections: { heading: string; paragraph: string }[];
-}
-
-export interface LegalPagesEs {
-  privacidad: LegalPageEs;
-  terminos: LegalPageEs;
-}
-
-export interface NotFoundPageEs {
-  metadata: PageMetadataEs;
-  hero: SubpageHeroEs;
-  action: { label: string; href: string };
-}
+} as const satisfies BusinessPages;
 
 export const contactPageEs = {
   metadata: {
@@ -903,7 +652,7 @@ export const contactPageEs = {
         'Hola, equipo POWERFUL. Les contacto desde su web y quisiera conversar sobre una consulta empresarial.',
     },
   },
-} as const satisfies ContactPageEs;
+} as const satisfies ContactPage;
 
 export const legalPagesEs = {
   privacidad: {
@@ -968,7 +717,7 @@ export const legalPagesEs = {
       },
     ],
   },
-} as const satisfies LegalPagesEs;
+} as const satisfies LegalPages;
 
 export const notFoundPageEs = {
   metadata: {
@@ -981,4 +730,11 @@ export const notFoundPageEs = {
     lede: 'Vuelve al inicio o explora nuestros servicios.',
   },
   action: { label: 'Volver al inicio', href: '/' },
-} as const satisfies NotFoundPageEs;
+} as const satisfies NotFoundPage;
+
+export const commercialCatalogEs = {
+  home: homePageEs,
+  businessPages: businessPagesEs,
+  contact: contactPageEs,
+  shell: siteShellEs,
+} as const satisfies CommercialCatalog;

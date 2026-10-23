@@ -1,40 +1,42 @@
 ---
-import { siteNavigation } from '../content/es';
+import type { SiteShellContent } from '../content/types';
+import type { Locale } from '../i18n/types';
 import Icon from './Icon.astro';
 
 interface Props {
   currentPath: string;
+  locale: Locale;
+  content: SiteShellContent['header'];
 }
 
-const { currentPath } = Astro.props;
-const contactLink = '/contacto.html';
+const { currentPath, locale, content } = Astro.props;
 ---
 
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="POWERFUL, volver a inicio">
+    <a class="brand" href={content.homeHref} aria-label={content.brandHomeLabel}>
       <img src="/brand/wordmark-header.png" width="2005" height="277" alt="POWERFUL" />
     </a>
-    <nav class="desktop-nav" aria-label="Navegación principal">
-      {siteNavigation.map((item) => {
+    <nav class="desktop-nav" aria-label={content.desktopNavigationLabel}>
+      {content.navigation.map((item) => {
         const active = currentPath === item.href;
         return <a class:list={['nav-link', { active }]} href={item.href} aria-current={active ? 'page' : undefined}>{item.label}</a>;
       })}
     </nav>
     <div class="nav-side">
-      <span class="lang-tag" title="Sitio en español">ES <span aria-hidden="true">/ PE</span></span>
-      <a class="nav-contact" href={contactLink}>Conversemos <Icon name="arrow-up-right" /></a>
-      <button class="mobile-toggle" type="button" aria-label="Abrir menú" aria-controls="mobile-nav" aria-expanded="false">
+      <span class="lang-tag" lang={locale} title={content.languageTitle}>{content.languageLabel} <span aria-hidden="true">{content.languageRegion}</span></span>
+      <a class="nav-contact" href={content.contactHref}>{content.contactLabel} <Icon name="arrow-up-right" /></a>
+      <button class="mobile-toggle" type="button" aria-label={content.mobileToggleLabel} aria-controls="mobile-nav" aria-expanded="false">
         <Icon name="menu" className="menu-open-icon" />
         <Icon name="close" className="menu-close-icon" />
       </button>
     </div>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil">
-    {siteNavigation.map((item) => {
+  <nav id="mobile-nav" class="mobile-nav" aria-label={content.mobileNavigationLabel}>
+    {content.navigation.map((item) => {
       const active = currentPath === item.href;
       return <a class:list={['nav-link', { active }]} href={item.href} aria-current={active ? 'page' : undefined}>{item.label}</a>;
     })}
-    <a class="mobile-highlight" href={contactLink}>Conversemos <Icon name="arrow-right" /></a>
+    <a class="mobile-highlight" href={content.contactHref}>{content.contactLabel} <Icon name="arrow-right" /></a>
   </nav>
 </header>

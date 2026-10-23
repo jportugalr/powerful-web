@@ -1,9 +1,9 @@
 ---
-import type { ContactPageEs } from '../content/es';
+import type { ContactPage } from '../content/types';
 import Icon from './Icon.astro';
 
 interface Props {
-  content: ContactPageEs['whatsapp'];
+  content: ContactPage['whatsapp'];
 }
 
 const { content } = Astro.props;
@@ -22,6 +22,8 @@ const initialHref = `https://wa.me/51947982249?text=${encodeURIComponent(content
     id="whatsapp-contact-link"
     class="btn btn-dark contact-whatsapp-btn"
     href={initialHref}
+    data-default-message={content.defaultMessage}
+    data-message-catalog={JSON.stringify(content.messages)}
     target="_blank"
     rel="noopener noreferrer"
   >

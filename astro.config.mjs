@@ -41,6 +41,13 @@ if (indexingEnabled && !siteUrl) {
 
 export default defineConfig({
   output: 'static',
+  i18n: {
+    locales: ['es-PE', 'en'],
+    defaultLocale: 'es-PE',
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   ...(siteUrl ? { site: siteUrl } : {}),
   build: {
     format: 'preserve',

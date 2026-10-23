@@ -1,9 +1,9 @@
 ---
-import type { SubpageHeroEs } from '../content/es';
+import type { SubpageHero } from '../content/types';
 import Icon from './Icon.astro';
 
 interface Props {
-  content: SubpageHeroEs;
+  content: SubpageHero;
   action?: { label: string; href: string };
   variant?: 'default' | 'process';
   hideDecorativeNumber?: boolean;

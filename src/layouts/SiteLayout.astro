@@ -3,22 +3,34 @@ import '@fontsource-variable/inter';
 import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { siteShellEs } from '../content/es';
+import type { SiteShellContent } from '../content/types';
+import type { Locale } from '../i18n/types';
 
 interface Props {
   title: string;
   description: string;
   showFooterLead?: boolean;
   indexable?: boolean;
+  locale?: Locale;
+  shell?: SiteShellContent;
 }
 
-const { title, description, showFooterLead = true, indexable = false } = Astro.props;
+const {
+  title,
+  description,
+  showFooterLead = true,
+  indexable = false,
+  locale = 'es-PE',
+  shell = siteShellEs,
+} = Astro.props;
 const canonicalUrl = import.meta.env.PUBLIC_INDEXING_ENABLED === 'true' && indexable && Astro.site
   ? new URL(Astro.url.pathname, Astro.site).toString()
   : undefined;
 ---
 
 <!doctype html>
-<html lang="es-PE">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,10 +50,10 @@ const canonicalUrl = import.meta.env.PUBLIC_INDEXING_ENABLED === 'true' && index
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip" href="#main">Saltar al contenido</a>
-    <SiteHeader currentPath={Astro.url.pathname} />
+    <a class="skip" href="#main">{shell.skipLink}</a>
+    <SiteHeader currentPath={Astro.url.pathname} locale={locale} content={shell.header} />
     <main id="main"><slot /></main>
-    <SiteFooter showLead={showFooterLead} />
+    <SiteFooter showLead={showFooterLead} content={shell.footer} />
     <script>
       import '../scripts/navigation';
     </script>
