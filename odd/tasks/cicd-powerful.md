@@ -64,7 +64,7 @@ No hay workflows de GitHub Actions. El Compose local de VPS todavía solicita un
 - [x] Registrar evidencia y límites de acceso público.
 - [x] Crear el commit Conventional Commit y registrar su identidad.
 - Evidencia: pull exitoso de ghcr.io/jportugalr/powerful-web:latest. Compose creó powerful-web-vps-web-1 y up terminó con Healthy. Docker inspect reporta health Status=healthy, FailingStreak=0 y red edge con alias powerful-web. La imagen se identifica como sha256:8060759ee6372271d754406b948c377c0315b3188fe4ed5c01e1c96e0e0aed59 (RepoDigest de GHCR registrado solo para trazabilidad; el Compose sigue usando latest). wget a http://127.0.0.1:8080/healthz dentro del contenedor y a http://powerful-web:8080/healthz desde infra-vps-caddy-1 devolvió ok.
-- Límite público: desde el VPS, curl no pudo resolver powerful.pe ni powerfulglobal.pe. No se cambiaron DNS ni Caddy; HTTPS público y la redirección canónica siguen sin verificarse.
+- Estado público: desde el VPS, curl no pudo resolver powerful.pe ni powerfulglobal.pe. En Caddy, solicitudes HTTP locales con ambos Host devuelven 308 a HTTPS en el mismo dominio; al probar HTTPS hacia el puerto 443 local con --resolve, ambos reciben una alerta TLS internal error. El upstream web sí responde ok desde Caddy por edge. No se cambiaron DNS ni Caddy; no se confirmó HTTPS ni la redirección de powerfulglobal.pe hacia powerful.pe.
 - Commit de despliegue: fb70041 (ops: record POWERFUL VPS deployment).
 
 ## Criterios de aceptación
@@ -82,5 +82,5 @@ No hay workflows de GitHub Actions. El Compose local de VPS todavía solicita un
 - CI-01 implementado, validado y cerrado en `72714c2bb29457771419e217b584849bbaeb7534`. El workflow publica el mismo artefacto probado como `sha-<commit>` y `latest`; los pull requests no reciben permiso de escritura al paquete.
 - Exploración previa confirmó que el smoke anterior presupone servicios ya iniciados y que `compose.vps.yaml` todavía usa un digest obligatorio.
 - CD-01 implementado, validado y cerrado en `5f7c67eac0ebd21c3b8e23df74d640bb7a8a36fd`. El deploy temporalmente autentica GHCR por SSH, usa el `.env` existente del destino y espera el healthcheck del contenedor.
-- CD-02 desplegado desde /opt/powerful-web: latest descargada, contenedor healthy y respuesta confirmada desde Caddy por el alias edge. Desde el VPS, ambos dominios publicos fallaron en resolucion DNS; no se modificaron DNS ni Caddy, asi que HTTPS y la redireccion canonica no estan verificadas.
+- CD-02 desplegado desde /opt/powerful-web: latest descargada, contenedor healthy y respuesta confirmada desde Caddy por el alias edge. Ambos dominios fallan en resolucion DNS desde el VPS; Caddy redirige HTTP a HTTPS por dominio, pero el handshake TLS local falla con alerta internal error. No se modificaron DNS ni Caddy; HTTPS y la redireccion canonica siguen pendientes de verificacion.
 - Siguiente del flujo automatizado: configurar variables y secretos de production, conceder a Actions lectura del paquete GHCR y ejecutar el workflow manual cuando corresponda.
