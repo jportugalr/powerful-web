@@ -38,13 +38,14 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
   - Checks: `npm run check`, build local en ambos modos de indexación, inspección del HTML/robots/sitemap generados, `git diff --check`.
   - Ruta: delegated direct por mapeo 4+ archivos y escritura coordinada.
   - Evidencia: `npm run check` pasó (33 archivos, 0 diagnósticos); build predeterminado y build con `PUBLIC_SITE_URL=https://powerful.example PUBLIC_INDEXING_ENABLED=true` pasaron; el sitemap contiene seis rutas comerciales `.html` y excluye Privacidad, Condiciones, 404 y parámetros; canonical/robots coinciden con el host configurado; flag sin URL falla con error claro; `git diff --check` pasó con aviso de conversión CRLF en `astro.config.mjs`.
-  - Commit: pendiente de registrar tras cerrar la unidad de trabajo.
+  - Commit: `058bbad` (`feat(seo): gate Google indexing on launch configuration`).
 
-- [ ] **CACHE-01 — Definir cabeceras HTTP para HTML y assets públicos versionados.** Mantener `/_astro/` en un año con `immutable`; definir `no-cache` para páginas HTML; usar un TTL moderado en imágenes/favicon de `/public` con nombres estables, evitando que la regla de imágenes reemplace la regla de `/_astro/`.
+- [x] **CACHE-01 — Definir cabeceras HTTP para HTML y assets públicos versionados.** Mantener `/_astro/` en un año con `immutable`; definir `no-cache` para páginas HTML; usar un TTL moderado en imágenes/favicon de `/public` con nombres estables, evitando que la regla de imágenes reemplace la regla de `/_astro/`.
   - Aceptación: configuración Nginx aplica la política adecuada por tipo/ruta; la documentación refleja la conducta; no se añade infraestructura de caché externa.
   - Checks: `npm run check`, build, revisar `nginx.conf` y su sintaxis mediante runtime local disponible, `git diff --check`.
   - Ruta: delegated direct para el cambio coordinado a configuración y documentación.
-  - Evidencia/commit: pendiente.
+  - Evidencia: `npm run check` pasó (33 archivos, 0 diagnósticos); `npm run build` generó las nueve páginas estáticas; `git diff --check` pasó. `nginx -t` se omitió: no hay binario Nginx en el host ni contenedor local Nginx activo; no se iniciaron servicios. Revisión de configuración confirma `^~ /_astro/` preserva el año inmutable, las imágenes/favicons usan un día y páginas/documentos usan `no-cache`.
+  - Commit: pendiente de registrar tras cerrar la unidad de trabajo.
 
 ## Evidencia y progreso
 
@@ -54,8 +55,9 @@ El usuario autorizó preparar POWERFUL para Google/SEO y mejorar la caché donde
 - Nginx actualmente da `public, max-age=31536000, immutable` a `/_astro/`; los assets tienen hash. Las imágenes/favicons en `/public` usan nombres estables. HTML y assets públicos carecen de cabeceras explícitas en la configuración.
 - Google recomienda páginas útiles y rastreables, títulos claros, y sitemap como ayuda de descubrimiento; un sitemap no garantiza indexación. Indexación real, rendimiento medido, cobertura y consultas requieren el sitio público y Search Console.
 - SEO-01 implementado: la indexación sigue apagada por defecto y requiere `PUBLIC_INDEXING_ENABLED=true` más un origen HTTPS en `PUBLIC_SITE_URL`; canonicals, Open Graph, `robots.txt` y sitemap se habilitan solo con esa configuración. Se probó salida estática en ambos modos y el error ante configuración incompleta. No se fijó dominio ni se cambiaron textos legales.
+- CACHE-01 implementado: `docker/nginx.conf` revalida HTML/documentos, mantiene el año inmutable para `/_astro/` y aplica TTL de un día a imágenes/favicon públicos con URL fija. README describe la posible demora de hasta un día al reemplazar esos assets.
 - Se conservaron los cambios locales preexistentes ajenos a este feature.
 
 ## Siguiente paso
 
-Registrar el commit SEO-01 y actualizar el espejo Engram. Después completar CACHE-01: cabeceras Nginx para HTML y assets públicos, checks locales disponibles y commit. La activación de `PUBLIC_INDEXING_ENABLED` queda para cuando el usuario tenga fijados el dominio canónico y la preparación pública/legal.
+SEO-01 quedó cerrado en `058bbad`. CACHE-01 está implementado y sus checks aplicables pasaron; registrar su commit y actualizar el espejo Engram. La activación de `PUBLIC_INDEXING_ENABLED` queda para cuando el usuario tenga fijados el dominio canónico y la preparación pública/legal.

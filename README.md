@@ -40,7 +40,9 @@ docker compose -f compose.production.yaml exec -T web nginx -t
 docker compose -f compose.production.yaml ps
 ```
 
-Disponible en `http://127.0.0.1:8088` (`WEB_PORT` configurable), con `/healthz` para comprobar el servidor. Esta configuración es independiente de `compose.yaml`: no combinarlos con `-f`. Los proyectos Compose `powerful-web-dev` y `powerful-web-production` mantienen redes y servicios separados. La imagen final ejecuta Nginx sin root y contiene únicamente el sitio compilado; no incorpora Node, dependencias de desarrollo ni el expediente interno. Las rutas inexistentes devuelven 404, sin fallback de aplicación SPA. Solo los recursos compilados bajo `/_astro/` usan caché inmutable; el logo conserva su URL actualizable.
+Disponible en `http://127.0.0.1:8088` (`WEB_PORT` configurable), con `/healthz` para comprobar el servidor. Esta configuración es independiente de `compose.yaml`: no combinarlos con `-f`. Los proyectos Compose `powerful-web-dev` y `powerful-web-production` mantienen redes y servicios separados. La imagen final ejecuta Nginx sin root y contiene únicamente el sitio compilado; no incorpora Node, dependencias de desarrollo ni el expediente interno. Las rutas inexistentes devuelven 404, sin fallback de aplicación SPA.
+
+Nginx envía `Cache-Control: no-cache` para HTML y los demás documentos, de modo que el navegador puede almacenarlos pero debe revalidarlos antes de reutilizarlos. Los recursos compilados con hash bajo `/_astro/` conservan `public, max-age=31536000, immutable` (un año). Las imágenes y favicons de URL fija (`avif`, `gif`, `ico`, `jpg`/`jpeg`, `png`, `svg` y `webp`) usan `public, max-age=86400` (un día), por lo que un reemplazo bajo la misma URL puede tardar hasta ese plazo en verse; cambia el nombre del recurso si debe actualizarse de inmediato. La regla de `/_astro/` tiene prioridad sobre la de imágenes. Esta política HTTP no requiere Redis ni una caché de backend.
 
 ## Preparación para Google
 
