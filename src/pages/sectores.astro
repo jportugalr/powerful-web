@@ -4,12 +4,13 @@ import PageHero from '../components/PageHero.astro';
 import SectorCard from '../components/SectorCard.astro';
 import TechnologyCapability from '../components/TechnologyCapability.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
-import { businessPagesEs } from '../content/es';
+import { resolveCommercialCatalog } from '../i18n/catalog';
 
-const page = businessPagesEs.sectores;
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.businessPages.sectores;
 ---
 
-<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true}>
+<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true} locale={locale} shell={catalog.shell}>
   <PageHero content={page.hero} hideDecorativeNumber />
 
   <section class="section sectors-section">

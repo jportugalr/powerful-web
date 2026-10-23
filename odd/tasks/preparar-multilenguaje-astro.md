@@ -17,7 +17,7 @@ El contenido principal está centralizado en `src/content/es.ts`, pero Astro no 
 - Mantener Privacidad y Condiciones solo en español y fuera del mapa ES/EN hasta contar con traducción y aprobación.
 - Mantener toda la web en `noindex,nofollow`; no cambiar `PUBLIC_INDEXING_ENABLED`, sitemap, robots, CI, despliegue ni sistemas remotos.
 - No crear páginas inglesas vacías, traducciones comerciales, nuevas afirmaciones de negocio ni un selector que enlace a páginas inexistentes. La variante editorial de inglés queda abierta; la infraestructura usa el locale genérico `en`.
-- La autorización actual amplía el alcance únicamente para implementar el resolvedor de catálogos por locale; no autoriza traducciones, páginas inglesas ni el selector.
+- La autorización actual amplía el alcance para que el resolvedor use el catálogo español cuando el locale solicitado no tenga traducción e integrarlo en las seis páginas comerciales existentes. No autoriza traducciones, páginas inglesas ni el selector; Privacidad y Condiciones siguen pendientes y solo en español.
 
 ## Restricciones y configuración
 
@@ -27,7 +27,7 @@ El contenido principal está centralizado en `src/content/es.ts`, pero Astro no 
 - SDD: no seleccionado.
 - TDD: **OFF**, por la configuración documentada en `README.md`; runner funcional: `npm run check` y `npm run build`.
 - RDD: `disabled/unmanaged`, según la configuración documentada del proyecto; no iniciar revisión nativa.
-- Pronóstico revisado: 938 líneas authored en fuentes (169 adiciones + 384 eliminaciones en archivos seguidos por Git, más 385 líneas de archivos nuevos); 983 al sumar esta ficha. I18N-02 agrega aproximadamente 25–40 líneas. El cambio es coherente con el objetivo y no se reducirá solo por tamaño. Estrategia de entrega: `stacked-to-main`, elegida por el usuario el 2026-10-23; organiza futuros PR slices y no autoriza crear ramas, PRs ni hacer push. El work-unit commit se hará localmente en `main`.
+- Pronóstico revisado: la preparación previa sumó aproximadamente 938 líneas authored en fuentes; el cableado del fallback añade un estimado de 80–150 líneas authored. El acumulado supera el umbral orientativo de 400, por lo que aplica la estrategia `stacked-to-main`, elegida por el usuario el 2026-10-23; organiza futuros PR slices y no autoriza crear ramas, PRs ni hacer push. El work-unit commit se hará localmente en `main`.
 
 ## Tarea
 
@@ -38,12 +38,13 @@ El contenido principal está centralizado en `src/content/es.ts`, pero Astro no 
   - Evidencia: la adaptación de fuente está implementada. `tsc --noEmit` pasó y `git diff --check` pasó (Git avisó que normalizará CRLF de `astro.config.mjs`). `npm run check` y `npm run build` no pudieron ejecutarse: falta Node Linux en WSL y `npm` resuelve a Windows/CMD, que rechaza el cwd UNC; `node.exe astro.mjs check` carece de `@rolldown/binding-wasm32-wasi`; el contenedor `dev` carece de `@astrojs/sitemap`. El `dist/` inspeccionado es anterior, no un resultado de esta implementación: solo contiene rutas ES, muestra `index,follow` y una línea de sitemap para páginas comerciales, por lo que no confirma el noindex del próximo build. La fuente conserva la compuerta `PUBLIC_INDEXING_ENABLED`; no se tocó la variable, sitemap, robots ni despliegue.
   - Commit de implementación: `0162bee8ad7858266d202e067c127360aeb069c9` en `main` (local; sin push).
   - RDD: `disabled/unmanaged`; no ejecutar assessment ni review nativo.
-- [x] **I18N-02 — Resolver catálogo comercial por locale.** Crear un registro explícito de catálogos disponibles y una función para obtener el catálogo del idioma solicitado; no devolver silenciosamente español para un locale aún sin traducción.
-  - Aceptación: `es-PE` resuelve al catálogo actual; `en` (y otros locales sin catálogo) produce un error explícito y útil; el tipo de retorno no permite que un llamador use contenido inexistente como si estuviera traducido; no se crean páginas ni selector.
-  - Checks: `tsc --noEmit`, `git diff --check`; conservar la evidencia previa de que `npm run check` y `npm run build` no estaban disponibles por dependencias/runtime.
-  - Ruta: direct inline; la implementación se limita a un módulo de registro/resolución y no toca dos archivos fuente no triviales.
-  - Evidencia: `resolveCommercialCatalog()` devuelve el catálogo registrado para `es-PE`, informa por separado de un locale desconocido, y lanza un error explícito si el locale es conocido pero todavía no tiene catálogo (`en`). No hay fallback al español. `node.exe node_modules/typescript/bin/tsc --noEmit` pasó; `git diff --cached --check` pasó. No se repitieron `npm run check/build`: el runtime Astro sigue con los bloqueos de dependencias documentados en I18N-01 y este cambio no añade dependencias.
-  - Commit: pendiente.
+- [x] **I18N-02 — Resolver e integrar el catálogo comercial con fallback español.** Reabrida por solicitud del usuario: el resultado anterior fail-fast para `en` ya no cumple el comportamiento requerido. Hacer que el resolvedor entregue catálogo y locale efectivo (`es-PE`) cuando falte el locale, sea desconocido o no exista catálogo; conectar las seis páginas comerciales al resolvedor para que el shell y el idioma declarado correspondan al contenido mostrado.
+  - Aceptación: `es-PE` resuelve al catálogo actual; `en`, un locale desconocido o locale ausente usan el catálogo español con locale efectivo `es-PE`; las seis páginas comerciales usan el catálogo resuelto; Inicio pasa los datos a `HomeContent` en vez de importarlos desde la página/componente; las páginas fallback conservan enlaces españoles, `lang="es-PE"`, rutas y contenido actuales; no se crean páginas inglesas ni selector; Privacidad y Condiciones siguen pendientes, solo en español y fuera del catálogo comercial; no se modifica el `noindex,nofollow`.
+  - Checks: `npm run check`, `npm run build`, inspección de las seis rutas comerciales y `lang="es-PE"` del contenido fallback en `dist/`, comprobar `noindex,nofollow`, `node_modules/typescript/bin/tsc --noEmit` si el runtime disponible lo permite, `git diff --check`. No generar traducciones ni modificar indexación.
+  - Ruta: delegated direct; el mapeo cubrió más de cuatro archivos y el cableado afecta al menos siete fuentes no triviales (resolvedor, seis páginas y props de HomeContent).
+  - TDD: OFF, fuente `README.md`; runners funcionales `npm run check` y `npm run build`.
+  - Evidencia: resolveCommercialCatalog() ahora devuelve { catalog, locale }; solo usa el locale solicitado si existe un catálogo y, en caso contrario (incluido en, desconocido o ausente), devuelve el catálogo español con locale efectivo es-PE. Las seis páginas comerciales obtienen sus datos del resolver y pasan el shell/locale efectivo a SiteLayout; HomeContent recibe el catálogo por props. Revisión del diff confirma que Privacidad, Condiciones y la indexación no se modificaron. node.exe node_modules/typescript/bin/tsc --noEmit pasó y git diff --check pasó. npm run check/build no pudieron ejecutarse: npm invoca CMD desde la ruta UNC y no encuentra astro; la invocación directa node.exe node_modules/astro/bin/astro.mjs check/build falla porque falta @rolldown/binding-wasm32-wasi (rolldown-binding.wasi.cjs). No se generó un dist nuevo; las rutas, lang y noindex en el build no pudieron verificarse. No se añadieron pruebas.
+  - Commit de implementación: se registrará después del work-unit commit local.
   - RDD: `disabled/unmanaged`; no ejecutar assessment ni review nativo.
 
 ## Progreso y siguiente paso
@@ -52,5 +53,5 @@ El contenido principal está centralizado en `src/content/es.ts`, pero Astro no 
 - Sin regresión visible confirmada aún: el build/check Astro no produjo salida nueva, así que rutas, `lang`, metadata y noindex deben verificarse cuando se repare o disponga el runtime con dependencias completas. El `dist/` previo es indexable y obsoleto para esta unidad; no se modificó.
 - Work-unit commit selectivo guardado en `main`: `0162bee8ad7858266d202e067c127360aeb069c9`; los cambios preexistentes ajenos siguen intactos.
 - I18N-01 sigue abierto hasta disponer de un runtime Astro completo para validar build, rutas, `lang`, metadata, noindex y sitemap.
-- I18N-02 implementado únicamente en `src/i18n/catalog.ts`; el selector y los catálogos inglés siguen fuera de alcance.
-- Siguiente paso: guardar el work-unit commit local selectivo de I18N-02 en `main`, excluyendo cambios ajenos.
+- I18N-02 quedó implementada con fallback español en las seis páginas comerciales; no hay contenido inglés, páginas inglesas ni selector.
+- I18N-01 mantiene pendiente la validación de Astro, rutas generadas y noindex. Para cerrar esa evidencia falta ejecutar Astro en un runtime con sus dependencias nativas completas.

@@ -2,12 +2,13 @@
 import PageHero from '../components/PageHero.astro';
 import WhatsAppContact from '../components/WhatsAppContact.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
-import { contactPageEs } from '../content/es';
+import { resolveCommercialCatalog } from '../i18n/catalog';
 
-const page = contactPageEs;
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.contact;
 ---
 
-<SiteLayout title={page.metadata.title} description={page.metadata.description} showFooterLead={false} indexable={true}>
+<SiteLayout title={page.metadata.title} description={page.metadata.description} showFooterLead={false} indexable={true} locale={locale} shell={catalog.shell}>
   <PageHero content={page.hero} />
 
   <section class="section contact-section">

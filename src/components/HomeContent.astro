@@ -1,7 +1,15 @@
 ---
 import Icon from './Icon.astro';
 import ServicePreviewCard from './ServicePreviewCard.astro';
-import { businessPagesEs, homePageEs } from '../content/es';
+import type { CommercialCatalog } from '../content/types';
+
+interface Props {
+  catalog: CommercialCatalog;
+}
+
+const { catalog } = Astro.props;
+const homePage = catalog.home;
+const sectorCards = catalog.businessPages.sectores.cards;
 
 const {
   hero,
@@ -11,11 +19,11 @@ const {
   principles,
   processPreview,
   miniCta,
-} = homePageEs;
+} = homePage;
 
 // Keep this photo selection deliberate; the complete set remains available in the sector links.
 const editorialSectorIds = new Set(['mineria', 'energia', 'infraestructura', 'inmobiliario', 'comercio']);
-const editorialSectors = businessPagesEs.sectores.cards.filter((sector) => editorialSectorIds.has(sector.id));
+const editorialSectors = sectorCards.filter((sector) => editorialSectorIds.has(sector.id));
 ---
 
 <section class="hero home-hero">

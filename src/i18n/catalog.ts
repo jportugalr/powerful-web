@@ -6,21 +6,21 @@ const commercialCatalogs: Partial<Record<Locale, CommercialCatalog>> = {
   'es-PE': commercialCatalogEs,
 };
 
-export function resolveCommercialCatalog(locale: string | undefined): CommercialCatalog {
-  if (!locale) {
-    throw new Error('Cannot resolve commercial content without a locale.');
+export interface ResolvedCommercialCatalog {
+  catalog: CommercialCatalog;
+  locale: Locale;
+}
+
+export function resolveCommercialCatalog(locale: string | undefined): ResolvedCommercialCatalog {
+  if (locale && isLocale(locale)) {
+    const requestedCatalog = commercialCatalogs[locale];
+
+    if (requestedCatalog) {
+      return { catalog: requestedCatalog, locale };
+    }
   }
 
-  if (!isLocale(locale)) {
-    throw new Error(`Unsupported commercial locale "${locale}".`);
-  }
-
-  const catalog = commercialCatalogs[locale];
-  if (!catalog) {
-    throw new Error(`No commercial content catalog is registered for locale "${locale}".`);
-  }
-
-  return catalog;
+  return { catalog: commercialCatalogEs, locale: 'es-PE' };
 }
 
 function isLocale(value: string): value is Locale {

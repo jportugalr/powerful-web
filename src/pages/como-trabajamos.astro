@@ -2,12 +2,13 @@
 import MiniCta from '../components/MiniCta.astro';
 import CollaborationFramework from '../components/CollaborationFramework.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
-import { businessPagesEs } from '../content/es';
+import { resolveCommercialCatalog } from '../i18n/catalog';
 
-const page = businessPagesEs.comoTrabajamos;
+const { catalog, locale } = resolveCommercialCatalog(Astro.currentLocale);
+const page = catalog.businessPages.comoTrabajamos;
 ---
 
-<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true}>
+<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true} locale={locale} shell={catalog.shell}>
   <CollaborationFramework content={page} />
 
   <section class="section navy-panel">
