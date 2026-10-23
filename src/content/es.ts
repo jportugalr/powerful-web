@@ -966,11 +966,6 @@ export const legalPagesEs = {
         paragraph:
           'El enlace de contacto abre WhatsApp con un texto prellenado. El sitio no lo envía por ti: puedes revisarlo o editarlo y decides si lo envías desde esa aplicación.',
       },
-      {
-        heading: 'Materiales del sitio',
-        paragraph:
-          'Este documento no declara titularidad ni licencia sobre imágenes u otros materiales cuya autorización no se haya verificado.',
-      },
     ],
   },
 } as const satisfies LegalPagesEs;

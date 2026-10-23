@@ -10,15 +10,15 @@ Antes de LAUNCH-02, el sitio todavía mostraba “borrador” y “preliminar”
 
 ## Autorización, alcance y límites
 
-El usuario pidió preparar la revisión final, retirar referencias públicas a borrador/en proceso y consultar lo que siga incompleto. Ante la solicitud de datos y aprobaciones respondió: “aun no coloques ruc ni información de la empresa, haz tu mejor esfuerzo con todo lo demas”. Esto autoriza mejoras locales basadas en hechos comprobables y omite expresamente los datos empresariales; no constituye aprobación legal, confirmación de titularidad/licencias de assets ni autorización de despliegue.
+El usuario pidió preparar la revisión final, retirar referencias públicas a borrador/en proceso y consultar lo que siga incompleto. Ante la solicitud de datos y aprobaciones respondió: “aun no coloques ruc ni información de la empresa, haz tu mejor esfuerzo con todo lo demas”. Después confirmó “Todos confirmados” al consultarle por los visuales de sectores, el arte global generado y las imágenes aportadas de Pesca, Agro, tecnología e ilustración global. Esta confirmación cubre la autorización para publicar esos recursos; no completa los datos empresariales, no constituye aprobación legal ni autoriza despliegue.
 
 - Mover los diez JSON internos fuera de `public/`, conservando intactos los assets y el contenido de metadata.
 - Revisar el copy público de Privacidad y Condiciones, quitar rótulos de borrador/preliminar y describir solo el comportamiento observado del sitio.
 - Mantener Privacidad y Condiciones con `noindex,nofollow` y fuera del sitemap; no habilitar `PUBLIC_INDEXING_ENABLED` ni cambiar CI/imagen para indexar.
 - Actualizar documentación interna solo donde contradiga la implementación actual.
-- Mantener en el expediente interno el bloqueo legal: faltan responsable y domicilio, canal de derechos confirmado, proveedores/transferencias, tratamiento y conservación de registros técnicos, derechos de assets y revisión/aprobación legal.
+- Mantener en el expediente interno el bloqueo legal: faltan responsable y domicilio, canal de derechos confirmado, proveedores/transferencias, tratamiento y conservación de registros técnicos y revisión/aprobación legal. La autorización de publicación de los recursos visuales enumerados está confirmada por el usuario.
 - No cambiar DNS, Caddy, VPS, GHCR, despliegue, ramas ni configuración remota. No publicar cambios.
-- No eliminar imágenes con licencias o autoría no confirmadas en esta tarea; la reubicación de metadata evita exponer prompts y datos internos, pero no acredita derechos de publicación de las imágenes.
+- No alterar ni eliminar imágenes por esta tarea. La confirmación del usuario cubre los recursos visuales enumerados; la reubicación de metadata sigue evitando exponer prompts y datos internos.
 
 ## Ruta, modo y entrega
 
@@ -45,6 +45,14 @@ El usuario pidió preparar la revisión final, retirar referencias públicas a b
   - Checks: `npm run check`; build predeterminado e inspección del HTML noindex; build con `PUBLIC_SITE_URL=https://powerful.pe PUBLIC_INDEXING_ENABLED=true` e inspección de canonical/sitemap para confirmar que los textos legales siguen excluidos; smoke con imagen local solo si está disponible la base runtime exacta, sin pulls ni imágenes fabricadas; `git diff --check`.
   - Ruta: delegated direct; el cambio coordina `src/content/es.ts`, favicon y documentación no trivial, por lo que se delega el escritor.
   - Evidencia: `npm run check` pasó con 0 errores, advertencias o hints. El build predeterminado pasó; Privacidad y Condiciones conservan `noindex,nofollow` y el aviso visible, `robots.txt` permite el rastreo sin declarar sitemap y no se generó sitemap. El build con `PUBLIC_SITE_URL=https://powerful.pe PUBLIC_INDEXING_ENABLED=true` pasó; ambas páginas legales mantuvieron `noindex,nofollow`, no emitieron canonical y no aparecen en `sitemap-0.xml`; la portada comercial sí tiene canonical absoluta, el sitemap index se genera y `robots.txt` lo anuncia. La salida de ambas páginas no contiene “borrador”, “preliminar” ni “provisional”. `git diff --check` pasó. El smoke no está disponible: la base exacta `nginx:1.29-alpine` faltaba en la comprobación local de LAUNCH-01; no se inició un contenedor, descargó imagen ni fabricó runtime. La comparación byte a byte del SVG confirmó que solo cambia la frase accesible solicitada.
+  - Commit: `cdc9912` — `fix(legal): make legal notices explicit and factual`.
+
+- [x] **LAUNCH-03 — Alinear la cláusula de materiales con la confirmación de publicación.** Retirar de Condiciones del sitio la frase que dice que no se verificó autorización para imágenes, pues el usuario confirmó la publicación de todos los recursos visuales enumerados: visuales de sectores, arte global generado, imágenes aportadas de Pesca, Agro y tecnología e ilustración global. No añadir una afirmación general de titularidad/licencia ni cambiar el aviso visible de texto incompleto y no aprobado.
+  - Aceptación: el texto público no sugiere que los visuales enumerados carecen de autorización confirmada; el aviso de incompletitud y aprobación legal permanece visible; Privacidad y Condiciones mantienen `noindex,nofollow` y siguen fuera del sitemap.
+  - Checks: `npm run check`; `npm run build`; inspección del HTML de Condiciones para asegurar que no conserva la frase de autorización no verificada y sí conserva el aviso; inspección de metadatos de indexación; `git diff --check`.
+  - Ruta: delegated direct; esta tarea modifica el copy legal y el documento de recuperación de lanzamiento.
+  - TDD: OFF, de acuerdo con la configuración ya resuelta en este expediente; ejecutar los checks funcionales ordinarios, sin añadir una prueba espejo.
+  - Evidencia: `package.json` define `npm run check` como `astro check` y `npm run build` como `astro build`. El contenedor temporal `node:24-alpine` instaló con `npm ci`; ambos comandos equivalentes del CLI de Astro pasaron, con 0 errores, advertencias o hints y 9 páginas generadas. El HTML de `/terminos.html` conserva el aviso de texto incompleto/no aprobado y `noindex,nofollow`, y ya no incluye la sección `Materiales del sitio`. La exclusión legal del sitemap con indexación habilitada quedó comprobada por LAUNCH-02 y no cambió en esta tarea. `git diff --check` pasó. El contenedor dev existente no tenía `@astrojs/sitemap`; la verificación limpia pasó. El wrapper de inspección del agente terminó con estado 1 por incluir una ruta inexistente y una búsqueda sensible a mayúsculas; Astro check y build terminaron correctamente.
   - Commit: pendiente.
 
 ## Evidencia y progreso
@@ -53,10 +61,11 @@ El usuario pidió preparar la revisión final, retirar referencias públicas a b
 - Tarea previa SEO-01 mantiene `PUBLIC_INDEXING_ENABLED` apagado por defecto y excluye Privacidad/Condiciones del sitemap.
 - La auditoría de solo lectura encontró diez JSON públicos, sin referencias runtime. Todos son metadata interna y Astro los copiaba al artefacto servido por Docker.
 - El sitio estático expone un botón que abre WhatsApp con mensaje prellenado. El usuario no confirmó que ese número sea el canal oficial de privacidad.
+- El usuario confirmó la autorización para publicar los visuales de sectores, el arte global generado, las imágenes aportadas de Pesca, Agro y tecnología y la ilustración global. La revisión legal y los demás datos empresariales/de tratamiento continúan pendientes.
 - La norma y guía oficial peruana describen información previa al tratamiento que incluye identidad/domicilio del responsable, finalidades, destinatarios, conservación y medios para ejercer derechos. Por ello el copy factual no equivale a cumplimiento o aprobación legal.
 - LAUNCH-01 movió los diez sidecars a `source-assets/metadata/` sin modificar las imágenes. El build local pasó y el artefacto conserva las imágenes públicas, pero no contiene los JSON de metadata. El smoke queda pendiente por falta local de la base exacta `nginx:1.29-alpine`; no se hizo pull remoto.
-- Observación externa de solo lectura comunicada por el agente principal el 2026-10-23: `powerful.pe` resolvió a `159.65.107.12` y respondió por HTTPS con estado 200 y `Cache-Control: no-cache`; `powerfulglobal.pe` seguía sin resolver. La misma observación encontró en producción las etiquetas y avisos públicos anteriores junto con `noindex,nofollow`; LAUNCH-02 sigue siendo un cambio local, sin publicación.
+- Observación externa de solo lectura comunicada por el agente principal el 2026-10-23: `powerful.pe` resolvió a `159.65.107.12` y respondió por HTTPS con estado 200 y `Cache-Control: no-cache`; `powerfulglobal.pe` seguía sin resolver. La misma observación encontró en producción las etiquetas y avisos públicos anteriores junto con `noindex,nofollow`; LAUNCH-02 y LAUNCH-03 son cambios locales, sin publicación.
 
 ## Siguiente paso
 
-LAUNCH-01 está completa en `5d8748d`; LAUNCH-02 completó la edición y verificaciones locales. Registrar el hash de su commit después de crearlo. No hacer push ni despliegue; mantener pendiente la aprobación legal y la confirmación de dominio, DNS y TLS antes de habilitar indexación.
+LAUNCH-01 está completa en `5d8748d`, LAUNCH-02 en `cdc9912` y LAUNCH-03 ya está validada. Registrar el commit local de LAUNCH-03. No hacer push ni despliegue. Mantener pendiente la aprobación legal y la confirmación de dominio, DNS y TLS antes de habilitar indexación.
