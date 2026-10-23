@@ -42,6 +42,18 @@ docker compose -f compose.production.yaml ps
 
 Disponible en `http://127.0.0.1:8088` (`WEB_PORT` configurable), con `/healthz` para comprobar el servidor. Esta configuración es independiente de `compose.yaml`: no combinarlos con `-f`. Los proyectos Compose `powerful-web-dev` y `powerful-web-production` mantienen redes y servicios separados. La imagen final ejecuta Nginx sin root y contiene únicamente el sitio compilado; no incorpora Node, dependencias de desarrollo ni el expediente interno. Las rutas inexistentes devuelven 404, sin fallback de aplicación SPA. Solo los recursos compilados bajo `/_astro/` usan caché inmutable; el logo conserva su URL actualizable.
 
+## Preparación para Google
+
+Por defecto, las páginas conservan `noindex,nofollow`, `robots.txt` permite el rastreo para que Google pueda leer esa directiva y no se genera un sitemap. Para preparar una compilación indexable, configura `PUBLIC_SITE_URL` con el origen HTTPS definitivo (sin ruta, query ni fragmento) y `PUBLIC_INDEXING_ENABLED=true`. Por ejemplo, reemplaza `https://example.com` por el dominio canónico confirmado:
+
+```sh
+PUBLIC_SITE_URL=https://example.com PUBLIC_INDEXING_ENABLED=true npm run build
+```
+
+Sin una URL HTTPS válida, el build falla claramente cuando se activa el flag. La compilación habilitada genera canonical y Open Graph de texto solo para páginas comerciales, además de `sitemap-index.xml`; Privacidad, Condiciones y 404 conservan `noindex` y quedan fuera del sitemap. Este build no publica el sitio ni confirma su indexación.
+
+Antes de habilitar indexación en el dominio definitivo, falta confirmar DNS y el host canónico, completar y aprobar los textos legales, publicar mediante el proceso autorizado y verificar la propiedad en Google Search Console. Después se puede enviar allí `https://<dominio-canonico>/sitemap-index.xml` y revisar los informes de cobertura e indexación. El sitemap ayuda al descubrimiento, pero no garantiza que Google indexe las páginas.
+
 Con ambos servicios arriba, repetir el smoke desde Bash/WSL (requiere `curl` y `sha256sum`):
 
 ```sh
@@ -60,7 +72,7 @@ TDD estricto desactivado por decisión explícita del usuario; se realizan chequ
 
 ## Alcance y marca
 
-El formulario de Contacto solo valida y presenta un borrador dentro del navegador: no transmite ni almacena consultas. Privacidad y Condiciones son borradores sin aprobación legal; todas las páginas conservan `noindex,nofollow`. No hay despliegue autorizado. El expediente original está en `Powerful/` y queda fuera de Git; no se altera ni se sustituye. `public/brand/powerful-master.png` es la copia exacta del maestro V1.2 aprobado (SHA256 `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`).
+El formulario de Contacto solo valida y presenta un borrador dentro del navegador: no transmite ni almacena consultas. Privacidad y Condiciones son borradores sin aprobación legal y conservan `noindex,nofollow`. No hay despliegue autorizado. El expediente original está en `Powerful/` y queda fuera de Git; no se altera ni se sustituye. `public/brand/powerful-master.png` es la copia exacta del maestro V1.2 aprobado (SHA256 `762f5883c7218d45b4df0ab0f11b20eec1c931b4536f2cc8df7684227e74bbc4`).
 
 El favicon SVG usa una copia exacta del emblema V0.5 para fondos claros, aprobada por el usuario para iconos el 2026-10-18. El layout publica fallbacks PNG de 16, 32 y 48 px, además de un Apple touch icon de 180 px, derivados del PNG oficial de 1254 × 1254 con Sharp/Lanczos. `DESIGN.md` registra la aplicación vigente de marca.
 

@@ -9,7 +9,7 @@ import { businessPagesEs } from '../content/es';
 const page = businessPagesEs.sectores;
 ---
 
-<SiteLayout title={page.metadata.title} description={page.metadata.description}>
+<SiteLayout title={page.metadata.title} description={page.metadata.description} indexable={true}>
   <PageHero content={page.hero} hideDecorativeNumber />
 
   <section class="section sectors-section">
