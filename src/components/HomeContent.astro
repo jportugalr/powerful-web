@@ -74,6 +74,38 @@ const editorialSectors = sectorCards.filter((sector) => editorialSectorIds.has(s
           alt={hero.mapAlt}
           decoding="async"
         />
+        <svg
+          class="hero-map-motion"
+          viewBox="0 0 1448 1086"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <radialGradient id="hero-map-peru-glow">
+              <stop offset="0" stop-color="#fff0bd" stop-opacity="0.92" />
+              <stop offset="0.38" stop-color="#f4bd54" stop-opacity="0.48" />
+              <stop offset="1" stop-color="#f4bd54" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <ellipse
+            class="hero-map-peru-glow"
+            cx="354"
+            cy="680"
+            rx="72"
+            ry="98"
+            fill="url(#hero-map-peru-glow)"
+          />
+          <g class="hero-map-routes" fill="none">
+            <path pathLength="100" d="M184 328 C221 384 264 505 349 620" />
+            <path pathLength="100" d="M367 360 C337 434 315 540 378 613" />
+            <path pathLength="100" d="M237 470 C270 514 318 570 352 614" />
+            <path pathLength="100" d="M704 324 C611 359 507 451 441 528 C411 563 389 593 375 614" />
+            <path pathLength="100" d="M722 515 C641 557 523 616 451 642 C416 655 394 665 379 671" />
+            <path pathLength="100" d="M1205 414 C1004 455 745 588 541 631 C466 647 416 667 379 681" />
+            <path pathLength="100" d="M405 814 C386 776 370 738 381 704" />
+            <path pathLength="100" d="M1319 753 C1114 863 842 910 617 870 C496 848 420 766 382 696" />
+          </g>
+        </svg>
       </div>
     </figure>
   </div>
